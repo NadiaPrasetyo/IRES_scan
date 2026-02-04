@@ -50,6 +50,9 @@ def fetch(url):
 # ------------------------------------------------------------
 # Parse main browse tables
 # ------------------------------------------------------------
+# ------------------------------------------------------------
+# Parse main browse tables
+# ------------------------------------------------------------
 def parse_browse_page(url, mode):
     html = fetch(url)
     soup = BeautifulSoup(html, "lxml")
@@ -65,7 +68,7 @@ def parse_browse_page(url, mode):
     for row in rows:
         tds = row.find_all("td")
         if len(tds) != 15:
-            continue  # skip malformed rows
+            continue
 
         # iresite_id
         iresite_id = tds[0].get_text(strip=True)
@@ -84,42 +87,50 @@ def parse_browse_page(url, mode):
         virus_name = src_name if mode == "viral" else None
         gene_name = src_name if mode == "cellular" else None
 
-        # ------------------------------
-        # Correct organism extraction
-        # ------------------------------
-        host_td = tds[7]  # 8th column: "IRES found in"
+        # --------------------------------------------------
+        # Organism extraction (DEBUGGABLE + SAFE)
+        # --------------------------------------------------
+        host_td = tds[7]
         host_span = host_td.find("span")
         organism = None
-        if host_span and mode == "cellular":
-            # Try to extract full organism name from onmouseover
-            mouseover = host_span.get("onmouseover", "")
-            m = re.search(r"&gt;(.*?)&lt;/a&gt;", mouseover)
-            if m:
-                organism = clean(m.group(1))
-            else:
-                organism = clean(host_span.get_text())
-        elif mode == "viral":
-            organism = None
 
-            if host_span:
-                onmouseover = host_span.get("onmouseover", "")
-                if onmouseover:
-                    # Decode HTML entities
-                    unescaped = unescape(onmouseover)
+        if host_span:
+            span_text = clean(host_span.get_text())
+            onmouseover = host_span.get("onmouseover", "")
 
-                    # Extract anchor inner text
-                    m = re.search(r"<a[^>]*>([^<]+)</a>", unescaped, flags=re.IGNORECASE)
-                    if m:
-                        organism = clean(m.group(1))
+            print(f"\n[DEBUG] IRESite {iresite_id} ({mode})")
+            print(f"  span_text   = {span_text}")
+            print(f"  onmouseover = {onmouseover}")
 
-                        # Remove trailing "virus" ONLY for viral organisms
+            if onmouseover:
+                unescaped = unescape(onmouseover)
+                print(f"  unescaped   = {unescaped}")
+
+                m = re.search(r"<a[^>]*>([^<]+)</a>", unescaped, flags=re.IGNORECASE)
+                if m:
+                    organism = clean(m.group(1))
+                    print(f"  extracted   = {organism}")
+
+                    if mode == "viral":
                         organism = re.sub(r"\s+virus$", "", organism, flags=re.IGNORECASE)
+                        print(f"  stripped    = {organism}")
+                else:
+                    print("  regex FAILED")
+            else:
+                print("  no onmouseover")
 
-            # Absolute last-resort fallback
+            # Fallback: span text ONLY if nothing extracted
             if not organism:
-                organism = clean(host_td.get_text())
+                organism = span_text
+                print(f"  fallback    = {organism}")
 
+        else:
+            organism = clean(host_td.get_text())
+            print(f"\n[DEBUG] IRESite {iresite_id}: no span, using td text = {organism}")
+
+        # --------------------------------------------------
         # normalize multi-IRES rows
+        # --------------------------------------------------
         n = max(len(ires_names), len(ires_sizes))
         ires_names += [None] * (n - len(ires_names))
         ires_sizes += [None] * (n - len(ires_sizes))
