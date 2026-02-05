@@ -12,8 +12,7 @@ SEARCH_URL = "https://www.ebi.ac.uk/ebisearch/ws/rest/rfam"
 FETCH_URL = "https://rfam.org/family"
 
 FIELDS = (
-    "id,gca_accession,rfamseq_acc,name,common_name,"
-    "rna_type,description,num_seed,length,seq_start,seq_end,ENA"
+    "id,description,rna_type,entry_type,rfamseq_acc,rfamseq_acc_description,scientific_name,num_seed,seq_start,seq_end,ENA,RFAM"
 )
 
 HEADERS = {"User-Agent": "rfam-ires-fetcher/1.0"}
@@ -30,6 +29,72 @@ def safe_get(url):
         pass
     return None
 
+def dedupe_entries(entries):
+    seen = set()
+    unique = []
+
+    for e in entries:
+        key = (
+            e.get("entry_type"),
+            e.get("id"),
+            e.get("rfamseq_acc"),
+            e.get("seq_start"),
+            e.get("seq_end"),
+        )
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(e)
+
+    return unique
+
+def dedupe_rows(rows):
+    seen = set()
+    unique = []
+
+    for r in rows:
+        key = (
+            r.get("entry_type"),
+            r.get("rfam_id"),
+            r.get("accession"),
+            r.get("seq_start"),
+            r.get("seq_end"),
+        )
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(r)
+
+    return unique
+
+def collect_rfam_ids(entries):
+    """
+    Collect RFAM family IDs from EBISearch entries.
+    Works without relying on entry_type.
+    """
+    rfams = set()
+
+    for entry in entries:
+        fields = entry.get("fields", {})
+
+        ids = fields.get("id", [])
+        if not ids:
+            continue
+
+        entry_id = ids[0]
+
+        # Case 1: family entry
+        if entry_id.startswith("RF"):
+            rfams.add(entry_id)
+            continue
+
+        # Case 2: sequence entry → extract RFAM field
+        rfam_list = fields.get("RFAM", [])
+        for rfam_id in rfam_list:
+            if rfam_id.startswith("RF"):
+                rfams.add(rfam_id)
+
+    return sorted(rfams)
 
 def fetch_search_results(org):
     query = f'rna_type:"IRES" AND {org}'
@@ -77,26 +142,6 @@ def fetch_family_regions(rfam_id):
         })
 
     return regions
-
-def fetch_sequence_region(acc, start=None, end=None):
-    url = f"https://rfam.org/sequence/{acc}.fa"
-    r = safe_get(url)
-    if not r:
-        return None
-
-    seq = "".join(
-        line.strip()
-        for line in r.text.splitlines()
-        if not line.startswith(">")
-    )
-
-    if start and end:
-        try:
-            return seq[int(start)-1:int(end)]
-        except Exception:
-            return seq
-
-    return seq
 
 def extract_secondary_structure(stockholm_text):
     for line in stockholm_text.splitlines():
@@ -169,50 +214,60 @@ def main():
 
     rows = []
     entries = fetch_search_results(args.org)
+    print(f"Found {len(entries)} entries for {args.org}")
 
-    for entry in entries:
-        rfam_id = entry.get("id")
-        if not rfam_id or not rfam_id.startswith("RF"):
-            continue
+    entries = dedupe_entries(entries)
+    print(f"After deduplication: {len(entries)} entries")
+    
+    csv_path = os.path.join(args.output_dir, f"{args.org}_search_results.csv")
+    with open(csv_path, "w", newline="") as fh:
+        writer = csv.DictWriter(fh, fieldnames=sorted(entries[0].keys()) if entries else [])
+        writer.writeheader()
+        for entry in entries:
+            writer.writerow(entry)
 
-        print(f"Processing {rfam_id}")
+    rfam_ids = collect_rfam_ids(entries)
+    print(f"Collected {len(rfam_ids)} unique RFAM families")
+
+    rows = []
+
+    for rfam_id in rfam_ids:
+        print(f"Processing family {rfam_id}")
 
         fam_data = fetch_family_data(rfam_id, args.output_dir)
         regions = fetch_family_regions(rfam_id)
 
-        fam_dir = os.path.join(args.output_dir, rfam_id)
-        os.makedirs(fam_dir, exist_ok=True)
+        if not regions:
+            # still record the family even if no regions are returned
+            rows.append({
+                "rfam_id": rfam_id,
+                **fam_data
+            })
+            continue
 
         for region in regions:
-            acc = region["accession"]
-            seq = fetch_sequence_region(
-                acc,
-                region.get("seq_start"),
-                region.get("seq_end"),
-            )
-
-            # write per-accession fasta
-            fasta_path = None
-            if seq:
-                fasta_path = os.path.join(fam_dir, f"{acc}.fa")
-                with open(fasta_path, "w") as fh:
-                    fh.write(f">{acc}|{rfam_id}\n{seq}\n")
-
             row = {
-                **entry,
+                "rfam_id": rfam_id,
                 **fam_data,
                 **region,
-                "rfam_id": rfam_id,
-                "sequence": seq,
-                "accession_fasta": fasta_path,
             }
-
             rows.append(row)
 
         time.sleep(0.3)
 
+    rows = dedupe_rows(rows)
+    
     # Write CSV
     csv_path = os.path.join(args.output_dir, "rfam_ires_summary.csv")
+
+    if not rows:
+        print("\nNo valid IRES entries produced rows.")
+        print("This usually means:")
+        print("  - sequence entries lacked seq_start/seq_end")
+        print("  - or RFAM returned metadata-only hits")
+        print(f"\nEmpty CSV not written: {csv_path}")
+        return
+
     with open(csv_path, "w", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=sorted(rows[0].keys()))
         writer.writeheader()
