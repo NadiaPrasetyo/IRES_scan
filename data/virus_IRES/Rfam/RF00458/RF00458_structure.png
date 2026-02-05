@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg height="550" width="700" xmlns="http://www.w3.org/2000/svg">
+	<script height="550" type="text/ecmascript" width="700"><![CDATA[
+      var shown = 1;
+      function click() {
+        var seq = document.getElementById("seq");
+        if (shown==1) {
+          seq.setAttribute("style", "visibility: hidden");
+          shown = 0;
+        } else {
+          seq.setAttribute("style", "visibility: visible");
+          shown = 1;
+        }
+      }
+]]></script>
+	<style type="text/css"><![CDATA[
+      .nucleotide {
+        font-family: SansSerif;
+      }
+      .backbone {
+        stroke: grey;
+        fill:   none;
+        stroke-width: 1.5;
+      }
+      .basepairs {
+        stroke: red;
+        fill:   none;
+        stroke-width: 2.5;
+      }
+]]></style>
+	<rect height="452" onclick="click(evt)" style="fill: white; stroke: white" width="452" x="0" y="0" />
+	<g id="legendElements" transform="translate(25,500)">
+<text id="legendTitle" style="fill: dimgrey; font-family: Arial,Helvetica; font-size: 14px; text-anchor: middle" x="71" y="27">Sequence Conservation</text>
+<text id="leftLegendNumber" style="fill: dimgrey; font-family: Arial,Helvetica; font-size: 14px; text-anchor: left" x="0" y="-2">0.00</text>
+<text id="rightLegendNumber" style="fill: dimgrey; font-family: Arial,Helvetica; font-size: 14px; text-ancor: left" x="122" y="-2">1.00</text>
+<g id="legendBoxElements" x="0" y="0">
+	<rect height="15" style="fill: rgb(255,0,255)" width="4" x="0" y="0" />
+	<rect height="15" style="fill: rgb(219,0,255)" width="4" x="4" y="0" />
+	<rect height="15" style="fill: rgb(184,0,255)" width="4" x="8" y="0" />
+	<rect height="15" style="fill: rgb(148,0,255)" width="4" x="12" y="0" />
+	<rect height="15" style="fill: rgb(113,0,255)" width="4" x="16" y="0" />
+	<rect height="15" style="fill: rgb(77,0,255)" width="4" x="20" y="0" />
+	<rect height="15" style="fill: rgb(42,0,255)" width="4" x="24" y="0" />
+	<rect height="15" style="fill: rgb(7,0,255)" width="4" x="28" y="0" />
+	<rect height="15" style="fill: rgb(0,28,255)" width="4" x="32" y="0" />
+	<rect height="15" style="fill: rgb(0,63,255)" width="4" x="36" y="0" />
+	<rect height="15" style="fill: rgb(0,99,255)" width="4" x="40" y="0" />
+	<rect height="15" style="fill: rgb(0,134,255)" width="4" x="44" y="0" />
+	<rect height="15" style="fill: rgb(0,169,255)" width="4" x="48" y="0" />
+	<rect height="15" style="fill: rgb(0,205,255)" width="4" x="52" y="0" />
+	<rect height="15" style="fill: rgb(0,240,255)" width="4" x="56" y="0" />
+	<rect height="15" style="fill: rgb(0,255,240)" width="4" x="60" y="0" />
+	<rect height="15" style="fill: rgb(0,255,198)" width="4" x="64" y="0" />
+	<rect height="15" style="fill: rgb(0,255,162)" width="4" x="68" y="0" />
+	<rect height="15" style="fill: rgb(0,255,127)" width="4" x="72" y="0" />
+	<rect height="15" style="fill: rgb(0,255,92)" width="4" x="76" y="0" />
+	<rect height="15" style="fill: rgb(0,255,56)" width="4" x="80" y="0" />
+	<rect height="15" style="fill: rgb(0,255,21)" width="4" x="84" y="0" />
+	<rect height="15" style="fill: rgb(0,255,0)" width="4" x="88" y="0" />
+	<rect height="15" style="fill: rgb(14,255,0)" width="4" x="92" y="0" />
+	<rect height="15" style="fill: rgb(49,255,0)" width="4" x="96" y="0" />
+	<rect height="15" style="fill: rgb(84,255,0)" width="4" x="100" y="0" />
+	<rect height="15" style="fill: rgb(120,255,0)" width="4" x="104" y="0" />
+	<rect height="15" style="fill: rgb(155,255,0)" width="4" x="108" y="0" />
+	<rect height="15" style="fill: rgb(191,255,0)" width="4" x="112" y="0" />
+	<rect height="15" style="fill: rgb(226,255,0)" width="4" x="116" y="0" />
+	<rect height="15" style="fill: rgb(255,247,0)" width="4" x="120" y="0" />
+	<rect height="15" style="fill: rgb(255,212,0)" width="4" x="124" y="0" />
+	<rect height="15" style="fill: rgb(255,177,0)" width="4" x="128" y="0" />
+	<rect height="15" style="fill: rgb(255,141,0)" width="4" x="132" y="0" />
+	<rect height="15" style="fill: rgb(255,105,0)" width="4" x="136" y="0" />
+	<rect height="15" style="fill: rgb(255,70,0)" width="4" x="140" y="0" />
+	<rect height="15" style="fill: rgb(255,0,0)" width="4" x="144" y="0" />
+</g>
+	</g>
+	<g transform="scale(0.729032,0.729032) translate(414.5,207.5)">
+		<g id="circleElements">
+<circle cx="99.997" cy="126.769" r="7" style="fill: rgb(42,0,255); fill-opacity: 1" />
+<circle cx="86.416" cy="120.399" r="7" style="fill: rgb(0,28,255); fill-opacity: 1" />
+<circle cx="72.835" cy="114.03" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="59.255" cy="107.661" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="45.674" cy="101.291" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="32.094" cy="94.922" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="18.513" cy="88.553" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="4.933" cy="82.183" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-8.648" cy="75.814" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-8.519" cy="62.887" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-13.274" cy="50.917" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-22.175" cy="41.671" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-33.87" cy="36.501" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-46.605" cy="36.143" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-58.484" cy="40.615" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-67.752" cy="49.22" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="-81.529" cy="43.286" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="-95.306" cy="37.353" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="-109.083" cy="31.42" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="-122.859" cy="25.487" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="-136.636" cy="19.554" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="-150.413" cy="13.621" r="7" style="fill: rgb(0,255,56); fill-opacity: 1" />
+<circle cx="-164.19" cy="7.688" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="-177.966" cy="1.755" r="7" style="fill: rgb(0,255,56); fill-opacity: 1" />
+<circle cx="-187.581" cy="-10.81" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="-202.331" cy="-8.738" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="-200.493" cy="-23.731" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="-202.955" cy="-38.634" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="-209.517" cy="-52.24" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-219.648" cy="-63.445" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-232.526" cy="-71.34" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="-247.107" cy="-75.286" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="-262.209" cy="-74.963" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="-276.608" cy="-70.397" r="7" style="fill: rgb(255,247,0); fill-opacity: 1" />
+<circle cx="-289.136" cy="-61.959" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="-298.779" cy="-50.331" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="-304.754" cy="-36.457" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="-306.576" cy="-21.462" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="-304.099" cy="-6.561" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="-297.523" cy="7.038" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="-287.381" cy="18.232" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="-274.495" cy="26.115" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="-259.911" cy="30.046" r="7" style="fill: rgb(255,247,0); fill-opacity: 1" />
+<circle cx="-244.809" cy="29.708" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-230.414" cy="25.128" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="-217.894" cy="16.676" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="-208.264" cy="5.039" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="-199.635" cy="17.18" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="-183.899" cy="15.532" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="-170.123" cy="21.465" r="7" style="fill: rgb(255,247,0); fill-opacity: 1" />
+<circle cx="-156.346" cy="27.398" r="7" style="fill: rgb(0,255,56); fill-opacity: 1" />
+<circle cx="-142.569" cy="33.331" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="-128.792" cy="39.264" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="-115.016" cy="45.197" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="-101.239" cy="51.13" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="-87.462" cy="57.063" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-73.685" cy="62.996" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-72.304" cy="80.149" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="-62.38" cy="94.315" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-46.57" cy="101.548" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-29.185" cy="99.775" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-15.017" cy="89.394" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="-1.437" cy="95.764" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="12.144" cy="102.133" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="25.724" cy="108.502" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="39.305" cy="114.872" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="52.886" cy="121.241" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="66.466" cy="127.611" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="80.047" cy="133.98" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="93.627" cy="140.349" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="84.723" cy="142.759" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="77.165" cy="150.806" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="74.287" cy="163.388" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="78.515" cy="177.579" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="75.428" cy="192.258" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="72.34" cy="206.937" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="69.253" cy="221.616" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="66.165" cy="236.295" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="58.89" cy="244.869" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="60.23" cy="254.76" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="54.188" cy="268.489" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="48.145" cy="282.218" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="42.102" cy="295.947" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="28.563" cy="305.201" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="30.078" cy="321.53" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="45.087" cy="328.137" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="58.152" cy="318.224" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="55.831" cy="301.99" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="61.874" cy="288.261" r="7" style="fill: rgb(255,247,0); fill-opacity: 1" />
+<circle cx="67.917" cy="274.532" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="73.959" cy="260.803" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="76.452" cy="275.594" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="84.259" cy="288.402" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="96.265" cy="297.394" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="110.752" cy="301.284" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="125.647" cy="299.514" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="138.82" cy="292.34" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="148.386" cy="280.785" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="152.976" cy="266.505" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="151.934" cy="251.541" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="145.408" cy="238.035" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="134.333" cy="227.918" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="120.293" cy="222.639" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="105.297" cy="222.951" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="91.489" cy="228.811" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="80.844" cy="239.382" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="83.931" cy="224.703" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="87.019" cy="210.024" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="90.106" cy="195.346" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="93.194" cy="180.667" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="107.92" cy="177.814" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="116.266" cy="190.278" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="124.612" cy="202.741" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="132.958" cy="215.205" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="131.267" cy="231.159" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="142.786" cy="242.325" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="158.68" cy="240.138" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="166.755" cy="226.275" r="7" style="fill: rgb(255,247,0); fill-opacity: 1" />
+<circle cx="160.817" cy="211.371" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="145.422" cy="206.859" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="137.076" cy="194.395" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="128.73" cy="181.932" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="120.384" cy="169.468" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="122.45" cy="162.258" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="135.75" cy="169.195" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="149.049" cy="176.131" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="162.349" cy="183.068" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="175.649" cy="190.005" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="188.948" cy="196.941" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="197.304" cy="209.399" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="209.957" cy="217.454" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="224.78" cy="219.754" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="239.279" cy="215.91" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="251.016" cy="206.57" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="258.018" cy="193.304" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="259.105" cy="178.343" r="7" style="fill: rgb(0,255,56); fill-opacity: 1" />
+<circle cx="254.096" cy="164.204" r="7" style="fill: rgb(255,247,0); fill-opacity: 1" />
+<circle cx="243.833" cy="153.265" r="7" style="fill: rgb(255,247,0); fill-opacity: 1" />
+<circle cx="230.042" cy="147.365" r="7" style="fill: rgb(255,247,0); fill-opacity: 1" />
+<circle cx="215.043" cy="147.496" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="201.357" cy="153.638" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="186.402" cy="152.478" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="171.447" cy="151.318" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="156.492" cy="150.158" r="7" style="fill: rgb(255,247,0); fill-opacity: 1" />
+<circle cx="141.537" cy="148.998" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="126.582" cy="147.838" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="128.648" cy="140.629" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="142.328" cy="134.477" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="156.009" cy="128.325" r="7" style="fill: rgb(0,255,56); fill-opacity: 1" />
+<circle cx="169.689" cy="122.173" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="183.369" cy="116.021" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="192.491" cy="115.353" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="197.218" cy="109.66" r="7" style="fill: rgb(0,255,56); fill-opacity: 1" />
+<circle cx="210.798" cy="103.29" r="7" style="fill: rgb(0,255,127); fill-opacity: 1" />
+<circle cx="224.379" cy="96.921" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="237.959" cy="90.552" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="251.54" cy="84.182" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="265.12" cy="77.813" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="279.896" cy="83.421" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="294.275" cy="76.861" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="299.726" cy="62.027" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="293.015" cy="47.718" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="278.124" cy="42.424" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="263.887" cy="49.286" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="258.751" cy="64.232" r="7" style="fill: rgb(255,105,0); fill-opacity: 1" />
+<circle cx="245.17" cy="70.602" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="231.59" cy="76.971" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="218.009" cy="83.341" r="7" style="fill: rgb(0,255,198); fill-opacity: 1" />
+<circle cx="204.429" cy="89.71" r="7" style="fill: rgb(0,255,198); fill-opacity: 1" />
+<circle cx="190.848" cy="96.079" r="7" style="fill: rgb(0,255,198); fill-opacity: 1" />
+<circle cx="177.217" cy="102.34" r="7" style="fill: rgb(0,255,56); fill-opacity: 1" />
+<circle cx="163.537" cy="108.492" r="7" style="fill: rgb(0,255,56); fill-opacity: 1" />
+<circle cx="149.857" cy="114.644" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="136.176" cy="120.796" r="7" style="fill: rgb(0,255,56); fill-opacity: 1" />
+<circle cx="122.496" cy="126.948" r="7" style="fill: rgb(0,255,56); fill-opacity: 1" />
+<circle cx="131.552" cy="114.991" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="144.803" cy="107.961" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="155.755" cy="97.711" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="163.645" cy="84.954" r="7" style="fill: rgb(120,255,0); fill-opacity: 1" />
+<circle cx="167.924" cy="70.577" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="168.294" cy="55.582" r="7" style="fill: rgb(255,247,0); fill-opacity: 1" />
+<circle cx="164.731" cy="41.011" r="7" style="fill: rgb(0,255,0); fill-opacity: 1" />
+<circle cx="157.481" cy="27.88" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="147.049" cy="17.101" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="134.161" cy="9.426" r="7" style="fill: rgb(0,255,56); fill-opacity: 1" />
+<circle cx="119.715" cy="5.388" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="104.715" cy="5.268" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="90.207" cy="9.076" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="77.198" cy="16.545" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="66.596" cy="27.155" r="7" style="fill: rgb(0,255,127); fill-opacity: 1" />
+<circle cx="59.137" cy="40.17" r="7" style="fill: rgb(0,255,127); fill-opacity: 1" />
+<circle cx="55.342" cy="54.681" r="7" style="fill: rgb(0,255,127); fill-opacity: 1" />
+<circle cx="55.473" cy="69.681" r="7" style="fill: rgb(0,99,255); fill-opacity: 1" />
+<circle cx="59.523" cy="84.124" r="7" style="fill: rgb(0,169,255); fill-opacity: 1" />
+<circle cx="67.208" cy="97.005" r="7" style="fill: rgb(0,28,255); fill-opacity: 1" />
+<circle cx="77.995" cy="107.429" r="7" style="fill: rgb(0,99,255); fill-opacity: 1" />
+		</g>
+		<polyline class="backbone" id="outline" points="       98.997,127.769       85.416,121.399       71.835,115.030       58.255,108.661       44.674,102.291       31.094,95.922       17.513,89.553       3.933,83.183       -9.648,76.814       -9.519,63.887       -14.274,51.917       -23.175,42.671       -34.870,37.501       -47.605,37.143       -59.484,41.615       -68.752,50.220       -82.529,44.286       -96.306,38.353       -110.083,32.420       -123.859,26.487       -137.636,20.554       -151.413,14.621       -165.190,8.688       -178.966,2.755       -188.581,-9.810       -203.331,-7.738       -201.493,-22.731       -203.955,-37.634       -210.517,-51.240       -220.648,-62.445       -233.526,-70.340       -248.107,-74.286       -263.209,-73.963       -277.608,-69.397       -290.136,-60.959       -299.779,-49.331       -305.754,-35.457       -307.576,-20.462       -305.099,-5.561       -298.523,8.038       -288.381,19.232       -275.495,27.115       -260.911,31.046       -245.809,30.708       -231.414,26.128       -218.894,17.676       -209.264,6.039       -200.635,18.180       -184.899,16.532       -171.123,22.465       -157.346,28.398       -143.569,34.331       -129.792,40.264       -116.016,46.197       -102.239,52.130       -88.462,58.063       -74.685,63.996       -73.304,81.149       -63.380,95.315       -47.570,102.548       -30.185,100.775       -16.017,90.394       -2.437,96.764       11.144,103.133       24.724,109.502       38.305,115.872       51.886,122.241       65.466,128.611       79.047,134.980       92.627,141.349       83.723,143.759       76.165,151.806       73.287,164.388       77.515,178.579       74.428,193.258       71.340,207.937       68.253,222.616       65.165,237.295       57.890,245.869       59.230,255.760       53.188,269.489       47.145,283.218       41.102,296.947       27.563,306.201       29.078,322.530       44.087,329.137       57.152,319.224       54.831,302.990       60.874,289.261       66.917,275.532       72.959,261.803       75.452,276.594       83.259,289.402       95.265,298.394       109.752,302.284       124.647,300.514       137.820,293.340       147.386,281.785       151.976,267.505       150.934,252.541       144.408,239.035       133.333,228.918       119.293,223.639       104.297,223.951       90.489,229.811       79.844,240.382       82.931,225.703       86.019,211.024       89.106,196.346       92.194,181.667       106.920,178.814       115.266,191.278       123.612,203.741       131.958,216.205       130.267,232.159       141.786,243.325       157.680,241.138       165.755,227.275       159.817,212.371       144.422,207.859       136.076,195.395       127.730,182.932       119.384,170.468       121.450,163.258       134.750,170.195       148.049,177.131       161.349,184.068       174.649,191.005       187.948,197.941       196.304,210.399       208.957,218.454       223.780,220.754       238.279,216.910       250.016,207.570       257.018,194.304       258.105,179.343       253.096,165.204       242.833,154.265       229.042,148.365       214.043,148.496       200.357,154.638       185.402,153.478       170.447,152.318       155.492,151.158       140.537,149.998       125.582,148.838       127.648,141.629       141.328,135.477       155.009,129.325       168.689,123.173       182.369,117.021       191.491,116.353       196.218,110.660       209.798,104.290       223.379,97.921       236.959,91.552       250.540,85.182       264.120,78.813       278.896,84.421       293.275,77.861       298.726,63.027       292.015,48.718       277.124,43.424       262.887,50.286       257.751,65.232       244.170,71.602       230.590,77.971       217.009,84.341       203.429,90.710       189.848,97.079       176.217,103.340       162.537,109.492       148.857,115.644       135.176,121.796       121.496,127.948       130.552,115.991       143.803,108.961       154.755,98.711       162.645,85.954       166.924,71.577       167.294,56.582       163.731,42.011       156.481,28.880       146.049,18.101       133.161,10.426       118.715,6.388       103.715,6.268       89.207,10.076       76.198,17.545       65.596,28.155       58.137,41.170       54.342,55.681       54.473,70.681       58.523,85.124       66.208,98.005       76.995,108.429     " style="fill: none; stroke: black; stroke-width: 0.75" />
+		<g id="pairs" style="fill: none; stroke: black; stroke-width: 0.75">
+			<line class="basepairs" id="1,70" x1="98.99654" x2="92.62717" y1="127.76877" y2="141.34930" />
+			<line class="basepairs" id="2,69" x1="85.41599" x2="79.04662" y1="121.39940" y2="134.97995" />
+			<line class="basepairs" id="3,68" x1="71.83545" x2="65.46608" y1="115.03003" y2="128.61057" />
+			<line class="basepairs" id="4,67" x1="58.25491" x2="51.88554" y1="108.66066" y2="122.24121" />
+			<line class="basepairs" id="5,66" x1="44.67437" x2="38.30500" y1="102.29129" y2="115.87184" />
+			<line class="basepairs" id="6,65" x1="31.09382" x2="24.72445" y1="95.92192" y2="109.50247" />
+			<line class="basepairs" id="7,64" x1="17.51328" x2="11.14391" y1="89.55255" y2="103.13310" />
+			<line class="basepairs" id="8,63" x1="3.93274" x2="-2.43663" y1="83.18318" y2="96.76373" />
+			<line class="basepairs" id="9,62" x1="-9.64781" x2="-16.01718" y1="76.81381" y2="90.39436" />
+			<line class="basepairs" id="16,57" x1="-68.75242" x2="-74.68548" y1="50.21956" y2="63.99631" />
+			<line class="basepairs" id="17,56" x1="-82.52916" x2="-88.46223" y1="44.28650" y2="58.06325" />
+			<line class="basepairs" id="18,55" x1="-96.30591" x2="-102.23898" y1="38.35344" y2="52.13019" />
+			<line class="basepairs" id="19,54" x1="-110.08266" x2="-116.01572" y1="32.42038" y2="46.19713" />
+			<line class="basepairs" id="20,53" x1="-123.85941" x2="-129.79247" y1="26.48732" y2="40.26407" />
+			<line class="basepairs" id="21,52" x1="-137.63615" x2="-143.56921" y1="20.55426" y2="34.33101" />
+			<line class="basepairs" id="22,51" x1="-151.41290" x2="-157.34596" y1="14.62120" y2="28.39795" />
+			<line class="basepairs" id="23,50" x1="-165.18965" x2="-171.12271" y1="8.68814" y2="22.46489" />
+			<line class="basepairs" id="24,49" x1="-178.96640" x2="-184.89946" y1="2.75508" y2="16.53183" />
+			<line class="basepairs" id="26,47" x1="-203.33054" x2="-209.26360" y1="-7.73752" y2="6.03923" />
+			<line class="basepairs" id="74,110" x1="77.51508" x2="92.19389" y1="178.57938" y2="181.66685" />
+			<line class="basepairs" id="75,109" x1="74.42761" x2="89.10642" y1="193.25819" y2="196.34567" />
+			<line class="basepairs" id="76,108" x1="71.34014" x2="86.01895" y1="207.93701" y2="211.02448" />
+			<line class="basepairs" id="77,107" x1="68.25267" x2="82.93148" y1="222.61581" y2="225.70329" />
+			<line class="basepairs" id="78,106" x1="65.16520" x2="79.84401" y1="237.29463" y2="240.38211" />
+			<line class="basepairs" id="80,91" x1="59.23041" x2="72.95941" y1="255.76022" y2="261.80295" />
+			<line class="basepairs" id="81,90" x1="53.18769" x2="66.91669" y1="269.48923" y2="275.53195" />
+			<line class="basepairs" id="82,89" x1="47.14497" x2="60.87397" y1="283.21823" y2="289.26096" />
+			<line class="basepairs" id="83,88" x1="41.10225" x2="54.83125" y1="296.94724" y2="302.98996" />
+			<line class="basepairs" id="111,123" x1="106.92007" x2="119.38380" y1="178.81384" y2="170.46786" />
+			<line class="basepairs" id="112,122" x1="115.26605" x2="127.72979" y1="191.27759" y2="182.93161" />
+			<line class="basepairs" id="113,121" x1="123.61204" x2="136.07576" y1="203.74132" y2="195.39534" />
+			<line class="basepairs" id="114,120" x1="131.95801" x2="144.42175" y1="216.20505" y2="207.85907" />
+			<line class="basepairs" id="147,175" x1="127.64782" x2="121.49582" y1="141.62856" y2="127.94817" />
+			<line class="basepairs" id="148,174" x1="141.32820" x2="135.17621" y1="135.47656" y2="121.79617" />
+			<line class="basepairs" id="149,173" x1="155.00859" x2="148.85660" y1="129.32455" y2="115.64418" />
+			<line class="basepairs" id="150,172" x1="168.68896" x2="162.53697" y1="123.17256" y2="109.49219" />
+			<line class="basepairs" id="151,171" x1="182.36935" x2="176.21736" y1="117.02057" y2="103.34018" />
+			<line class="basepairs" id="153,170" x1="196.21762" x2="189.84825" y1="110.65985" y2="97.07930" />
+			<line class="basepairs" id="154,169" x1="209.79817" x2="203.42880" y1="104.29048" y2="90.70993" />
+			<line class="basepairs" id="155,168" x1="223.37871" x2="217.00934" y1="97.92111" y2="84.34056" />
+			<line class="basepairs" id="156,167" x1="236.95926" x2="230.58989" y1="91.55174" y2="77.97119" />
+			<line class="basepairs" id="157,166" x1="250.53979" x2="244.17043" y1="85.18237" y2="71.60182" />
+			<line class="basepairs" id="158,165" x1="264.12033" x2="257.75098" y1="78.81300" y2="65.23245" />
+		</g>
+		<g id="seq" style="font-family: Arial,Helvetica" transform="translate(-4.6, 4)">
+			<text class="nucleotide" x="98.997" y="127.769">
+-</text>
+			<text class="nucleotide" x="85.416" y="121.399">
+Y</text>
+			<text class="nucleotide" x="71.835" y="115.030">
+R</text>
+			<text class="nucleotide" x="58.255" y="108.661">
+A</text>
+			<text class="nucleotide" x="44.674" y="102.291">
+M</text>
+			<text class="nucleotide" x="31.094" y="95.922">
+W</text>
+			<text class="nucleotide" x="17.513" y="89.553">
+A</text>
+			<text class="nucleotide" x="3.933" y="83.183">
+U</text>
+			<text class="nucleotide" x="-9.648" y="76.814">
+G</text>
+			<text class="nucleotide" x="-9.519" y="63.887">
+U</text>
+			<text class="nucleotide" x="-14.274" y="51.917">
+G</text>
+			<text class="nucleotide" x="-23.175" y="42.671">
+A</text>
+			<text class="nucleotide" x="-34.870" y="37.501">
+U</text>
+			<text class="nucleotide" x="-47.605" y="37.143">
+C</text>
+			<text class="nucleotide" x="-59.484" y="41.615">
+U</text>
+			<text class="nucleotide" x="-68.752" y="50.220">
+U</text>
+			<text class="nucleotide" x="-82.529" y="44.286">
+G</text>
+			<text class="nucleotide" x="-96.306" y="38.353">
+C</text>
+			<text class="nucleotide" x="-110.083" y="32.420">
+U</text>
+			<text class="nucleotide" x="-123.859" y="26.487">
+U</text>
+			<text class="nucleotide" x="-137.636" y="20.554">
+G</text>
+			<text class="nucleotide" x="-151.413" y="14.621">
+U</text>
+			<text class="nucleotide" x="-165.190" y="8.688">
+A</text>
+			<text class="nucleotide" x="-178.966" y="2.755">
+A</text>
+			<text class="nucleotide" x="-188.581" y="-9.810">
+R</text>
+			<text class="nucleotide" x="-203.331" y="-7.738">
+K</text>
+			<text class="nucleotide" x="-201.493" y="-22.731">
+A</text>
+			<text class="nucleotide" x="-203.955" y="-37.634">
+C</text>
+			<text class="nucleotide" x="-210.517" y="-51.240">
+A</text>
+			<text class="nucleotide" x="-220.648" y="-62.445">
+A</text>
+			<text class="nucleotide" x="-233.526" y="-70.340">
+U</text>
+			<text class="nucleotide" x="-248.107" y="-74.286">
+U</text>
+			<text class="nucleotide" x="-263.209" y="-73.963">
+U</text>
+			<text class="nucleotide" x="-277.608" y="-69.397">
+U</text>
+			<text class="nucleotide" x="-290.136" y="-60.959">
+S</text>
+			<text class="nucleotide" x="-299.779" y="-49.331">
+A</text>
+			<text class="nucleotide" x="-305.754" y="-35.457">
+G</text>
+			<text class="nucleotide" x="-307.576" y="-20.462">
+A</text>
+			<text class="nucleotide" x="-305.099" y="-5.561">
+G</text>
+			<text class="nucleotide" x="-298.523" y="8.038">
+G</text>
+			<text class="nucleotide" x="-288.381" y="19.232">
+U</text>
+			<text class="nucleotide" x="-275.495" y="27.115">
+W</text>
+			<text class="nucleotide" x="-260.911" y="31.046">
+A</text>
+			<text class="nucleotide" x="-245.809" y="30.708">
+A</text>
+			<text class="nucleotide" x="-231.414" y="26.128">
+W</text>
+			<text class="nucleotide" x="-218.894" y="17.676">
+A</text>
+			<text class="nucleotide" x="-209.264" y="6.039">
+A</text>
+			<text class="nucleotide" x="-200.635" y="18.180">
+A</text>
+			<text class="nucleotide" x="-184.899" y="16.532">
+U</text>
+			<text class="nucleotide" x="-171.123" y="22.465">
+U</text>
+			<text class="nucleotide" x="-157.346" y="28.398">
+A</text>
+			<text class="nucleotide" x="-143.569" y="34.331">
+C</text>
+			<text class="nucleotide" x="-129.792" y="40.264">
+A</text>
+			<text class="nucleotide" x="-116.016" y="46.197">
+A</text>
+			<text class="nucleotide" x="-102.239" y="52.130">
+G</text>
+			<text class="nucleotide" x="-88.462" y="58.063">
+U</text>
+			<text class="nucleotide" x="-74.685" y="63.996">
+A</text>
+			<text class="nucleotide" x="-73.304" y="81.149">
+G</text>
+			<text class="nucleotide" x="-63.380" y="95.315">
+U</text>
+			<text class="nucleotide" x="-47.570" y="102.548">
+G</text>
+			<text class="nucleotide" x="-30.185" y="100.775">
+C</text>
+			<text class="nucleotide" x="-16.017" y="90.394">
+U</text>
+			<text class="nucleotide" x="-2.437" y="96.764">
+A</text>
+			<text class="nucleotide" x="11.144" y="103.133">
+U</text>
+			<text class="nucleotide" x="24.724" y="109.502">
+W</text>
+			<text class="nucleotide" x="38.305" y="115.872">
+K</text>
+			<text class="nucleotide" x="51.886" y="122.241">
+U</text>
+			<text class="nucleotide" x="65.466" y="128.611">
+U</text>
+			<text class="nucleotide" x="79.047" y="134.980">
+G</text>
+			<text class="nucleotide" x="92.627" y="141.349">
+U</text>
+			<text class="nucleotide" x="83.723" y="143.759">
+A</text>
+			<text class="nucleotide" x="76.165" y="151.806">
+U</text>
+			<text class="nucleotide" x="73.287" y="164.388">
+U</text>
+			<text class="nucleotide" x="77.515" y="178.579">
+K</text>
+			<text class="nucleotide" x="74.428" y="193.258">
+A</text>
+			<text class="nucleotide" x="71.340" y="207.937">
+G</text>
+			<text class="nucleotide" x="68.253" y="222.616">
+S</text>
+			<text class="nucleotide" x="65.165" y="237.295">
+U</text>
+			<text class="nucleotide" x="57.890" y="245.869">
+U</text>
+			<text class="nucleotide" x="59.230" y="255.760">
+R</text>
+			<text class="nucleotide" x="53.188" y="269.489">
+G</text>
+			<text class="nucleotide" x="47.145" y="283.218">
+C</text>
+			<text class="nucleotide" x="41.102" y="296.947">
+U</text>
+			<text class="nucleotide" x="27.563" y="306.201">
+A</text>
+			<text class="nucleotide" x="29.078" y="322.530">
+U</text>
+			<text class="nucleotide" x="44.087" y="329.137">
+U</text>
+			<text class="nucleotide" x="57.152" y="319.224">
+U</text>
+			<text class="nucleotide" x="54.831" y="302.990">
+A</text>
+			<text class="nucleotide" x="60.874" y="289.261">
+G</text>
+			<text class="nucleotide" x="66.917" y="275.532">
+C</text>
+			<text class="nucleotide" x="72.959" y="261.803">
+Y</text>
+			<text class="nucleotide" x="75.452" y="276.594">
+U</text>
+			<text class="nucleotide" x="83.259" y="289.402">
+U</text>
+			<text class="nucleotide" x="95.265" y="298.394">
+A</text>
+			<text class="nucleotide" x="109.752" y="302.284">
+C</text>
+			<text class="nucleotide" x="124.647" y="300.514">
+S</text>
+			<text class="nucleotide" x="137.820" y="293.340">
+U</text>
+			<text class="nucleotide" x="147.386" y="281.785">
+Y</text>
+			<text class="nucleotide" x="151.976" y="267.505">
+C</text>
+			<text class="nucleotide" x="150.934" y="252.541">
+C</text>
+			<text class="nucleotide" x="144.408" y="239.035">
+A</text>
+			<text class="nucleotide" x="133.333" y="228.918">
+G</text>
+			<text class="nucleotide" x="119.293" y="223.639">
+G</text>
+			<text class="nucleotide" x="104.297" y="223.951">
+A</text>
+			<text class="nucleotide" x="90.489" y="229.811">
+U</text>
+			<text class="nucleotide" x="79.844" y="240.382">
+G</text>
+			<text class="nucleotide" x="82.931" y="225.703">
+S</text>
+			<text class="nucleotide" x="86.019" y="211.024">
+C</text>
+			<text class="nucleotide" x="89.106" y="196.346">
+U</text>
+			<text class="nucleotide" x="92.194" y="181.667">
+M</text>
+			<text class="nucleotide" x="106.920" y="178.814">
+G</text>
+			<text class="nucleotide" x="115.266" y="191.278">
+K</text>
+			<text class="nucleotide" x="123.612" y="203.741">
+G</text>
+			<text class="nucleotide" x="131.958" y="216.205">
+G</text>
+			<text class="nucleotide" x="130.267" y="232.159">
+C</text>
+			<text class="nucleotide" x="141.786" y="243.325">
+A</text>
+			<text class="nucleotide" x="157.680" y="241.138">
+G</text>
+			<text class="nucleotide" x="165.755" y="227.275">
+C</text>
+			<text class="nucleotide" x="159.817" y="212.371">
+C</text>
+			<text class="nucleotide" x="144.422" y="207.859">
+C</text>
+			<text class="nucleotide" x="136.076" y="195.395">
+C</text>
+			<text class="nucleotide" x="127.730" y="182.932">
+M</text>
+			<text class="nucleotide" x="119.384" y="170.468">
+C</text>
+			<text class="nucleotide" x="121.450" y="163.258">
+A</text>
+			<text class="nucleotide" x="134.750" y="170.195">
+A</text>
+			<text class="nucleotide" x="148.049" y="177.131">
+U</text>
+			<text class="nucleotide" x="161.349" y="184.068">
+A</text>
+			<text class="nucleotide" x="174.649" y="191.005">
+U</text>
+			<text class="nucleotide" x="187.948" y="197.941">
+C</text>
+			<text class="nucleotide" x="196.304" y="210.399">
+C</text>
+			<text class="nucleotide" x="208.957" y="218.454">
+A</text>
+			<text class="nucleotide" x="223.780" y="220.754">
+G</text>
+			<text class="nucleotide" x="238.279" y="216.910">
+G</text>
+			<text class="nucleotide" x="250.016" y="207.570">
+R</text>
+			<text class="nucleotide" x="257.018" y="194.304">
+A</text>
+			<text class="nucleotide" x="258.105" y="179.343">
+R</text>
+			<text class="nucleotide" x="253.096" y="165.204">
+C</text>
+			<text class="nucleotide" x="242.833" y="154.265">
+C</text>
+			<text class="nucleotide" x="229.042" y="148.365">
+C</text>
+			<text class="nucleotide" x="214.043" y="148.496">
+U</text>
+			<text class="nucleotide" x="200.357" y="154.638">
+C</text>
+			<text class="nucleotide" x="185.402" y="153.478">
+U</text>
+			<text class="nucleotide" x="170.447" y="152.318">
+S</text>
+			<text class="nucleotide" x="155.492" y="151.158">
+U</text>
+			<text class="nucleotide" x="140.537" y="149.998">
+G</text>
+			<text class="nucleotide" x="125.582" y="148.838">
+C</text>
+			<text class="nucleotide" x="127.648" y="141.629">
+G</text>
+			<text class="nucleotide" x="141.328" y="135.477">
+G</text>
+			<text class="nucleotide" x="155.009" y="129.325">
+Y</text>
+			<text class="nucleotide" x="168.689" y="123.173">
+Y</text>
+			<text class="nucleotide" x="182.369" y="117.021">
+U</text>
+			<text class="nucleotide" x="191.491" y="116.353">
+U</text>
+			<text class="nucleotide" x="196.218" y="110.660">
+W</text>
+			<text class="nucleotide" x="209.798" y="104.290">
+M</text>
+			<text class="nucleotide" x="223.379" y="97.921">
+A</text>
+			<text class="nucleotide" x="236.959" y="91.552">
+S</text>
+			<text class="nucleotide" x="250.540" y="85.182">
+A</text>
+			<text class="nucleotide" x="264.120" y="78.813">
+U</text>
+			<text class="nucleotide" x="278.896" y="84.421">
+U</text>
+			<text class="nucleotide" x="293.275" y="77.861">
+A</text>
+			<text class="nucleotide" x="298.726" y="63.027">
+G</text>
+			<text class="nucleotide" x="292.015" y="48.718">
+G</text>
+			<text class="nucleotide" x="277.124" y="43.424">
+U</text>
+			<text class="nucleotide" x="262.887" y="50.286">
+A</text>
+			<text class="nucleotide" x="257.751" y="65.232">
+G</text>
+			<text class="nucleotide" x="244.170" y="71.602">
+U</text>
+			<text class="nucleotide" x="230.590" y="77.971">
+S</text>
+			<text class="nucleotide" x="217.009" y="84.341">
+K</text>
+			<text class="nucleotide" x="203.429" y="90.710">
+W</text>
+			<text class="nucleotide" x="189.848" y="97.079">
+A</text>
+			<text class="nucleotide" x="176.217" y="103.340">
+A</text>
+			<text class="nucleotide" x="162.537" y="109.492">
+R</text>
+			<text class="nucleotide" x="148.857" y="115.644">
+A</text>
+			<text class="nucleotide" x="135.176" y="121.796">
+C</text>
+			<text class="nucleotide" x="121.496" y="127.948">
+C</text>
+			<text class="nucleotide" x="130.552" y="115.991">
+U</text>
+			<text class="nucleotide" x="143.803" y="108.961">
+A</text>
+			<text class="nucleotide" x="154.755" y="98.711">
+A</text>
+			<text class="nucleotide" x="162.645" y="85.954">
+G</text>
+			<text class="nucleotide" x="166.924" y="71.577">
+A</text>
+			<text class="nucleotide" x="167.294" y="56.582">
+A</text>
+			<text class="nucleotide" x="163.731" y="42.011">
+A</text>
+			<text class="nucleotide" x="156.481" y="28.880">
+U</text>
+			<text class="nucleotide" x="146.049" y="18.101">
+U</text>
+			<text class="nucleotide" x="133.161" y="10.426">
+Y</text>
+			<text class="nucleotide" x="118.715" y="6.388">
+A</text>
+			<text class="nucleotide" x="103.715" y="6.268">
+C</text>
+			<text class="nucleotide" x="89.207" y="10.076">
+C</text>
+			<text class="nucleotide" x="76.198" y="17.545">
+U</text>
+			<text class="nucleotide" x="65.596" y="28.155">
+S</text>
+			<text class="nucleotide" x="58.137" y="41.170">
+C</text>
+			<text class="nucleotide" x="54.342" y="55.681">
+W</text>
+			<text class="nucleotide" x="54.473" y="70.681">
+R</text>
+			<text class="nucleotide" x="58.523" y="85.124">
+A</text>
+			<text class="nucleotide" x="66.208" y="98.005">
+M</text>
+			<text class="nucleotide" x="76.995" y="108.429">
+W</text>
+			<text id="fivePrime" style="fill: dimgrey; font-family: Arial,Helvetica; font-size: 10px; text-ancor: middle" x="103.997" y="111.769">5&apos;</text>
+			<text id="threePrime" style="fill: dimgrey; font-family: Arial,Helvetica; font-size: 10px; text-ancor: middle" x="81.995" y="92.429">3&apos;</text>
+		</g>
+	</g>
+	<script><![CDATA[
+        var shown = 1;
+        function click() {
+             var seq = document.getElementById("seq");
+             var lines = document.getElementById("outline");
+             var pairs = document.getElementById("pairs");
+
+             if (shown==1) {
+               seq.setAttribute("style", "font-family: Arial,Helvetica; visibility: hidden");
+               lines.setAttribute("style", "fill: none; stroke: black; stroke-width: 0.75; visibility: visible");
+               pairs.setAttribute("style", "fill: none; stroke: black; stroke-width: 0.75; visibility: visible");
+
+               shown = 2;
+             } else if (shown==2) {
+               seq.setAttribute("style", "font-family: Arial,Helvetica; visibility: visible");
+               pairs.setAttribute("style", "fill: none; stroke: black; stroke-width: 0.75; visibility: hidden");
+               lines.setAttribute("style", "fill: none; stroke: black; stroke-width: 0.75; visibility: hidden");
+
+               shown = 3;
+             } else if (shown==3) {
+               seq.setAttribute("style", "font-family: Arial,Helvetica; visibility: visible");
+               lines.setAttribute("style", "fill: none; stroke: black; stroke-width: 0.75; visibility: visible");
+               pairs.setAttribute("style", "fill: none; stroke: black; stroke-width: 0.75; visibility: visible");
+               shown = 1;
+             }
+         }
+  ]]></script>
+	<!--
+	Generated using the Perl SVG Module V2.87
+	by Ronan Oger
+
+	-->
+</svg>

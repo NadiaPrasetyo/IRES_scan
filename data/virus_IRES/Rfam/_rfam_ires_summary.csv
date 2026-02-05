@@ -1,0 +1,42 @@
+NCBI_tax_ID,accession,bit_score,region_end,region_start,rfam_id,seq_description,species
+31646,AF009606.1,434.2,354,2,RF00061,"Hepatitis C virus subtype 1a polyprotein gene, complete cds.",Hepatitis C virus subtype 1a
+11100,M31182.1,362.3,385,1,RF00209,"Bovine viral diarrhea virus 1-NADL, complete genome.",Bovine viral diarrhea virus 1-NADL
+73482,X00871.1,539.6,712,252,RF00210,X00871.1 Foot and mouth disease virus (FMDV-O1K) RNA for polyprotein precursor,Foot-and-mouth disease virus (strain O1)
+649897,AF308157.1,521.2,1057,595,RF00210,"Foot-and-mouth disease virus, complete genome.",Foot-and-mouth disease virus O/swine/1997
+39085,AJ005695.1,195.4,698,232,RF00210,Human parechovirus 2 complete genome,Human parechovirus 2
+650129,M81861.1,156.2,830,374,RF00210,"Encephalomyocarditis virus polyprotein, complete cds.",Encephalomyocarditis virus strain Rueckert
+2773293,KP233897.1,152.2,746,290,RF00210,"KP233897.1 Rabovirus A1 isolate Berlin/Jan2011/0572, complete genome",rabovirus A1
+50429,LSMT01000209.1,151.4,284971,284514,RF00210,"LSMT01000209.1 Stylophora pistillata isolate CSM Monaco Spis.scaffold209, whole genome shotgun sequence",Stylophora pistillata
+1554474,KJ158169.1,138.4,826,353,RF00210,"Rosavirus 2 strain GA7403, complete genome.",Rosavirus A2 isolate Human/Gambia/GA7403/2008
+1168173,HM153767.3,132.7,711,262,RF00210,"Ovine hungarovirus OHUV1/2009/HUN, complete genome.",Ovine hungarovirus OHUV1/2009/HUN
+1554481,KF958461.1,121.3,652,204,RF00210,"Mosavirus A2 strain SZAL6-MoV/2011/HUN, complete genome.",Mosavirus A2 isolate Coracias garrulus/Hungary/SZAL6-MoV/2011
+1554483,FJ438902.1,118.3,1159,601,RF00210,"Cosavirus A strain HCoSV-A1 polyprotein gene, complete cds.",Cosavirus A isolate Human/Pakistan/0553/-
+1195365,JQ814851.1,117.5,1406,947,RF00210,"Miniopterus schreibersii picornavirus 1, complete genome.",Miniopterus schreibersii picornavirus 1
+1554484,KC614703.1,61.3,589,128,RF00210,"Turkey avisivirus isolate USA-IN1, complete genome.",Avisivirus A isolate Turkey/USA/USA-IN1/2010
+228578,U30944.1,159.3,5597,5444,RF00225,"Youcai mosaic virus replicase, movement protein, and coat protein mRNA, complete cds.",Youcai mosaic virus
+51680,HQ667979.1,141.4,5605,5455,RF00225,"HQ667979.1 Ribgrass mosaic virus strain Kons.1105 isolate R14, complete genome",Ribgrass mosaic virus
+10376,AB850647.1,268.6,55367,55151,RF00448,"AB850647.1 Human herpesvirus 4 DNA, complete genome, strain: HN12",Human herpesvirus 4 (Epstein-Barr virus)
+10376,AB850654.1,268.6,55370,55154,RF00448,"ENA|AB850654|AB850654.1 Human herpesvirus 4 DNA, complete genome, strain: HN15.",Human herpesvirus 4 (Epstein-Barr virus)
+10376,AJ507799.2,268.6,55369,55153,RF00448,Human herpesvirus 4 complete wild type genome,Human herpesvirus 4 (Epstein-Barr virus)
+10376,DQ279927.1,265.1,55485,55269,RF00448,"Human herpesvirus 4 strain AG876, complete genome.",Human herpesvirus 4 (Epstein-Barr virus)
+1716044,KP676001.1,212.7,39164,38948,RF00448,"Lymphocryptovirus Macaca/pfe-lcl-E3, complete genome.",Lymphocryptovirus Macaca/pfe-lcl-E3
+9597,AJFE02004538.1,205.2,8507,8291,RF00448,"AJFE02004538.1 Pan paniscus isolate Ulindi cntg4739, whole genome shotgun sequence",Pan paniscus (pygmy chimpanzee)
+1923691,KX884282.1,158.9,6130,5938,RF00458,"Wuhan arthropod virus 2 strain WHSF0 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Wuhan arthropod virus 2
+1923095,KX883972.1,128,5823,5630,RF00458,"Hubei picorna-like virus 16 strain SCM51353 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Hubei picorna-like virus 16
+1922622,KX883381.1,127.9,6659,6466,RF00458,"Beihai picorna-like virus 75 strain BHJP52955 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Beihai picorna-like virus 75
+1923736,KX884274.1,124.2,7201,7022,RF00458,"Wuhan insect virus 33 strain WHCCII11871 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Wuhan insect virus 33
+1922870,KX883971.1,122.5,5893,5699,RF00458,"Hubei diptera virus 1 strain SCM51289 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Hubei diptera virus 1
+1923742,KX884293.1,121.9,7471,7275,RF00458,"Wuhan millipede virus 3 strain WHWG56524 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Wuhan millipede virus 3
+1923104,KX883736.1,113.3,5793,5584,RF00458,"Hubei picorna-like virus 24 strain WGML142000 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Hubei picorna-like virus 24
+1923094,KX883290.1,109.5,7013,6822,RF00458,"Hubei picorna-like virus 15 strain arthropodmix13755 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Hubei picorna-like virus 15
+2848912,MW864599.1,105,4540,4344,RF00458,"MW864599.1 Anisopteromalus calandrae positive-strand RNA virus 1, complete genome",Anisopteromalus calandrae positive-strand RNA virus 1
+1923451,KX883654.1,87.4,5927,5717,RF00458,"Shahe picorna-like virus 8 strain SHWC12398 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Shahe picorna-like virus 8
+1922638,KX883372.1,60.4,6317,6126,RF00458,"Beihai picorna-like virus 91 strain BHJJX25930 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Beihai picorna-like virus 91
+1923485,KX884315.1,58.4,5785,5604,RF00458,"Wenling crustacean virus 2 strain WLJQ102135 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Wenling crustacean virus 2
+1923441,KX883663.1,57.6,6306,6128,RF00458,"Shahe picorna-like virus 11 strain SHWC13613 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Shahe picorna-like virus 11
+1923652,KX883979.1,53.9,6308,6097,RF00458,"Wenzhou shrimp virus 5 strain shrimp14323 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Wenzhou shrimp virus 5
+1923653,KX884348.1,53,7293,7089,RF00458,"Wenzhou shrimp virus 6 strain WZRBX43423 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Wenzhou shrimp virus 6
+1922784,KX884554.1,51.3,5348,5201,RF00458,"Changjiang picorna-like virus 11 strain CJLX30672 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Changjiang picorna-like virus 11
+1922626,KX883338.1,46.1,5590,5405,RF00458,"Beihai picorna-like virus 79 strain BHBJDX18844 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Beihai picorna-like virus 79
+1922628,KX884478.1,46.1,5567,5388,RF00458,"Beihai picorna-like virus 80 strain BHZC36213 hypothetical protein 2 genes, complete cds.",Beihai picorna-like virus 80
+1923093,KX883934.1,44.5,6467,6306,RF00458,"Hubei picorna-like virus 14 strain QTM26191 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",Hubei picorna-like virus 14

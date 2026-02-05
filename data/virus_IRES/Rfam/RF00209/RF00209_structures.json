@@ -1,1 +1,1 @@
-{"mapping":[{"chain":"N","pdb_start":1,"cm_start":134,"pdb_id":"4c4q","pdb_end":233,"rfam_acc":"RF00209","cm_end":368,"evalue_score":"7.6e-69","bit_score":230.9}]}
+{"mapping":[{"chain":"N","cm_start":134,"pdb_start":1,"pdb_end":233,"pdb_id":"4c4q","rfam_acc":"RF00209","cm_end":368,"evalue_score":"7.6e-69","bit_score":230.9}]}

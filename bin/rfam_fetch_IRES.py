@@ -134,11 +134,11 @@ def fetch_family_regions(rfam_id):
         regions.append({
             "accession": fields[0],
             "bit_score": fields[1],
-            "region_type": fields[2],
-            "seq_start": fields[3],
-            "seq_end": fields[4],
-            "description": fields[5],
-            "species": fields[6],
+            "region_start": fields[2],
+            "region_end": fields[3],
+            "seq_description": fields[4],
+            "species": fields[5],
+            "NCBI_tax_ID": fields[6],
         })
 
     return regions
@@ -154,54 +154,45 @@ def fetch_family_data(rfam_id, outdir):
     fam_dir = os.path.join(outdir, rfam_id)
     os.makedirs(fam_dir, exist_ok=True)
 
-    data = {
-        "rfam_id": rfam_id,
-        "sequence": None,
-        "secondary_structure": None,
-        "covariation_cm": None,
-        "stockholm": None,
-        "fasta": None,
-        "structure_json": None,
-    }
-
     # FASTA (ungapped)
     r = safe_get(f"{FETCH_URL}/{rfam_id}/alignment/fastau")
     if r:
         fasta_path = os.path.join(fam_dir, f"{rfam_id}.fa")
         open(fasta_path, "w").write(r.text)
-        data["fasta"] = fasta_path
-
-        # take first sequence
-        seq = "".join(
-            line.strip()
-            for line in r.text.splitlines()
-            if not line.startswith(">")
-        )
-        data["sequence"] = seq or None
+        print(f"Saved ungapped FASTA to {fasta_path}")
 
     # Stockholm alignment
     r = safe_get(f"{FETCH_URL}/{rfam_id}/alignment/stockholm")
     if r:
         sto_path = os.path.join(fam_dir, f"{rfam_id}.sto")
         open(sto_path, "w").write(r.text)
-        data["stockholm"] = sto_path
-        data["secondary_structure"] = extract_secondary_structure(r.text)
+        print(f"Saved Stockholm alignment to {sto_path}")
+        # save secondary structure in a separate file for easier access
+        ss_path = os.path.join(fam_dir, f"{rfam_id}_ss.txt")
+        open(ss_path, "w").write(extract_secondary_structure(r.text) or "")
+        print(f"Extracted secondary structure to {ss_path}")
 
     # Covariance model
     r = safe_get(f"{FETCH_URL}/{rfam_id}/cm")
     if r:
         cm_path = os.path.join(fam_dir, f"{rfam_id}.cm")
         open(cm_path, "w").write(r.text)
-        data["covariation_cm"] = cm_path
+        print(f"Saved covariance model to {cm_path}")
 
     # Structure mapping JSON
     r = safe_get(f"{FETCH_URL}/{rfam_id}/structures?content-type=application/json")
     if r:
         json_path = os.path.join(fam_dir, f"{rfam_id}_structures.json")
         open(json_path, "w").write(r.text)
-        data["structure_json"] = json_path
+        print(f"Saved structure mapping JSON to {json_path}")
 
-    return data
+    # Structure images (if available)
+    r = safe_get(f"{FETCH_URL}/{rfam_id}/image/cons")
+    if r:
+        img_path = os.path.join(fam_dir, f"{rfam_id}_structure.png")
+        open(img_path, "wb").write(r.content)
+        print(f"Saved consensus structure image to {img_path}")
+                 
 
 
 def main():
@@ -234,48 +225,40 @@ def main():
     for rfam_id in rfam_ids:
         print(f"Processing family {rfam_id}")
 
-        fam_data = fetch_family_data(rfam_id, args.output_dir)
+        fetch_family_data(rfam_id, args.output_dir)
         regions = fetch_family_regions(rfam_id)
 
-        if not regions:
-            # still record the family even if no regions are returned
-            rows.append({
-                "rfam_id": rfam_id,
-                **fam_data
-            })
-            continue
 
         for region in regions:
             row = {
                 "rfam_id": rfam_id,
-                **fam_data,
                 **region,
             }
             rows.append(row)
 
         time.sleep(0.3)
 
-    rows = dedupe_rows(rows)
-    
-    # Write CSV
-    csv_path = os.path.join(args.output_dir, "rfam_ires_summary.csv")
+        rows = dedupe_rows(rows)
+        # Write CSV
+        csv_path = os.path.join(args.output_dir, "_rfam_ires_summary.csv")
 
-    if not rows:
-        print("\nNo valid IRES entries produced rows.")
-        print("This usually means:")
-        print("  - sequence entries lacked seq_start/seq_end")
-        print("  - or RFAM returned metadata-only hits")
-        print(f"\nEmpty CSV not written: {csv_path}")
-        return
+        if not rows:
+            print("\nNo valid IRES entries produced rows.")
+            print("This usually means:")
+            print("  - sequence entries lacked seq_start/seq_end")
+            print("  - or RFAM returned metadata-only hits")
+            print(f"\nEmpty CSV not written: {csv_path}")
+            return
 
-    with open(csv_path, "w", newline="") as fh:
-        writer = csv.DictWriter(fh, fieldnames=sorted(rows[0].keys()))
-        writer.writeheader()
-        for row in rows:
-            writer.writerow(row)
+        with open(csv_path, "w", newline="") as fh:
+            writer = csv.DictWriter(fh, fieldnames=sorted(rows[0].keys()))
+            writer.writeheader()
+            for row in rows:
+                writer.writerow(row)
 
-    print(f"\nDone. CSV written to {csv_path}")
+        print(f"Rfam regions CSV written to {csv_path}")
 
+    print("\nDone.")
 
 if __name__ == "__main__":
     main()
