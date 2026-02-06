@@ -69,6 +69,63 @@ def dedupe_rows(rows):
 
     return unique
 
+def fetch_full_sequence(accession):
+    """
+    Fetch full FASTA sequence for an accession from ENA.
+    Returns (header, sequence) or (None, None)
+    """
+    url = f"https://www.ebi.ac.uk/ena/browser/api/fasta/{accession}"
+    r = safe_get(url)
+    if not r:
+        return None, None
+
+    lines = r.text.strip().splitlines()
+    if not lines or not lines[0].startswith(">"):
+        return None, None
+
+    header = lines[0]
+    seq = "".join(lines[1:]).replace(" ", "").replace("\n", "")
+    return header, seq
+
+def extract_region_sequences(rfam_id, outdir):
+    """
+    For each region in {rfam_id}_regions.csv, fetch the full sequence,
+    extract start:end, and save as FASTA.
+    """
+    fam_dir = os.path.join(outdir, rfam_id)
+    regions_csv = os.path.join(fam_dir, f"{rfam_id}_regions.csv")
+
+    if not os.path.exists(regions_csv):
+        print(f"No regions CSV found for {rfam_id}")
+        return
+
+    with open(regions_csv, newline="") as fh:
+        reader = csv.DictReader(fh)
+        for row in reader:
+            accession = row["accession"]
+            start = int(row["start"])
+            end = int(row["end"])
+
+            header, full_seq = fetch_full_sequence(accession)
+            if not full_seq:
+                print(f"Failed to fetch sequence for {accession}")
+                continue
+
+            # ENA coordinates are 1-based, inclusive
+            subseq = full_seq[start - 1:end]
+
+            out_fa = os.path.join(
+                fam_dir, f"{accession}_{start}_{end}.fa"
+            )
+
+            with open(out_fa, "w") as out:
+                out.write(f">{accession}:{start}-{end}\n")
+                # wrap sequence at 60 chars
+                for i in range(0, len(subseq), 60):
+                    out.write(subseq[i:i+60] + "\n")
+
+            print(f"Saved region sequence to {out_fa}")
+
 def collect_rfam_ids(entries):
     """
     Collect RFAM family IDs from EBISearch entries.
@@ -114,7 +171,7 @@ def fetch_search_results(org):
     r.raise_for_status()
     return r.json()["entries"]
 
-def fetch_family_regions(rfam_id):
+def fetch_family_regions(rfam_id, outdir):
     """
     Returns a list of dicts:
     accession, type, start, end, description, species
@@ -124,26 +181,17 @@ def fetch_family_regions(rfam_id):
     if not r:
         return []
 
-    regions = []
-    for line in r.text.splitlines():
-        if not line or line.startswith("#"):
-            continue
-
-        fields = line.split("\t")
-        if len(fields) < 7:
-            continue
-
-        regions.append({
-            "accession": fields[0],
-            "bit_score": fields[1],
-            "region_start": fields[2],
-            "region_end": fields[3],
-            "seq_description": fields[4],
-            "species": fields[5],
-            "NCBI_tax_ID": fields[6],
-        })
-
-    return regions
+    csv_path = os.path.join(outdir, rfam_id, f"{rfam_id}_regions.csv")
+    with open(csv_path, "w", newline="") as fh:
+        writer = csv.writer(fh)
+        writer.writerow(["accession", "bits_score", "start", "end", "description", "species", "tax_id"])
+        for line in r.text.splitlines():
+            if line.startswith("#") or not line.strip():
+                continue
+            parts = line.split("\t")
+            if len(parts) >= 7:
+                writer.writerow(parts[:7])
+    print(f"Saved family regions to {csv_path}")
 
 def extract_secondary_structure(stockholm_text):
     for line in stockholm_text.splitlines():
@@ -230,43 +278,16 @@ def main():
     rfam_ids = collect_rfam_ids(entries)
     print(f"Collected {len(rfam_ids)} unique RFAM families")
 
-    rows = []
 
     for rfam_id in rfam_ids:
         print(f"Processing family {rfam_id}")
 
         fetch_family_data(rfam_id, args.output_dir)
-        regions = fetch_family_regions(rfam_id)
-
-
-        for region in regions:
-            row = {
-                "rfam_id": rfam_id,
-                **region,
-            }
-            rows.append(row)
+        fetch_family_regions(rfam_id, args.output_dir)
+        extract_region_sequences(rfam_id, args.output_dir)
 
         time.sleep(0.3)
 
-        rows = dedupe_rows(rows)
-        # Write CSV
-        csv_path = os.path.join(args.output_dir, "_rfam_ires_summary.csv")
-
-        if not rows:
-            print("\nNo valid IRES entries produced rows.")
-            print("This usually means:")
-            print("  - sequence entries lacked seq_start/seq_end")
-            print("  - or RFAM returned metadata-only hits")
-            print(f"\nEmpty CSV not written: {csv_path}")
-            return
-
-        with open(csv_path, "w", newline="") as fh:
-            writer = csv.DictWriter(fh, fieldnames=sorted(rows[0].keys()))
-            writer.writeheader()
-            for row in rows:
-                writer.writerow(row)
-
-        print(f"Rfam regions CSV written to {csv_path}")
 
     print("\nDone.")
 
