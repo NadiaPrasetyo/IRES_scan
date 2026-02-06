@@ -7,6 +7,8 @@ import os
 import sys
 import time
 import requests
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+import os
 
 SEARCH_URL = "https://www.ebi.ac.uk/ebisearch/ws/rest/rfam"
 FETCH_URL = "https://rfam.org/family"
@@ -186,13 +188,21 @@ def fetch_family_data(rfam_id, outdir):
         open(json_path, "w").write(r.text)
         print(f"Saved structure mapping JSON to {json_path}")
 
-    # Structure images (if available)
-    r = safe_get(f"{FETCH_URL}/{rfam_id}/image/cons")
-    if r:
-        img_path = os.path.join(fam_dir, f"{rfam_id}_structure.png")
-        open(img_path, "wb").write(r.content)
-        print(f"Saved consensus structure image to {img_path}")
-                 
+    url = f"{FETCH_URL}/{rfam_id}/image/cons"
+    svg_path = os.path.join(fam_dir, f"{rfam_id}_structure.svg")
+
+    r = safe_get(url)
+    if r and r.headers.get("Content-Type", "").startswith("image/svg"):
+        with open(svg_path, "wb") as fh:
+            fh.write(r.content)
+        print(f"Saved structure SVG to {svg_path}")
+    elif r:
+        html_path = os.path.join(fam_dir, f"{rfam_id}_structure.html")
+        with open(html_path, "w") as fh:
+            fh.write(r.text)
+        print(f"Saved raw HTML to {html_path}")
+    else:
+        print(f"No structure response for {rfam_id} at {url}")
 
 
 def main():
