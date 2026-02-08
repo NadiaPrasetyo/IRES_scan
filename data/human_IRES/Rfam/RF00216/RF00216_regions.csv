@@ -1,0 +1,140 @@
+accession,bits_score,start,end,description,species,tax_id
+CM000670.2,389.4,127736244,127736545,"Homo sapiens chromosome 8, GRCh38 reference primary assembly.",Homo sapiens (human),9606
+CM000322.4,386.3,130141841,130142142,"Pan troglodytes isolate Yerkes chimp pedigree #C0471 (Clint) chromosome 8, whole genome shotgun sequence.",Pan troglodytes (chimpanzee),9598
+CM003391.1,386.3,127131687,127131988,"CM003391.1 Pan paniscus isolate Ulindi chromosome 8, whole genome shotgun sequence",Pan paniscus (pygmy chimpanzee),9597
+FR853101.2,380.9,129151049,129151350,"Gorilla gorilla gorilla genomic chromosome, chr8, whole genome shotgun sequence",Gorilla gorilla gorilla (western lowland gorilla),9595
+CM001662.1,360.8,82733975,82734279,"Nomascus leucogenys chromosome 16, whole genome shotgun sequence.",Nomascus leucogenys (Northern white-cheeked gibbon),61853
+KN980162.1,359.7,17666756,17666454,"KN980162.1 Colobus angolensis palliatus isolate OR3802 unplaced genomic scaffold Scaffold17, whole genome shotgun sequence",Colobus angolensis palliatus,336983
+MCGX01000410.1,359.4,3132607,3132305,"MCGX01000410.1 Rhinopithecus bieti isolate Rb0 scaffold_54, whole genome shotgun sequence",Rhinopithecus bieti (Black snub-nosed monkey),61621
+CM009270.2,358,126330060,126330362,"CM009270.2 Pongo abelii isolate Susie chromosome 8, whole genome shotgun sequence",Pongo abelii (Sumatran orangutan),9601
+KN298037.1,356.8,269601,269903,"KN298037.1 Rhinopithecus roxellana isolate Xiao Hai unplaced genomic scaffold ENSRROG039254, whole genome shotgun sequence",Rhinopithecus roxellana (golden snub-nosed monkey),61622
+CM009958.1,352.9,130037080,130037382,"CM009958.1 Theropithecus gelada isolate Dixy chromosome 8, whole genome shotgun sequence",Theropithecus gelada (gelada baboon),9565
+CM018187.2,352.9,123035046,123035348,"CM018187.2 Papio anubis isolate 15944 chromosome 8, whole genome shotgun sequence",Papio anubis (Olive baboon),9555
+CM001948.2,352.4,122283175,122283477,"Chlorocebus sabaeus isolate 1994-021 chromosome 8, whole genome shotgun sequence.",Chlorocebus sabaeus,60711
+KN973840.1,350,383023,382721,"KN973840.1 Mandrillus leucophaeus isolate KB7577 unplaced genomic scaffold Scaffold177, whole genome shotgun sequence",Mandrillus leucophaeus (drill),9568
+KQ009788.1,343.7,11708982,11708680,"KQ009788.1 Cercocebus atys isolate FAK unplaced genomic scaffold Scaffold126, whole genome shotgun sequence",Cercocebus atys (sooty mangabey),9531
+CM019246.1,341.8,131306569,131306879,"CM019246.1 Piliocolobus tephrosceles isolate RC106 chromosome 7, whole genome shotgun sequence",Piliocolobus tephrosceles (Ugandan red Colobus),591936
+CM014343.1,340.5,128099426,128099728,"CM014343.1 Macaca mulatta isolate AG07107 chromosome 8, whole genome shotgun sequence",Macaca mulatta (Rhesus monkey),9544
+KQ005503.1,340.5,2002917,2003219,"KQ005503.1 Macaca nemestrina isolate M95218 unplaced genomic scaffold Scaffold182, whole genome shotgun sequence",Macaca nemestrina (pig-tailed macaque),9545
+CM021946.1,336.6,126700550,126700852,"CM021946.1 Macaca fascicularis isolate cy0333 breed Mauritian cynomolgus macaque chromosome 8, whole genome shotgun sequence",Macaca fascicularis (crab-eating macaque),9541
+KV389439.1,333.4,8610604,8610297,"KV389439.1 Cebus capucinus imitator isolate Cc_AM_T3 unplaced genomic scaffold Scaffold13, whole genome shotgun sequence",Cebus imitator (Panamanian white-faced capuchin),2715852
+KZ201537.1,332.5,1154339,1154036,"KZ201537.1 Aotus nancymaae isolate 86115 unplaced genomic scaffold Scaffold257, whole genome shotgun sequence",Aotus nancymaae (Ma's night monkey),37293
+CM021930.1,331.9,67890886,67890583,"CM021930.1 Callithrix jacchus isolate mCalJac1 chromosome 16, whole genome shotgun sequence",Callithrix jacchus (white-tufted-ear marmoset),9483
+NW_022436943.1,324.5,51032121,51032424,"NW_022436943.1 Sapajus apella isolate SASKATOON/1434 unplaced genomic scaffold, GSC_monkey_1.0 scaffold3, whole genome shotgun sequence",Cebus apella (Tufted capuchin),9515
+JH378163.1,295.1,10536501,10536208,"JH378163.1 Saimiri boliviensis boliviensis unplaced genomic scaffold scaffold00059, whole genome shotgun sequence",Saimiri boliviensis boliviensis (Bolivian squirrel monkey),39432
+KQ021892.1,264.5,2378482,2378164,"KQ021892.1 Propithecus coquereli isolate 6110/MARCELLA unplaced genomic scaffold Scaffold234, whole genome shotgun sequence",Propithecus coquereli (Coquerel's sifaka),379532
+CM007669.1,239.7,75320188,75320504,"CM007669.1 Microcebus murinus isolate mixed chromosome 9, whole genome shotgun sequence",Microcebus murinus (gray mouse lemur),30608
+MPIZ01001246.1,231,2894540,2894224,"MPIZ01001246.1 Prolemur simus strain KIAN8.4 scaffold1246, whole genome shotgun sequence",Prolemur simus (greater bamboo lemur),1328070
+GL873523.1,209.9,3374614,3374297,"Otolemur garnettii unplaced genomic scaffold scaffold00004, whole genome shotgun sequence.",Otolemur garnettii (small-eared galago),30611
+NW_017872684.1,200.1,782179,782496,"NW_017872684.1 Castor canadensis isolate Ward unplaced genomic scaffold, C.can genome v1.0 scaffold_3357, whole genome shotgun sequence",Castor canadensis (American beaver),51338
+KB320973.1,199.9,414671,414987,"KB320973.1 Tupaia chinensis unplaced genomic scaffold Scaffold000513_1, whole genome shotgun sequence",Tupaia chinensis (Chinese tree shrew),246437
+LR738611.1,197.3,199234055,199234358,"LR738611.1 Sciurus vulgaris genome assembly, chromosome: 1",Sciurus vulgaris (Eurasian red squirrel),55149
+JAATJV010433784.1,196.9,905956,905653,"JAATJV010433784.1 Sciurus carolinensis isolate SUZIE scaffold8103, whole genome shotgun sequence",Sciurus carolinensis (gray squirrel),30640
+CZRN02000108.1,194.2,25177867,25178166,"CZRN02000108.1 Marmota marmota marmota genome assembly, contig: chr15_part1, whole genome shotgun sequence",Marmota marmota marmota (Alpine marmot),9994
+CM027701.2,189.6,51080423,51080095,"CM027701.2 Equus asinus breed Dezhou chromosome 12, whole genome shotgun sequence",Equus asinus (ass),9793
+CABDUW010000210.1,188.5,347534,347833,"CABDUW010000210.1 Marmota monax genome assembly, contig: monax5_s00210, whole genome shotgun sequence",Marmota monax (woodchuck),9995
+CM009156.1,187.9,71418718,71419046,"CM009156.1 Equus caballus isolate Twilight breed thoroughbred chromosome 9, whole genome shotgun sequence",Equus caballus (horse),9796
+QVIC01000013.1,187.8,9090260,9089961,"QVIC01000013.1 Urocitellus parryii isolate AGS 11-09-20 scaffold_12, whole genome shotgun sequence",Spermophilus parryii (Arctic ground squirrel),9999
+JH393280.1,187.2,20485743,20485444,"JH393280.1 Spermophilus tridecemlineatus unplaced genomic scaffold scaffold00002, whole genome shotgun sequence",Spermophilus tridecemlineatus (thirteen-lined ground squirrel),43179
+CM016651.2,185.7,30833664,30833986,"CM016651.2 Camelus dromedarius isolate Drom800 breed African chromosome 25, whole genome shotgun sequence",Camelus dromedarius (Arabian camel),9838
+CM000815.5,184.7,12460148,12459822,"Sus scrofa isolate TJ Tabasco breed Duroc chromosome 4, whole genome shotgun sequence.",Sus scrofa (pig),9823
+NW_011544900.1,184.6,9734270,9734592,"NW_011544900.1 Camelus bactrianus breed Alxa unplaced genomic scaffold, Ca_bactrianus_MBC_1.0 scaffold8, whole genome shotgun sequence",Camelus bactrianus (Bactrian camel),9837
+JACDTQ010002883.1,182.2,35507731,35508062,"JACDTQ010002883.1 Diceros bicornis minor isolate SBR-YM ScS9zPn_2883, whole genome shotgun sequence",Diceros bicornis minor,77932
+PVHT020000230.1,181.9,22806319,22806648,"PVHT020000230.1 Catagonus wagneri isolate BS18 Sc2sB16_197;HRSCAF=33265_1, whole genome shotgun sequence",Catagonus wagneri (Chacoan peccary),51154
+NW_017731428.1,178.2,1732611,1732276,"NW_017731428.1 Hipposideros armiger isolate ML-2016 unplaced genomic scaffold, ASM189008v1, whole genome shotgun sequence",Hipposideros armiger,186990
+KZ294321.1,175.2,1447526,1447825,"KZ294321.1 Spermophilus dauricus unplaced genomic scaffold scaffold1746, whole genome shotgun sequence",Spermophilus dauricus (Daurian ground squirrel),99837
+JACASF010000016.1,173.8,65705077,65705389,"JACASF010000016.1 Molossus molossus isolate mMolMol1 scaffold_m16_p_16, whole genome shotgun sequence",Molossus molossus (Pallas's mastiff bat),27622
+CM014239.1,169.1,63661177,63661510,"CM014239.1 Rhinolophus ferrumequinum isolate MPI-CBG mRhiFer1 chromosome 14, whole genome shotgun sequence",Rhinolophus ferrumequinum (greater horseshoe bat),59479
+CM026980.1,165,93593882,93594192,"CM026980.1 Rattus norvegicus strain BN/NHsdMcwi chromosome 7, whole genome shotgun sequence",Rattus norvegicus (Norway rat),10116
+NW_021964206.1,164.3,1950083,1950406,"NW_021964206.1 Vicugna pacos isolate Carlotta (AHFN-0088) chromosome 25 unlocalized genomic scaffold, VicPac3.1 ScfyRBE_1;HRSCAF=2, whole genome shotgun sequence",Vicugna pacos (alpaca),30538
+JH721921.1,161,2714181,2714474,"JH721921.1 Chinchilla lanigera unplaced genomic scaffold scaffold00060, whole genome shotgun sequence",Chinchilla lanigera,34839
+JACASE010000015.1,158.3,53134326,53134668,"JACASE010000015.1 Rousettus aegyptiacus isolate mRouAeg1 scaffold_m13_p_15, whole genome shotgun sequence",Rousettus aegyptiacus (Egyptian rousette),9407
+JAATJU010022800.1,155.6,4030812,4030502,"JAATJU010022800.1 Microtus ochrogaster isolate LTLLF scaffold36, whole genome shotgun sequence",Microtus ochrogaster (prairie vole),79684
+LZNR01002078.1,154.4,371381,371054,"LZNR01002078.1 Ursus americanus isolate MABB319796 Contig2081, whole genome shotgun sequence",Ursus americanus (American black bear),9643
+NW_004524638.1,154.2,4537406,4537114,"NW_004524638.1 Octodon degus isolate 3935 unplaced genomic scaffold, OctDeg1.0 scaffold00062, whole genome shotgun sequence",Octodon degus (degu),10160
+CM022827.1,153.9,90999873,91000200,"CM022827.1 Ailuropoda melanoleuca isolate Jingjing chromosome 9, whole genome shotgun sequence",Ailuropoda melanoleuca (giant panda),9646
+JABWUV010000016.1,153.7,5735920,5735602,"JABWUV010000016.1 Myotis myotis isolate mMyoMyo1 scaffold_m19_p_16, whole genome shotgun sequence",Myotis myotis,51298
+NW_024427107.1,153.5,67522479,67522806,"NW_024427107.1 Ursus maritimus isolate PB19 unplaced genomic scaffold, ASM1731132v1 scaffold_9, whole genome shotgun sequence",Ursus maritimus (polar bear),29073
+FNWR01000155.1,151.8,3786529,3786202,"FNWR01000155.1 Neovison vison genome assembly, contig: scaffold155, whole genome shotgun sequence",Neovison vison,452646
+NW_004450802.1,151.2,1112146,1111810,"NW_004450802.1 Odobenus rosmarus divergens isolate Ivan unplaced genomic scaffold, Oros_1.0 Scaffold539, whole genome shotgun sequence",Odobenus rosmarus divergens (Pacific walrus),9708
+KB105545.1,151.1,2207272,2207591,"KB105545.1 Myotis davidii unplaced genomic scaffold scaffold317, whole genome shotgun sequence",Myotis davidii,225400
+NW_011888840.1,150.8,5547828,5548155,"NW_011888840.1 Pteropus vampyrus isolate Shadow unplaced genomic scaffold, Pvam_2.0 Scaffold59, whole genome shotgun sequence",Pteropus vampyrus (large flying fox),132908
+NW_006501430.1,149.9,1796528,1796839,"NW_006501430.1 Peromyscus maniculatus bairdii unplaced genomic scaffold, Pman_1.0 Scaffold394, whole genome shotgun sequence",Peromyscus maniculatus bairdii (prairie deer mouse),230844
+GL429880.1,148.8,2784400,2784080,"Myotis lucifugus unplaced genomic scaffold scaffold_113, whole genome shotgun sequence.",Myotis lucifugus (little brown bat),59463
+KE164731.1,148.8,482962,483282,"KE164731.1 Myotis brandtii unplaced genomic scaffold scaffold911, whole genome shotgun sequence",Myotis brandtii,109478
+NC_045801.1,146.6,12809976,12809661,"NC_045801.1 Balaenoptera musculus isolate JJ_BM4_2016_0621 chromosome 17, mBalMus1.pri.v3, whole genome shotgun sequence",Balaenoptera musculus (Blue whale),9771
+CM018172.1,146.2,66919482,66919797,"CM018172.1 Phocoena sinus isolate mPhoSin1 chromosome 17, whole genome shotgun sequence",Phocoena sinus (vaquita),42100
+NW_020172779.1,146.2,11362744,11363059,"NW_020172779.1 Neophocaena asiaeorientalis asiaeorientalis breed wild unplaced genomic scaffold, Neophocaena_asiaeorientalis_V1 scaffold177, whole genome shotgun sequence",Neophocaena asiaeorientalis asiaeorientalis (yangtze finless porpoise),1706337
+RWIC01000600.1,145.6,161317,161001,"RWIC01000600.1 Monodon monoceros isolate MVW Scaffold599, whole genome shotgun sequence",Monodon monoceros (narwhal),40151
+KL202963.1,145.1,3970449,3970751,"KL202963.1 Nannospalax galili isolate Female #2095 unplaced genomic scaffold scaffold380, whole genome shotgun sequence",Nannospalax galili (Upper Galilee mountains blind mole rat),1026970
+NW_019154098.1,144.7,13692356,13692029,"NW_019154098.1 Enhydra lutris kenyoni isolate GAN:26980312 unplaced genomic scaffold, ASM228890v2 scaffoldscaffold14, whole genome shotgun sequence",Enhydra lutris kenyoni,391180
+NW_006783414.1,144.3,3970810,3971125,"NW_006783414.1 Lipotes vexillifer unplaced genomic scaffold, Lipotes_vexillifer_v1 scaffold84, whole genome shotgun sequence",Lipotes vexillifer (Yangtze River dolphin),118797
+LZPO01044550.1,144.1,70651,70339,"Neotoma lepida isolate 417 scaffold_2099, whole genome shotgun sequence.",Neotoma lepida (desert woodrat),56216
+KB031038.1,143.6,496386,496720,"KB031038.1 Pteropus alecto unplaced genomic scaffold scaffold238, whole genome shotgun sequence",Pteropus alecto (black flying fox),9402
+CM001395.3,143.5,72291020,72291310,"Felis catus isolate Cinnamon breed Abyssinian chromosome F2, whole genome shotgun sequence.",Felis catus (domestic cat),9685
+CM001008.3,143.3,61857412,61857722,"CM001008.3 Mus musculus chromosome 15, GRCm39 reference primary assembly C57BL/6J",Mus musculus (house mouse),10090
+NW_022098049.1,143.1,5511517,5511832,"NW_022098049.1 Delphinapterus leucas isolate GAN/ISIS: 26980492/103006 unplaced genomic scaffold, ASM228892v3 scaffoldscaffold58, whole genome shotgun sequence",Delphinapterus leucas (beluga whale),9749
+NW_006408519.1,143.1,35216746,35217047,"NW_006408519.1 Chrysochloris asiatica unplaced genomic scaffold, ChrAsi1.0 scaffold00001, whole genome shotgun sequence",Chrysochloris asiatica,185453
+CM017346.2,142.7,13242319,13242029,"CM017346.2 Lynx canadensis isolate LIC74 chromosome F2, whole genome shotgun sequence",Lynx canadensis (Canada lynx),61383
+NC_058406.1,142.6,174602709,174603054,"NC_058406.1 Neomonachus schauinslandi chromosome 4, ASM220157v2, whole genome shotgun sequence",Monachus schauinslandi (Hawaiian monk seal),29088
+NW_006383235.1,142,758806,758467,"NW_006383235.1 Leptonychotes weddellii isolate WS11-02 unplaced genomic scaffold, LepWed1.0 scaffold00195, whole genome shotgun sequence",Leptonychotes weddellii (Weddell seal),9713
+NC_047050.1,141.2,66015315,66015630,"NC_047050.1 Tursiops truncatus isolate mTurTru1 chromosome 17, mTurTru1.mat.Y, whole genome shotgun sequence",Tursiops truncatus (bottlenosed dolphin),9739
+NW_020312828.1,140.8,69609373,69609698,"NW_020312828.1 Callorhinus ursinus isolate GAN/ISIS: 27379988/994484 unplaced genomic scaffold, ASM326570v1 scaffold86, whole genome shotgun sequence",Callorhinus ursinus (northern fur seal),34884
+CM018459.1,140.1,12408585,12408295,"CM018459.1 Panthera leo isolate Brooke chromosome X, whole genome shotgun sequence",Panthera leo (lion),9689
+NW_025421322.1,139.5,28423822,28424150,"NW_025421322.1 Mustela putorius furo isolate JIRA1106 unplaced genomic scaffold, ASM1176430v1.1 tig00000228_pilon_pilon_pilon, whole genome shotgun sequence",Mustela putorius furo (domestic ferret),9669
+NW_004443958.1,137.9,15158021,15158345,"NW_004443958.1 Trichechus manatus latirostris isolate Lorelei unplaced genomic scaffold, TriManLat1.0 scaffold00022, whole genome shotgun sequence",Trichechus manatus latirostris,127582
+NW_020834742.1,136,13227919,13227620,"NW_020834742.1 Acinonyx jubatus isolate Rico unplaced genomic scaffold, Aci_jub_2 Primary Assembly Aci_jub_2_ph1_scaffold16, whole genome shotgun sequence",Acinonyx jubatus (cheetah),32536
+JAULJE010000019.1,135.9,6746032,6745714,"JAULJE010000019.1 Eptesicus nilssonii isolate BLF_Eptnil Scaffold_19, whole genome shotgun sequence",Eptesicus nilssoni (northern bat),59451
+NW_004801689.1,135.8,1404557,1404867,"NW_004801689.1 Mesocricetus auratus isolate Golden Hamster female 1 unplaced genomic scaffold, MesAur1.0 scaffold00086, whole genome shotgun sequence",Mesocricetus auratus (golden hamster),10036
+NW_021146530.1,134.3,19281,18968,"NW_021146530.1 Physeter catodon isolate SW-GA unplaced genomic scaffold, ASM283717v5 random_1194, whole genome shotgun sequence",Physeter catodon (sperm whale),9755
+QWLN02005128.1,133,6052011,6052325,"QWLN02005128.1 Sousa chinensis isolate MY-2018 scaffold14.1, whole genome shotgun sequence",Sousa chinensis (Indo-pacific humpbacked dolphin),103600
+JH008557.1,132.2,2585,2884,"JH008557.1 Cricetulus griseus cell line CHO-K1 unplaced genomic scaffold scaffold8919, whole genome shotgun sequence",Cricetulus griseus (Chinese hamster),10029
+GL010035.1,131.4,73187970,73188293,"Loxodonta africana unplaced genomic scaffold scaffold_8, whole genome shotgun sequence.",Loxodonta africana (African savanna elephant),9785
+CM016985.1,130.6,65836116,65836401,"CM016985.1 Suricata suricatta isolate VVHF042 chromosome 15, whole genome shotgun sequence",Suricata suricatta (meerkat),37032
+DS562906.1,124.6,8278717,8278422,"Cavia porcellus supercont2_51 genomic scaffold, whole genome shotgun sequence.",Cavia porcellus (Domestic guinea pig),10141
+CM004575.1,123.1,69337623,69337932,"CM004575.1 Capra hircus breed San Clemente chromosome 14, whole genome shotgun sequence",Capra hircus (goat),9925
+NW_006921693.1,122.5,2402417,2402087,"NW_006921693.1 Orycteropus afer afer isolate SDZICR_OR568_19922 unplaced genomic scaffold, OryAfe1.0 scaffold00106, whole genome shotgun sequence",Orycteropus afer afer,1230840
+CM008181.2,122.1,12658353,12658044,"CM008181.2 Bos taurus isolate L1 Dominette 01449 registration number 42190680 breed Hereford chromosome 14, whole genome shotgun sequence",Bos taurus (cattle),9913
+CM011787.1,122.1,69645208,69645517,"CM011787.1 Bos indicus x Bos taurus breed Angus x Brahman F1 hybrid chromosome 14, whole genome shotgun sequence",Bos indicus x Bos taurus (hybrid cattle),30522
+CM016707.1,122.1,7694742,7695051,"CM016707.1 Bos grunniens isolate yakHY00 ecotype maiwa chromosome 18, whole genome shotgun sequence",Bos grunniens (domestic yak),30521
+JH881600.1,122.1,2968718,2968409,"JH881600.1 Bos grunniens mutus unplaced genomic scaffold scaffold1155_1, whole genome shotgun sequence",Bos grunniens mutus,72004
+NC_032663.1,122.1,12156320,12156011,"NC_032663.1 Bos indicus isolate QUIL7308 breed Nelore chromosome 14, Bos_indicus_1.0, whole genome shotgun sequence",Bos indicus,9915
+NC_040909.2,121.2,131078650,131078977,"NC_040909.2 Phyllostomus discolor isolate MPI-MPIP mPhyDis1 chromosome 7, mPhyDis1.pri.v3, whole genome shotgun sequence",Phyllostomus discolor (pale spear-nosed bat),89673
+PVHU020000859.1,120.2,3210543,3210849,"PVHU020000859.1 Moschus moschiferus isolate BS20 Scw3uUT_797;HRSCAF=73745, whole genome shotgun sequence",Moschus moschiferus (Siberian musk deer),68415
+CM001590.2,120,25556941,25556642,"Ovis aries breed Texel chromosome 9, whole genome shotgun sequence.",Ovis aries (sheep),9940
+NW_012273084.1,109.8,124,445,"NW_012273084.1 Dipodomys ordii isolate 6190 unplaced genomic scaffold, Dord_2.0 Scaffold5870, whole genome shotgun sequence",Dipodomys ordii (Ord's kangaroo rat),10020
+NW_018339175.1,109.8,3860329,3860023,"NW_018339175.1 Odocoileus virginianus texanus isolate animal Pink-7 unplaced genomic scaffold, Ovir.te_1.0 scaffold57, whole genome shotgun sequence",Odocoileus virginianus texanus,9880
+CYRY02029373.1,108.1,46679,46149,"CYRY02029373.1 Gulo gulo genome assembly, contig: scaffold3789, whole genome shotgun sequence",Gulo gulo (wolverine),48420
+CM008028.1,103,17119169,17118864,"CM008028.1 Cervus elaphus hippelaphus isolate Hungarian chromosome 21, whole genome shotgun sequence",Cervus elaphus hippelaphus,46360
+CM021212.1,103,12195539,12195234,"CM021212.1 Cervus hanglu yarkandensis isolate CEY-2017 chromosome 21, whole genome shotgun sequence",Cervus elaphus yarkandensis,84702
+CM018488.1,87.5,65021001,65021306,"CM018488.1 Muntiacus reevesi isolate UCam_UCB_Mr chromosome 12, whole genome shotgun sequence",Muntiacus reevesi (Chinese muntjac),9886
+NTJE010585326.1,87,1,158,"NTJE010585326.1 Eschrichtius robustus isolate AM-GW-M-EMB-4M-20130531 contig_684937, whole genome shotgun sequence",Eschrichtius robustus (grey whale),9764
+JH168604.1,73.9,493379,493626,"JH168604.1 Heterocephalus glaber unplaced genomic scaffold scaffold423, whole genome shotgun sequence",Heterocephalus glaber (naked mole-rat),10181
+CM000792.1,70.4,143523859,143524155,"Oryctolagus cuniculus chromosome 3, whole genome shotgun sequence.",Oryctolagus cuniculus (rabbit),9986
+NW_004524747.1,70.2,2500908,2501204,"NW_004524747.1 Octodon degus isolate 3935 unplaced genomic scaffold, OctDeg1.0 scaffold00171, whole genome shotgun sequence",Octodon degus (degu),10160
+JH725455.1,66.6,4483781,4484098,"JH725455.1 Jaculus jaculus unplaced genomic scaffold scaffold00019, whole genome shotgun sequence",Jaculus jaculus (lesser Egyptian jerboa),51337
+NTJE010176158.1,65.1,5442,5608,"NTJE010176158.1 Eschrichtius robustus isolate AM-GW-M-EMB-4M-20130531 contig_194645, whole genome shotgun sequence",Eschrichtius robustus (grey whale),9764
+JACAGB010000014.1,61.4,4694300,4693972,"JACAGB010000014.1 Pipistrellus kuhlii isolate mPipKuh1 scaffold_m20_p_14, whole genome shotgun sequence",Pipistrellus kuhlii (Kuhl's pipistrelle),59472
+KN123534.1,60.1,456937,456741,"KN123534.1 Fukomys damarensis unplaced genomic scaffold scaffold478, whole genome shotgun sequence",Fukomys damarensis (Damara mole-rat),885580
+CAJHUB010000788.1,59.3,20411096,20411428,"CAJHUB010000788.1 Nyctereutes procyonoides isolate TBG_1078 genome assembly, contig: Nypro808, whole genome shotgun sequence",Nyctereutes procyonoides (raccoon dog),34880
+CM025112.1,57.3,25544696,25545028,"CM025112.1 Canis lupus familiaris isolate SID07034 breed Labrador retriever chromosome 13, whole genome shotgun sequence",Canis lupus familiaris (dog),9615
+CM025469.1,57.3,25426096,25426428,"CM025469.1 Canis lupus dingo isolate Sandy chromosome 13, whole genome shotgun sequence",Canis lupus dingo (dingo),286419
+JAGFMF010011709.1,55.9,8785172,8784850,"JAGFMF010011709.1 Galemys pyrenaicus isolate IBE-C5619 2611389, whole genome shotgun sequence",Galemys pyrenaicus,202257
+KE538614.1,55.6,1198,1110,"Camelus ferus isolate Naran unplaced genomic scaffold scaffold11238, whole genome shotgun sequence.",Camelus ferus (Wild Bactrian camel),419612
+QGOO02000009.1,54.8,58452355,58452476,"QGOO02000009.1 Mus spicilegus strain ZRU musp714_scaffold_00009b, whole genome shotgun sequence",Mus spicilegus (steppe mouse),10103
+MU826361.1,46.6,984881,985164,"MU826361.1 Desmophyllum pertusum isolate USNM1676648 unplaced genomic scaffold scaffold_69, whole genome shotgun sequence",Lophelia pertusa,174260
+OV696687.1,46.6,18213300,18213156,"OV696687.1 Branchiostoma lanceolatum genome assembly, chromosome: 2",Branchiostoma lanceolatum (amphioxus),7740
+CM043970.1,46.3,5599196,5599373,"CM043970.1 Adiantum capillus-veneris isolate H3 chromosome 29, whole genome shotgun sequence",Adiantum capillus-veneris,13818
+WIUZ02000006.1,45.8,2486815,2486596,"WIUZ02000006.1 Thelephora terrestris strain UH-Tt-Lm1 BJ322scaffold_6, whole genome shotgun sequence",Thelephora terrestris,56493
+JADOBP010000015.1,44.5,2552142,2552450,"JADOBP010000015.1 Patiria miniata isolate m_02_andy HiC_scaffold_23, whole genome shotgun sequence",Patiria miniata,46514
+CAJHUB010000758.1,44.3,13309,13631,"CAJHUB010000758.1 Nyctereutes procyonoides isolate TBG_1078 genome assembly, contig: Nypro781, whole genome shotgun sequence",Nyctereutes procyonoides (raccoon dog),34880
+JAOPHQ010002407.1,43,12454,12246,"JAOPHQ010002407.1 Merluccius polli isolate C29 contig2407, whole genome shotgun sequence",Merluccius polli (Benguela hake),89951
+NW_020356448.1,42.9,15831809,15832143,"NW_020356448.1 Vulpes vulpes strain TameXAggressive cross unplaced genomic scaffold, VulVul2.2 scaffold14, whole genome shotgun sequence",Vulpes vulpes (red fox),9627
+NC_047084.1,41.8,220164805,220165034,"NC_047084.1 Geotrypetes seraphini chromosome 1, aGeoSer1.1, whole genome shotgun sequence",Geotrypetes seraphini,260995
+OV696698.1,41.5,15270681,15270825,"OV696698.1 Branchiostoma lanceolatum genome assembly, chromosome: 13",Branchiostoma lanceolatum (amphioxus),7740
+NC_047084.1,41.3,220164981,220164741,"NC_047084.1 Geotrypetes seraphini chromosome 1, aGeoSer1.1, whole genome shotgun sequence",Geotrypetes seraphini,260995
+CM034092.1,41.1,21238398,21238219,"CM034092.1 Eleutherodactylus coqui isolate HN-11 Male chromosome 7, whole genome shotgun sequence",Eleutherodactylus coqui (Puerto Rican coqui),57060
+JAAAJB010000046.1,40.9,77954,77781,"JAAAJB010000046.1 Actinomortierella ambigua strain BC1065 scaffold_46, whole genome shotgun sequence",Actinomortierella ambigua,1343610
+WNTK01023712.1,40.7,1320,1596,"WNTK01023712.1 Eleutherodactylus coqui isolate HN-11 Male Sca23699, whole genome shotgun sequence",Eleutherodactylus coqui (Puerto Rican coqui),57060
+CAJHUB010000599.1,40.5,93068,92741,"CAJHUB010000599.1 Nyctereutes procyonoides isolate TBG_1078 genome assembly, contig: Nypro638, whole genome shotgun sequence",Nyctereutes procyonoides (raccoon dog),34880
+CM034095.1,40.1,67200870,67200695,"CM034095.1 Eleutherodactylus coqui isolate HN-11 Male chromosome 10, whole genome shotgun sequence",Eleutherodactylus coqui (Puerto Rican coqui),57060

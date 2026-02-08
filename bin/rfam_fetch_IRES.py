@@ -9,6 +9,8 @@ import time
 import requests
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 import os
+from datetime import datetime
+import traceback
 
 SEARCH_URL = "https://www.ebi.ac.uk/ebisearch/ws/rest/rfam"
 FETCH_URL = "https://rfam.org/family"
@@ -17,18 +19,45 @@ FIELDS = (
     "id,description,rna_type,entry_type,rfamseq_acc,rfamseq_acc_description,scientific_name,num_seed,seq_start,seq_end,ENA,RFAM"
 )
 
-HEADERS = {"User-Agent": "rfam-ires-fetcher/1.0"}
+HEADERS = {
+    "User-Agent": "rfam-ires-fetcher/1.0",
+    "Connection": "close",
+}
 
 TIMEOUT = 30
 
+DEBUG = True
 
-def safe_get(url):
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
-        if r.status_code == 200:
-            return r
-    except requests.RequestException:
-        pass
+def debug(msg):
+    if DEBUG:
+        ts = datetime.now().strftime("%H:%M:%S")
+        print(f"[{ts}] {msg}", flush=True)
+
+
+def safe_get(url, retries=3):
+    for attempt in range(1, retries + 1):
+        try:
+            debug(f"GET {url} (attempt {attempt})")
+            r = requests.get(
+                url,
+                headers=HEADERS,
+                timeout=(10, 30)  # (connect timeout, read timeout)
+            )
+            debug(f"Status {r.status_code} for {url}")
+
+            if r.status_code == 200:
+                return r
+
+        except requests.exceptions.ReadTimeout:
+            debug(f"READ TIMEOUT on {url}")
+        except requests.exceptions.ConnectTimeout:
+            debug(f"CONNECT TIMEOUT on {url}")
+        except requests.RequestException as e:
+            debug(f"REQUEST ERROR on {url}: {e}")
+
+        time.sleep(2)
+
+    debug(f"GIVING UP on {url}")
     return None
 
 def dedupe_entries(entries):
@@ -101,30 +130,51 @@ def extract_region_sequences(rfam_id, outdir):
 
     with open(regions_csv, newline="") as fh:
         reader = csv.DictReader(fh)
-        for row in reader:
+        for i, row in enumerate(reader, 1):
             accession = row["accession"]
             start = int(row["start"])
             end = int(row["end"])
 
-            header, full_seq = fetch_full_sequence(accession)
-            if not full_seq:
-                print(f"Failed to fetch sequence for {accession}")
-                continue
-
-            # ENA coordinates are 1-based, inclusive
-            subseq = full_seq[start - 1:end]
+            debug(f"[{rfam_id}] Region {i}: {accession}:{start}-{end}")
 
             out_fa = os.path.join(
                 fam_dir, f"{accession}_{start}_{end}.fa"
             )
 
-            with open(out_fa, "w") as out:
-                out.write(f">{accession}:{start}-{end}\n")
-                # wrap sequence at 60 chars
-                for i in range(0, len(subseq), 60):
-                    out.write(subseq[i:i+60] + "\n")
+            # ⏭️ Skip if already processed
+            if os.path.exists(out_fa):
+                debug(f"[{accession}] {start}-{end} already exists, skipping")
+                continue
 
-            print(f"Saved region sequence to {out_fa}")
+            try:
+                header, full_seq = fetch_full_sequence(accession)
+                if not full_seq:
+                    debug(f"[{accession}] FAILED to fetch full sequence")
+                    continue
+
+                if end > len(full_seq):
+                    debug(
+                        f"[{accession}] WARNING end={end} > length={len(full_seq)}"
+                    )
+
+                subseq = full_seq[start - 1:end]
+
+                out_fa = os.path.join(
+                    fam_dir, f"{accession}_{start}_{end}.fa"
+                )
+
+                with open(out_fa, "w") as out:
+                    out.write(f">{accession}:{start}-{end}\n")
+                    for j in range(0, len(subseq), 60):
+                        out.write(subseq[j:j+60] + "\n")
+
+                debug(f"[{accession}] saved {len(subseq)} bp")
+
+                time.sleep(0.5) # Time out for 0.5 seconds between requests
+
+            except Exception:
+                debug(f"EXCEPTION processing {accession}")
+                traceback.print_exc()
 
 def collect_rfam_ids(entries):
     """
@@ -167,7 +217,13 @@ def fetch_search_results(org):
     if r is None:
         sys.exit("EBISearch unavailable")
 
-    r = requests.get(SEARCH_URL, params=params, headers=HEADERS)
+    r = requests.get(
+    SEARCH_URL,
+    params=params,
+    headers=HEADERS,
+    timeout=(10, 30)
+    )
+
     r.raise_for_status()
     return r.json()["entries"]
 
