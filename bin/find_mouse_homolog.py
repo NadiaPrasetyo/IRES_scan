@@ -50,7 +50,14 @@ def main():
     run(["mmseqs", "createindex", "mouse_genome_db", "tmp"])
 
     # Step 4: Search for homologous sequences in the mouse genome using MMseqs2
-    run(["mmseqs", "search", "human_IRES_db", "mouse_genome_db", "search_results_db", "tmp"])
+    run([
+    "mmseqs", "search",
+    "human_IRES_db",
+    "mouse_genome_db",
+    "search_results_db",
+    "tmp",
+    "--search-type", "3"
+    ])
 
     # Step 5: Convert the search results to FASTA format and m8 format
     run(["mmseqs", "convertalis", "human_IRES_db", "mouse_genome_db", "search_results_db", f"{args.output}.m8"])
