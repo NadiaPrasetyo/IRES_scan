@@ -62,13 +62,25 @@ def main():
 
     # Step 5: Convert the search results to FASTA format and m8 format
     run(["mmseqs", "convertalis", "human_IRES_db", "mouse_genome_db", "search_results_db", f"{args.output}.m8"])
-    run(["mmseqs", "convert2fasta", "search_results_db", f"{args.output}.fasta"])
+
+    # Extract matched target sequences into a new sequence DB
+    run([
+        "mmseqs", "createseqfiledb",
+        "human_IRES_db",
+        "mouse_genome_db",
+        "search_results_db",
+        "mouse_hits_db"
+    ])
+
+    # Convert that DB to FASTA
+    run(["mmseqs", "convert2fasta", "mouse_hits_db", f"{args.output}.fasta"])
 
     run(["mmseqs", "result2flat", "human_IRES_db", "mouse_genome_db", "search_results_db", f"{args.output}.txt"])
+    run (["mmseqs", "result2flat", "human_IRES_db", "mouse_genome_db", "mouse_hits_db", f"{args.output}_hits.fasta"])
 
 
     # Step 6: Clean up temporary files
-    run(["rm", "-rf", "tmp", "human_IRES_db*", "mouse_genome_db*", "search_results_db*"])
+    run(["rm", "-rf", "tmp", "human_IRES_db*", "mouse_genome_db*", "search_results_db*", "mouse_hits_db*"])
 
 if __name__ == "__main__":
     main()
