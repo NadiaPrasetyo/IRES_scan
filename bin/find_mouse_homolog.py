@@ -2,6 +2,7 @@
 # make sure mmseqs2 is installed and in your PATH
 import subprocess
 import logging
+import os
 import argparse
 
 def setup_logging(verbose=False):
@@ -15,7 +16,7 @@ def setup_logging(verbose=False):
     )
 
 def run(cmd):
-    logging.info(">>", " ".join(cmd))
+    logging.info(">> %s", " ".join(cmd))
     subprocess.run(cmd, check=True)
 
 def main():
@@ -28,8 +29,8 @@ def main():
     setup_logging(verbose=args.verbose)
 
     # Step 1: Download mouse IRES sequences from NCBI if it does not exist anywhere in the current directory
-    if not mouse_genome:
-        logging.info("Mouse genome not provided. Downloading from UCSC...")
+    if not args.mouse_genome or not os.path.exists(args.mouse_genome):
+        logging.info("Mouse genome not provided or does not exist. Downloading from UCSC...")
         run (["wget", "-O", "data/mouse_genome.fa.gz", "https://hgdownload.gi.ucsc.edu/goldenPath/mm39/bigZips/mm39.fa.gz"])
         # unzip the downloaded file
         run(["gunzip", "data/mouse_genome.fa.gz"])
@@ -45,15 +46,15 @@ def main():
     run(["mmseqs", "createdb", "data/mouse_genome.fa", "mouse_genome_db"])
 
     # create index for target mouse genome database to speed up search
-    mkdir("tmp", exist_ok=True)
+    os.makedirs("tmp", exist_ok=True)
     run(["mmseqs", "createindex", "mouse_genome_db", "tmp"])
 
     # Step 4: Search for homologous sequences in the mouse genome using MMseqs2
     run(["mmseqs", "search", "human_IRES_db", "mouse_genome_db", "search_results_db", "tmp"])
 
     # Step 5: Convert the search results to FASTA format and m8 format
-    run(["mmseqs", "convertalis", "human_IRES_db", "mouse_genome_db", "search_results_db", "{args.output}.m8"])
-    run(["mmseqs", "result2flat", "human_IRES_db", "mouse_genome_db", "search_results_db", "{args.output}.fasta"])
+    run(["mmseqs", "convertalis", "human_IRES_db", "mouse_genome_db", "search_results_db", f"{args.output}.m8"])
+    run(["mmseqs", "result2flat", "human_IRES_db", "mouse_genome_db", "search_results_db", f"{args.output}.fasta"])
 
 
 if __name__ == "__main__":
