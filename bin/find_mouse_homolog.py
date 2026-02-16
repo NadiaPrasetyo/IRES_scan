@@ -47,7 +47,7 @@ def main():
 
     # create index for target mouse genome database to speed up search
     os.makedirs("tmp", exist_ok=True)
-    run(["mmseqs", "createindex", "mouse_genome_db", "tmp"])
+    run(["mmseqs", "createindex", "mouse_genome_db", "tmp", "--search-type", "3"])
 
     # Step 4: Search for homologous sequences in the mouse genome using MMseqs2
     run([
