@@ -36,13 +36,13 @@ def main():
 
     # check that there is at least one input:
     if not any([input_dir, input_csv, input_tsv]):
-        logging.error("❌ No input provided. Please specify at least one of --input_dir, --input_csv, or --input_tsv.", file=sys.stderr)
+        logging.error("❌ No input provided. Please specify at least one of --input_dir, --input_csv, or --input_tsv.")
         sys.exit(1)
 
     if input_dir:
         fasta_files = collect_fastas(input_dir)
         if not fasta_files:
-            logging.error("❌ No FASTA files found in the specified directory.", file=sys.stderr)
+            logging.error("❌ No FASTA files found in the specified directory.")
             sys.exit(1)
         logging.info(f"Found {len(fasta_files)} FASTA files in {input_dir}")
         with open(output_file, "w") as out:
