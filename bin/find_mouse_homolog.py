@@ -12,7 +12,7 @@ def setup_logging(verbose=False):
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
-        handlers=[logging.FileHandler(log_file), logging.StreamHandler()] if verbose else [logging.FileHandler(log_file)],
+        handlers=[logging.FileHandler(log_file), logging.StreamHandler()] if verbose else [logging.StreamHandler()],
     )
 
 def run(cmd):
@@ -31,9 +31,9 @@ def main():
     # Step 1: Download mouse IRES sequences from NCBI if it does not exist anywhere in the current directory
     if not args.mouse_genome or not os.path.exists(args.mouse_genome):
         logging.info("Mouse genome not provided or does not exist. Downloading from UCSC...")
-        run (["wget", "-O", "data/mouse_genome.fa.gz", "https://hgdownload.gi.ucsc.edu/goldenPath/mm39/bigZips/mm39.fa.gz"])
+        run (["wget", "-O", "data/mm39.fa.gz", "https://hgdownload.gi.ucsc.edu/goldenPath/mm39/bigZips/mm39.fa.gz"])
         # unzip the downloaded file
-        run(["gunzip", "data/mouse_genome.fa.gz"])
+        run(["gunzip", "data/mm39.fa.gz"])
 
     # Step 2: Check that mmseqs2 is installed and in the PATH
     try:
@@ -43,7 +43,7 @@ def main():
 
     # Step 3: Create MMseqs2 databases for the input human IRES sequences and the mouse genome
     run(["mmseqs", "createdb", args.input, "human_IRES_db"])
-    run(["mmseqs", "createdb", "data/mouse_genome.fa", "mouse_genome_db"])
+    run(["mmseqs", "createdb", args.mouse_genome, "mouse_genome_db"])
 
     # create index for target mouse genome database to speed up search
     os.makedirs("tmp", exist_ok=True)

@@ -9,7 +9,7 @@ def setup_logging(verbose=False):
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
-        handlers=[logging.FileHandler(log_file), logging.StreamHandler()] if verbose else [logging.FileHandler(log_file)],
+        handlers=[logging.FileHandler(log_file), logging.StreamHandler()] if verbose else [logging.StreamHandler()],
     )
 
 def collect_fastas(input_dir):
