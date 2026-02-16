@@ -66,7 +66,6 @@ def main():
     # Extract matched target sequences into a new sequence DB
     run([
         "mmseqs", "createseqfiledb",
-        "human_IRES_db",
         "mouse_genome_db",
         "search_results_db",
         "mouse_hits_db"
