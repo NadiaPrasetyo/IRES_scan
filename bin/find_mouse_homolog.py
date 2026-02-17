@@ -45,41 +45,29 @@ def main():
     # put all db and other intermediate files in a tmp directory
     os.makedirs("tmp", exist_ok=True)
     # Step 3: Create MMseqs2 databases for the input human IRES sequences and the mouse genome
-    run(["mmseqs", "createdb", args.input, "human_IRES_db"])
-    run(["mmseqs", "createdb", args.mouse_genome, "mouse_genome_db"])
+    run(["mmseqs", "createdb", args.input, "tmp/human_IRES_db"])
+    run(["mmseqs", "createdb", args.mouse_genome, "tmp/mouse_genome_db"])
 
     # Step 4: Search for homologous sequences in the mouse genome using MMseqs2
     run([
     "mmseqs", "search",
-    "human_IRES_db",
-    "mouse_genome_db",
-    "search_results_db",
+    "tmp/human_IRES_db",
+    "tmp/mouse_genome_db",
+    "tmp/search_results_db",
     "tmp",
     "--search-type", "3",
+    "-s", "7.5",
     "--threads", str(args.threads),
     ])
 
     # Step 5: Convert the search results to FASTA format and m8 format
-    run(["mmseqs", "convertalis", "human_IRES_db", "mouse_genome_db", "search_results_db", f"{args.output}.m8"])
-
-    # Extract matched target sequences into a new sequence DB
-    run([
-        "mmseqs", "createseqfiledb",
-        "mouse_genome_db",
-        "search_results_db",
-        "mouse_hits_db",
-        "--threads", str(args.threads)
-    ])
-
-    # Convert that DB to FASTA
-    # run(["mmseqs", "convert2fasta", "mouse_hits_db", f"{args.output}.fasta"])
-
-    run(["mmseqs", "result2flat", "human_IRES_db", "mouse_genome_db", "search_results_db", f"{args.output}.txt"])
-    run (["mmseqs", "result2flat", "human_IRES_db", "mouse_genome_db", "mouse_hits_db", f"{args.output}_hits.fasta"])
-
+    run(["mmseqs", "convertalis", "tmp/human_IRES_db", "tmp/mouse_genome_db", "tmp/search_results_db",
+          f"{args.output}.tsv",
+          "--format-mode", "4",
+          "--format-output", "query,target,pident,alnlen,bits,qheader,evalue,qaln,taln"])
 
     # Step 6: Clean up temporary files
-    run(["rm", "-rf", "tmp", "human_IRES_db*", "mouse_genome_db*", "search_results_db*", "mouse_hits_db*"])
+    run(["rm", "-rf", "tmp"])
 
 if __name__ == "__main__":
     main()
