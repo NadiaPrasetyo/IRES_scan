@@ -36,7 +36,7 @@ def main():
     parser.add_argument("--min-seq-id", type=float, default=0.9)
     parser.add_argument("--coverage", type=float, default=0.8)
     parser.add_argument("--cov-mode", type=int, default=1)
-    parser.add_argument("--threads", type=int, default=8)
+    parser.add_argument("--threads", type=int, default=16)
     parser.add_argument("--outdir", default="mmseqs_cluster_out")
 
     args = parser.parse_args()
