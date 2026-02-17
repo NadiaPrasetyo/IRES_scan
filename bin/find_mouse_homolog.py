@@ -5,6 +5,8 @@ import logging
 import os
 import argparse
 
+THREADS = 16 # adjust this based on your system's capabilities
+
 def setup_logging(verbose=False):
     # log into a file when needed (verbose mode)
     log_file = "find_mouse_homolog.log"
@@ -44,11 +46,8 @@ def main():
     # put all db and other intermediate files in a tmp directory
     os.makedirs("tmp", exist_ok=True)
     # Step 3: Create MMseqs2 databases for the input human IRES sequences and the mouse genome
-    run(["mmseqs", "createdb", args.input, "human_IRES_db", ])
-    run(["mmseqs", "createdb", args.mouse_genome, "mouse_genome_db"])
-
-    # create index for target mouse genome database to speed up search
-    run(["mmseqs", "createindex", "mouse_genome_db", "tmp", "--search-type", "3"])
+    run(["mmseqs", "createdb", args.input, "human_IRES_db", "--threads", str(THREADS)])
+    run(["mmseqs", "createdb", args.mouse_genome, "mouse_genome_db", "--threads", str(THREADS)])
 
     # Step 4: Search for homologous sequences in the mouse genome using MMseqs2
     run([
@@ -57,7 +56,8 @@ def main():
     "mouse_genome_db",
     "search_results_db",
     "tmp",
-    "--search-type", "3"
+    "--search-type", "3",
+    "--threads", str(THREADS),
     ])
 
     # Step 5: Convert the search results to FASTA format and m8 format
@@ -68,14 +68,15 @@ def main():
         "mmseqs", "createseqfiledb",
         "mouse_genome_db",
         "search_results_db",
-        "mouse_hits_db"
+        "mouse_hits_db",
+        "--threads", str(THREADS)
     ])
 
     # Convert that DB to FASTA
-    run(["mmseqs", "convert2fasta", "mouse_hits_db", f"{args.output}.fasta"])
+    run(["mmseqs", "convert2fasta", "mouse_hits_db", f"{args.output}.fasta", "--threads", str(THREADS)])
 
-    run(["mmseqs", "result2flat", "human_IRES_db", "mouse_genome_db", "search_results_db", f"{args.output}.txt"])
-    run (["mmseqs", "result2flat", "human_IRES_db", "mouse_genome_db", "mouse_hits_db", f"{args.output}_hits.fasta"])
+    run(["mmseqs", "result2flat", "human_IRES_db", "mouse_genome_db", "search_results_db", f"{args.output}.txt", "--threads", str(THREADS)])
+    run (["mmseqs", "result2flat", "human_IRES_db", "mouse_genome_db", "mouse_hits_db", f"{args.output}_hits.fasta", "--threads", str(THREADS)])
 
 
     # Step 6: Clean up temporary files
