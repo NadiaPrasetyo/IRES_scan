@@ -72,7 +72,7 @@ def main():
     ])
 
     # Convert that DB to FASTA
-    run(["mmseqs", "convert2fasta", "mouse_hits_db", f"{args.output}.fasta"])
+    # run(["mmseqs", "convert2fasta", "mouse_hits_db", f"{args.output}.fasta"])
 
     run(["mmseqs", "result2flat", "human_IRES_db", "mouse_genome_db", "search_results_db", f"{args.output}.txt"])
     run (["mmseqs", "result2flat", "human_IRES_db", "mouse_genome_db", "mouse_hits_db", f"{args.output}_hits.fasta"])
