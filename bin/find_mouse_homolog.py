@@ -63,6 +63,7 @@ def main():
     # Step 5: Convert the search results to FASTA format and m8 format
     run(["mmseqs", "convertalis", "tmp/human_IRES_db", "tmp/mouse_genome_db", "tmp/search_results_db",
           f"{args.output}.tsv",
+          "--search-type", "3",
           "--format-mode", "4",
           "--format-output", "query,target,pident,alnlen,bits,qheader,evalue,qaln,taln"])
 
