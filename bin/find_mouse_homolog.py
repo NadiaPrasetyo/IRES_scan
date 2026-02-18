@@ -57,6 +57,7 @@ def main():
     "tmp",
     "--search-type", "3",
     "-s", "7.5",
+    "-a",
     "--threads", str(args.threads),
     ])
 
