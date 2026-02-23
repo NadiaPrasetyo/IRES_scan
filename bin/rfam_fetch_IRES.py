@@ -2,15 +2,13 @@
 
 import argparse
 import csv
-import json
+import logging
 import os
 import sys
 import time
 import requests
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 import os
-from datetime import datetime
-import traceback
 
 SEARCH_URL = "https://www.ebi.ac.uk/ebisearch/ws/rest/rfam"
 FETCH_URL = "https://rfam.org/family"
@@ -26,38 +24,42 @@ HEADERS = {
 
 TIMEOUT = 30
 
-DEBUG = True
-
-def debug(msg):
-    if DEBUG:
-        ts = datetime.now().strftime("%H:%M:%S")
-        print(f"[{ts}] {msg}", flush=True)
+def setup_logging(verbose=False):
+    log_level =logging.INFO
+    log_file = "rfam_fetch_IRES.log"
+    logging.basicConfig(
+        level=log_level,
+        format="[%(asctime)s] %(levelname)s: %(message)s",
+        handlers=[
+            logging.StreamHandler(sys.stdout), logging.FileHandler(log_file) if verbose else logging.StreamHandler(sys.stdout)
+        ],
+    )
 
 
 def safe_get(url, retries=3):
     for attempt in range(1, retries + 1):
         try:
-            debug(f"GET {url} (attempt {attempt})")
+            logging.debug(f"GET {url} (attempt {attempt})")
             r = requests.get(
                 url,
                 headers=HEADERS,
                 timeout=(10, 30)  # (connect timeout, read timeout)
             )
-            debug(f"Status {r.status_code} for {url}")
+            logging.debug(f"Status {r.status_code} for {url}")
 
             if r.status_code == 200:
                 return r
 
         except requests.exceptions.ReadTimeout:
-            debug(f"READ TIMEOUT on {url}")
+            logging.debug(f"READ TIMEOUT on {url}")
         except requests.exceptions.ConnectTimeout:
-            debug(f"CONNECT TIMEOUT on {url}")
+            logging.debug(f"CONNECT TIMEOUT on {url}")
         except requests.RequestException as e:
-            debug(f"REQUEST ERROR on {url}: {e}")
+            logging.debug(f"REQUEST ERROR on {url}: {e}")
 
         time.sleep(2)
 
-    debug(f"GIVING UP on {url}")
+    logging.debug(f"GIVING UP on {url}")
     return None
 
 def dedupe_entries(entries):
@@ -116,65 +118,62 @@ def fetch_full_sequence(accession):
     seq = "".join(lines[1:]).replace(" ", "").replace("\n", "")
     return header, seq
 
-def extract_region_sequences(rfam_id, outdir):
+def fetch_sequence_regions(entries, organism, outdir):
     """
-    For each region in {rfam_id}_regions.csv, fetch the full sequence,
-    extract start:end, and save as FASTA.
+    Fetch subsequences ONLY for entries where:
+      - entry_type == 'Sequence'
+      - scientific_name matches organism (if provided)
+      - Extract ONLY between seq_start and seq_end
+
+    Saves results to: <output-dir>/<organism>_sequence_regions.fasta
     """
-    fam_dir = os.path.join(outdir, rfam_id)
-    regions_csv = os.path.join(fam_dir, f"{rfam_id}_regions.csv")
 
-    if not os.path.exists(regions_csv):
-        print(f"No regions CSV found for {rfam_id}")
-        return
+    fasta_out = os.path.join(outdir, f"{organism}_sequence_regions.fasta")
 
-    with open(regions_csv, newline="") as fh:
-        reader = csv.DictReader(fh)
-        for i, row in enumerate(reader, 1):
-            accession = row["accession"]
-            start = int(row["start"])
-            end = int(row["end"])
+    count = 0
 
-            debug(f"[{rfam_id}] Region {i}: {accession}:{start}-{end}")
+    with open(fasta_out, "w") as out_fh:
+        for entry in entries:
+            fields = entry.get("fields", {})
 
-            out_fa = os.path.join(
-                fam_dir, f"{accession}_{start}_{end}.fa"
-            )
-
-            # ⏭️ Skip if already processed
-            if os.path.exists(out_fa):
-                debug(f"[{accession}] {start}-{end} already exists, skipping")
+            entry_type = fields.get("entry_type", [])
+            logging.info(f"Processing entry with type: {entry_type}")
+            if not entry_type or entry_type[0] != "Sequence":
                 continue
 
-            try:
-                header, full_seq = fetch_full_sequence(accession)
-                if not full_seq:
-                    debug(f"[{accession}] FAILED to fetch full sequence")
-                    continue
+            accession_list = fields.get("rfamseq_acc", [])
+            start_list = fields.get("seq_start", [])
+            end_list = fields.get("seq_end", [])
 
-                if end > len(full_seq):
-                    debug(
-                        f"[{accession}] WARNING end={end} > length={len(full_seq)}"
-                    )
+            if not accession_list or not start_list or not end_list:
+                continue
 
+            accession = accession_list[0]
+            start = int(start_list[0])
+            end = int(end_list[0])
+
+            header, full_seq = fetch_full_sequence(accession)
+            if not full_seq:
+                continue
+
+            # Coordinates may be reversed
+            if start <= end:
                 subseq = full_seq[start - 1:end]
+            else:
+                subseq = full_seq[end - 1:start]
 
-                out_fa = os.path.join(
-                    fam_dir, f"{accession}_{start}_{end}.fa"
-                )
+            fasta_header = (
+                f">{accession}:{start}-{end} "
+                f"{fields.get('description', [''])[0]}"
+            )
 
-                with open(out_fa, "w") as out:
-                    out.write(f">{accession}:{start}-{end}\n")
-                    for j in range(0, len(subseq), 60):
-                        out.write(subseq[j:j+60] + "\n")
+            out_fh.write(fasta_header + "\n")
+            out_fh.write(subseq + "\n")
 
-                debug(f"[{accession}] saved {len(subseq)} bp")
+            count += 1
 
-                time.sleep(0.5) # Time out for 0.5 seconds between requests
+    logging.info(f"Saved {count} trimmed sequences to {fasta_out}")
 
-            except Exception:
-                debug(f"EXCEPTION processing {accession}")
-                traceback.print_exc()
 
 def collect_rfam_ids(entries):
     """
@@ -247,7 +246,7 @@ def fetch_family_regions(rfam_id, outdir):
             parts = line.split("\t")
             if len(parts) >= 7:
                 writer.writerow(parts[:7])
-    print(f"Saved family regions to {csv_path}")
+    logging.info(f"Saved family regions to {csv_path}")
 
 def extract_secondary_structure(stockholm_text):
     for line in stockholm_text.splitlines():
@@ -260,37 +259,30 @@ def fetch_family_data(rfam_id, outdir):
     fam_dir = os.path.join(outdir, rfam_id)
     os.makedirs(fam_dir, exist_ok=True)
 
-    # FASTA (ungapped)
-    r = safe_get(f"{FETCH_URL}/{rfam_id}/alignment/fastau")
-    if r:
-        fasta_path = os.path.join(fam_dir, f"{rfam_id}.fa")
-        open(fasta_path, "w").write(r.text)
-        print(f"Saved ungapped FASTA to {fasta_path}")
-
     # Stockholm alignment
     r = safe_get(f"{FETCH_URL}/{rfam_id}/alignment/stockholm")
     if r:
         sto_path = os.path.join(fam_dir, f"{rfam_id}.sto")
         open(sto_path, "w").write(r.text)
-        print(f"Saved Stockholm alignment to {sto_path}")
+        logging.info(f"Saved Stockholm alignment to {sto_path}")
         # save secondary structure in a separate file for easier access
         ss_path = os.path.join(fam_dir, f"{rfam_id}_ss.txt")
         open(ss_path, "w").write(extract_secondary_structure(r.text) or "")
-        print(f"Extracted secondary structure to {ss_path}")
+        logging.info(f"Extracted secondary structure to {ss_path}")
 
     # Covariance model
     r = safe_get(f"{FETCH_URL}/{rfam_id}/cm")
     if r:
         cm_path = os.path.join(fam_dir, f"{rfam_id}.cm")
         open(cm_path, "w").write(r.text)
-        print(f"Saved covariance model to {cm_path}")
+        logging.info(f"Saved covariance model to {cm_path}")
 
     # Structure mapping JSON
     r = safe_get(f"{FETCH_URL}/{rfam_id}/structures?content-type=application/json")
     if r:
         json_path = os.path.join(fam_dir, f"{rfam_id}_structures.json")
         open(json_path, "w").write(r.text)
-        print(f"Saved structure mapping JSON to {json_path}")
+        logging.info(f"Saved structure mapping JSON to {json_path}")
 
     url = f"{FETCH_URL}/{rfam_id}/image/cons"
     svg_path = os.path.join(fam_dir, f"{rfam_id}_structure.svg")
@@ -299,30 +291,33 @@ def fetch_family_data(rfam_id, outdir):
     if r and r.headers.get("Content-Type", "").startswith("image/svg"):
         with open(svg_path, "wb") as fh:
             fh.write(r.content)
-        print(f"Saved structure SVG to {svg_path}")
+        logging.info(f"Saved structure SVG to {svg_path}")
     elif r:
         html_path = os.path.join(fam_dir, f"{rfam_id}_structure.html")
         with open(html_path, "w") as fh:
             fh.write(r.text)
-        print(f"Saved raw HTML to {html_path}")
+        logging.info(f"Saved raw HTML to {html_path}")
     else:
-        print(f"No structure response for {rfam_id} at {url}")
+        logging.info(f"No structure response for {rfam_id} at {url}")
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--org", required=True)
-    parser.add_argument("--output-dir", required=True)
+    parser.add_argument("--org", help='Organism name or taxonomy code (E.g. TAXONOMY:"9606" )', required=True)
+    parser.add_argument("--output-dir", help='Output directory path', required=True)
+    parser.add_argument("--verbose", action="store_true", help="Enable verbose logging")
     args = parser.parse_args()
+
+    setup_logging(args.verbose)
 
     os.makedirs(args.output_dir, exist_ok=True)
 
     rows = []
     entries = fetch_search_results(args.org)
-    print(f"Found {len(entries)} entries for {args.org}")
+    logging.info(f"Found {len(entries)} entries for {args.org}")
 
     entries = dedupe_entries(entries)
-    print(f"After deduplication: {len(entries)} entries")
+    logging.info(f"After deduplication: {len(entries)} entries")
     
     csv_path = os.path.join(args.output_dir, f"{args.org}_search_results.csv")
     with open(csv_path, "w", newline="") as fh:
@@ -331,21 +326,23 @@ def main():
         for entry in entries:
             writer.writerow(entry)
 
+    
+    fetch_sequence_regions(entries, args.org, args.output_dir)
+
     rfam_ids = collect_rfam_ids(entries)
-    print(f"Collected {len(rfam_ids)} unique RFAM families")
+    logging.info(f"Collected {len(rfam_ids)} unique RFAM families")
 
 
     for rfam_id in rfam_ids:
-        print(f"Processing family {rfam_id}")
+        logging.info(f"Processing family {rfam_id}")
 
         fetch_family_data(rfam_id, args.output_dir)
         fetch_family_regions(rfam_id, args.output_dir)
-        extract_region_sequences(rfam_id, args.output_dir)
 
         time.sleep(0.3)
 
 
-    print("\nDone.")
+    logging.info("\nDone.")
 
 if __name__ == "__main__":
     main()

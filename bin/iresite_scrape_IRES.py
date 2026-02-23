@@ -304,17 +304,12 @@ if __name__ == "__main__":
     print(df_cellular.head())
 
     # filter to only keep records with organism of interest
-    organisms_of_interest = ["Mus musculus", "Rattus nor..."]
+    organisms_of_interest = ["Mus musculus"]
     df_cellular_mouse = df_cellular[
         df_cellular["organism"].fillna("").str.contains(
             "|".join(organisms_of_interest), case=False
         )   
     ]
-
-    # rename organism Rattus nor... to Rattus norvegicus
-    df_cellular_mouse["organism"] = df_cellular_mouse["organism"].replace(
-        {"Rattus nor...": "Rattus norvegicus"}
-    )
 
     df_cellular_human = df_cellular[
         df_cellular["organism"].fillna("").str.contains(

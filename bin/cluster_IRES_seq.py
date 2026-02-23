@@ -108,12 +108,14 @@ def main():
         str(db),
         str(rep_db),
     ])
-
     run([
         "mmseqs", "convert2fasta",
         str(rep_db),
         str(outdir / "cluster_representatives.fasta"),
     ])
+
+    run (["mmseqs", "createseqfiledb", str(db), str(clu), "tmp/cluster_rep_seq_db"])
+    run (["mmseqs", "result2flat", str(db), str(db), "tmp/cluster_rep_seq_db", str(outdir / "cluster_sequences.fasta")])
 
     logging.info("\n🎉 Done!")
     logging.info(f"Clusters TSV: {outdir / 'clusters.tsv'}")

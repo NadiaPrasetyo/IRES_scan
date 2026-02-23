@@ -1,0 +1,25 @@
+accession,bits_score,start,end,description,species,tax_id
+CM000334.4,503,56050844,56050441,"Pan troglodytes isolate Yerkes chimp pedigree #C0471 (Clint) chromosome 20, whole genome shotgun sequence.",Pan troglodytes (chimpanzee),9598
+CM003403.1,500.1,51742714,51742311,"CM003403.1 Pan paniscus isolate Ulindi chromosome 20, whole genome shotgun sequence",Pan paniscus (pygmy chimpanzee),9597
+CM000682.2,498.6,54173977,54173577,"Homo sapiens chromosome 20, GRCh38 reference primary assembly.",Homo sapiens (human),9606
+FR853091.2,493,53204376,53203973,"Gorilla gorilla gorilla genomic chromosome, chr20, whole genome shotgun sequence",Gorilla gorilla gorilla (western lowland gorilla),9595
+CM009282.2,442.8,50690963,50690560,"CM009282.2 Pongo abelii isolate Susie chromosome 20, whole genome shotgun sequence",Pongo abelii (Sumatran orangutan),9601
+CM001659.1,432.4,10401606,10402006,"Nomascus leucogenys chromosome 13, whole genome shotgun sequence.",Nomascus leucogenys (Northern white-cheeked gibbon),61853
+CM019259.1,412.5,26864522,26864119,"CM019259.1 Piliocolobus tephrosceles isolate RC106 chromosome 20, whole genome shotgun sequence",Piliocolobus tephrosceles (Ugandan red Colobus),591936
+KN973984.1,412.2,3380451,3380048,"KN973984.1 Mandrillus leucophaeus isolate KB7577 unplaced genomic scaffold Scaffold19, whole genome shotgun sequence",Mandrillus leucophaeus (drill),9568
+CM014345.1,411.3,89382267,89381864,"CM014345.1 Macaca mulatta isolate AG07107 chromosome 10, whole genome shotgun sequence",Macaca mulatta (Rhesus monkey),9544
+KQ008039.1,411.1,10382036,10382439,"KQ008039.1 Macaca nemestrina isolate M95218 unplaced genomic scaffold Scaffold43, whole genome shotgun sequence",Macaca nemestrina (pig-tailed macaque),9545
+KQ012863.1,410,6379986,6380389,"KQ012863.1 Cercocebus atys isolate FAK unplaced genomic scaffold Scaffold88, whole genome shotgun sequence",Cercocebus atys (sooty mangabey),9531
+CM021948.1,407.3,86667690,86667287,"CM021948.1 Macaca fascicularis isolate cy0333 breed Mauritian cynomolgus macaque chromosome 10, whole genome shotgun sequence",Macaca fascicularis (crab-eating macaque),9541
+MCGX01020899.1,402.6,1669327,1669730,"MCGX01020899.1 Rhinopithecus bieti isolate Rb0 scaffold_56845, whole genome shotgun sequence",Rhinopithecus bieti (Black snub-nosed monkey),61621
+KN295523.1,401.7,654664,655067,"KN295523.1 Rhinopithecus roxellana isolate Xiao Hai unplaced genomic scaffold ENSRROG015242, whole genome shotgun sequence",Rhinopithecus roxellana (golden snub-nosed monkey),61622
+KN980007.1,396.4,4771721,4772124,"KN980007.1 Colobus angolensis palliatus isolate OR3802 unplaced genomic scaffold Scaffold156, whole genome shotgun sequence",Colobus angolensis palliatus,336983
+CM009960.1,392,48406189,48406596,"CM009960.1 Theropithecus gelada isolate Dixy chromosome 10, whole genome shotgun sequence",Theropithecus gelada (gelada baboon),9565
+CM018195.2,392,81205135,81204728,"CM018195.2 Papio anubis isolate 15944 chromosome 16, whole genome shotgun sequence",Papio anubis (Olive baboon),9555
+CM001942.1,386.2,9868886,9869289,"Chlorocebus sabaeus isolate 1994-021 chromosome 2, whole genome shotgun sequence.",Chlorocebus sabaeus,60711
+CM021919.1,332.8,47353449,47353045,"CM021919.1 Callithrix jacchus isolate mCalJac1 chromosome 5, whole genome shotgun sequence",Callithrix jacchus (white-tufted-ear marmoset),9483
+KZ208238.1,314,11327253,11326847,"KZ208238.1 Aotus nancymaae isolate 86115 unplaced genomic scaffold Scaffold9, whole genome shotgun sequence",Aotus nancymaae (Ma's night monkey),37293
+VZTK01062621.1,252.2,1,209,"VZTK01062621.1 Podargus strigoides voucher USNM:612703 isolate B10K-DU-001-40 C32198489, whole genome shotgun sequence",Podargus strigoides (tawny frogmouth),8905
+JH378156.1,248.5,6505661,6505286,"JH378156.1 Saimiri boliviensis boliviensis unplaced genomic scaffold scaffold00052, whole genome shotgun sequence",Saimiri boliviensis boliviensis (Bolivian squirrel monkey),39432
+KV389650.1,248.3,3490640,3490259,"KV389650.1 Cebus capucinus imitator isolate Cc_AM_T3 unplaced genomic scaffold Scaffold224, whole genome shotgun sequence",Cebus imitator (Panamanian white-faced capuchin),2715852
+NW_022437032.1,229,1836708,1837089,"NW_022437032.1 Sapajus apella isolate SASKATOON/1434 unplaced genomic scaffold, GSC_monkey_1.0 scaffold92, whole genome shotgun sequence",Cebus apella (Tufted capuchin),9515
