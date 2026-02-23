@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg height="550" width="700" xmlns="http://www.w3.org/2000/svg">
+	<rect height="550" onclick="click(evt)" style="fill: white; stroke: white" width="700" x="0" y="0" />
+	<g id="legendElements" transform="translate(25,500)">
+<text id="legendTitle" style="fill: dimgrey; font-family: Arial,Helvetica; font-size: 14px; text-anchor: middle" x="71" y="27">Sequence Conservation</text>
+<text id="leftLegendNumber" style="fill: dimgrey; font-family: Arial,Helvetica; font-size: 14px; text-anchor: left" x="0" y="-2">0.00</text>
+<text id="rightLegendNumber" style="fill: dimgrey; font-family: Arial,Helvetica; font-size: 14px; text-ancor: left" x="122" y="-2">1.00</text>
+<g id="legendBoxElements" x="0" y="0">
+	<rect height="15" style="fill: rgb(255,0,255)" width="4" x="0" y="0" />
+	<rect height="15" style="fill: rgb(219,0,255)" width="4" x="4" y="0" />
+	<rect height="15" style="fill: rgb(184,0,255)" width="4" x="8" y="0" />
+	<rect height="15" style="fill: rgb(148,0,255)" width="4" x="12" y="0" />
+	<rect height="15" style="fill: rgb(113,0,255)" width="4" x="16" y="0" />
+	<rect height="15" style="fill: rgb(77,0,255)" width="4" x="20" y="0" />
+	<rect height="15" style="fill: rgb(42,0,255)" width="4" x="24" y="0" />
+	<rect height="15" style="fill: rgb(7,0,255)" width="4" x="28" y="0" />
+	<rect height="15" style="fill: rgb(0,28,255)" width="4" x="32" y="0" />
+	<rect height="15" style="fill: rgb(0,63,255)" width="4" x="36" y="0" />
+	<rect height="15" style="fill: rgb(0,99,255)" width="4" x="40" y="0" />
+	<rect height="15" style="fill: rgb(0,134,255)" width="4" x="44" y="0" />
+	<rect height="15" style="fill: rgb(0,169,255)" width="4" x="48" y="0" />
+	<rect height="15" style="fill: rgb(0,205,255)" width="4" x="52" y="0" />
+	<rect height="15" style="fill: rgb(0,240,255)" width="4" x="56" y="0" />
+	<rect height="15" style="fill: rgb(0,255,240)" width="4" x="60" y="0" />
+	<rect height="15" style="fill: rgb(0,255,198)" width="4" x="64" y="0" />
+	<rect height="15" style="fill: rgb(0,255,162)" width="4" x="68" y="0" />
+	<rect height="15" style="fill: rgb(0,255,127)" width="4" x="72" y="0" />
+	<rect height="15" style="fill: rgb(0,255,92)" width="4" x="76" y="0" />
+	<rect height="15" style="fill: rgb(0,255,56)" width="4" x="80" y="0" />
+	<rect height="15" style="fill: rgb(0,255,21)" width="4" x="84" y="0" />
+	<rect height="15" style="fill: rgb(0,255,0)" width="4" x="88" y="0" />
+	<rect height="15" style="fill: rgb(14,255,0)" width="4" x="92" y="0" />
+	<rect height="15" style="fill: rgb(49,255,0)" width="4" x="96" y="0" />
+	<rect height="15" style="fill: rgb(84,255,0)" width="4" x="100" y="0" />
+	<rect height="15" style="fill: rgb(120,255,0)" width="4" x="104" y="0" />
+	<rect height="15" style="fill: rgb(155,255,0)" width="4" x="108" y="0" />
+	<rect height="15" style="fill: rgb(191,255,0)" width="4" x="112" y="0" />
+	<rect height="15" style="fill: rgb(226,255,0)" width="4" x="116" y="0" />
+	<rect height="15" style="fill: rgb(255,247,0)" width="4" x="120" y="0" />
+	<rect height="15" style="fill: rgb(255,212,0)" width="4" x="124" y="0" />
+	<rect height="15" style="fill: rgb(255,177,0)" width="4" x="128" y="0" />
+	<rect height="15" style="fill: rgb(255,141,0)" width="4" x="132" y="0" />
+	<rect height="15" style="fill: rgb(255,105,0)" width="4" x="136" y="0" />
+	<rect height="15" style="fill: rgb(255,70,0)" width="4" x="140" y="0" />
+	<rect height="15" style="fill: rgb(255,0,0)" width="4" x="144" y="0" />
+</g>
+	</g>
+	<g transform="scale(1.193445,1.193445) translate(99.327057,124.752502)">
+		<g id="circleElements">
+<circle cx="110.075" cy="7.679" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="103.006" cy="20.906" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="105.536" cy="35.691" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="96.227" cy="23.93" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="86.918" cy="12.168" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="85.016" cy="-7.822" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="66.914" cy="-14.417" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="58.223" cy="-26.643" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="49.532" cy="-38.868" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="40.84" cy="-51.094" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="36.591" cy="-67.506" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="19.643" cy="-67.966" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="14.509" cy="-51.808" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="28.615" cy="-42.402" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="37.306" cy="-30.177" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="45.997" cy="-17.952" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="54.689" cy="-5.726" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="52.07" cy="4.301" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="55.535" cy="14.301" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="64.149" cy="20.825" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="75.156" cy="21.477" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="84.465" cy="33.239" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="93.775" cy="45.001" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="90.86" cy="51.911" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="75.976" cy="53.773" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="85.031" cy="65.732" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="82.116" cy="72.642" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="67.195" cy="74.185" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="52.275" cy="75.727" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="37.354" cy="77.269" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="22.614" cy="70.083" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="9.173" cy="79.479" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="10.859" cy="95.791" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="25.937" cy="102.239" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="38.897" cy="92.19" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="53.817" cy="90.648" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="68.738" cy="89.105" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="83.658" cy="87.563" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="88.16" cy="93.562" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="76.162" cy="102.565" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="85.166" cy="114.562" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="97.163" cy="105.559" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="101.665" cy="111.558" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="96.014" cy="125.453" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="90.363" cy="139.348" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="84.712" cy="153.243" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="68.512" cy="159.693" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="62.061" cy="175.529" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="68.87" cy="190.849" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="62.863" cy="204.593" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="56.856" cy="218.338" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="44.973" cy="230.43" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="53.303" cy="245.197" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="69.798" cy="241.28" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="70.601" cy="224.345" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="76.608" cy="210.6" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="82.614" cy="196.855" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="95.215" cy="193.848" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="103.883" cy="183.961" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="105.258" cy="170.687" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="98.607" cy="158.894" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="104.258" cy="144.999" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="109.909" cy="131.104" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="115.559" cy="117.209" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="129.062" cy="110.676" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="143.464" cy="114.868" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="157.866" cy="119.06" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="172.269" cy="123.253" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="174.388" cy="130.783" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="179.005" cy="137.014" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="185.476" cy="141.159" r="7" style="fill: rgb(255,141,0); fill-opacity: 1" />
+<circle cx="192.932" cy="142.719" r="7" style="fill: rgb(255,141,0); fill-opacity: 1" />
+<circle cx="200.387" cy="141.539" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="206.875" cy="137.82" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="211.575" cy="132.09" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="226.396" cy="134.399" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="241.218" cy="136.707" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="256.039" cy="139.015" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="270.86" cy="141.324" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="285.682" cy="143.632" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="288.588" cy="158.509" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="296.41" cy="171.494" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="308.203" cy="181.017" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="322.543" cy="185.93" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="337.699" cy="185.639" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="351.839" cy="180.179" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="363.258" cy="170.209" r="7" style="fill: rgb(0,255,56); fill-opacity: 1" />
+<circle cx="370.576" cy="156.934" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="372.908" cy="141.956" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="369.975" cy="127.085" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="362.129" cy="114.115" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="350.318" cy="104.613" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="335.969" cy="99.726" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="320.814" cy="100.046" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+<circle cx="306.683" cy="105.532" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="295.283" cy="115.522" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="287.99" cy="128.811" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="273.169" cy="126.502" r="7" style="fill: rgb(0,255,56); fill-opacity: 1" />
+<circle cx="258.347" cy="124.194" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="243.526" cy="121.886" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="228.705" cy="119.577" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="213.883" cy="117.269" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="198.296" cy="101.124" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="176.461" cy="108.851" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="162.059" cy="104.658" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="147.657" cy="100.466" r="7" style="fill: rgb(255,177,0); fill-opacity: 1" />
+<circle cx="133.254" cy="96.274" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="147.903" cy="93.048" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="162.895" cy="92.546" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="177.168" cy="87.932" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="189.616" cy="79.563" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="199.276" cy="68.088" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="205.399" cy="54.394" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="207.512" cy="39.544" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="205.45" cy="24.686" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="199.373" cy="10.972" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="189.752" cy="-0.536" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="177.332" cy="-8.947" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="163.075" cy="-13.609" r="7" style="fill: rgb(255,0,0); fill-opacity: 1" />
+<circle cx="148.085" cy="-14.162" r="7" style="fill: rgb(49,255,0); fill-opacity: 1" />
+<circle cx="133.524" cy="-10.562" r="7" style="fill: rgb(191,255,0); fill-opacity: 1" />
+		</g>
+		<polyline id="outline" points="       109.075,8.679       102.006,21.906       104.536,36.691       95.227,24.930       85.918,13.168       84.016,-6.822       65.914,-13.417       57.223,-25.643       48.532,-37.868       39.840,-50.094       35.591,-66.506       18.643,-66.966       13.509,-50.808       27.615,-41.402       36.306,-29.177       44.997,-16.952       53.689,-4.726       51.070,5.301       54.535,15.301       63.149,21.825       74.156,22.477       83.465,34.239       92.775,46.001       89.860,52.911       74.976,54.773       84.031,66.732       81.116,73.642       66.195,75.185       51.275,76.727       36.354,78.269       21.614,71.083       8.173,80.479       9.859,96.791       24.937,103.239       37.897,93.190       52.817,91.648       67.738,90.105       82.658,88.563       87.160,94.562       75.162,103.565       84.166,115.562       96.163,106.559       100.665,112.558       95.014,126.453       89.363,140.348       83.712,154.243       67.512,160.693       61.061,176.529       67.870,191.849       61.863,205.593       55.856,219.338       43.973,231.430       52.303,246.197       68.798,242.280       69.601,225.345       75.608,211.600       81.614,197.855       94.215,194.848       102.883,184.961       104.258,171.687       97.607,159.894       103.258,145.999       108.909,132.104       114.559,118.209       128.062,111.676       142.464,115.868       156.866,120.060       171.269,124.253       173.388,131.783       178.005,138.014       184.476,142.159       191.932,143.719       199.387,142.539       205.875,138.820       210.575,133.090       225.396,135.399       240.218,137.707       255.039,140.015       269.860,142.324       284.682,144.632       287.588,159.509       295.410,172.494       307.203,182.017       321.543,186.930       336.699,186.639       350.839,181.179       362.258,171.209       369.576,157.934       371.908,142.956       368.975,128.085       361.129,115.115       349.318,105.613       334.969,100.726       319.814,101.046       305.683,106.532       294.283,116.522       286.990,129.811       272.169,127.502       257.347,125.194       242.526,122.886       227.705,120.577       212.883,118.269       197.296,102.124       175.461,109.851       161.059,105.658       146.657,101.466       132.254,97.274       146.903,94.048       161.895,93.546       176.168,88.932       188.616,80.563       198.276,69.088       204.399,55.394       206.512,40.544       204.450,25.686       198.373,11.972       188.752,0.464       176.332,-7.947       162.075,-12.609       147.085,-13.162       132.524,-9.562     " style="fill: none; stroke: black; stroke-width: 0.75" />
+		<g id="pairs" style="fill: none; stroke: black; stroke-width: 0.75">
+			<line id="3,23" x1="104.53632" x2="92.77453" y1="36.69136" y2="46.00050" />
+			<line id="4,22" x1="95.22718" x2="83.46539" y1="24.92957" y2="34.23871" />
+			<line id="5,21" x1="85.91805" x2="74.15624" y1="13.16776" y2="22.47690" />
+			<line id="7,17" x1="65.91420" x2="53.68877" y1="-13.41748" y2="-4.72617" />
+			<line id="8,16" x1="57.22288" x2="44.99746" y1="-25.64290" y2="-16.95158" />
+			<line id="9,15" x1="48.53157" x2="36.30614" y1="-37.86833" y2="-29.17702" />
+			<line id="10,14" x1="39.84025" x2="27.61482" y1="-50.09375" y2="-41.40244" />
+			<line id="27,38" x1="81.11584" x2="82.65815" y1="73.64240" y2="88.56290" />
+			<line id="28,37" x1="66.19534" x2="67.73766" y1="75.18472" y2="90.10522" />
+			<line id="29,36" x1="51.27484" x2="52.81715" y1="76.72704" y2="91.64753" />
+			<line id="30,35" x1="36.35434" x2="37.89666" y1="78.26935" y2="93.18985" />
+			<line id="43,64" x1="100.66458" x2="114.55944" y1="112.55808" y2="118.20900" />
+			<line id="44,63" x1="95.01366" x2="108.90852" y1="126.45294" y2="132.10385" />
+			<line id="45,62" x1="89.36274" x2="103.25760" y1="140.34779" y2="145.99872" />
+			<line id="46,61" x1="83.71182" x2="97.60668" y1="154.24266" y2="159.89357" />
+			<line id="49,57" x1="67.86972" x2="81.61447" y1="191.84857" y2="197.85538" />
+			<line id="50,56" x1="61.86291" x2="75.60767" y1="205.59332" y2="211.60013" />
+			<line id="51,55" x1="55.85610" x2="69.60085" y1="219.33807" y2="225.34489" />
+			<line id="65,107" x1="128.06198" x2="132.25426" y1="111.67590" y2="97.27364" />
+			<line id="66,106" x1="142.46422" x2="146.65651" y1="115.86818" y2="101.46593" />
+			<line id="67,105" x1="156.86647" x2="161.05876" y1="120.06046" y2="105.65822" />
+			<line id="68,104" x1="171.26872" x2="175.46101" y1="124.25275" y2="109.85050" />
+			<line id="75,102" x1="210.57498" x2="212.88333" y1="133.09032" y2="118.26900" />
+			<line id="76,101" x1="225.39630" x2="227.70465" y1="135.39868" y2="120.57736" />
+			<line id="77,100" x1="240.21762" x2="242.52597" y1="137.70703" y2="122.88571" />
+			<line id="78,99" x1="255.03894" x2="257.34729" y1="140.01540" y2="125.19408" />
+			<line id="79,98" x1="269.86026" x2="272.16861" y1="142.32376" y2="127.50243" />
+			<line id="80,97" x1="284.68158" x2="286.98993" y1="144.63211" y2="129.81079" />
+		</g>
+		<g id="seq" style="font-family: Arial,Helvetica" transform="translate(-4.6, 4)">
+			<text x="109.075" y="8.679">
+A</text>
+			<text x="102.006" y="21.906">
+C</text>
+			<text x="104.536" y="36.691">
+G</text>
+			<text x="95.227" y="24.930">
+A</text>
+			<text x="85.918" y="13.168">
+C</text>
+			<text x="84.016" y="-6.822">
+U</text>
+			<text x="65.914" y="-13.417">
+G</text>
+			<text x="57.223" y="-25.643">
+G</text>
+			<text x="48.532" y="-37.868">
+G</text>
+			<text x="39.840" y="-50.094">
+C</text>
+			<text x="35.591" y="-66.506">
+A</text>
+			<text x="18.643" y="-66.966">
+U</text>
+			<text x="13.509" y="-50.808">
+U</text>
+			<text x="27.615" y="-41.402">
+G</text>
+			<text x="36.306" y="-29.177">
+C</text>
+			<text x="44.997" y="-16.952">
+C</text>
+			<text x="53.689" y="-4.726">
+C</text>
+			<text x="51.070" y="5.301">
+C</text>
+			<text x="54.535" y="15.301">
+C</text>
+			<text x="63.149" y="21.825">
+A</text>
+			<text x="74.156" y="22.477">
+G</text>
+			<text x="83.465" y="34.239">
+U</text>
+			<text x="92.775" y="46.001">
+U</text>
+			<text x="89.860" y="52.911">
+U</text>
+			<text x="74.976" y="54.773">
+C</text>
+			<text x="84.031" y="66.732">
+C</text>
+			<text x="81.116" y="73.642">
+C</text>
+			<text x="66.195" y="75.185">
+C</text>
+			<text x="51.275" y="76.727">
+C</text>
+			<text x="36.354" y="78.269">
+A</text>
+			<text x="21.614" y="71.083">
+A</text>
+			<text x="8.173" y="80.479">
+A</text>
+			<text x="9.859" y="96.791">
+U</text>
+			<text x="24.937" y="103.239">
+U</text>
+			<text x="37.897" y="93.190">
+U</text>
+			<text x="52.817" y="91.648">
+G</text>
+			<text x="67.738" y="90.105">
+G</text>
+			<text x="82.658" y="88.563">
+G</text>
+			<text x="87.160" y="94.562">
+C</text>
+			<text x="75.162" y="103.565">
+A</text>
+			<text x="84.166" y="115.562">
+U</text>
+			<text x="96.163" y="106.559">
+U</text>
+			<text x="100.665" y="112.558">
+G</text>
+			<text x="95.014" y="126.453">
+U</text>
+			<text x="89.363" y="140.348">
+C</text>
+			<text x="83.712" y="154.243">
+C</text>
+			<text x="67.512" y="160.693">
+C</text>
+			<text x="61.061" y="176.529">
+Y</text>
+			<text x="67.870" y="191.849">
+G</text>
+			<text x="61.863" y="205.593">
+G</text>
+			<text x="55.856" y="219.338">
+G</text>
+			<text x="43.973" y="231.430">
+U</text>
+			<text x="52.303" y="246.197">
+C</text>
+			<text x="68.798" y="242.280">
+U</text>
+			<text x="69.601" y="225.345">
+U</text>
+			<text x="75.608" y="211.600">
+C</text>
+			<text x="81.614" y="197.855">
+C</text>
+			<text x="94.215" y="194.848">
+A</text>
+			<text x="102.883" y="184.961">
+A</text>
+			<text x="104.258" y="171.687">
+C</text>
+			<text x="97.607" y="159.894">
+G</text>
+			<text x="103.258" y="145.999">
+G</text>
+			<text x="108.909" y="132.104">
+A</text>
+			<text x="114.559" y="118.209">
+C</text>
+			<text x="128.062" y="111.676">
+U</text>
+			<text x="142.464" y="115.868">
+G</text>
+			<text x="156.866" y="120.060">
+G</text>
+			<text x="171.269" y="124.253">
+G</text>
+			<text x="173.388" y="131.783">
+C</text>
+			<text x="178.005" y="138.014">
+G</text>
+			<text x="184.476" y="142.159">
+U</text>
+			<text x="191.932" y="143.719">
+U</text>
+			<text x="199.387" y="142.539">
+G</text>
+			<text x="205.875" y="138.820">
+C</text>
+			<text x="210.575" y="133.090">
+Y</text>
+			<text x="225.396" y="135.399">
+C</text>
+			<text x="240.218" y="137.707">
+C</text>
+			<text x="255.039" y="140.015">
+C</text>
+			<text x="269.860" y="142.324">
+G</text>
+			<text x="284.682" y="144.632">
+G</text>
+			<text x="287.588" y="159.509">
+W</text>
+			<text x="295.410" y="172.494">
+C</text>
+			<text x="307.203" y="182.017">
+A</text>
+			<text x="321.543" y="186.930">
+C</text>
+			<text x="336.699" y="186.639">
+U</text>
+			<text x="350.839" y="181.179">
+G</text>
+			<text x="362.258" y="171.209">
+R</text>
+			<text x="369.576" y="157.934">
+G</text>
+			<text x="371.908" y="142.956">
+G</text>
+			<text x="368.975" y="128.085">
+A</text>
+			<text x="361.129" y="115.115">
+C</text>
+			<text x="349.318" y="105.613">
+U</text>
+			<text x="334.969" y="100.726">
+G</text>
+			<text x="319.814" y="101.046">
+C</text>
+			<text x="305.683" y="106.532">
+C</text>
+			<text x="294.283" y="116.522">
+C</text>
+			<text x="286.990" y="129.811">
+Y</text>
+			<text x="272.169" y="127.502">
+Y</text>
+			<text x="257.347" y="125.194">
+G</text>
+			<text x="242.526" y="122.886">
+G</text>
+			<text x="227.705" y="120.577">
+G</text>
+			<text x="212.883" y="118.269">
+G</text>
+			<text x="197.296" y="102.124">
+U</text>
+			<text x="175.461" y="109.851">
+C</text>
+			<text x="161.059" y="105.658">
+U</text>
+			<text x="146.657" y="101.466">
+C</text>
+			<text x="132.254" y="97.274">
+G</text>
+			<text x="146.903" y="94.048">
+C</text>
+			<text x="161.895" y="93.546">
+U</text>
+			<text x="176.168" y="88.932">
+C</text>
+			<text x="188.616" y="80.563">
+A</text>
+			<text x="198.276" y="69.088">
+C</text>
+			<text x="204.399" y="55.394">
+C</text>
+			<text x="206.512" y="40.544">
+U</text>
+			<text x="204.450" y="25.686">
+U</text>
+			<text x="198.373" y="11.972">
+C</text>
+			<text x="188.752" y="0.464">
+A</text>
+			<text x="176.332" y="-7.947">
+G</text>
+			<text x="162.075" y="-12.609">
+C</text>
+			<text x="147.085" y="-13.162">
+A</text>
+			<text x="132.524" y="-9.562">
+G</text>
+			<text id="fivePrime" style="fill: dimgrey; font-family: Arial,Helvetica; font-size: 10px; text-ancor: middle" x="114.075" y="-7.321">5&apos;</text>
+			<text id="threePrime" style="fill: dimgrey; font-family: Arial,Helvetica; font-size: 10px; text-ancor: middle" x="137.524" y="-25.562">3&apos;</text>
+		</g>
+	</g>
+	<script><![CDATA[
+        var shown = 1;
+        function click() {
+             var seq = document.getElementById("seq");
+             var lines = document.getElementById("outline");
+             var pairs = document.getElementById("pairs");
+
+             if (shown==1) {
+               seq.setAttribute("style", "font-family: Arial,Helvetica; visibility: hidden");
+               lines.setAttribute("style", "fill: none; stroke: black; stroke-width: 0.75; visibility: visible");
+               pairs.setAttribute("style", "fill: none; stroke: black; stroke-width: 0.75; visibility: visible");
+
+               shown = 2;
+             } else if (shown==2) {
+               seq.setAttribute("style", "font-family: Arial,Helvetica; visibility: visible");
+               pairs.setAttribute("style", "fill: none; stroke: black; stroke-width: 0.75; visibility: hidden");
+               lines.setAttribute("style", "fill: none; stroke: black; stroke-width: 0.75; visibility: hidden");
+
+               shown = 3;
+             } else if (shown==3) {
+               seq.setAttribute("style", "font-family: Arial,Helvetica; visibility: visible");
+               lines.setAttribute("style", "fill: none; stroke: black; stroke-width: 0.75; visibility: visible");
+               pairs.setAttribute("style", "fill: none; stroke: black; stroke-width: 0.75; visibility: visible");
+               shown = 1;
+             }
+         }
+  ]]></script>
+	<!--
+	Generated using the Perl SVG Module V2.87
+	by Ronan Oger
+
+	-->
+</svg>

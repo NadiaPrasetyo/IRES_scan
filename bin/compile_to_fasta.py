@@ -65,8 +65,19 @@ def main():
         with open(input_tsv) as tsvfile, open(output_file, "a") as out:
             reader = csv.DictReader(tsvfile, delimiter="\t")
             for row in reader:
-                header = f">{row['IRES ID']}|{row['Organism']}"
-                sequence = row["IRES sequence"]
+                # robustly fetch fields with fallbacks and avoid KeyError
+                ires_id = row.get("IRES ID") or row.get("Ires ID") or row.get("ires_id") or row.get("IRES_ID") or ""
+                organism = row.get("Organism") or row.get("Virus Name") or ""
+                sequence = (row.get("IRES sequence") or row.get("sequence") or "").strip()
+
+                if not ires_id:
+                    logging.warning(f"Skipping row with missing IRES ID: {row}")
+                    continue
+                if not sequence:
+                    logging.warning(f"Skipping {ires_id} because sequence is empty.")
+                    continue
+
+                header = f">{ires_id}|{organism}" if organism else f">{ires_id}"
                 out.write(f"{header}\n{sequence}\n")
 
 
