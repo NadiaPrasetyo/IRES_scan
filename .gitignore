@@ -1,5 +1,6 @@
 # project specific
 mm39.fa
+hg38.2bit
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
