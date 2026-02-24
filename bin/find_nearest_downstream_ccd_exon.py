@@ -105,26 +105,54 @@ def run_blat(sequence, temp_fasta="temp.fa", output_psl="temp.psl", blat_path=".
 ############################################################
 
 def load_ccds_exons(ccd_file):
-    """
-    Expected columns:
-    chromosome, nc_accession, ccds_id, cds_strand,
-    exon_ordinal_position, genomic_start, genomic_end
-    """
 
-    df = pd.read_csv(ccd_file, sep="\t")
+    df = pd.read_csv(ccd_file, sep="\t", dtype=str, low_memory=False)
+    df.columns = df.columns.str.replace("#", "").str.strip()
+
+    # Keep only Public CCDS
+    df = df[df["ccds_status"] == "Public"]
 
     exons_by_chr = defaultdict(list)
 
     for _, row in df.iterrows():
-        exons_by_chr[row["chromosome"]].append({
-            "start": int(row["genomic_start"]),
-            "end": int(row["genomic_end"]),
-            "strand": row["cds_strand"],
-            "ccds_id": row["ccds_id"],
-            "nc_accession": row["nc_accession"]
-        })
+
+        chrom = "chr" + row["chromosome"].replace("chr", "")
+        strand = row["cds_strand"]
+        ccds_id = row["ccds_id"]
+
+        # Parse exon list
+        locations = row["cds_locations"].strip("[]")
+        exon_ranges = [x.strip() for x in locations.split(",")]
+
+        for exon_number, exon in enumerate(exon_ranges, start=1):
+            start, end = exon.split("-")
+
+            exons_by_chr[chrom].append({
+                "start": int(start),
+                "end": int(end),
+                "strand": strand,
+                "ccds_id": ccds_id,
+                "exon_number": exon_number
+            })
 
     return exons_by_chr
+
+def load_ccds_protein_fasta(protein_fasta):
+
+    protein_dict = {}
+
+    for record in SeqIO.parse(protein_fasta, "fasta"):
+        header = record.description
+
+        # Example: CCDS2.2|Hs110|chr1|exon1
+        parts = header.split("|")
+        ccds_id = parts[0]
+        exon_part = parts[-1]  # exon1
+
+        key = f"{ccds_id}_{exon_part}"
+        protein_dict[key] = str(record.seq)
+
+    return protein_dict
 
 
 ############################################################
@@ -168,7 +196,7 @@ def find_nearest_downstream(chrom, start, end, strand, exons_by_chr):
 # MAIN
 ############################################################
 
-def main(fasta_file, ccd_file, output_csv, blat_path):
+def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
 
     # check that blat executable exists
     if not shutil.which(blat_path):
@@ -176,6 +204,10 @@ def main(fasta_file, ccd_file, output_csv, blat_path):
         sys.exit(1)
 
     exons_by_chr = load_ccds_exons(ccd_file)
+
+    protein_dict = None
+    if ccds_protein_fasta:
+        protein_dict = load_ccds_protein_fasta(ccds_protein_fasta)
 
     results = []
 
@@ -200,14 +232,40 @@ def main(fasta_file, ccd_file, output_csv, blat_path):
             chrom, start, end, strand, exons_by_chr
         )
 
-        if nearest:
+        if nearest and protein_dict:
+            logging.info(f"Found nearest exon for {ires_id}: {nearest['ccds_id']} exon {nearest['exon_number']}")
+            protein_key = f"{nearest['ccds_id']}_exon{nearest['exon_number']}"
+            protein_seq = protein_dict.get(protein_key, "NA")
+
             results.append({
                 "ires_id": ires_id,
                 "ires_location": f"{chrom}:{start}-{end}{strand}",
                 "nearest_exon_location":
                     f"{chrom}:{nearest['start']}-{nearest['end']}{strand}",
                 "ccds_id": nearest["ccds_id"],
-                "nc_accession": nearest["nc_accession"]
+                "exon_number": nearest["exon_number"],
+                "protein_sequence": protein_seq
+            })
+
+        elif nearest:
+            logging.info(f"Found nearest exon for {ires_id}: {nearest['ccds_id']} exon {nearest['exon_number']}")
+            results.append({
+                "ires_id": ires_id,
+                "ires_location": f"{chrom}:{start}-{end}{strand}",
+                "nearest_exon_location": "NA",
+                "ccds_id": "NA",
+                "exon_number": "NA",
+                "protein_sequence": "NA"
+            })
+        else:
+            logging.info(f"No downstream exon found for {ires_id}")
+            results.append({
+                "ires_id": ires_id,
+                "ires_location": f"{chrom}:{start}-{end}{strand}",
+                "nearest_exon_location": "NA",
+                "ccds_id": "NA",
+                "exon_number": "NA",
+                "protein_sequence": "NA"
             })
 
     pd.DataFrame(results).to_csv(output_csv, index=False)
@@ -219,6 +277,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Find nearest downstream CCDS exon for IRES sequences.")
     parser.add_argument("--fasta", help="Input FASTA file")
     parser.add_argument("--ccd_file", help="CCDS exon file")
+    parser.add_argument("--ccds_protein_fasta", help="CCDS exon protein FASTA")
     parser.add_argument("--output_csv", help="Output CSV file")
     parser.add_argument("--blat_path", default="./blat", help="Path to BLAT executable")
     parser.add_argument("--verbose", action="store_true", help="Enable verbose logging")
@@ -230,5 +289,6 @@ if __name__ == "__main__":
     ccd_file = args.ccd_file
     output_csv = args.output_csv
     blat_path = args.blat_path
+    ccds_protein_fasta = args.ccds_protein_fasta
 
-    main(fasta_file, ccd_file, output_csv, blat_path)
+    main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta)
