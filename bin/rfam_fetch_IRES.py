@@ -141,6 +141,8 @@ def fetch_sequence_regions(entries, organism, outdir):
             if not entry_type or entry_type[0] != "Sequence":
                 continue
 
+# "{'id': ['CM000663.2_39902015_39901795'], 'description': ['Homo sapiens IRES_L-myc'], 'rna_type': ['Cis-reg', 'IRES'], 'entry_type': ['Sequence'], 'rfamseq_acc': ['CM000663.2'], 'rfamseq_acc_description': ['Homo sapiens chromosome 1, GRCh38 reference primary assembly.'], 'scientific_name': ['Homo sapiens'], 'num_seed': [], 'seq_start': ['39902015'], 'seq_end': ['39901795'], 'ENA': ['CM000663'], 'RFAM': ['RF00261']}",CM000663.2_39902015_39901795,rfam
+            
             accession_list = fields.get("rfamseq_acc", [])
             start_list = fields.get("seq_start", [])
             end_list = fields.get("seq_end", [])
@@ -164,7 +166,8 @@ def fetch_sequence_regions(entries, organism, outdir):
 
             fasta_header = (
                 f">{accession}:{start}-{end} "
-                f"{fields.get('description', [''])[0]}"
+                f"{fields.get('description', [''])[0]} "
+                f"{fields.get('rfamseq_acc_description', [''])[0]}"
             )
 
             out_fh.write(fasta_header + "\n")
