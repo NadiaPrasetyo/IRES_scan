@@ -1,4 +1,4 @@
-INFERNAL1/a [1.1.4 | Dec 2020]
+INFERNAL1/a [1.1.5 | Sep 2023]
 NAME     IRES_c-myc
 ACC      RF00216
 DESC     c-myc internal ribosome entry site (IRES)
@@ -13,6 +13,7 @@ MAP      yes
 DATE     Sat Jul 13 13:13:27 2024
 COM      [1] /hps/software/users/agb/rfam/bin/cmbuild -F CM SEED
 COM      [2] /hps/software/users/agb/rfam/bin/cmcalibrate --cpu 8 /nfs/production/agb/rfam/15/rescan/families/RF00216/CM
+COM      [3] /projects/health_sciences/bms/biochemistry/gardner_group/nadia/infernal-1.1.5/src/cmcalibrate data/human_IRES/Rfam/RF00216/RF00216.cm
 PBEGIN   0.05
 PEND     0.05
 WBETA    1e-07
@@ -1214,7 +1215,7 @@ CM
                                              [ END   116 ]      -      - - - - -
      E   924   923 3    -1     0     0     0     0     0                                                 
 //
-HMMER3/f [3.3.2 | Nov 2020]
+HMMER3/f [3.4 | Aug 2023]
 NAME  IRES_c-myc
 ACC   RF00216
 DESC  c-myc internal ribosome entry site (IRES)

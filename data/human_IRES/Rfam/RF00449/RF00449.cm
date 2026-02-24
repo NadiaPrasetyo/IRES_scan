@@ -1,4 +1,4 @@
-INFERNAL1/a [1.1.4 | Dec 2020]
+INFERNAL1/a [1.1.5 | Sep 2023]
 NAME     IRES_HIF1
 ACC      RF00449
 DESC     HIF-1 alpha IRES
@@ -13,6 +13,7 @@ MAP      yes
 DATE     Tue Jul  9 09:22:30 2024
 COM      [1] /hps/software/users/agb/rfam/bin/cmbuild -F CM SEED
 COM      [2] /hps/software/users/agb/rfam/bin/cmcalibrate --cpu 8 /nfs/production/agb/rfam/15/rescan/families/RF00449/CM
+COM      [3] /projects/health_sciences/bms/biochemistry/gardner_group/nadia/infernal-1.1.5/src/cmcalibrate data/human_IRES/Rfam/RF00449/RF00449.cm
 PBEGIN   0.05
 PEND     0.05
 WBETA    1e-07
@@ -1165,7 +1166,7 @@ CM
                                              [ END   263 ]      -      - - - - -
      E   865   864 3    -1     0     0     0     0     0                                                 
 //
-HMMER3/f [3.3.2 | Nov 2020]
+HMMER3/f [3.4 | Aug 2023]
 NAME  IRES_HIF1
 ACC   RF00449
 DESC  HIF-1 alpha IRES
