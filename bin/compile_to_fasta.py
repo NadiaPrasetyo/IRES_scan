@@ -69,6 +69,7 @@ def main():
                 ires_id = row.get("IRES ID") or row.get("Ires ID") or row.get("ires_id") or row.get("IRES_ID") or ""
                 organism = row.get("Organism") or row.get("Virus Name") or ""
                 sequence = (row.get("IRES sequence") or row.get("sequence") or "").strip()
+                hg38_location = row.get("Location (hg38)") or ""
 
                 if not ires_id:
                     logging.warning(f"Skipping row with missing IRES ID: {row}")
@@ -77,7 +78,7 @@ def main():
                     logging.warning(f"Skipping {ires_id} because sequence is empty.")
                     continue
 
-                header = f">{ires_id}|{organism}" if organism else f">{ires_id}"
+                header = f">{ires_id}|{organism}|{hg38_location}" if organism else f">{ires_id}|{hg38_location}"
                 out.write(f"{header}\n{sequence}\n")
 
 
