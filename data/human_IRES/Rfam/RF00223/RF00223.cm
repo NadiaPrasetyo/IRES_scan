@@ -1,4 +1,4 @@
-INFERNAL1/a [1.1.4 | Dec 2020]
+INFERNAL1/a [1.1.5 | Sep 2023]
 NAME     IRES_Bip
 ACC      RF00223
 DESC     bip internal ribosome entry site (IRES)
@@ -13,6 +13,7 @@ MAP      yes
 DATE     Thu Jul  4 06:37:39 2024
 COM      [1] /hps/software/users/agb/rfam/bin/cmbuild -F CM SEED
 COM      [2] /hps/software/users/agb/rfam/bin/cmcalibrate --cpu 8 /nfs/production/agb/rfam/15/rescan/work/43/363a472b138888f06529d88220f9b6/RF00223/CM
+COM      [3] /projects/health_sciences/bms/biochemistry/gardner_group/nadia/infernal-1.1.5/src/cmcalibrate data/human_IRES/Rfam/RF00223/RF00223.cm
 PBEGIN   0.05
 PEND     0.05
 WBETA    1e-07
@@ -1069,7 +1070,7 @@ CM
                                              [ END   235 ]      -      - - - - -
      E   797   796 3    -1     0     0     0     0     0                                                 
 //
-HMMER3/f [3.3.2 | Nov 2020]
+HMMER3/f [3.4 | Aug 2023]
 NAME  IRES_Bip
 ACC   RF00223
 DESC  bip internal ribosome entry site (IRES)

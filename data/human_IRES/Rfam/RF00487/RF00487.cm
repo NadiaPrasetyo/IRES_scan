@@ -1,4 +1,4 @@
-INFERNAL1/a [1.1.4 | Dec 2020]
+INFERNAL1/a [1.1.5 | Sep 2023]
 NAME     IRES_Cx43
 ACC      RF00487
 DESC     Connexin-43 internal ribosome entry site (IRES)
@@ -13,6 +13,7 @@ MAP      yes
 DATE     Thu Jul  4 06:20:37 2024
 COM      [1] /hps/software/users/agb/rfam/bin/cmbuild -F CM SEED
 COM      [2] /hps/software/users/agb/rfam/bin/cmcalibrate --cpu 8 /nfs/production/agb/rfam/15/rescan/work/61/335c65f870be9e49fd132355c1d4b2/RF00487/CM
+COM      [3] /projects/health_sciences/bms/biochemistry/gardner_group/nadia/infernal-1.1.5/src/cmcalibrate data/human_IRES/Rfam/RF00487/RF00487.cm
 PBEGIN   0.05
 PEND     0.05
 WBETA    1e-07
@@ -828,7 +829,7 @@ CM
                                              [ END   120 ]      -      - - - - -
      E   630   629 3    -1     0     0     0     0     0                                                 
 //
-HMMER3/f [3.3.2 | Nov 2020]
+HMMER3/f [3.4 | Aug 2023]
 NAME  IRES_Cx43
 ACC   RF00487
 DESC  Connexin-43 internal ribosome entry site (IRES)
