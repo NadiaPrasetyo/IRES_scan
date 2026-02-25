@@ -223,6 +223,10 @@ def find_nearest_downstream(chrom, start, end, exons_by_chr):
                 min_distance = distance
                 candidate = exon
 
+    # Add distance to candidate if found
+    if candidate:
+        candidate["distance"] = min_distance
+
     return candidate
 
 
@@ -311,6 +315,7 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
                     f"{chrom}:{nearest['start']}-{nearest['end']}{nearest['strand']}",
                 "ccds_id": nearest["ccds_id"],
                 "exon_number": nearest["exon_number"],
+                "distance": nearest.get("distance", "NA"),
                 "sequence": protein_seq
             })
 
@@ -322,6 +327,7 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
                 "nearest_exon_location": f"{chrom}:{nearest['start']}-{nearest['end']}{nearest['strand']}",
                 "ccds_id": nearest["ccds_id"],
                 "exon_number": nearest["exon_number"],
+                "distance": nearest.get("distance", "NA"),
                 "sequence": "NA"
             })
         else:
@@ -332,6 +338,7 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
                 "nearest_exon_location": "NA",
                 "ccds_id": "NA",
                 "exon_number": "NA",
+                "distance": "NA",
                 "sequence": "NA"
             })
 
