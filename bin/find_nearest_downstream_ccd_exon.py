@@ -35,20 +35,34 @@ def parse_header_for_coordinates(header):
     Returns: (chrom, start, end, strand) or None
     """
 
-    # Example formats:
-    # chr9:87726220-87726396+
-    # chr13:20,189,591-20,192,943-
-    # CM000664.2:10445264-10445145
+    # Remove commas
+    header_clean = header.replace(",", "")
 
-    header = header.replace(",", "")
-
-    # chr format
-    match = re.search(r'(chr[\w\.]+):(\d+)-(\d+)([+-]?)', header)
+    # Attempt to find chrX:start-end[+/-] anywhere in the string
+    match = re.search(r'chr?(\w+):(\d+)-(\d+)([+-]?)', header_clean)
     if match:
         chrom = match.group(1)
         start = int(match.group(2))
         end = int(match.group(3))
         strand = match.group(4) if match.group(4) else "+"
+        return chrom, start, end, strand
+
+    # If chr pattern not found, try generic pattern like CM000664.2:10445264-10445145
+    match_generic = re.search(r'([\w\.]+):(\d+)-(\d+)([+-]?)?', header_clean)
+    if match_generic:
+        # Heuristic: if the first group looks like CM*, hsa*, etc., try to extract chromosome from description
+        chrom_candidate = match_generic.group(1)
+        start = int(match_generic.group(2))
+        end = int(match_generic.group(3))
+        strand = match_generic.group(4) if match_generic.group(4) else "+"
+
+        # Check for "chromosome N" in header
+        chrom_match = re.search(r'chromosome (\w+)', header_clean, re.IGNORECASE)
+        if chrom_match:
+            chrom = chrom_match.group(1)
+        else:
+            chrom = chrom_candidate  # fallback
+
         return chrom, start, end, strand
 
     return None
