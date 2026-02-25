@@ -185,10 +185,7 @@ def load_ccds_protein_fasta(protein_fasta):
 # FIND NEAREST DOWNSTREAM EXON
 ############################################################
 
-def find_nearest_downstream(chrom, start, end, strand, exons_by_chr):
-    """
-    Strand-aware downstream logic.
-    """
+def find_nearest_downstream(chrom, start, end, exons_by_chr):
 
     if chrom not in exons_by_chr:
         logging.info(f"No exons found for chromosome {chrom}")
@@ -199,23 +196,12 @@ def find_nearest_downstream(chrom, start, end, strand, exons_by_chr):
 
     for exon in exons_by_chr[chrom]:
 
-        if exon["strand"] != strand:
-            logging.debug(f"Skipping exon {exon['ccds_id']} exon {exon['exon_number']} on {chrom} due to strand mismatch, expected {strand} but got {exon['strand']}")
-            continue
-
-        if strand == "+":
-            if exon["start"] >= end:
-                distance = exon["start"] - end
-                if distance < min_distance:
-                    min_distance = distance
-                    candidate = exon
-
-        elif strand == "-":
-            if exon["end"] <= start:
-                distance = start - exon["end"]
-                if distance < min_distance:
-                    min_distance = distance
-                    candidate = exon
+        # Genomic downstream only (higher coordinate)
+        if exon["start"] >= end:
+            distance = exon["start"] - end
+            if distance < min_distance:
+                min_distance = distance
+                candidate = exon
 
     return candidate
 
@@ -258,11 +244,11 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
             chrom, start, end, strand = blat_hit
 
         nearest = find_nearest_downstream(
-            chrom, start, end, strand, exons_by_chr
+            chrom, start, end, exons_by_chr
         )
 
         if nearest and protein_dict:
-            logging.info(f"Found nearest exon for {ires_id}: {nearest['ccds_id']} exon {nearest['exon_number']}")
+            logging.info(f"Found nearest exon for {ires_id}: {nearest['ccds_id']} exon {nearest['exon_number']} {strand}")
             protein_key = f"{nearest['ccds_id']}_exon{nearest['exon_number']}"
             protein_seq = protein_dict.get(protein_key, "NA")
 
@@ -281,9 +267,9 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
             results.append({
                 "ires_id": ires_id,
                 "ires_location": f"{chrom}:{start}-{end}{strand}",
-                "nearest_exon_location": "NA",
-                "ccds_id": "NA",
-                "exon_number": "NA",
+                "nearest_exon_location": f"{chrom}:{nearest['start']}-{nearest['end']}{strand}",
+                "ccds_id": nearest["ccds_id"],
+                "exon_number": nearest["exon_number"],
                 "protein_sequence": "NA"
             })
         else:
