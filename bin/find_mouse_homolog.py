@@ -66,7 +66,7 @@ def main():
     run(["mmseqs", "convertalis", "tmp/human_IRES_db", "tmp/mouse_genome_db", "tmp/search_results_db",
           f"{args.output}.tsv",
           "--format-mode", "4",
-          "--format-output", "query,target,pident,alnlen,bits,qheader,evalue,qaln,taln"])
+          "--format-output", "query,target,pident,alnlen,bits,tstart,tend,tlen,evalue,qaln,taln"])
 
     # Step 6: Clean up temporary files
     run(["rm", "-rf", "tmp"])
