@@ -19,7 +19,7 @@ HG38_2BIT = "hg38.2bit"   # path to hg38 2bit genome
 def setup_logging(verbose=False):
     log_file = "find_nearest_downstream_ccd_exon.log"
     logging.basicConfig(
-        level=logging.INFO,
+        level=logging.DEBUG if verbose else logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
         handlers=[logging.FileHandler(log_file), logging.StreamHandler()] if verbose else [logging.StreamHandler()],
     )
@@ -116,7 +116,6 @@ def load_ccds_exons(ccd_file):
     (df["cds_locations"] != "[]")
     ]
 
-
     exons_by_chr = defaultdict(list)
 
     for _, row in df.iterrows():
@@ -192,6 +191,7 @@ def find_nearest_downstream(chrom, start, end, strand, exons_by_chr):
     """
 
     if chrom not in exons_by_chr:
+        logging.info(f"No exons found for chromosome {chrom}")
         return None
 
     candidate = None
@@ -200,6 +200,7 @@ def find_nearest_downstream(chrom, start, end, strand, exons_by_chr):
     for exon in exons_by_chr[chrom]:
 
         if exon["strand"] != strand:
+            logging.debug(f"Skipping exon {exon['ccds_id']} exon {exon['exon_number']} on {chrom} due to strand mismatch, expected {strand} but got {exon['strand']}")
             continue
 
         if strand == "+":
@@ -248,10 +249,11 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
 
         if coord:
             chrom, start, end, strand = coord
+            logging.debug(f"Parsed coordinates for IRES ID={ires_id} Location= {chrom}:{start}-{end}{strand}")
         else:
             blat_hit = run_blat(sequence, blat_path=blat_path)
             if not blat_hit:
-                print(f"BLAT failed for {ires_id}")
+                logging.warning(f"BLAT failed for {ires_id}")
                 continue
             chrom, start, end, strand = blat_hit
 
@@ -275,7 +277,7 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
             })
 
         elif nearest:
-            logging.info(f"Found nearest exon for {ires_id}: {nearest['ccds_id']} exon {nearest['exon_number']}")
+            logging.info(f"Found nearest exon for {ires_id}: {nearest['ccds_id']} exon {nearest['exon_number']} without protein sequence")
             results.append({
                 "ires_id": ires_id,
                 "ires_location": f"{chrom}:{start}-{end}{strand}",
