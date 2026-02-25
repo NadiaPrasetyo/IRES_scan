@@ -36,6 +36,7 @@ def main():
         # unzip the downloaded file
         run(["gunzip", "data/mm39.fa.gz"])
 
+
     # Step 2: Check that mmseqs2 is installed and in the PATH
     try:
         subprocess.run(["mmseqs", "version"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
@@ -48,23 +49,31 @@ def main():
     run(["mmseqs", "createdb", args.input, "tmp/human_IRES_db"])
     run(["mmseqs", "createdb", args.mouse_genome, "tmp/mouse_genome_db"])
 
+    # Step 3.5 translate the mouse genome database to protein sequences (6-frame translation)
+    run([
+        "mmseqs", "translatenucs",
+        "tmp/mouse_genome_db",
+        "tmp/mouse_genome_db_translated",
+        "--threads", str(args.threads),
+    ])
+
     # Step 4: Search for homologous sequences in the mouse genome using MMseqs2
     run([
     "mmseqs", "search",
     "tmp/human_IRES_db",
-    "tmp/mouse_genome_db",
+    "tmp/mouse_genome_db_translated",
     "tmp/search_results_db",
     "tmp",
-    "--search-type", "3",
+    "--search-type", "1",
     "-s", "7.5",
     "-a",
     "--threads", str(args.threads),
     ])
 
     # Step 5: Convert the search results to FASTA format and m8 format
-    run(["mmseqs", "convertalis", "tmp/human_IRES_db", "tmp/mouse_genome_db", "tmp/search_results_db",
+    run(["mmseqs", "convertalis", "tmp/human_IRES_db", "tmp/mouse_genome_db_translated", "tmp/search_results_db",
           f"{args.output}.tsv",
-          "--search-type", "3",
+          "--search-type", "1",
           "--format-mode", "4",
           "--format-output", "query,target,pident,alnlen,bits,qheader,evalue,qaln,taln"])
 

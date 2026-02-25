@@ -305,34 +305,34 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
             protein_seq = protein_dict.get(protein_key, "NA")
 
             results.append({
-                "ires_id": ires_id,
+                "ires_name": ires_id,
                 "ires_location": f"{chrom}:{start}-{end}{strand}",
                 "nearest_exon_location":
                     f"{chrom}:{nearest['start']}-{nearest['end']}{nearest['strand']}",
                 "ccds_id": nearest["ccds_id"],
                 "exon_number": nearest["exon_number"],
-                "protein_sequence": protein_seq
+                "sequence": protein_seq
             })
 
         elif nearest:
             logging.info(f"Found nearest exon for {ires_id}: {nearest['ccds_id']} exon {nearest['exon_number']} without protein sequence")
             results.append({
-                "ires_id": ires_id,
+                "ires_name": ires_id,
                 "ires_location": f"{chrom}:{start}-{end}{strand}",
                 "nearest_exon_location": f"{chrom}:{nearest['start']}-{nearest['end']}{nearest['strand']}",
                 "ccds_id": nearest["ccds_id"],
                 "exon_number": nearest["exon_number"],
-                "protein_sequence": "NA"
+                "sequence": "NA"
             })
         else:
             logging.info(f"No downstream exon found for {ires_id}")
             results.append({
-                "ires_id": ires_id,
+                "ires_name": ires_id,
                 "ires_location": f"{chrom}:{start}-{end}{strand}",
                 "nearest_exon_location": "NA",
                 "ccds_id": "NA",
                 "exon_number": "NA",
-                "protein_sequence": "NA"
+                "sequence": "NA"
             })
 
     pd.DataFrame(results).to_csv(output_csv, index=False)

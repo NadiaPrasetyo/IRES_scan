@@ -20,7 +20,7 @@ def collect_fastas(input_dir):
 
 def main():
     parser = argparse.ArgumentParser(description="Compile all sequences in the input file/directory into a single FASTA file")
-    parser.add_argument("--input_dir", nargs="?", default=".", help="Optional Directory to search for FASTA files (default: current directory)")
+    parser.add_argument("--input_dir", nargs="?", help="Optional Directory to search for FASTA files (recursively)")
     parser.add_argument("--input_csv", help="Optional CSV file with sequence IDs and descriptions to include in the FASTA headers")
     parser.add_argument("--input_tsv", help="Optional TSV file with sequence IDs and descriptions to include in the FASTA headers")
     parser.add_argument("--output", default="data/all_sequences.fasta", help="Output FASTA file name (default: data/all_sequences.fasta)")
@@ -57,7 +57,8 @@ def main():
         with open(input_csv) as csvfile, open(output_file, "a") as out:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                header = f">{row['ires_name']}|{row['organism']}"
+                organism = row.get("organism") or ""
+                header = f">{row['ires_name']}|{organism}" if organism else f">{row['ires_name']}"
                 sequence = row["sequence"]
                 out.write(f"{header}\n{sequence}\n")
 
