@@ -248,7 +248,7 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
         )
 
         if nearest and protein_dict:
-            logging.info(f"Found nearest exon for {ires_id}: {nearest['ccds_id']} exon {nearest['exon_number']} {strand}")
+            logging.info(f"Found nearest exon for {ires_id}: {nearest['ccds_id']} exon {nearest['exon_number']} {nearest['strand']}")
             protein_key = f"{nearest['ccds_id']}_exon{nearest['exon_number']}"
             protein_seq = protein_dict.get(protein_key, "NA")
 
@@ -256,7 +256,7 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
                 "ires_id": ires_id,
                 "ires_location": f"{chrom}:{start}-{end}{strand}",
                 "nearest_exon_location":
-                    f"{chrom}:{nearest['start']}-{nearest['end']}{strand}",
+                    f"{chrom}:{nearest['start']}-{nearest['end']}{nearest['strand']}",
                 "ccds_id": nearest["ccds_id"],
                 "exon_number": nearest["exon_number"],
                 "protein_sequence": protein_seq
@@ -267,7 +267,7 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
             results.append({
                 "ires_id": ires_id,
                 "ires_location": f"{chrom}:{start}-{end}{strand}",
-                "nearest_exon_location": f"{chrom}:{nearest['start']}-{nearest['end']}{strand}",
+                "nearest_exon_location": f"{chrom}:{nearest['start']}-{nearest['end']}{nearest['strand']}",
                 "ccds_id": nearest["ccds_id"],
                 "exon_number": nearest["exon_number"],
                 "protein_sequence": "NA"
