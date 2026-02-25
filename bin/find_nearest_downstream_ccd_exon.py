@@ -233,6 +233,8 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
 
         coord = parse_header_for_coordinates(header)
 
+        used_blat = False
+
         if coord:
             chrom, start, end, strand = coord
             logging.debug(f"Parsed coordinates for IRES ID={ires_id} Location= {chrom}:{start}-{end}{strand}")
@@ -242,10 +244,40 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
                 logging.warning(f"BLAT failed for {ires_id}")
                 continue
             chrom, start, end, strand = blat_hit
+            logging.debug(f"BLAT coordinates for IRES ID={ires_id} Location= {chrom}:{start}-{end}{strand}")
+            used_blat = True
 
         nearest = find_nearest_downstream(
             chrom, start, end, exons_by_chr
         )
+
+        # 🔁 BACKUP: if nothing found, try BLAT remapping
+        if nearest is None and not used_blat:
+            logging.info(f"No downstream exon found using header coordinates for {ires_id}, trying BLAT remap")
+
+            blat_hit = run_blat(sequence, blat_path=blat_path)
+
+            if blat_hit:
+                blat_chrom, blat_start, blat_end, blat_strand = blat_hit
+
+                logging.debug(
+                    f"BLAT remap for {ires_id}: "
+                    f"{blat_chrom}:{blat_start}-{blat_end}{blat_strand}"
+                )
+
+                nearest = find_nearest_downstream(
+                    blat_chrom,
+                    blat_start,
+                    blat_end,
+                    exons_by_chr
+                )
+
+                # If BLAT worked, update coordinates
+                if nearest:
+                    chrom, start, end, strand = blat_chrom, blat_start, blat_end, blat_strand
+                    logging.info(f"BLAT rescue succeeded for {ires_id}")
+            else:
+                logging.warning(f"BLAT rescue failed for {ires_id}")
 
         if nearest and protein_dict:
             logging.info(f"Found nearest exon for {ires_id}: {nearest['ccds_id']} exon {nearest['exon_number']} {nearest['strand']}")
