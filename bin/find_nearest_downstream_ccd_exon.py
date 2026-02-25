@@ -110,7 +110,12 @@ def load_ccds_exons(ccd_file):
     df.columns = df.columns.str.replace("#", "").str.strip()
 
     # Keep only Public CCDS
-    df = df[df["ccds_status"] == "Public"]
+    df = df[
+    (df["ccds_status"] == "Public") &
+    (df["cds_locations"].notna()) &
+    (df["cds_locations"] != "[]")
+    ]
+
 
     exons_by_chr = defaultdict(list)
 
@@ -121,15 +126,37 @@ def load_ccds_exons(ccd_file):
         ccds_id = row["ccds_id"]
 
         # Parse exon list
-        locations = row["cds_locations"].strip("[]")
-        exon_ranges = [x.strip() for x in locations.split(",")]
+        locations = str(row["cds_locations"]).strip()
+
+        # Skip empty or malformed entries
+        if not locations or locations == "[]":
+            continue
+
+        locations = locations.strip("[]")
+
+        exon_ranges = [x.strip() for x in locations.split(",") if x.strip()]
 
         for exon_number, exon in enumerate(exon_ranges, start=1):
-            start, end = exon.split("-")
+
+            if "-" not in exon:
+                continue
+
+            start_str, end_str = exon.split("-", 1)
+
+            # Skip if either coordinate missing
+            if not start_str or not end_str:
+                continue
+
+            try:
+                start = int(start_str)
+                end = int(end_str)
+            except ValueError:
+                logging.error("Bad exon entry:", exon, "in row:", row.to_dict())
+                continue
 
             exons_by_chr[chrom].append({
-                "start": int(start),
-                "end": int(end),
+                "start": start,
+                "end": end,
                 "strand": strand,
                 "ccds_id": ccds_id,
                 "exon_number": exon_number
