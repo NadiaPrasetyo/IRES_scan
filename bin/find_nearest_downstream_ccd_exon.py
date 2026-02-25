@@ -29,17 +29,20 @@ def setup_logging(verbose=False):
 # PARSE FASTA HEADER FOR COORDINATES
 ############################################################
 
+
 def parse_header_for_coordinates(header):
     """
     Extract chromosome, start, end, strand from header.
     Returns: (chrom, start, end, strand) or None
+    
+    Always returns chromosome in 'chrN' format.
     """
 
     # Remove commas
     header_clean = header.replace(",", "")
 
-    # Attempt to find chrX:start-end[+/-] anywhere in the string
-    match = re.search(r'chr?(\w+):(\d+)-(\d+)([+-]?)', header_clean)
+    # Try standard chr pattern first
+    match = re.search(r'(chr[\w\.]+):(\d+)-(\d+)([+-]?)', header_clean)
     if match:
         chrom = match.group(1)
         start = int(match.group(2))
@@ -47,21 +50,24 @@ def parse_header_for_coordinates(header):
         strand = match.group(4) if match.group(4) else "+"
         return chrom, start, end, strand
 
-    # If chr pattern not found, try generic pattern like CM000664.2:10445264-10445145
+    # Fallback: generic pattern like CM000664.2:10445264-10445145
     match_generic = re.search(r'([\w\.]+):(\d+)-(\d+)([+-]?)?', header_clean)
     if match_generic:
-        # Heuristic: if the first group looks like CM*, hsa*, etc., try to extract chromosome from description
-        chrom_candidate = match_generic.group(1)
         start = int(match_generic.group(2))
         end = int(match_generic.group(3))
         strand = match_generic.group(4) if match_generic.group(4) else "+"
 
-        # Check for "chromosome N" in header
+        # Attempt to find "chromosome N" in header
         chrom_match = re.search(r'chromosome (\w+)', header_clean, re.IGNORECASE)
         if chrom_match:
-            chrom = chrom_match.group(1)
+            chrom = "chr" + chrom_match.group(1)
         else:
-            chrom = chrom_candidate  # fallback
+            # If no chromosome info, fallback to generic ID (still prefixed with chr if numeric)
+            chrom_candidate = match_generic.group(1)
+            if chrom_candidate.isdigit():
+                chrom = "chr" + chrom_candidate
+            else:
+                chrom = chrom_candidate  # leave as-is for non-numeric IDs
 
         return chrom, start, end, strand
 
