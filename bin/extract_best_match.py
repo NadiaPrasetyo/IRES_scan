@@ -1,7 +1,6 @@
 import argparse
 import logging
 import os
-import subprocess
 
 def setup_logging(verbose=False):
     logging.basicConfig(
@@ -38,7 +37,7 @@ def main():
             except ValueError:
                 logging.warning("Skipping header or non-numeric line: %s", line.strip())
                 continue
-            if query not in best_matches or (bits > best_matches[query][0] or (bits == best_matches[query][0] and pident > best_matches[query][1])):
+            if query not in best_matches or bits > best_matches[query][0] or (bits == best_matches[query][0] and pident > best_matches[query][1]):
                 best_matches[query] = (bits, pident, evalue, target, tstart, tend, alnlen, taln)
 
     with open(args.output, "w") as outfile:

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 import shutil
 import sys
 import re
@@ -55,7 +56,7 @@ def parse_header_for_coordinates(header):
     if match_generic:
         start = int(match_generic.group(2))
         end = int(match_generic.group(3))
-        strand = match_generic.group(4) if match_generic.group(4) else "+"
+        strand = match_generic.group(4) if match_generic.group(4) else "NA"
 
         # Attempt to find "chromosome N" in header
         chrom_match = re.search(r'chromosome (\w+)', header_clean, re.IGNORECASE)
@@ -205,7 +206,7 @@ def load_ccds_protein_fasta(protein_fasta):
 # FIND NEAREST DOWNSTREAM EXON
 ############################################################
 
-def find_nearest_downstream(chrom, start, end, exons_by_chr):
+def find_nearest_downstream(chrom, start, end, strand, exons_by_chr):
 
     if chrom not in exons_by_chr:
         logging.info(f"No exons found for chromosome {chrom}")
@@ -216,12 +217,38 @@ def find_nearest_downstream(chrom, start, end, exons_by_chr):
 
     for exon in exons_by_chr[chrom]:
 
-        # Genomic downstream only (higher coordinate)
-        if exon["start"] >= end:
-            distance = exon["start"] - end
+        if strand == "NA":
+            # If strand unknown, consider both directions
+            distance = min(abs(exon["start"] - end), abs(exon["end"] - start))
             if distance < min_distance:
                 min_distance = distance
                 candidate = exon
+
+        else:
+            if exon["strand"] != strand:
+                continue
+
+            elif strand == "+":
+                # Genomic downstream only (higher coordinate)
+                if exon["start"] >= end:
+                    distance = exon["start"] - end
+                    if distance < min_distance:
+                        min_distance = distance
+                        candidate = exon
+
+            elif strand == "-":
+                # Genomic downstream only (lower coordinate)
+                if exon["end"] <= start:
+                    distance = start - exon["end"]
+                    if distance < min_distance:
+                        min_distance = distance
+                        candidate = exon
+            # Genomic downstream only (higher coordinate)
+            if exon["start"] >= end:
+                distance = exon["start"] - end
+                if distance < min_distance:
+                    min_distance = distance
+                    candidate = exon
 
     # Add distance to candidate if found
     if candidate:
@@ -272,7 +299,7 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
             used_blat = True
 
         nearest = find_nearest_downstream(
-            chrom, start, end, exons_by_chr
+            chrom, start, end, strand, exons_by_chr
         )
 
         # 🔁 BACKUP: if nothing found, try BLAT remapping
@@ -293,6 +320,7 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
                     blat_chrom,
                     blat_start,
                     blat_end,
+                    blat_strand,
                     exons_by_chr
                 )
 
@@ -343,6 +371,11 @@ def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
             })
 
     pd.DataFrame(results).to_csv(output_csv, index=False)
+
+    # delete temp files if they exist
+    for temp_file in ["temp.fa", "temp.psl"]:
+        if os.path.exists(temp_file):
+            os.remove(temp_file)
 
 
 ############################################################
