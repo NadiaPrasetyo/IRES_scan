@@ -21,8 +21,9 @@ def collect_fastas(input_dir):
 def main():
     parser = argparse.ArgumentParser(description="Compile all sequences in the input file/directory into a single FASTA file")
     parser.add_argument("--input_dir", nargs="?", help="Optional Directory to search for FASTA files (recursively)")
-    parser.add_argument("--input_csv", help="Optional CSV file with sequence IDs and descriptions to include in the FASTA headers")
-    parser.add_argument("--input_tsv", help="Optional TSV file with sequence IDs and descriptions to include in the FASTA headers")
+    parser.add_argument("--input_fasta", nargs="+", help="Optional FASTA file(s) to include in the output")
+    parser.add_argument("--input_csv", nargs="+", help="Optional CSV file with sequence IDs and descriptions to include in the FASTA headers")
+    parser.add_argument("--input_tsv", nargs="+", help="Optional TSV file with sequence IDs and descriptions to include in the FASTA headers")
     parser.add_argument("--output", default="data/all_sequences.fasta", help="Output FASTA file name (default: data/all_sequences.fasta)")
     parser.add_argument("--verbose", action="store_true", help="Enable verbose logging to console and file")
     args = parser.parse_args()
@@ -31,12 +32,13 @@ def main():
     output_file = Path(args.output).resolve()
 
     input_dir = Path(args.input_dir).resolve() if args.input_dir else None
-    input_csv = Path(args.input_csv).resolve() if args.input_csv else None
-    input_tsv = Path(args.input_tsv).resolve() if args.input_tsv else None
+    input_fasta = [Path(f).resolve() for f in args.input_fasta] if args.input_fasta else None
+    input_csv = [Path(f).resolve() for f in args.input_csv] if args.input_csv else None
+    input_tsv = [Path(f).resolve() for f in args.input_tsv] if args.input_tsv else None
 
     # check that there is at least one input:
-    if not any([input_dir, input_csv, input_tsv]):
-        logging.error("❌ No input provided. Please specify at least one of --input_dir, --input_csv, or --input_tsv.")
+    if not any([input_dir, input_fasta, input_csv, input_tsv]):
+        logging.error("❌ No input provided. Please specify at least one of --input_dir, --input_fasta, --input_csv, or --input_tsv.")
         sys.exit(1)
 
     if input_dir:
@@ -52,35 +54,45 @@ def main():
                     if not f.read().endswith("\n"):
                         out.write("\n")
 
+    if input_fasta:
+        with open(output_file, "a") as out:
+            for fasta in input_fasta:
+                with open(fasta) as f:
+                    out.write(f.read())
+                    if not f.read().endswith("\n"):
+                        out.write("\n")
+
     if input_csv:
         # ,iresite_id,ires_name,gene_name,virus_name,organism,ires_pos,ires_size,conclusion,boundary_determined,sequence,structure,notes
-        with open(input_csv) as csvfile, open(output_file, "a") as out:
-            reader = csv.DictReader(csvfile)
-            for row in reader:
-                organism = row.get("organism") or ""
-                header = f">{row['ires_name']}|{organism}" if organism else f">{row['ires_name']}"
-                sequence = row["sequence"]
-                out.write(f"{header}\n{sequence}\n")
+        for csv_file in input_csv:
+            with open(csv_file) as csvfile, open(output_file, "a") as out:
+                reader = csv.DictReader(csvfile)
+                for row in reader:
+                    organism = row.get("organism") or ""
+                    header = f">{row['ires_name']}|{organism}" if organism else f">{row['ires_name']}"
+                    sequence = row["sequence"]
+                    out.write(f"{header}\n{sequence}\n")
 
     if input_tsv:
-        with open(input_tsv) as tsvfile, open(output_file, "a") as out:
-            reader = csv.DictReader(tsvfile, delimiter="\t")
-            for row in reader:
-                # robustly fetch fields with fallbacks and avoid KeyError
-                ires_id = row.get("IRES ID") or row.get("Ires ID") or row.get("ires_id") or row.get("IRES_ID") or ""
-                organism = row.get("Organism") or row.get("Virus Name") or ""
-                sequence = (row.get("IRES sequence") or row.get("sequence") or "").strip()
-                hg38_location = row.get("Location (hg38)") or ""
+        for tsv_file in input_tsv:
+            with open(tsv_file) as tsvfile, open(output_file, "a") as out:
+                reader = csv.DictReader(tsvfile, delimiter="\t")
+                for row in reader:
+                    # robustly fetch fields with fallbacks and avoid KeyError
+                    ires_id = row.get("IRES ID") or row.get("Ires ID") or row.get("ires_id") or row.get("IRES_ID") or ""
+                    organism = row.get("Organism") or row.get("Virus Name") or ""
+                    sequence = (row.get("IRES sequence") or row.get("sequence") or "").strip()
+                    hg38_location = row.get("Location (hg38)") or ""
 
-                if not ires_id:
-                    logging.warning(f"Skipping row with missing IRES ID: {row}")
-                    continue
-                if not sequence:
-                    logging.warning(f"Skipping {ires_id} because sequence is empty.")
-                    continue
+                    if not ires_id:
+                        logging.warning(f"Skipping row with missing IRES ID: {row}")
+                        continue
+                    if not sequence:
+                        logging.warning(f"Skipping {ires_id} because sequence is empty.")
+                        continue
 
-                header = f">{ires_id}|{organism}|{hg38_location}" if organism else f">{ires_id}|{hg38_location}"
-                out.write(f"{header}\n{sequence}\n")
+                    header = f">{ires_id}|{organism}|{hg38_location}" if organism else f">{ires_id}|{hg38_location}"
+                    out.write(f"{header}\n{sequence}\n")
 
 
     # remove empty lines at the end of the file and if a header does not have the sequence, remove it as well
