@@ -1,0 +1,126 @@
+#target name         accession query name           accession mdl mdl from   mdl to seq from   seq to strand trunc pass   gc  bias  score   E-value inc description of target
+#------------------- --------- -------------------- --------- --- -------- -------- -------- -------- ------ ----- ---- ---- ----- ------ --------- --- ---------------------
+IRES_FGF1            RF00387   hsa_ires_00510.1     -          cm        1      162  1184330  1184169      -    no    1 0.56   0.0  173.3   4.3e-40 !   FGF-1 internal ribosome entry site (IRES)
+IRES_Bip             RF00223   hsa_ires_00588.1     -          cm        1      263  1076534  1076797      +    no    1 0.64   3.0  161.5   1.1e-46 !   bip internal ribosome entry site (IRES)
+IRES_c-myc           RF00216   hsa_ires_00352.1     -          cm        1      302   271503   271698      +    no    1 0.54   0.0   20.8    0.0083 !   c-myc internal ribosome entry site (IRES)
+IRES_mnt             RF00457   hsa_ires_00608.1     -          cm        1      203  1237107  1237309      +    no    1 0.67  14.9  247.4   1.4e-67 !   Mnt IRES
+IRES_mnt             RF00457   hsa_ires_00130.1     -          cm        1      203   406695   406550      -    no    1 0.42   2.1   26.7   0.00063 !   Mnt IRES
+IRES_L-myc           RF00261   hsa_ires_00672.1     -          cm        1      221   318019   318168      +    no    1 0.53   0.6   28.9    0.0057 !   L-myc internal ribosome entry site (IRES)
+IRES_Bip             RF00223   hsa_ires_00513.1     -          cm        1      263  1081763  1081869      +    no    1 0.58   0.0   23.2   0.00056 !   bip internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00068.1     -          cm        1      322   504708   504552      -    no    1 0.55   0.0   20.6   0.00078 !   n-myc internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00551.1     -          cm        1      322  1147373  1147206      -    no    1 0.53   0.0   18.4    0.0046 !   n-myc internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00551.1     -          cm        1      322  1104650  1104447      -    no    1 0.55   0.0   17.5    0.0089 !   n-myc internal ribosome entry site (IRES)
+IRES_c-sis           RF00549   hsa_ires_00200.1     -          cm        1      621   639582   638976      -    no    1 0.67  36.4  596.1    2e-161 !   c-sis internal ribosome entry site (IRES)
+IRES_Bip             RF00223   hsa_ires_00200.1     -          cm        1      263   615456   615289      -    no    1 0.55   0.0   21.0    0.0026 !   bip internal ribosome entry site (IRES)
+IRES_Bip             RF00223   hsa_ires_00439.1     -          cm        1      263  1245448  1245365      -    no    1 0.58   0.0   20.0    0.0056 !   bip internal ribosome entry site (IRES)
+IRES_mnt             RF00457   hsa_ires_00128.1     -          cm        1      203   673283   673138      -    no    1 0.42   2.1   26.7   0.00063 !   Mnt IRES
+IRES_VEGF_A          RF00461   hsa_ires_00009.1     -          cm        1      308   536870   536999      +    no    1 0.54   0.0   25.3    0.0094 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_c-myc           RF00216   c-myc                -          cm        1      302  1246587  1246897      +    no    1 0.62   0.1  143.3   2.7e-39 !   c-myc internal ribosome entry site (IRES)
+IRES_mnt             RF00457   hsa_ires_00491.1     -          cm        1      203   243593   243727      +    no    1 0.44   0.1   22.7    0.0088 !   Mnt IRES
+IRES_mnt             RF00457   MNT_75-267           -          cm        1      203  1237499  1237701      +    no    1 0.67  14.9  247.4   1.4e-67 !   Mnt IRES
+IRES_c-myc           RF00216   hsa_ires_00598.1     -          cm        1      302  1246587  1246897      +    no    1 0.62   0.1  143.3   2.7e-39 !   c-myc internal ribosome entry site (IRES)
+IRES_mnt             RF00457   hsa_ires_00509.1     -          cm        1      203    89265    89457      +    no    1 0.47   0.0   23.7    0.0047 !   Mnt IRES
+IRES_Bip             RF00223   BiP_-222_-3          -          cm        1      263  1245072  1245335      +    no    1 0.64   3.0  161.5   1.1e-46 !   bip internal ribosome entry site (IRES)
+IRES_VEGF_A          RF00461   hsa_ires_00207.1     -          cm        1      308   209230   209094      -    no    1 0.49   0.0   27.9     0.002 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_L-myc           RF00261   CM000663.2:38708708-38708962 -          cm        1      221   326939   327160      +    no    1 0.79  49.0  183.9   1.5e-39 !   L-myc internal ribosome entry site (IRES)
+IRES_VEGF_A          RF00461   hsa_ires_00416.1     -          cm        1      308   321220   321084      -    no    1 0.49   0.0   27.9     0.002 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_Bip             RF00223   hsa_ires_00016.1     -          cm        1      263   983939   984003      +    no    1 0.55   0.0   19.7    0.0068 !   bip internal ribosome entry site (IRES)
+IRES_Bip             RF00223   hsa_ires_00368.1     -          cm        1      263   604710   604627      -    no    1 0.58   0.0   20.0    0.0056 !   bip internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00413.1     -          cm        1      322   494501   494671      +    no    1 0.58   0.0   17.5    0.0093 !   n-myc internal ribosome entry site (IRES)
+IRES_Bip             RF00223   hsa_ires_00059.1     -          cm        1      263  1199362  1199286      -    no    1 0.61   0.0   24.6    0.0002 !   bip internal ribosome entry site (IRES)
+IRES_c-myc           RF00216   p27kip1              -          cm        1      302   650737   650558      -    no    1 0.56   0.1   23.6    0.0013 !   c-myc internal ribosome entry site (IRES)
+IRES_c-myc           RF00216   hsa_ires_00376.1     -          cm        1      302   121546   121382      -    no    1 0.51   0.0   25.5   0.00034 !   c-myc internal ribosome entry site (IRES)
+IRES_c-myc           RF00216   hSNM1                -          cm        1      302   403930   403766      -    no    1 0.51   0.0   25.5   0.00034 !   c-myc internal ribosome entry site (IRES)
+IRES_IGF2            RF00483   hsa_ires_00526.1     -          cm        1      121    62619    62499      -    no    1 0.63   0.0  145.0   3.2e-32 !   Insulin-like growth factor II IRES
+IRES_n-myc           RF00226   hsa_ires_00526.1     -          cm        1      322    56531    56301      -    no    1 0.63   0.1   20.9   0.00059 !   n-myc internal ribosome entry site (IRES)
+IRES_Bip             RF00223   hsa_ires_00047.1     -          cm        1      263  1071019  1071122      +    no    1 0.63   0.0   22.2    0.0011 !   bip internal ribosome entry site (IRES)
+IRES_L-myc           RF00261   hsa_ires_00653.1     -          cm        1      221  1214297  1214451      +    no    1 0.53   0.0   31.0    0.0019 !   L-myc internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00653.1     -          cm        1      322   194147   194325      +    no    1 0.56   0.0   17.8    0.0071 !   n-myc internal ribosome entry site (IRES)
+IRES_Kv1_4           RF00447   hsa_ires_00561.1     -          cm        1      259   301839   301939      +    no    1 0.40   0.0   25.6    0.0096 !   Voltage-gated potassium-channel Kv1.4 IRES
+IRES_c-myc           RF00216   hsa_ires_00625.1     -          cm        1      302   503172   502993      -    no    1 0.46   0.0   22.9     0.002 !   c-myc internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00471.1     -          cm        1      322   833745   833940      +    no    1 0.51   0.0   17.6    0.0084 !   n-myc internal ribosome entry site (IRES)
+IRES_L-myc           RF00261   hsa_ires_00606.1     -          cm        1      221  1244563  1244784      +    no    1 0.79  49.0  183.9   1.5e-39 !   L-myc internal ribosome entry site (IRES)
+IRES_L-myc           RF00261   hsa_ires_00303.1     -          cm        1      221  1214297  1214451      +    no    1 0.53   0.0   31.0    0.0019 !   L-myc internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00303.1     -          cm        1      322   194147   194325      +    no    1 0.56   0.0   17.8    0.0071 !   n-myc internal ribosome entry site (IRES)
+IRES_Bip             RF00223   hsa_ires_00597.1     -          cm        1      263  1245072  1245335      +    no    1 0.64   3.0  161.5   1.1e-46 !   bip internal ribosome entry site (IRES)
+IRES_mnt             RF00457   hsa_ires_00052.1     -          cm        1      203   432240   432388      +    no    1 0.43   2.4   22.9    0.0077 !   Mnt IRES
+IRES_n-myc           RF00226   hsa_ires_00276.1     -          cm        1      322   333478   333298      -    no    1 0.45   0.0   18.8    0.0032 !   n-myc internal ribosome entry site (IRES)
+IRES_VEGF_A          RF00461   hsa_ires_00667.1     -          cm        1      308   492553   492844      +    no    1 0.58   1.4   25.3     0.009 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_mnt             RF00457   hsa_ires_00373.1     -          cm        1      203  1083215  1083407      +    no    1 0.47   0.0   23.7    0.0047 !   Mnt IRES
+IRES_TrkB            RF00547   hsa_ires_00640.1     -          cm        1      352  1248213  1248520      +    no    1 0.66   8.9  132.3   2.3e-34 !   TrkB IRES
+NRF2_IRES            RF02531   hsa_ires_00639.1     -          cm        1      128  1120711  1120595      -    no    1 0.65   0.0   79.1   4.4e-11 !   Nrf2 internal ribosome entry site (IRES)
+IRES_Bip             RF00223   CM000671.2:125241341-125241094 -          cm        1      263  1245072  1245335      +    no    1 0.64   3.0  161.5   1.1e-46 !   bip internal ribosome entry site (IRES)
+IRES_mnt             RF00457   hsa_ires_00118.1     -          cm        1      203   158380   158572      +    no    1 0.47   0.0   23.7    0.0047 !   Mnt IRES
+IRES_n-myc           RF00226   hsa_ires_00599.1     -          cm        1      322  1208304  1208485      +    no    1 0.58   0.0   18.4    0.0044 !   n-myc internal ribosome entry site (IRES)
+IRES_VEGF_A          RF00461   hsa_ires_00347.1     -          cm        1      308   502990   503091      +    no    1 0.64   0.0   30.3   0.00052 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_Bip             RF00223   PDGF2/c-sis          -          cm        1      263  1241491  1241324      -    no    1 0.55   0.0   21.0    0.0026 !   bip internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   PDGF2/c-sis          -          cm        1      322   301382   301552      +    no    1 0.58   0.0   17.5    0.0093 !   n-myc internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00252.1     -          cm      215      240   612938   612963      +    no    1 0.73   0.0   20.0    0.0012 !   n-myc internal ribosome entry site (IRES)
+IRES_VEGF_A          RF00461   hsa_ires_00387.1     -          cm        1      308  1002460  1002619      +    no    1 0.55   0.3   28.2    0.0017 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_L-myc           RF00261   hsa_ires_00614.1     -          cm        1      221  1214297  1214451      +    no    1 0.53   0.0   31.0    0.0019 !   L-myc internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00614.1     -          cm        1      322   194147   194325      +    no    1 0.56   0.0   17.8    0.0071 !   n-myc internal ribosome entry site (IRES)
+IRES_c-myc           RF00216   hsa_ires_00264.1     -          cm        1      302    55156    54962      -    no    1 0.59   0.0   23.5    0.0013 !   c-myc internal ribosome entry site (IRES)
+IRES_VEGF_A          RF00461   hsa_ires_00384.1     -          cm        1      308   795535   795722      +    no    1 0.60   0.0   27.8    0.0022 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_n-myc           RF00226   hsa_ires_00384.1     -          cm        1      322   322755   322640      -    no    1 0.61   0.0   18.7    0.0034 !   n-myc internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00077.1     -          cm        1      322  1048411  1048221      -    no    1 0.52   0.0   22.5   0.00017 !   n-myc internal ribosome entry site (IRES)
+IRES_L-myc           RF00261   hsa_ires_00065.1     -          cm        1      221    37455    37335      -    no    1 0.55   1.8   28.8    0.0061 !   L-myc internal ribosome entry site (IRES)
+IRES_VEGF_A          RF00461   hsa_ires_00227.1     -          cm        1      308   708409   708596      +    no    1 0.60   0.0   27.8    0.0022 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_n-myc           RF00226   hsa_ires_00227.1     -          cm        1      322   235629   235514      -    no    1 0.61   0.0   18.7    0.0034 !   n-myc internal ribosome entry site (IRES)
+IRES_mnt             RF00457   CM000679.2:2400912-2400710 -          cm        1      203  1237107  1237309      +    no    1 0.67  14.9  247.4   1.4e-67 !   Mnt IRES
+IRES_VEGF_A          RF00461   hsa_ires_00666.1     -          cm        1      308   492553   492844      +    no    1 0.58   1.4   25.3     0.009 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_Bip             RF00223   hsa_ires_00125.1     -          cm        1      263  1013345  1013240      -    no    1 0.64   0.0   22.4     0.001 !   bip internal ribosome entry site (IRES)
+IRES_Cx32            RF00484   CM000685.2:71223206-71223356 -          cm        1      149  1248077  1248225      +    no    1 0.60   0.0  179.0   2.7e-47 !   Connexin-32 internal ribosome entry site (IRES)
+IRES_VEGF_A          RF00461   hsa_ires_00173.1     -          cm        1      308  1036186  1036417      +    no    1 0.53   0.0   26.2    0.0057 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_n-myc           RF00226   hsa_ires_00461.1     -          cm        1      322   304977   305192      +    no    1 0.55   0.0   18.0    0.0061 !   n-myc internal ribosome entry site (IRES)
+IRES_FGF1            RF00387   hsa_ires_00317.1     -          cm        1      162   761955   761794      -    no    1 0.56   0.0  173.3   4.3e-40 !   FGF-1 internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00453.1     -          cm        1      322  1053039  1052872      -    no    1 0.53   0.0   18.4    0.0046 !   n-myc internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00453.1     -          cm        1      322  1010316  1010113      -    no    1 0.55   0.0   17.5    0.0089 !   n-myc internal ribosome entry site (IRES)
+IRES_c-myc           RF00216   hsa_ires_00592.1     -          cm        1      302   650737   650558      -    no    1 0.56   0.1   23.6    0.0013 !   c-myc internal ribosome entry site (IRES)
+IRES_mnt             RF00457   hsa_ires_00560.1     -          cm        1      203   190805   190968      +    no    1 0.42   2.6   23.8    0.0042 !   Mnt IRES
+IRES_c-myc           RF00216   hsa_ires_00175.1     -          cm        1      302   486027   485821      -    no    1 0.44   0.0   21.1    0.0071 !   c-myc internal ribosome entry site (IRES)
+IRES_Bip             RF00223   hsa_ires_00350.1     -          cm        1      263   253503   253415      -    no    1 0.52   0.0   19.6    0.0072 !   bip internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00179.1     -          cm        1      322   981116   981286      +    no    1 0.58   0.0   17.5    0.0093 !   n-myc internal ribosome entry site (IRES)
+IRES_L-myc           RF00261   hsa_ires_00188.1     -          cm        1      221   433996   434150      +    no    1 0.53   0.0   31.0    0.0019 !   L-myc internal ribosome entry site (IRES)
+IRES_VEGF_A          RF00461   hsa_ires_00042.1     -          cm        1      308   988540   988669      +    no    1 0.54   0.0   25.3    0.0094 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_c-myc           RF00216   hsa_ires_00603.1     -          cm        1      302   403930   403766      -    no    1 0.51   0.0   25.5   0.00034 !   c-myc internal ribosome entry site (IRES)
+IRES_Bip             RF00223   hsa_ires_00315.1     -          cm        1      263   117480   117743      +    no    1 0.64   3.0  161.5   1.1e-46 !   bip internal ribosome entry site (IRES)
+IRES_L-myc           RF00261   hsa_ires_00315.1     -          cm        1      221  1245032  1244877      -    no    1 0.58   2.3   29.6     0.004 !   L-myc internal ribosome entry site (IRES)
+IRES_VEGF_A          RF00461   hsa_ires_00668.1     -          cm        1      308   492553   492844      +    no    1 0.58   1.4   25.3     0.009 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_TrkB            RF00547   CM000671.2:84670396-84670748 -          cm        1      352  1248213  1248520      +    no    1 0.66   8.9  132.3   2.3e-34 !   TrkB IRES
+IRES_n-myc           RF00226   hsa_ires_00277.1     -          cm        1      322  1226491  1226288      -    no    1 0.55   0.0   17.5    0.0089 !   n-myc internal ribosome entry site (IRES)
+IRES_VEGF_A          RF00461   hsa_ires_00437.1     -          cm        1      308   349481   349668      +    no    1 0.60   0.0   27.8    0.0022 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_L-myc           RF00261   hsa_ires_00605.1     -          cm        1      221  1214297  1214451      +    no    1 0.53   0.0   31.0    0.0019 !   L-myc internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00605.1     -          cm        1      322   194147   194325      +    no    1 0.56   0.0   17.8    0.0071 !   n-myc internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00450.1     -          cm        1      322  1192024  1192239      +    no    1 0.55   0.0   18.0    0.0061 !   n-myc internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00341.1     -          cm        1      322   628329   628060      -    no    1 0.56   0.0  105.0   2.3e-33 !   n-myc internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00341.1     -          cm        1      322   629515   629312      -    no    1 0.71  12.0   79.9   1.3e-24 !   n-myc internal ribosome entry site (IRES)
+IRES_Kv1_4           RF00447   CM000673.2:30012935-30012676 -          cm        1      259  1248274  1248533      +    no    1 0.43   0.0  310.3   2.6e-74 !   Voltage-gated potassium-channel Kv1.4 IRES
+IRES_Bip             RF00223   CM000673.2:30012935-30012676 -          cm        1      263   378094   377978      -    no    1 0.46   0.0   20.0    0.0056 !   bip internal ribosome entry site (IRES)
+IRES_FGF1            RF00387   CM000667.2:142697800-142697634 -          cm        1      162  1184330  1184169      -    no    1 0.56   0.0  173.3   4.3e-40 !   FGF-1 internal ribosome entry site (IRES)
+IRES_Bip             RF00223   hsa_ires_00049.1     -          cm        1      263    38238    38118      -    no    1 0.55   0.0   19.5    0.0077 !   bip internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00686.1     -          cm        1      322  1136794  1136949      +    no    1 0.54   0.1   18.4    0.0045 !   n-myc internal ribosome entry site (IRES)
+IRES_VEGF_A          RF00461   hsa_ires_00669.1     -          cm        1      308   492553   492844      +    no    1 0.58   1.4   25.3     0.009 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_Cx43            RF00487   CM000668.2:121435649-121435848 -          cm        1      204  1238315  1238518      +    no    1 0.46   0.0  220.3   2.8e-56 !   Connexin-43 internal ribosome entry site (IRES)
+IRES_VEGF_A          RF00461   hsa_ires_00344.1     -          cm        1      308  1017596  1017427      -    no    1 0.60   0.7   32.9   0.00012 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_L-myc           RF00261   CM000663.2:39902015-39901795 -          cm        1      221  1247959  1248180      +    no    1 0.79  49.0  183.9   1.5e-39 !   L-myc internal ribosome entry site (IRES)
+IRES_Bip             RF00223   hsa_ires_00612.1     -          cm        1      263  1241491  1241324      -    no    1 0.55   0.0   21.0    0.0026 !   bip internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00612.1     -          cm        1      322   301382   301552      +    no    1 0.58   0.0   17.5    0.0093 !   n-myc internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   hsa_ires_00670.1     -          cm        1      322  1057935  1057778      -    no    1 0.51   0.0   20.2     0.001 !   n-myc internal ribosome entry site (IRES)
+IRES_Bip             RF00223   CM000684.2:39244768-39244141 -          cm        1      263  1241491  1241324      -    no    1 0.55   0.0   21.0    0.0026 !   bip internal ribosome entry site (IRES)
+IRES_n-myc           RF00226   CM000684.2:39244768-39244141 -          cm        1      322   301382   301552      +    no    1 0.58   0.0   17.5    0.0093 !   n-myc internal ribosome entry site (IRES)
+IRES_L-myc           RF00261   hsa_ires_00031.1     -          cm        1      221   755408   755545      +    no    1 0.59   0.0   31.2    0.0017 !   L-myc internal ribosome entry site (IRES)
+IRES_VEGF_A          RF00461   hsa_ires_00665.1     -          cm        1      308   492553   492844      +    no    1 0.58   1.4   25.3     0.009 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_VEGF_A          RF00461   hsa_ires_00562.1     -          cm        1      308  1243189  1243056      -    no    1 0.60   0.0   34.5   4.7e-05 !   Vascular endothelial growth factor (VEGF) IRES A
+IRES_HIF1            RF00449   CM000676.2:61695528-61695807 -          cm        1      279  1229989  1230265      +    no    1 0.73  29.3  274.1   2.1e-75 !   HIF-1 alpha IRES
+IRES_c-myc           RF00216   CM000676.2:61695528-61695807 -          cm        1      302   988110   988272      +    no    1 0.58   0.0   21.2    0.0065 !   c-myc internal ribosome entry site (IRES)
+IRES_Bip             RF00223   hsa_ires_00486.1     -          cm        1      263  1226390  1226299      -    no    1 0.51   0.0   19.5     0.008 !   bip internal ribosome entry site (IRES)
+#
+# Program:         cmscan
+# Version:         1.1.5 (Sep 2023)
+# Pipeline mode:   SCAN
+# Query file:      data/mouse_IRES/mouse_upstream_seq.fasta
+# Target file:     data/human_IRES/compiled_covariance_model.cm
+# Option settings: /projects/health_sciences/bms/biochemistry/gardner_group/nadia/infernal-1.1.5/src/cmscan -o data/mouse_IRES/mouse_IRES_cm_scan --tblout data/mouse_IRES/mouse_IRES_cm_scan_table data/human_IRES/compiled_covariance_model.cm data/mouse_IRES/mouse_upstream_seq.fasta 
+# Current dir:     /projects/health_sciences/bms/biochemistry/gardner_group/nadia/IRES_scan
+# Date:            Fri Feb 27 06:18:10 2026
+# [ok]
