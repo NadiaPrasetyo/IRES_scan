@@ -149,7 +149,7 @@ def main():
     logging.info("Removed temporary directory")
     
     # Remove intermediate MMseqs databases
-    for db_file in [db, f"{db}_h", clu_db, cluster_seq_db, f"{cluster_seq_db}_h", rep_db, f"{rep_db}_h", align_path, f"{align_path}_h"]:
+    for db_file in [db, f"{db}*.*", clu_db, cluster_seq_db, f"{cluster_seq_db}*.*", rep_db, f"{rep_db}*.*", align_path, f"{align_path}*.*"]:
         if os.path.exists(db_file):
             os.remove(db_file)
             logging.info(f"Removed {db_file}")
