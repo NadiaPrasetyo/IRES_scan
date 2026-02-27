@@ -52,6 +52,8 @@ def main():
     cluster_fasta = os.path.join(args.output_dir, "clustered_sequences.fasta")
     rep_db = os.path.join(args.output_dir, "DB_clu_rep")
     rep_fasta = os.path.join(args.output_dir, "cluster_representatives.fasta")
+    align_path = os.path.join(args.output_dir, "aln")
+    cluster_aln_tsv = os.path.join(args.output_dir, "cluster_alignments.tsv")
 
     # check that mmseqs is installed
     try:
@@ -126,6 +128,20 @@ def main():
     print("Clustered FASTA:", cluster_fasta)
     print("Representative FASTA:", rep_fasta)
 
+    logging.info(f"🧬 Computing alignment + k-mer similarity scores")
+    # Compute alignments from clustering result
+    run([
+        "mmseqs", "align", str(db), str(db), str(clu_db), str(align_path), "-a"
+    ])
+    
+    # Convert alignment results to BLAST tab format
+    run([
+    "mmseqs", "convertalis", str(db), str(db), str(align_path), f"{cluster_aln_tsv}",
+          "--format-mode", "4",
+          "--format-output", "query,target,pident,alnlen,bits,evalue,cigar"
+    ])
+
+
     logging.info("Deleting intermediate files: Temporary files and directory")
 
     # Cleanup temporary files
@@ -133,7 +149,7 @@ def main():
     logging.info("Removed temporary directory")
     
     # Remove intermediate MMseqs databases
-    for db_file in [db, f"{db}_h", clu_db, cluster_seq_db, f"{cluster_seq_db}_h", rep_db, f"{rep_db}_h"]:
+    for db_file in [db, f"{db}_h", clu_db, cluster_seq_db, f"{cluster_seq_db}_h", rep_db, f"{rep_db}_h", align_path, f"{align_path}_h"]:
         if os.path.exists(db_file):
             os.remove(db_file)
             logging.info(f"Removed {db_file}")
