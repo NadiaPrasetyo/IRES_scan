@@ -34,8 +34,11 @@ def main():
     parser.add_argument("-c", "--coverage", default="0.8", help="Coverage threshold (default: 0.8)")
     parser.add_argument("--cov-mode", default="0", help="Coverage mode (default: 0)")
     parser.add_argument("--threads", default="4", help="Number of threads (default: 4)")
+    parser.add_argument("--verbose", action="store_true", help="Enable verbose logging to console and file")
 
     args = parser.parse_args()
+
+    setup_logging(args.verbose)
 
     os.makedirs(args.output_dir, exist_ok=True)
     tmp_dir = os.path.join(args.output_dir, "tmp")
