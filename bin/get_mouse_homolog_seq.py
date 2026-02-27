@@ -93,7 +93,7 @@ def extract_ires_sequences(table_file, fasta_data):
             detected_location = f"{chrom}:{genomic_start}-{genomic_end}({strand})"
 
             header = (
-                f"{query_name} | {detected_location} | "
+                f"mouse_{query_name} | {detected_location} | "
                 f"{accession} | {target_name} | {description}"
             )
 
@@ -123,7 +123,7 @@ def main():
 
     results = extract_ires_sequences(args.table_file, fasta_data)
     logging.info(f"Extracted {len(results)} IRES sequences from table {args.table_file}")
-    
+
     write_fasta(results, args.output_file)
     logging.info(f"Done. Extracted {len(results)} IRES sequences to {args.output_file}")
 
