@@ -126,15 +126,19 @@ def main():
     print("Clustered FASTA:", cluster_fasta)
     print("Representative FASTA:", rep_fasta)
 
-    logging.info("Deleting intermediate files: Temporary directory: %s, MMseqs databases: %s, %s, %s, %s", tmp_dir, db, clu_db, cluster_seq_db, rep_db)
+    logging.info("Deleting intermediate files: Temporary files and directory")
 
     # Cleanup temporary files
-    shutil.rmtree(tmp_dir)  # Uncomment to remove temporary directory
-    # cleanup intermediate MMseqs databases if desired
-    os.remove(db)
-    os.remove(clu_db)
-    os.remove(cluster_seq_db)
-    os.remove(rep_db)
+    shutil.rmtree(tmp_dir)
+    logging.info("Removed temporary directory")
+    
+    # Remove intermediate MMseqs databases
+    for db_file in [db, f"{db}_h", clu_db, cluster_seq_db, f"{cluster_seq_db}_h", rep_db, f"{rep_db}_h"]:
+        if os.path.exists(db_file):
+            os.remove(db_file)
+            logging.info(f"Removed {db_file}")
+    
+    logging.info("Cleanup complete")
 
 
 if __name__ == "__main__":
