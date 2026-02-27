@@ -149,10 +149,26 @@ def main():
     logging.info("Removed temporary directory")
     
     # Remove intermediate MMseqs databases
-    for db_file in [db, f"{db}*.*", clu_db, cluster_seq_db, f"{cluster_seq_db}*.*", rep_db, f"{rep_db}*.*", align_path, f"{align_path}*.*"]:
-        if os.path.exists(db_file):
+    for db_file in [db, clu_db, cluster_seq_db, rep_db, align_path]:
+        if os.path.isdir(db_file):
+            shutil.rmtree(db_file, ignore_errors=True)
+            logging.info(f"Removed directory {db_file}")
+        elif os.path.exists(db_file):
             os.remove(db_file)
             logging.info(f"Removed {db_file}")
+    
+    # Remove all database-related files in output directory
+    for filename in os.listdir(args.output_dir):
+        if filename.startswith(("DB", "DB_clu", "DB_clu_seq", "DB_clu_rep", "aln")):
+            filepath = os.path.join(args.output_dir, filename)
+            try:
+                if os.path.isdir(filepath):
+                    shutil.rmtree(filepath)
+                else:
+                    os.remove(filepath)
+                logging.info(f"Removed {filepath}")
+            except Exception as e:
+                logging.warning(f"Could not remove {filepath}: {e}")
     
     logging.info("Cleanup complete")
 
