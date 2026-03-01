@@ -138,7 +138,7 @@ def main():
     run([
     "mmseqs", "convertalis", str(db), str(db), str(align_path), f"{cluster_aln_tsv}",
           "--format-mode", "4",
-          "--format-output", "query,target,pident,alnlen,bits,evalue,cigar"
+          "--format-output", "query,target,pident,alnlen,bits,evalue,tseq,theader"
     ])
 
 
