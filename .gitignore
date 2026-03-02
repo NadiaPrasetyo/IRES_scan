@@ -2,6 +2,7 @@
 mm39.fa
 hg38.2bit
 data/mouse_IRES/mouse_upstream_seq.fasta
+bin/scrap.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

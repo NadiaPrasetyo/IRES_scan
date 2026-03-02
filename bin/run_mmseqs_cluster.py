@@ -148,6 +148,14 @@ def main():
     # Cleanup temporary files
     shutil.rmtree(tmp_dir)
     logging.info("Removed temporary directory")
+
+    # remove any remaining intermediate files in the output directory
+    for filename in os.listdir(args.output_dir):
+        if filename.startswith("DB") or filename.startswith("DB_clu") or filename.startswith("DB_clu_seq") or filename.startswith("aln"):
+            file_path = os.path.join(args.output_dir, filename)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+                logging.info(f"Removed intermediate file: {file_path}")
         
     logging.info("Cleanup complete")
 
