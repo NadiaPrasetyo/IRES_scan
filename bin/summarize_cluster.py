@@ -39,6 +39,8 @@ def parse_organism_and_location(theader):
             organism = "Homo sapiens (human)"
         if organism.lower () in ["mus musculus (house mouse)", "mouse", "mus musculus"]:
             organism = "Mus musculus (mouse)"
+        if organism.startswith("chr"):
+            organism = "Mus musculus (mouse)"
     elif "vir" in theader:
         organism = "Virus"
     elif "homo" in theader.lower():
