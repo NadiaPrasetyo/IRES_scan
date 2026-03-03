@@ -155,67 +155,73 @@ def load_processed_entries(output_csv):
     return processed, last_cluster_num
 
 def parse_clustered_fasta(fasta_path):
-    """
-    Parse clustered FASTA where:
-    - A cluster starts when two consecutive headers share the same first token
-    - First header = cluster marker
-    - Second header = representative full header
-    - Followed by FASTA member sequences
-    """
 
     clusters = []
     current_cluster = None
-    last_header_line = None
 
     with open(fasta_path, "r") as f:
-        for line in f:
-            line = line.strip()
+        lines = [line.strip() for line in f if line.strip()]
 
-            if not line:
+    i = 0
+    while i < len(lines):
+
+        line = lines[i]
+
+        if line.startswith(">"):
+
+            # Look ahead
+            if i + 1 < len(lines) and lines[i + 1].startswith(">"):
+
+                # This is a new cluster marker
+                cluster_marker = line[1:].strip()
+                representative_header = lines[i + 1][1:].strip()
+
+                # Save previous cluster
+                if current_cluster:
+                    clusters.append(current_cluster)
+
+                # Start new cluster
+                current_cluster = {
+                    "representative": representative_header,
+                    "members": []
+                }
+
+                # Add representative as first member
+                current_cluster["members"].append({
+                    "header": representative_header,
+                    "sequence": ""
+                })
+
+                i += 2
                 continue
 
-            if line.startswith(">"):
-                header = line[1:].strip()
-                header_id = header.split()[0]
-
-                # Check if this header starts a new cluster
-                if last_header_line:
-                    last_id = last_header_line.split()[0]
-
-                    if header_id == last_id:
-                        # Save previous cluster
-                        if current_cluster:
-                            clusters.append(current_cluster)
-
-                        # Start new cluster
-                        current_cluster = {
-                            "representative": header,
-                            "members": []
-                        }
-
-                        last_header_line = header
-                        continue
-
-                # Otherwise: normal member header
-                if current_cluster is not None:
-                    current_cluster["members"].append({
-                        "header": header,
-                        "sequence": ""
-                    })
-
-                last_header_line = header
-
             else:
-                # Sequence line
-                if current_cluster and current_cluster["members"]:
-                    current_cluster["members"][-1]["sequence"] += line
+                # Normal member header
+                if current_cluster is None:
+                    i += 1
+                    continue
 
-    # Append final cluster
+                member_header = line[1:].strip()
+                current_cluster["members"].append({
+                    "header": member_header,
+                    "sequence": ""
+                })
+
+                i += 1
+                continue
+
+        else:
+            # Sequence line
+            if current_cluster and current_cluster["members"]:
+                current_cluster["members"][-1]["sequence"] += line
+
+        i += 1
+
+    # Append last cluster
     if current_cluster:
         clusters.append(current_cluster)
 
     return clusters
-
 
 def summarize_clusters(input_fasta, output_csv):
 
