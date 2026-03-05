@@ -33,22 +33,22 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 29,"KX884315.1:5604-5785 Wenling crustacean virus 2 IRES_Cripavirus Wenling crustacean virus 2 strain WLJQ102135 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX884315.1:5604-5785 Wenling crustacean virus 2 IRES_Cripavirus Wenling crustacean virus 2 strain WLJQ102135 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",RF00458,Virus,,182
 30,SINV1_IGRpred|Solenopsis invicta virus 1,SINV1_IGRpred|Solenopsis invicta virus 1,,Solenopsis invicta virus 1,,200
 30,SINV1_IGRpred|Solenopsis invicta virus 1,vir_ires_00499.1,,Virus,,204
-31,vir_ires_00203.1,vir_ires_00203.1,,Virus,,174
-32,vir_ires_00487.1,vir_ires_00487.1,,Virus,,235
+31,vir_ires_00203.1,vir_ires_00203.1,,Human betaherpesvirus 7 (HHV-7),,174
+32,vir_ires_00487.1,vir_ires_00487.1,,Feline leukemia virus (FeLV),,235
 32,vir_ires_00487.1,FeLV-Notch2|Felis silvestris,,Felis silvestris,,238
-33,vir_ires_00005.1,vir_ires_00005.1,,Virus,,174
-34,vir_ires_00491.1,vir_ires_00491.1,RF00458,Virus,,178
-35,vir_ires_00197.1,vir_ires_00197.1,,Virus,,174
-36,vir_ires_00497.1,vir_ires_00497.1,,Virus,,395
-37,vir_ires_00072.1,vir_ires_00072.1,,Virus,,174
-38,vir_ires_00080.1,vir_ires_00080.1,,Virus,,174
-39,vir_ires_00418.1,vir_ires_00418.1,,Virus,,174
-40,vir_ires_00050.1,vir_ires_00050.1,,Virus,,174
-41,vir_ires_00131.1,vir_ires_00131.1,,Virus,,174
-42,vir_ires_00322.1,vir_ires_00322.1,,Virus,,174
-43,vir_ires_00285.1,vir_ires_00285.1,,Virus,,174
-44,vir_ires_00270.1,vir_ires_00270.1,,Virus,,174
-45,vir_ires_00537.1,vir_ires_00537.1,,Virus,,389
+33,vir_ires_00005.1,vir_ires_00005.1,,Human mastadenovirus C; Human adenovirus 2 (HAdV-C),,174
+34,vir_ires_00491.1,vir_ires_00491.1,RF00458,Triatoma virus (TrV),,178
+35,vir_ires_00197.1,vir_ires_00197.1,,Human papillomavirus type 50 (HPV50),,174
+36,vir_ires_00497.1,vir_ires_00497.1,,Tremovirus A,,395
+37,vir_ires_00072.1,vir_ires_00072.1,,Human alphaherpesvirus 3 (HHV-3),,174
+38,vir_ires_00080.1,vir_ires_00080.1,,Human alphaherpesvirus 3 (HHV-3),,174
+39,vir_ires_00418.1,vir_ires_00418.1,,Lloviu cuevavirus,,174
+40,vir_ires_00050.1,vir_ires_00050.1,,Human betaherpesvirus 6B (HHV-6B),,174
+41,vir_ires_00131.1,vir_ires_00131.1,,Human mastadenovirus A,,174
+42,vir_ires_00322.1,vir_ires_00322.1,,Influenza A virus (A/goose/Guangdong/1/1996(H5N1)),,174
+43,vir_ires_00285.1,vir_ires_00285.1,,Human papillomavirus type 92 (HPV92),,174
+44,vir_ires_00270.1,vir_ires_00270.1,,Himetobi P virus (HiPV),,174
+45,vir_ires_00537.1,vir_ires_00537.1,,Equine hepacivirus JPN3/JAPAN/2013,,389
 46,"hsa_ires_00017.1|Homo sapiens (human)|chr11:46,701,094-46,701,524+","hsa_ires_00017.1|Homo sapiens (human)|chr11:46,701,094-46,701,524+",,Homo sapiens (human),"chr11:46,701,094-46,701,524+",174
 47,"hsa_ires_00049.1|Homo sapiens (human)|chr1:204,073,539-204,112,915+","hsa_ires_00049.1|Homo sapiens (human)|chr1:204,073,539-204,112,915+",,Homo sapiens (human),"chr1:204,073,539-204,112,915+",174
 48,"hsa_ires_00081.1|Homo sapiens (human)|chr8:144,890,045-144,901,461-","hsa_ires_00081.1|Homo sapiens (human)|chr8:144,890,045-144,901,461-",,Homo sapiens (human),"chr8:144,890,045-144,901,461-",174
@@ -74,24 +74,24 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 68,mouse_hsa_ires_00077.1 | chr5:64033802-64033992(-) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),mouse_hsa_ires_00077.1 | chr5:64033802-64033992(-) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),RF00226,Mus musculus (mouse),chr5:64033802-64033992-,191
 69,"KX884293.1:7275-7471 Wuhan millipede virus 3 IRES_Cripavirus Wuhan millipede virus 3 strain WHWG56524 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX884293.1:7275-7471 Wuhan millipede virus 3 IRES_Cripavirus Wuhan millipede virus 3 strain WHWG56524 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",RF00458,Virus,,197
 70,EoPV_5NTR|Ectropis obliqua picorna-like virus,EoPV_5NTR|Ectropis obliqua picorna-like virus,,Ectropis obliqua picorna-like virus,,390
-71,vir_ires_00093.1,vir_ires_00093.1,,Virus,,174
-72,vir_ires_00358.1,vir_ires_00358.1,,Virus,,174
-73,vir_ires_00266.1,vir_ires_00266.1,,Virus,,174
-74,vir_ires_00176.1,vir_ires_00176.1,,Virus,,174
-75,vir_ires_00009.1,vir_ires_00009.1,,Virus,,174
-76,vir_ires_00370.1,vir_ires_00370.1,,Virus,,174
-77,vir_ires_00377.1,vir_ires_00377.1,,Virus,,174
-78,vir_ires_00326.1,vir_ires_00326.1,,Virus,,174
-79,vir_ires_00424.1,vir_ires_00424.1,,Virus,,174
-80,vir_ires_00443.1,vir_ires_00443.1,,Virus,,174
-80,vir_ires_00443.1,vir_ires_00030.1,,Virus,,174
-80,vir_ires_00443.1,vir_ires_00444.1,,Virus,,174
-81,vir_ires_00054.1,vir_ires_00054.1,,Virus,,174
-82,vir_ires_00119.1,vir_ires_00119.1,,Virus,,174
-83,vir_ires_00485.1,vir_ires_00485.1,,Virus,,280
-84,vir_ires_00486.1,vir_ires_00486.1,,Virus,,408
-85,vir_ires_00017.1,vir_ires_00017.1,,Virus,,174
-86,vir_ires_00538.1,vir_ires_00538.1,,Virus,,372
+71,vir_ires_00093.1,vir_ires_00093.1,,Human papillomavirus type 41 (HPV4),,174
+72,vir_ires_00358.1,vir_ires_00358.1,,Human gammaherpesvirus 8 (Kaposi's sarcoma-associated herpesvirus),,174
+73,vir_ires_00266.1,vir_ires_00266.1,,Human mastadenovirus E (HAdV-E),,174
+74,vir_ires_00176.1,vir_ires_00176.1,,Human betaherpesvirus 6A (HHV-6A),,174
+75,vir_ires_00009.1,vir_ires_00009.1,,Human mastadenovirus C; Human adenovirus 2 (HAdV-C),,174
+76,vir_ires_00370.1,vir_ires_00370.1,,Macaque simian foamy virus (SFVmac),,174
+77,vir_ires_00377.1,vir_ires_00377.1,,Human mastadenovirus D (HAdV-D),,174
+78,vir_ires_00326.1,vir_ires_00326.1,,Human gammaherpesvirus 4 (Epstein-Barr virus);  Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+79,vir_ires_00424.1,vir_ires_00424.1,,Human betaherpesvirus 6A (HHV-6A),,174
+80,vir_ires_00443.1,vir_ires_00443.1,,Human mastadenovirus B (HAdV-B),,174
+80,vir_ires_00443.1,vir_ires_00030.1,,Human adenovirus 7 (HAdV7),,174
+80,vir_ires_00443.1,vir_ires_00444.1,,Human mastadenovirus B (HAdV-B),,174
+81,vir_ires_00054.1,vir_ires_00054.1,,Human betaherpesvirus 6B (HHV-6B),,174
+82,vir_ires_00119.1,vir_ires_00119.1,,Human mastadenovirus A,,174
+83,vir_ires_00485.1,vir_ires_00485.1,,Porcine teschovirus 1 (PTV-1),,280
+84,vir_ires_00486.1,vir_ires_00486.1,,Aichi virus 1 (AiV-1),,408
+85,vir_ires_00017.1,vir_ires_00017.1,,Human adenovirus 5 (HAdV5),,174
+86,vir_ires_00538.1,vir_ires_00538.1,,Rosellinia necatrix victorivirus 1,,372
 87,"GL000255.2:3071369-3071588 Homo sapiens IRES_Hsp70 Homo sapiens chromosome 6 genomic contig, GRCh38 reference assembly alternate locus group ALT_REF_LOCI_6.","GL000255.2:3071369-3071588 Homo sapiens IRES_Hsp70 Homo sapiens chromosome 6 genomic contig, GRCh38 reference assembly alternate locus group ALT_REF_LOCI_6.",RF00495,Homo sapiens (human),,220
 87,"GL000255.2:3071369-3071588 Homo sapiens IRES_Hsp70 Homo sapiens chromosome 6 genomic contig, GRCh38 reference assembly alternate locus group ALT_REF_LOCI_6.","GL000250.2:3148163-3148382 Homo sapiens IRES_Hsp70 Homo sapiens chromosome 6 genomic contig, GRCh38 reference assembly alternate locus group ALT_REF_LOCI_1.",,Homo sapiens (human),,220
 87,"GL000255.2:3071369-3071588 Homo sapiens IRES_Hsp70 Homo sapiens chromosome 6 genomic contig, GRCh38 reference assembly alternate locus group ALT_REF_LOCI_6.","CM000668.2:31815541-31815760 Homo sapiens IRES_Hsp70 Homo sapiens chromosome 6, GRCh38 reference primary assembly.",,Homo sapiens (human),,220
@@ -134,24 +134,24 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 114,ERAV_245-961|Equine rhinitis A virus 1,ERAV_245-961|Equine rhinitis A virus 1,RF00210,Equine rhinitis A virus 1,,712
 114,ERAV_245-961|Equine rhinitis A virus 1,vir_ires_00500.1,RF00210,Virus,,717
 115,TMEV|Theiler\'s encephalomyelitis virus,TMEV|Theiler\'s encephalomyelitis virus,RF00210,Theiler\'s encephalomyelitis virus,,1040
-116,vir_ires_00260.1,vir_ires_00260.1,,Virus,,174
-117,vir_ires_00420.1,vir_ires_00420.1,,Virus,,174
-118,vir_ires_00167.1,vir_ires_00167.1,,Virus,,174
-119,vir_ires_00037.1,vir_ires_00037.1,RF00229,Virus,,174
-120,vir_ires_00496.1,vir_ires_00496.1,,Virus,,385
+116,vir_ires_00260.1,vir_ires_00260.1,,Human mastadenovirus E (HAdV-E),,174
+117,vir_ires_00420.1,vir_ires_00420.1,,Feline picornavirus,,174
+118,vir_ires_00167.1,vir_ires_00167.1,,Human papillomavirus type 7 (HPV7),,174
+119,vir_ires_00037.1,vir_ires_00037.1,RF00229,Human poliovirus 3,,174
+120,vir_ires_00496.1,vir_ires_00496.1,,Bovine viral diarrhea virus 1 (BVDV-1),,385
 120,vir_ires_00496.1,"M31182.1:1-385 Bovine viral diarrhea virus 1  IRES_Pesti Bovine viral diarrhea virus 1-NADL, complete genome.",,Virus,,385
 120,vir_ires_00496.1,BVDV1_1-385|Bovine viral diarrhea virus 1,,Bovine viral diarrhea virus 1,,385
 120,vir_ires_00496.1,BVDV1_1-385|Bovine viral diarrhea virus 1,,Bovine viral diarrhea virus 1,,385
-121,vir_ires_00110.1,vir_ires_00110.1,,Virus,,174
-122,vir_ires_00468.1,vir_ires_00468.1,,Virus,,174
-123,vir_ires_00126.1,vir_ires_00126.1,,Virus,,174
-124,vir_ires_00351.1,vir_ires_00351.1,,Virus,,174
-125,vir_ires_00245.1,vir_ires_00245.1,,Virus,,174
+121,vir_ires_00110.1,vir_ires_00110.1,,Human mastadenovirus F (HAdV-F),,174
+122,vir_ires_00468.1,vir_ires_00468.1,,Ovine enzootic nasal tumor virus,,174
+123,vir_ires_00126.1,vir_ires_00126.1,,Human mastadenovirus A,,174
+124,vir_ires_00351.1,vir_ires_00351.1,,Human gammaherpesvirus 8 (Kaposi's sarcoma-associated herpesvirus),,174
+125,vir_ires_00245.1,vir_ires_00245.1,,Drosophila C virus (DCV),,174
 125,vir_ires_00245.1,DCV_IGR|Drosophila C virus,RF00458,Drosophila C virus,,189
-126,vir_ires_00207.1,vir_ires_00207.1,,Virus,,174
-127,vir_ires_00363.1,vir_ires_00363.1,,Virus,,174
-128,vir_ires_00290.1,vir_ires_00290.1,,Virus,,174
-129,vir_ires_00539.1,vir_ires_00539.1,,Virus,,289
+126,vir_ires_00207.1,vir_ires_00207.1,,Human betaherpesvirus 7 (HHV-7),,174
+127,vir_ires_00363.1,vir_ires_00363.1,,Woolly monkey sarcoma virus (WMSV),,174
+128,vir_ires_00290.1,vir_ires_00290.1,,Human papillomavirus type 96 (HPV96),,174
+129,vir_ires_00539.1,vir_ires_00539.1,,Helminthosporium victoriae virus 190S,,289
 130,"hsa_ires_00019.1|Homo sapiens (human)|chr2:233,917,398-233,930,684+","hsa_ires_00019.1|Homo sapiens (human)|chr2:233,917,398-233,930,684+",,Homo sapiens (human),"chr2:233,917,398-233,930,684+",174
 131,"hsa_ires_00051.1|Homo sapiens (human)|chr1:154,272,563-154,272,736+","hsa_ires_00051.1|Homo sapiens (human)|chr1:154,272,563-154,272,736+",,Homo sapiens (human),"chr1:154,272,563-154,272,736+",174
 132,"hsa_ires_00083.1|Homo sapiens (human)|chr7:101,629,119-101,629,292-","hsa_ires_00083.1|Homo sapiens (human)|chr7:101,629,119-101,629,292-",,Homo sapiens (human),"chr7:101,629,119-101,629,292-",174
@@ -178,19 +178,19 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 152,mouse_hsa_ires_00227.1 | chr3:87822002-87822189(+) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,mouse_hsa_ires_00437.1 | chr3:87822002-87822189(+) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,RF00461,Mus musculus (mouse),chr3:87822002-87822189+,188
 152,mouse_hsa_ires_00227.1 | chr3:87822002-87822189(+) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,mouse_hsa_ires_00384.1 | chr3:87822002-87822189(+) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,RF00461,Mus musculus (mouse),chr3:87822002-87822189+,188
 153,TMV_UI_IRESmp228|Tobacco mosaic virus,TMV_UI_IRESmp228|Tobacco mosaic virus,,Tobacco mosaic virus,,231
-154,vir_ires_00055.1,vir_ires_00055.1,,Virus,,174
-155,vir_ires_00446.1,vir_ires_00446.1,,Virus,,174
-156,vir_ires_00155.1,vir_ires_00155.1,,Virus,,174
-157,vir_ires_00184.1,vir_ires_00184.1,,Virus,,174
-158,vir_ires_00298.1,vir_ires_00298.1,,Virus,,174
-159,vir_ires_00213.1,vir_ires_00213.1,,Virus,,174
-160,vir_ires_00244.1,vir_ires_00244.1,,Virus,,174
-161,vir_ires_00423.1,vir_ires_00423.1,,Virus,,174
-162,vir_ires_00252.1,vir_ires_00252.1,,Virus,,174
-163,vir_ires_00373.1,vir_ires_00373.1,,Virus,,174
-164,vir_ires_00059.1,vir_ires_00059.1,,Virus,,174
-165,vir_ires_00323.1,vir_ires_00323.1,,Virus,,174
-166,vir_ires_00540.1,vir_ires_00540.1,,Virus,,293
+154,vir_ires_00055.1,vir_ires_00055.1,,Human betaherpesvirus 6B (HHV-6B),,174
+155,vir_ires_00446.1,vir_ires_00446.1,,Human adenovirus 54 (HAdV-54),,174
+156,vir_ires_00155.1,vir_ires_00155.1,,Human papillomavirus type 10 (HPV10),,174
+157,vir_ires_00184.1,vir_ires_00184.1,,Human betaherpesvirus 6A (HHV-6A),,174
+158,vir_ires_00298.1,vir_ires_00298.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+159,vir_ires_00213.1,vir_ires_00213.1,,Human betaherpesvirus 7 (HHV-7),,174
+160,vir_ires_00244.1,vir_ires_00244.1,,Bovine foamy virus (BFV),,174
+161,vir_ires_00423.1,vir_ires_00423.1,,Human foamy virus (HFV),,174
+162,vir_ires_00252.1,vir_ires_00252.1,,Equine foamy virus (EFV),,174
+163,vir_ires_00373.1,vir_ires_00373.1,,African green monkey simian foamy virus,,174
+164,vir_ires_00059.1,vir_ires_00059.1,,Human betaherpesvirus 6B (HHV-6B),,174
+165,vir_ires_00323.1,vir_ires_00323.1,,Influenza A virus (A/New York/392/2004(H3N2)),,174
+166,vir_ires_00540.1,vir_ires_00540.1,,Helminthosporium victoriae 145S virus,,293
 167,"CM000671.2:33264696-33264327 Homo sapiens IRES_Bag1 Homo sapiens chromosome 9, GRCh38 reference primary assembly.","CM000671.2:33264696-33264327 Homo sapiens IRES_Bag1 Homo sapiens chromosome 9, GRCh38 reference primary assembly.",,Homo sapiens (human),,370
 168,AML1/RUNX1|Homo sapiens,AML1/RUNX1|Homo sapiens,,Homo sapiens (human),,1561
 168,AML1/RUNX1|Homo sapiens,"hsa_ires_00593.1|Homo sapiens (human)|chr21:34,887,113-34,888,690-",,Homo sapiens (human),"chr21:34,887,113-34,888,690-",1578
@@ -230,19 +230,19 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 193,mouse_hsa_ires_00227.1 | chr3:88126356-88126471(-) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),mouse_hsa_ires_00384.1 | chr3:87952513-87952628(-) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),RF00226,Mus musculus (mouse),chr3:87952513-87952628-,116
 194,mouse_hsa_ires_00049.1 | chr1:133282574-133282694(-) | RF00223 | IRES_Bip | internal ribosome entry site (IRES),mouse_hsa_ires_00049.1 | chr1:133282574-133282694(-) | RF00223 | IRES_Bip | internal ribosome entry site (IRES),RF00223,Mus musculus (mouse),chr1:133282574-133282694-,121
 195,"KX883663.1:6128-6306 Shahe picorna-like virus 11 IRES_Cripavirus Shahe picorna-like virus 11 strain SHWC13613 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX883663.1:6128-6306 Shahe picorna-like virus 11 IRES_Cripavirus Shahe picorna-like virus 11 strain SHWC13613 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",RF00458,Virus,,179
-196,vir_ires_00269.1,vir_ires_00269.1,,Virus,,174
-197,vir_ires_00169.1,vir_ires_00169.1,,Virus,,174
-198,vir_ires_00191.1,vir_ires_00191.1,,Virus,,174
-199,vir_ires_00325.1,vir_ires_00325.1,,Virus,,174
-200,vir_ires_00366.1,vir_ires_00366.1,,Virus,,174
-201,vir_ires_00006.1,vir_ires_00006.1,,Virus,,174
-202,vir_ires_00104.1,vir_ires_00104.1,,Virus,,174
-203,vir_ires_00051.1,vir_ires_00051.1,,Virus,,174
-204,vir_ires_00095.1,vir_ires_00095.1,,Virus,,174
-205,vir_ires_00171.1,vir_ires_00171.1,,Virus,,174
-206,vir_ires_00317.1,vir_ires_00317.1,,Virus,,174
-207,vir_ires_00196.1,vir_ires_00196.1,,Virus,,174
-208,vir_ires_00541.1,vir_ires_00541.1,,Virus,,215
+196,vir_ires_00269.1,vir_ires_00269.1,,Modoc virus (MODV),,174
+197,vir_ires_00169.1,vir_ires_00169.1,,Human papillomavirus type 9 (HPV9),,174
+198,vir_ires_00191.1,vir_ires_00191.1,,Human papillomavirus type 48 (HPV48),,174
+199,vir_ires_00325.1,vir_ires_00325.1,,Rotavirus C,,174
+200,vir_ires_00366.1,vir_ires_00366.1,,Human papillomavirus type 88 (HPV88),,174
+201,vir_ires_00006.1,vir_ires_00006.1,,Human mastadenovirus C; Human adenovirus 2 (HAdV-C),,174
+202,vir_ires_00104.1,vir_ires_00104.1,,Human mastadenovirus F (HAdV-F),,174
+203,vir_ires_00051.1,vir_ires_00051.1,,Human betaherpesvirus 6B (HHV-6B),,174
+204,vir_ires_00095.1,vir_ires_00095.1,,Human papillomavirus type 6b (HPV6b),,174
+205,vir_ires_00171.1,vir_ires_00171.1,,Marburg marburgvirus,,174
+206,vir_ires_00317.1,vir_ires_00317.1,,Sudan ebolavirus,,174
+207,vir_ires_00196.1,vir_ires_00196.1,,Human papillomavirus type 50 (HPV50),,174
+208,vir_ires_00541.1,vir_ires_00541.1,,Cryphonectria nitschkei chrysovirus 1,,215
 209,"CM000671.2:84670396-84670748 Homo sapiens IRES_TrkB Homo sapiens chromosome 9, GRCh38 reference primary assembly.","CM000671.2:84670396-84670748 Homo sapiens IRES_TrkB Homo sapiens chromosome 9, GRCh38 reference primary assembly.",,Homo sapiens (human),,353
 210,Apaf-1|Homo sapiens,Apaf-1|Homo sapiens,,Homo sapiens (human),,231
 210,Apaf-1|Homo sapiens,"hsa_ires_00580.1|Homo sapiens (human)|chr12:98,645,644-98,648,359+",,Homo sapiens (human),"chr12:98,645,644-98,648,359+",233
@@ -278,23 +278,23 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 236,"KX883934.1:6306-6467 Hubei picorna-like virus 14 IRES_Cripavirus Hubei picorna-like virus 14 strain QTM26191 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX883934.1:6306-6467 Hubei picorna-like virus 14 IRES_Cripavirus Hubei picorna-like virus 14 strain QTM26191 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",RF00458,Virus,,162
 237,TRV_5NTR|Triatoma virus,TRV_5NTR|Triatoma virus,,Triatoma virus,,694
 237,TRV_5NTR|Triatoma virus,TRV_5NTR|Triatoma virus,,Triatoma virus,,694
-238,vir_ires_00417.1,vir_ires_00417.1,,Virus,,174
-239,vir_ires_00062.1,vir_ires_00062.1,,Virus,,174
-240,vir_ires_00277.1,vir_ires_00277.1,,Virus,,174
-241,vir_ires_00394.1,vir_ires_00394.1,,Virus,,174
-242,vir_ires_00219.1,vir_ires_00219.1,,Virus,,174
-243,vir_ires_00347.1,vir_ires_00347.1,,Virus,,174
-244,vir_ires_00128.1,vir_ires_00128.1,,Virus,,174
-245,vir_ires_00247.1,vir_ires_00247.1,,Virus,,174
-246,vir_ires_00086.1,vir_ires_00086.1,,Virus,,174
-247,vir_ires_00462.1,vir_ires_00462.1,,Virus,,174
-247,vir_ires_00462.1,vir_ires_00029.1,,Virus,,174
-248,vir_ires_00390.1,vir_ires_00390.1,,Virus,,174
-249,vir_ires_00081.1,vir_ires_00081.1,,Virus,,174
-250,vir_ires_00109.1,vir_ires_00109.1,,Virus,,174
-251,vir_ires_00023.1,vir_ires_00023.1,,Virus,,174
-252,vir_ires_00040.1,vir_ires_00040.1,,Virus,,174
-253,vir_ires_00542.1,vir_ires_00542.1,,Virus,,264
+238,vir_ires_00417.1,vir_ires_00417.1,,Pigeon picornavirus B,,174
+239,vir_ires_00062.1,vir_ires_00062.1,,Human betaherpesvirus 6B (HHV-6B),,174
+240,vir_ires_00277.1,vir_ires_00277.1,,Human metapneumovirus (HMPV),,174
+241,vir_ires_00394.1,vir_ires_00394.1,,Human mastadenovirus B (HAdV-B),,174
+242,vir_ires_00219.1,vir_ires_00219.1,,Human betaherpesvirus 7 (HHV-7),,174
+243,vir_ires_00347.1,vir_ires_00347.1,,Human papillomavirus type 101 (HPV101),,174
+244,vir_ires_00128.1,vir_ires_00128.1,,Human mastadenovirus A,,174
+245,vir_ires_00247.1,vir_ires_00247.1,,Feline foamy virus (FFV/FeFV),,174
+246,vir_ires_00086.1,vir_ires_00086.1,,Human alphaherpesvirus 3 (HHV-3),,174
+247,vir_ires_00462.1,vir_ires_00462.1,,Human mastadenovirus B (HAdV-B),,174
+247,vir_ires_00462.1,vir_ires_00029.1,,Human mastadenovirus B (HAdV-B);  Human adenovirus 7 (HAdV7),,174
+248,vir_ires_00390.1,vir_ires_00390.1,,Human mastadenovirus B (HAdV-B),,174
+249,vir_ires_00081.1,vir_ires_00081.1,,Human alphaherpesvirus 3 (HHV-3),,174
+250,vir_ires_00109.1,vir_ires_00109.1,,Human mastadenovirus F (HAdV-F),,174
+251,vir_ires_00023.1,vir_ires_00023.1,,Human mastadenovirus B (HAdV-B);  Human adenovirus 7 (HAdV7),,174
+252,vir_ires_00040.1,vir_ires_00040.1,,Human immunodeficiency virus 2 (HIV-2),,174
+253,vir_ires_00542.1,vir_ires_00542.1,,Human T-cell leukemia virus type I,,264
 254,"CM000673.2:30012935-30012676 Homo sapiens IRES_Kv1_4 Homo sapiens chromosome 11, GRCh38 reference primary assembly.","CM000673.2:30012935-30012676 Homo sapiens IRES_Kv1_4 Homo sapiens chromosome 11, GRCh38 reference primary assembly.",,Homo sapiens (human),,260
 255,AQP4|Homo sapiens,AQP4|Homo sapiens,,Homo sapiens (human),,284
 256,n-MYC|Homo sapiens,n-MYC|Homo sapiens,,Homo sapiens (human),,320
@@ -333,22 +333,22 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 280,mouse_hsa_ires_00666.1 | chr2:166101276-166101567(+) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,mouse_hsa_ires_00668.1 | chr2:166101276-166101567(+) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,RF00461,Mus musculus (mouse),chr2:166101276-166101567+,292
 281,"KX883972.1:5630-5823 Hubei picorna-like virus 16 IRES_Cripavirus Hubei picorna-like virus 16 strain SCM51353 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX883972.1:5630-5823 Hubei picorna-like virus 16 IRES_Cripavirus Hubei picorna-like virus 16 strain SCM51353 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",RF00458,Virus,,194
 282,FMDV_type_C|Foot-and-mouth disease virus,FMDV_type_C|Foot-and-mouth disease virus,RF00210,Foot-and-mouth disease virus,,461
-283,vir_ires_00147.1,vir_ires_00147.1,,Virus,,174
-284,vir_ires_00127.1,vir_ires_00127.1,,Virus,,174
-285,vir_ires_00399.1,vir_ires_00399.1,,Virus,,174
-286,vir_ires_00094.1,vir_ires_00094.1,,Virus,,174
-287,vir_ires_00502.1,vir_ires_00502.1,RF00229,Virus,,642
-288,vir_ires_00421.1,vir_ires_00421.1,,Virus,,174
-289,vir_ires_00432.1,vir_ires_00432.1,,Virus,,174
-289,vir_ires_00432.1,vir_ires_00027.1,,Virus,,174
-290,vir_ires_00359.1,vir_ires_00359.1,,Virus,,174
-291,vir_ires_00163.1,vir_ires_00163.1,,Virus,,174
-292,vir_ires_00283.1,vir_ires_00283.1,,Virus,,174
-293,vir_ires_00096.1,vir_ires_00096.1,,Virus,,174
-294,vir_ires_00447.1,vir_ires_00447.1,,Virus,,174
-295,vir_ires_00159.1,vir_ires_00159.1,,Virus,,174
-296,vir_ires_00511.1,vir_ires_00511.1,RF00448,Virus,,144
-297,vir_ires_00543.1,vir_ires_00543.1,RF02340,Virus,,96
+283,vir_ires_00147.1,vir_ires_00147.1,,Human papillomavirus type 16 (HPV16),,174
+284,vir_ires_00127.1,vir_ires_00127.1,,Human mastadenovirus A,,174
+285,vir_ires_00399.1,vir_ires_00399.1,,Human mastadenovirus B (HAdV-B),,174
+286,vir_ires_00094.1,vir_ires_00094.1,,Human papillomavirus type 41 (HPV4),,174
+287,vir_ires_00502.1,vir_ires_00502.1,RF00229,Canine picodicistrovirus,,642
+288,vir_ires_00421.1,vir_ires_00421.1,,Turkey gallivirus,,174
+289,vir_ires_00432.1,vir_ires_00432.1,,Human mastadenovirus B (HAdV-B),,174
+289,vir_ires_00432.1,vir_ires_00027.1,,Human adenovirus 7 (HAdV7),,174
+290,vir_ires_00359.1,vir_ires_00359.1,,Human gammaherpesvirus 8 (Kaposi's sarcoma-associated herpesvirus),,174
+291,vir_ires_00163.1,vir_ires_00163.1,,Human papillomavirus type 49 (HPV49),,174
+292,vir_ires_00283.1,vir_ires_00283.1,,Human papillomavirus type 92 (HPV92),,174
+293,vir_ires_00096.1,vir_ires_00096.1,,Human papillomavirus type 6b (HPV6b),,174
+294,vir_ires_00447.1,vir_ires_00447.1,,Human immunodeficiency virus 2 (HIV-2),,174
+295,vir_ires_00159.1,vir_ires_00159.1,,Human papillomavirus type 32 (HPV32),,174
+296,vir_ires_00511.1,vir_ires_00511.1,RF00448,Human gammaherpesvirus 4,,144
+297,vir_ires_00543.1,vir_ires_00543.1,RF02340,Dengue virus 2,,96
 298,AT1R_var1|Homo sapiens,AT1R_var1|Homo sapiens,,Homo sapiens (human),,356
 298,AT1R_var1|Homo sapiens,AT1R_var4|Homo sapiens,,Homo sapiens (human),,414
 299,NRF_-653_-17|Homo sapiens,NRF_-653_-17|Homo sapiens,,Homo sapiens (human),,637
@@ -378,23 +378,23 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 322,mouse_hsa_ires_00561.1 | chr3:65942197-65942297(+) | RF00447 | IRES_Kv1_4 | potassium-channel Kv1.4 IRES,mouse_hsa_ires_00561.1 | chr3:65942197-65942297(+) | RF00447 | IRES_Kv1_4 | potassium-channel Kv1.4 IRES,RF00447,Mus musculus (mouse),chr3:65942197-65942297+,101
 323,mouse_hsa_ires_00125.1 | chr8:107058266-107058371(-) | RF00223 | IRES_Bip | internal ribosome entry site (IRES),mouse_hsa_ires_00125.1 | chr8:107058266-107058371(-) | RF00223 | IRES_Bip | internal ribosome entry site (IRES),RF00223,Mus musculus (mouse),chr8:107058266-107058371-,106
 324,"KX883381.1:6466-6659 Beihai picorna-like virus 75 IRES_Cripavirus Beihai picorna-like virus 75 strain BHJP52955 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX883381.1:6466-6659 Beihai picorna-like virus 75 IRES_Cripavirus Beihai picorna-like virus 75 strain BHJP52955 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",RF00458,Virus,,194
-325,vir_ires_00297.1,vir_ires_00297.1,,Virus,,174
-326,vir_ires_00291.1,vir_ires_00291.1,,Virus,,174
-327,vir_ires_00346.1,vir_ires_00346.1,,Virus,,174
-328,vir_ires_00114.1,vir_ires_00114.1,,Virus,,174
-329,vir_ires_00179.1,vir_ires_00179.1,,Virus,,174
-330,vir_ires_00221.1,vir_ires_00221.1,,Virus,,174
-331,vir_ires_00077.1,vir_ires_00077.1,,Virus,,174
-332,vir_ires_00223.1,vir_ires_00223.1,,Virus,,174
-333,vir_ires_00360.1,vir_ires_00360.1,,Virus,,174
-333,vir_ires_00360.1,vir_ires_00469.1,,Virus,,174
-334,vir_ires_00233.1,vir_ires_00233.1,,Virus,,174
-335,vir_ires_00227.1,vir_ires_00227.1,,Virus,,174
-336,vir_ires_00316.1,vir_ires_00316.1,,Virus,,174
-337,vir_ires_00349.1,vir_ires_00349.1,,Virus,,174
-338,vir_ires_00117.1,vir_ires_00117.1,,Virus,,174
-339,vir_ires_00512.1,vir_ires_00512.1,RF00511,Virus,,232
-340,vir_ires_00544.1,vir_ires_00544.1,RF02340,Virus,,107
+325,vir_ires_00297.1,vir_ires_00297.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+326,vir_ires_00291.1,vir_ires_00291.1,,Human papillomavirus type 96 (HPV96),,174
+327,vir_ires_00346.1,vir_ires_00346.1,,Human papillomavirus type 101 (HPV101),,174
+328,vir_ires_00114.1,vir_ires_00114.1,,Human papillomavirus type 63 (HPV63),,174
+329,vir_ires_00179.1,vir_ires_00179.1,,Human betaherpesvirus 6A (HHV-6A),,174
+330,vir_ires_00221.1,vir_ires_00221.1,,Human betaherpesvirus 7 (HHV-7),,174
+331,vir_ires_00077.1,vir_ires_00077.1,,Human alphaherpesvirus 3 (HHV-3),,174
+332,vir_ires_00223.1,vir_ires_00223.1,,Human betaherpesvirus 7 (HHV-7),,174
+333,vir_ires_00360.1,vir_ires_00360.1,,Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+333,vir_ires_00360.1,vir_ires_00469.1,,Human gammaherpesvirus 4 (Epstein-Barr virus),,174
+334,vir_ires_00233.1,vir_ires_00233.1,,"Human alphaherpesvirus 2 (Herpes simplex virus 2, HHV-2)",,174
+335,vir_ires_00227.1,vir_ires_00227.1,,"Human alphaherpesvirus 2 (Herpes simplex virus 2, HHV-2)",,174
+336,vir_ires_00316.1,vir_ires_00316.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+337,vir_ires_00349.1,vir_ires_00349.1,,Human gammaherpesvirus 8 (Kaposi's sarcoma-associated herpesvirus),,174
+338,vir_ires_00117.1,vir_ires_00117.1,,Human papillomavirus type 63 (HPV63),,174
+339,vir_ires_00512.1,vir_ires_00512.1,RF00511,Human gammaherpesvirus 8,,232
+340,vir_ires_00544.1,vir_ires_00544.1,RF02340,Zika virus,,107
 341,AT1R_var2|Homo sapiens,AT1R_var2|Homo sapiens,,Homo sapiens (human),,272
 342,p27kip1|Homo sapiens,p27kip1|Homo sapiens,,Homo sapiens (human),,152
 343,"hsa_ires_00024.1|Homo sapiens (human)|chr6:96,563,194-96,603,613+","hsa_ires_00024.1|Homo sapiens (human)|chr6:96,563,194-96,603,613+",,Homo sapiens (human),"chr6:96,563,194-96,603,613+",174
@@ -431,22 +431,22 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 370,"KX884478.1:5388-5567 Beihai picorna-like virus 80 IRES_Cripavirus Beihai picorna-like virus 80 strain BHZC36213 hypothetical protein 2 genes, complete cds.","KX884478.1:5388-5567 Beihai picorna-like virus 80 IRES_Cripavirus Beihai picorna-like virus 80 strain BHZC36213 hypothetical protein 2 genes, complete cds.",RF00458,Virus,,180
 371,GBV-B|Hepatitis GB virus B,GBV-B|Hepatitis GB virus B,,Hepatitis GB virus B,,416
 371,GBV-B|Hepatitis GB virus B,vir_ires_00478.1,,Virus,,445
-372,vir_ires_00287.1,vir_ires_00287.1,,Virus,,174
-373,vir_ires_00362.1,vir_ires_00362.1,,Virus,,174
-373,vir_ires_00362.1,vir_ires_00340.1,,Virus,,174
-374,vir_ires_00001.1,vir_ires_00001.1,,Virus,,174
-375,vir_ires_00318.1,vir_ires_00318.1,,Virus,,174
-376,vir_ires_00241.1,vir_ires_00241.1,,Virus,,174
-377,vir_ires_00356.1,vir_ires_00356.1,,Virus,,174
-378,vir_ires_00395.1,vir_ires_00395.1,,Virus,,174
-379,vir_ires_00228.1,vir_ires_00228.1,,Virus,,174
-380,vir_ires_00060.1,vir_ires_00060.1,,Virus,,174
-381,vir_ires_00088.1,vir_ires_00088.1,,Virus,,174
-382,vir_ires_00183.1,vir_ires_00183.1,,Virus,,174
-383,vir_ires_00405.1,vir_ires_00405.1,,Virus,,174
-384,vir_ires_00156.1,vir_ires_00156.1,,Virus,,174
-385,vir_ires_00021.1,vir_ires_00021.1,,Virus,,174
-386,vir_ires_00545.1,vir_ires_00545.1,,Virus,,297
+372,vir_ires_00287.1,vir_ires_00287.1,,Kashmir bee virus (KBV),,174
+373,vir_ires_00362.1,vir_ires_00362.1,,Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+373,vir_ires_00362.1,vir_ires_00340.1,,Human gammaherpesvirus 4 (Epstein-Barr virus),,174
+374,vir_ires_00001.1,vir_ires_00001.1,,Human mastadenovirus C; Human adenovirus 2; Human adenovirus 5 (HAdV-C),,174
+375,vir_ires_00318.1,vir_ires_00318.1,,Sudan ebolavirus,,174
+376,vir_ires_00241.1,vir_ires_00241.1,,"Human alphaherpesvirus 1 (Herpes simplex virus 1, HHV-1)",,174
+377,vir_ires_00356.1,vir_ires_00356.1,,Human gammaherpesvirus 8 (Kaposi's sarcoma-associated herpesvirus),,174
+378,vir_ires_00395.1,vir_ires_00395.1,,Human mastadenovirus B (HAdV-B),,174
+379,vir_ires_00228.1,vir_ires_00228.1,,"Human alphaherpesvirus 2 (Herpes simplex virus 2, HHV-2)",,174
+380,vir_ires_00060.1,vir_ires_00060.1,,Human betaherpesvirus 6B (HHV-6B),,174
+381,vir_ires_00088.1,vir_ires_00088.1,,Human alphaherpesvirus 3 (HHV-3),,174
+382,vir_ires_00183.1,vir_ires_00183.1,,Human betaherpesvirus 6A (HHV-6A),,174
+383,vir_ires_00405.1,vir_ires_00405.1,,Human bocavirus 4 NI (HBoV4-NI),,174
+384,vir_ires_00156.1,vir_ires_00156.1,,Human papillomavirus type 10 (HPV10),,174
+385,vir_ires_00021.1,vir_ires_00021.1,,Human mastadenovirus B (HAdV-B);  Human adenovirus 7 (HAdV7),,174
+386,vir_ires_00545.1,vir_ires_00545.1,,Friend murine leukemia virus,,297
 387,"GL000250.2:3160362-3160579 Homo sapiens IRES_Hsp70 Homo sapiens chromosome 6 genomic contig, GRCh38 reference assembly alternate locus group ALT_REF_LOCI_1.","GL000250.2:3160362-3160579 Homo sapiens IRES_Hsp70 Homo sapiens chromosome 6 genomic contig, GRCh38 reference assembly alternate locus group ALT_REF_LOCI_1.",,Homo sapiens (human),,218
 387,"GL000250.2:3160362-3160579 Homo sapiens IRES_Hsp70 Homo sapiens chromosome 6 genomic contig, GRCh38 reference assembly alternate locus group ALT_REF_LOCI_1.","CM000668.2:31827737-31827954 Homo sapiens IRES_Hsp70 Homo sapiens chromosome 6, GRCh38 reference primary assembly.",,Homo sapiens (human),,218
 387,"GL000250.2:3160362-3160579 Homo sapiens IRES_Hsp70 Homo sapiens chromosome 6 genomic contig, GRCh38 reference assembly alternate locus group ALT_REF_LOCI_1.","GL000251.2:3304990-3305207 Homo sapiens IRES_Hsp70 Homo sapiens chromosome 6 genomic contig, GRCh38 reference assembly alternate locus group ALT_REF_LOCI_2.",,Homo sapiens (human),,218
@@ -481,25 +481,25 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 413,mouse_hsa_ires_00173.1 | chr11:86784617-86784848(+) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,mouse_hsa_ires_00173.1 | chr11:86784617-86784848(+) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,RF00461,Mus musculus (mouse),chr11:86784617-86784848+,232
 414,"KX883372.1:6126-6317 Beihai picorna-like virus 91 IRES_Cripavirus Beihai picorna-like virus 91 strain BHJJX25930 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX883372.1:6126-6317 Beihai picorna-like virus 91 IRES_Cripavirus Beihai picorna-like virus 91 strain BHJJX25930 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",RF00458,Virus,,192
 415,GBV-C|Hepatitis GB virus C,GBV-C|Hepatitis GB virus C,,Hepatitis GB virus C,,630
-416,vir_ires_00343.1,vir_ires_00343.1,RF00458,Virus,,174
+416,vir_ires_00343.1,vir_ires_00343.1,RF00458,Homalodisca coagulata virus-1 (HoCV-1),,174
 416,vir_ires_00343.1,HoCV1_IGRpred|Homalodisca coagulata virus-1,RF00458,Homalodisca coagulata virus-1,,188
-417,vir_ires_00193.1,vir_ires_00193.1,,Virus,,174
-418,vir_ires_00275.1,vir_ires_00275.1,,Virus,,174
-419,vir_ires_00240.1,vir_ires_00240.1,,Virus,,174
-420,vir_ires_00153.1,vir_ires_00153.1,,Virus,,174
-421,vir_ires_00070.1,vir_ires_00070.1,,Virus,,174
-422,vir_ires_00157.1,vir_ires_00157.1,,Virus,,174
-423,vir_ires_00258.1,vir_ires_00258.1,,Virus,,174
-424,vir_ires_00121.1,vir_ires_00121.1,,Virus,,174
-425,vir_ires_00253.1,vir_ires_00253.1,,Virus,,174
-426,vir_ires_00151.1,vir_ires_00151.1,,Virus,,174
-427,vir_ires_00032.1,vir_ires_00032.1,,Virus,,174
-428,vir_ires_00415.1,vir_ires_00415.1,,Virus,,174
-429,vir_ires_00103.1,vir_ires_00103.1,,Virus,,174
-430,vir_ires_00437.1,vir_ires_00437.1,,Virus,,174
-431,vir_ires_00514.1,vir_ires_00514.1,RF00458,Virus,,177
+417,vir_ires_00193.1,vir_ires_00193.1,,Human papillomavirus type 50 (HPV50),,174
+418,vir_ires_00275.1,vir_ires_00275.1,,Human papillomavirus type 90 (candHPV90),,174
+419,vir_ires_00240.1,vir_ires_00240.1,,"Human alphaherpesvirus 1 (Herpes simplex virus 1, HHV-1)",,174
+420,vir_ires_00153.1,vir_ires_00153.1,,Rabies lyssavirus,,174
+421,vir_ires_00070.1,vir_ires_00070.1,,Human betaherpesvirus 6B (HHV-6B),,174
+422,vir_ires_00157.1,vir_ires_00157.1,,Human papillomavirus type 26 (HPV26),,174
+423,vir_ires_00258.1,vir_ires_00258.1,,Human mastadenovirus E (HAdV-E),,174
+424,vir_ires_00121.1,vir_ires_00121.1,,Human mastadenovirus A,,174
+425,vir_ires_00253.1,vir_ires_00253.1,,Influenza B virus (B/Lee/1940),,174
+426,vir_ires_00151.1,vir_ires_00151.1,,Human polyomavirus 1,,174
+427,vir_ires_00032.1,vir_ires_00032.1,,Human adenovirus 7 (HAdV7),,174
+428,vir_ires_00415.1,vir_ires_00415.1,,Simian retrovirus 4 (SRV-4),,174
+429,vir_ires_00103.1,vir_ires_00103.1,,Rous sarcoma virus (RSV),,174
+430,vir_ires_00437.1,vir_ires_00437.1,,Influenza A virus (A/New York/392/2004(H3N2)),,174
+431,vir_ires_00514.1,vir_ires_00514.1,RF00458,Himetobi P virus (HiPV),,177
 431,vir_ires_00514.1,HiPV_IGRpred|Himetobi P virus,RF00458,Himetobi P virus,,188
-432,vir_ires_00546.1,vir_ires_00546.1,,Virus,,311
+432,vir_ires_00546.1,vir_ires_00546.1,,Infectious flacherie virus,,311
 433,PDGF2/c-sis|Homo sapiens,PDGF2/c-sis|Homo sapiens,,Homo sapiens (human),,1022
 434,"hsa_ires_00026.1|Homo sapiens (human)|chr2:158,101,890-158,102,063+","hsa_ires_00026.1|Homo sapiens (human)|chr2:158,101,890-158,102,063+",,Homo sapiens (human),"chr2:158,101,890-158,102,063+",174
 435,"hsa_ires_00058.1|Homo sapiens (human)|chr7:99,325,873-99,333,366+","hsa_ires_00058.1|Homo sapiens (human)|chr7:99,325,873-99,333,366+",,Homo sapiens (human),"chr7:99,325,873-99,333,366+",174
@@ -537,32 +537,32 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 459,gypsy_env|Drosophila melanogaster,gypsy_env|Drosophila melanogaster,,Drosophila melanogaster,,330
 459,gypsy_env|Drosophila melanogaster,gypsy_env|Drosophila melanogaster,,Drosophila melanogaster,,330
 459,gypsy_env|Drosophila melanogaster,gypsy_env|Drosophila melanogaster,,Drosophila melanogaster,,330
-460,vir_ires_00235.1,vir_ires_00235.1,,Virus,,174
-461,vir_ires_00354.1,vir_ires_00354.1,,Virus,,174
-462,vir_ires_00209.1,vir_ires_00209.1,,Virus,,174
-463,vir_ires_00149.1,vir_ires_00149.1,,Virus,,174
-464,vir_ires_00374.1,vir_ires_00374.1,,Virus,,174
-465,vir_ires_00261.1,vir_ires_00261.1,,Virus,,174
-466,vir_ires_00039.1,vir_ires_00039.1,,Virus,,174
-466,vir_ires_00039.1,vir_ires_00465.1,,Virus,,174
-467,vir_ires_00160.1,vir_ires_00160.1,,Virus,,174
-468,vir_ires_00255.1,vir_ires_00255.1,,Virus,,174
-469,vir_ires_00490.1,vir_ires_00490.1,,Virus,,549
-470,vir_ires_00208.1,vir_ires_00208.1,,Virus,,174
-471,vir_ires_00044.1,vir_ires_00044.1,,Virus,,174
-472,vir_ires_00124.1,vir_ires_00124.1,,Virus,,174
-473,vir_ires_00353.1,vir_ires_00353.1,,Virus,,174
-474,vir_ires_00302.1,vir_ires_00302.1,,Virus,,174
-475,vir_ires_00441.1,vir_ires_00441.1,,Virus,,174
-476,vir_ires_00515.1,vir_ires_00515.1,,Virus,,148
-476,vir_ires_00515.1,vir_ires_00506.1,,Virus,,148
+460,vir_ires_00235.1,vir_ires_00235.1,,"Human alphaherpesvirus 1 (Herpes simplex virus 1, HHV-1)",,174
+461,vir_ires_00354.1,vir_ires_00354.1,,Human gammaherpesvirus 8 (Kaposi's sarcoma-associated herpesvirus),,174
+462,vir_ires_00209.1,vir_ires_00209.1,,Human betaherpesvirus 7 (HHV-7),,174
+463,vir_ires_00149.1,vir_ires_00149.1,,Human papillomavirus type 5 (HPV5),,174
+464,vir_ires_00374.1,vir_ires_00374.1,,Xenopus laevis endogenous retrovirus Xen1,,174
+465,vir_ires_00261.1,vir_ires_00261.1,,Human mastadenovirus E (HAdV-E),,174
+466,vir_ires_00039.1,vir_ires_00039.1,,Human immunodeficiency virus 2 (HIV-2),,174
+466,vir_ires_00039.1,vir_ires_00465.1,,Human immunodeficiency virus 2 (HIV-2),,174
+467,vir_ires_00160.1,vir_ires_00160.1,,Human papillomavirus type 32 (HPV32),,174
+468,vir_ires_00255.1,vir_ires_00255.1,,Human coronavirus 229E (HCoV-229E),,174
+469,vir_ires_00490.1,vir_ires_00490.1,,Triatoma virus (TrV),,549
+470,vir_ires_00208.1,vir_ires_00208.1,,Human betaherpesvirus 7 (HHV-7),,174
+471,vir_ires_00044.1,vir_ires_00044.1,,Human parvovirus B19,,174
+472,vir_ires_00124.1,vir_ires_00124.1,,Human mastadenovirus A,,174
+473,vir_ires_00353.1,vir_ires_00353.1,,Human gammaherpesvirus 8 (Kaposi's sarcoma-associated herpesvirus),,174
+474,vir_ires_00302.1,vir_ires_00302.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+475,vir_ires_00441.1,vir_ires_00441.1,,Human betaherpesvirus 6A (HHV-6A),,174
+476,vir_ires_00515.1,vir_ires_00515.1,,Turnip vein-clearing virus,,148
+476,vir_ires_00515.1,vir_ires_00506.1,,Tobamovirus,,148
 476,vir_ires_00515.1,crTMV_IREScp|Crucifer tobamovirus,RF00225,Crucifer tobamovirus,,146
 476,vir_ires_00515.1,crTMV_IREScp|Crucifer tobamovirus,RF00225,Crucifer tobamovirus,,146
 476,vir_ires_00515.1,"U03387.1:5455-5605 Turnip vein-clearing virus IRES_Tobamo Turnip vein-clearing virus, complete genome.",RF00225,Virus,,151
 476,vir_ires_00515.1,crTMV_IREScp|Crucifer tobamovirus,RF00225,Crucifer tobamovirus,,146
 476,vir_ires_00515.1,crTMV_IREScp|Crucifer tobamovirus,,Crucifer tobamovirus,,148
 476,vir_ires_00515.1,crTMV_IREScp|Crucifer tobamovirus,,Crucifer tobamovirus,,148
-477,vir_ires_00547.1,vir_ires_00547.1,,Virus,,438
+477,vir_ires_00547.1,vir_ires_00547.1,,Simian sapelovirus 3,,438
 478,Pim-1|Homo sapiens,Pim-1|Homo sapiens,,Homo sapiens (human),,396
 479,"hsa_ires_00027.1|Homo sapiens (human)|chr12:47,879,114-47,899,927-","hsa_ires_00027.1|Homo sapiens (human)|chr12:47,879,114-47,899,927-",,Homo sapiens (human),"chr12:47,879,114-47,899,927-",174
 480,"hsa_ires_00059.1|Homo sapiens (human)|chr12:51,008,605-51,009,270-","hsa_ires_00059.1|Homo sapiens (human)|chr12:51,008,605-51,009,270-",,Homo sapiens (human),"chr12:51,008,605-51,009,270-",174
@@ -590,26 +590,26 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 499,mouse_hsa_ires_00612.1 | chr15:78934754-78934924(+) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),mouse_PDGF2/c-sis | chr15:78934754-78934924(+) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),RF00226,Mus musculus (mouse),chr15:78934754-78934924+,171
 499,mouse_hsa_ires_00612.1 | chr15:78934754-78934924(+) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),mouse_hsa_ires_00413.1 | chr15:78934754-78934924(+) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),RF00226,Mus musculus (mouse),chr15:78934754-78934924+,171
 500,"KX883736.1:5584-5793 Hubei picorna-like virus 24 IRES_Cripavirus Hubei picorna-like virus 24 strain WGML142000 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX883736.1:5584-5793 Hubei picorna-like virus 24 IRES_Cripavirus Hubei picorna-like virus 24 strain WGML142000 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",RF00458,Virus,,210
-501,vir_ires_00466.1,vir_ires_00466.1,,Virus,,174
-501,vir_ires_00466.1,vir_ires_00138.1,,Virus,,174
-501,vir_ires_00466.1,vir_ires_00288.1,,Virus,,174
-502,vir_ires_00083.1,vir_ires_00083.1,,Virus,,174
-503,vir_ires_00120.1,vir_ires_00120.1,,Virus,,174
-504,vir_ires_00414.1,vir_ires_00414.1,,Virus,,174
-505,vir_ires_00352.1,vir_ires_00352.1,,Virus,,174
-506,vir_ires_00115.1,vir_ires_00115.1,,Virus,,174
-507,vir_ires_00329.1,vir_ires_00329.1,,Virus,,174
-508,vir_ires_00467.1,vir_ires_00467.1,,Virus,,174
-509,vir_ires_00152.1,vir_ires_00152.1,,Virus,,174
-510,vir_ires_00136.1,vir_ires_00136.1,,Virus,,174
-511,vir_ires_00192.1,vir_ires_00192.1,,Virus,,174
-512,vir_ires_00503.1,vir_ires_00503.1,,Virus,,655
+501,vir_ires_00466.1,vir_ires_00466.1,,Ovine enzootic nasal tumor virus,,174
+501,vir_ires_00466.1,vir_ires_00138.1,,Jaagsiekte sheep retrovirus (JSRV),,174
+501,vir_ires_00466.1,vir_ires_00288.1,,Enzootic nasal tumour virus of goats (ENTV-2),,174
+502,vir_ires_00083.1,vir_ires_00083.1,,Human alphaherpesvirus 3 (HHV-3),,174
+503,vir_ires_00120.1,vir_ires_00120.1,,Human mastadenovirus A,,174
+504,vir_ires_00414.1,vir_ires_00414.1,,Bundibugyo ebolavirus,,174
+505,vir_ires_00352.1,vir_ires_00352.1,,Human gammaherpesvirus 8 (Kaposi's sarcoma-associated herpesvirus),,174
+506,vir_ires_00115.1,vir_ires_00115.1,,Human papillomavirus type 63 (HPV63),,174
+507,vir_ires_00329.1,vir_ires_00329.1,,Human gammaherpesvirus 4 (Epstein-Barr virus);  Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+508,vir_ires_00467.1,vir_ires_00467.1,,Human adenovirus 54 (HAdV-54),,174
+509,vir_ires_00152.1,vir_ires_00152.1,,Human polyomavirus 1,,174
+510,vir_ires_00136.1,vir_ires_00136.1,,Jaagsiekte sheep retrovirus (JSRV),,174
+511,vir_ires_00192.1,vir_ires_00192.1,,Human papillomavirus type 48 (HPV48),,174
+512,vir_ires_00503.1,vir_ires_00503.1,,Enterovirus A71 (EV-A71),,655
 512,vir_ires_00503.1,EV71_1-748|Human enterovirus 71,RF00229,Human enterovirus 71,,748
-513,vir_ires_00022.1,vir_ires_00022.1,,Virus,,174
-513,vir_ires_00022.1,vir_ires_00396.1,,Virus,,174
-514,vir_ires_00049.1,vir_ires_00049.1,,Virus,,174
-515,vir_ires_00516.1,vir_ires_00516.1,,Virus,,116
-516,vir_ires_00548.1,vir_ires_00548.1,,Virus,,614
+513,vir_ires_00022.1,vir_ires_00022.1,,Human adenovirus 7 (HAdV7),,174
+513,vir_ires_00022.1,vir_ires_00396.1,,Human mastadenovirus B (HAdV-B),,174
+514,vir_ires_00049.1,vir_ires_00049.1,,Human betaherpesvirus 6B (HHV-6B),,174
+515,vir_ires_00516.1,vir_ires_00516.1,,Turnip crinkle virus,,116
+516,vir_ires_00548.1,vir_ires_00548.1,,Gallid alphaherpesvirus 2,,614
 517,BAG1_p36delta236nt|Homo sapiens,BAG1_p36delta236nt|Homo sapiens,RF00222,Homo sapiens (human),,130
 517,BAG1_p36delta236nt|Homo sapiens,"hsa_ires_00596.1|Homo sapiens (human)|chr9:33,264,330-33,264,461-",RF00222,Homo sapiens (human),"chr9:33,264,330-33,264,461-",132
 517,BAG1_p36delta236nt|Homo sapiens,BAG1_p36delta236nt|Homo sapiens,RF00222,Homo sapiens (human),,130
@@ -643,24 +643,24 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 540,mouse_hsa_ires_00453.1 | chr9:105287577-105287744(-) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),mouse_hsa_ires_00551.1 | chr9:105099152-105099319(-) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),RF00226,Mus musculus (mouse),chr9:105099152-105099319-,168
 541,mouse_hsa_ires_00670.1 | chr2:156242620-156242777(-) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),mouse_hsa_ires_00670.1 | chr2:156242620-156242777(-) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),RF00226,Mus musculus (mouse),chr2:156242620-156242777-,158
 542,"KX883290.1:6822-7013 Hubei picorna-like virus 15 IRES_Cripavirus Hubei picorna-like virus 15 strain arthropodmix13755 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX883290.1:6822-7013 Hubei picorna-like virus 15 IRES_Cripavirus Hubei picorna-like virus 15 strain arthropodmix13755 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",,Virus,,192
-543,vir_ires_00089.1,vir_ires_00089.1,,Virus,,174
-544,vir_ires_00105.1,vir_ires_00105.1,,Virus,,174
-545,vir_ires_00310.1,vir_ires_00310.1,,Virus,,174
-546,vir_ires_00130.1,vir_ires_00130.1,,Virus,,174
-547,vir_ires_00463.1,vir_ires_00463.1,,Virus,,174
-547,vir_ires_00463.1,vir_ires_00061.1,,Virus,,174
-548,vir_ires_00057.1,vir_ires_00057.1,,Virus,,174
-549,vir_ires_00129.1,vir_ires_00129.1,,Virus,,174
-550,vir_ires_00256.1,vir_ires_00256.1,,Virus,,174
-551,vir_ires_00411.1,vir_ires_00411.1,RF00229,Virus,,174
-552,vir_ires_00194.1,vir_ires_00194.1,,Virus,,174
-553,vir_ires_00164.1,vir_ires_00164.1,,Virus,,174
-554,vir_ires_00480.1,vir_ires_00480.1,,Virus,,237
-555,vir_ires_00215.1,vir_ires_00215.1,,Virus,,174
-556,vir_ires_00312.1,vir_ires_00312.1,,Virus,,174
-557,vir_ires_00045.1,vir_ires_00045.1,,Virus,,174
-558,vir_ires_00517.1,vir_ires_00517.1,,Virus,,113
-559,vir_ires_00549.1,vir_ires_00549.1,,Virus,,42
+543,vir_ires_00089.1,vir_ires_00089.1,,Human alphaherpesvirus 3 (HHV-3),,174
+544,vir_ires_00105.1,vir_ires_00105.1,,Human mastadenovirus F (HAdV-F),,174
+545,vir_ires_00310.1,vir_ires_00310.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+546,vir_ires_00130.1,vir_ires_00130.1,,Human mastadenovirus A,,174
+547,vir_ires_00463.1,vir_ires_00463.1,,Human betaherpesvirus 6A (HHV-6A),,174
+547,vir_ires_00463.1,vir_ires_00061.1,,Human betaherpesvirus 6B (HHV-6B),,174
+548,vir_ires_00057.1,vir_ires_00057.1,,Human betaherpesvirus 6B (HHV-6B),,174
+549,vir_ires_00129.1,vir_ires_00129.1,,Human mastadenovirus A,,174
+550,vir_ires_00256.1,vir_ires_00256.1,,Nipah henipavirus (NiV),,174
+551,vir_ires_00411.1,vir_ires_00411.1,RF00229,Enterovirus J,,174
+552,vir_ires_00194.1,vir_ires_00194.1,,Human papillomavirus type 50 (HPV50),,174
+553,vir_ires_00164.1,vir_ires_00164.1,,Human papillomavirus type 53 (HPV53),,174
+554,vir_ires_00480.1,vir_ires_00480.1,,Ectropis obliqua picorna-like virus (EoPV),,237
+555,vir_ires_00215.1,vir_ires_00215.1,,Human betaherpesvirus 7 (HHV-7),,174
+556,vir_ires_00312.1,vir_ires_00312.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+557,vir_ires_00045.1,vir_ires_00045.1,,Human betaherpesvirus 6B (HHV-6B),,174
+558,vir_ires_00517.1,vir_ires_00517.1,,Turnip crinkle virus,,113
+559,vir_ires_00549.1,vir_ires_00549.1,,Human T-cell leukemia virus type I,,42
 560,"CM000684.2:39244768-39244141 Homo sapiens IRES_c-sis Homo sapiens chromosome 22, GRCh38 reference primary assembly.","CM000684.2:39244768-39244141 Homo sapiens IRES_c-sis Homo sapiens chromosome 22, GRCh38 reference primary assembly.",,Homo sapiens (human),,628
 561,UNR|Homo sapiens,UNR|Homo sapiens,,Homo sapiens (human),,429
 562,"hsa_ires_00029.1|Homo sapiens (human)|chr19:35,499,993-35,501,911-","hsa_ires_00029.1|Homo sapiens (human)|chr19:35,499,993-35,501,911-",,Homo sapiens (human),"chr19:35,499,993-35,501,911-",174
@@ -691,27 +691,27 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 585,mouse_hsa_ires_00200.1 | chr15:79868434-79869040(-) | RF00549 | IRES_c-sis | internal ribosome entry site (IRES),mouse_hsa_ires_00200.1 | chr15:79868434-79869040(-) | RF00549 | IRES_c-sis | internal ribosome entry site (IRES),RF00549,Mus musculus (mouse),chr15:79868434-79869040-,607
 585,mouse_hsa_ires_00200.1 | chr15:79868434-79869040(-) | RF00549 | IRES_c-sis | internal ribosome entry site (IRES),"CM001008.3:79898989-79898383 Mus musculus IRES_c-sis CM001008.3 Mus musculus chromosome 15, GRCm39 reference primary assembly C57BL/6J",,Mus musculus (mouse),,607
 586,"KX883338.1:5405-5590 Beihai picorna-like virus 79 IRES_Cripavirus Beihai picorna-like virus 79 strain BHBJDX18844 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX883338.1:5405-5590 Beihai picorna-like virus 79 IRES_Cripavirus Beihai picorna-like virus 79 strain BHBJDX18844 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",RF00458,Virus,,186
-587,vir_ires_00036.1,vir_ires_00036.1,,Virus,,174
-588,vir_ires_00494.1,vir_ires_00494.1,,Virus,,212
+587,vir_ires_00036.1,vir_ires_00036.1,,Human papillomavirus type 31 (HPV31),,174
+588,vir_ires_00494.1,vir_ires_00494.1,,Taura syndrome virus (TSV),,212
 588,vir_ires_00494.1,TSV_IGR|Taura syndrome virus,,Taura syndrome virus,,250
-589,vir_ires_00315.1,vir_ires_00315.1,,Virus,,174
-590,vir_ires_00257.1,vir_ires_00257.1,,Virus,,174
-591,vir_ires_00488.1,vir_ires_00488.1,,Virus,,579
+589,vir_ires_00315.1,vir_ires_00315.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+590,vir_ires_00257.1,vir_ires_00257.1,,Human mastadenovirus E (HAdV-E),,174
+591,vir_ires_00488.1,vir_ires_00488.1,,Rhopalosiphum padi virus (RhPV),,579
 591,vir_ires_00488.1,RhPV_5NCR|Rhopalosiphum padi virus,,Rhopalosiphum padi virus,,579
 591,vir_ires_00488.1,RhPV_5NCR|Rhopalosiphum padi virus,,Rhopalosiphum padi virus,,579
-592,vir_ires_00239.1,vir_ires_00239.1,,Virus,,174
-593,vir_ires_00035.1,vir_ires_00035.1,,Virus,,174
-594,vir_ires_00384.1,vir_ires_00384.1,,Virus,,174
-595,vir_ires_00107.1,vir_ires_00107.1,,Virus,,174
-596,vir_ires_00299.1,vir_ires_00299.1,,Virus,,174
-597,vir_ires_00389.1,vir_ires_00389.1,,Virus,,174
-598,vir_ires_00419.1,vir_ires_00419.1,,Virus,,174
-599,vir_ires_00075.1,vir_ires_00075.1,,Virus,,174
-600,vir_ires_00309.1,vir_ires_00309.1,,Virus,,174
-601,vir_ires_00407.1,vir_ires_00407.1,,Virus,,174
-602,vir_ires_00518.1,vir_ires_00518.1,RF00229,Virus,,742
-603,vir_ires_00550.1,vir_ires_00550.1,,Virus,,447
-603,vir_ires_00550.1,vir_ires_00529.1,,Virus,,449
+592,vir_ires_00239.1,vir_ires_00239.1,,"Human alphaherpesvirus 1 (Herpes simplex virus 1, HHV-1)",,174
+593,vir_ires_00035.1,vir_ires_00035.1,,Human papillomavirus type 31 (HPV31),,174
+594,vir_ires_00384.1,vir_ires_00384.1,,Human mastadenovirus D (HAdV-D),,174
+595,vir_ires_00107.1,vir_ires_00107.1,,Human mastadenovirus F (HAdV-F),,174
+596,vir_ires_00299.1,vir_ires_00299.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+597,vir_ires_00389.1,vir_ires_00389.1,,Human mastadenovirus B (HAdV-B),,174
+598,vir_ires_00419.1,vir_ires_00419.1,,Lloviu cuevavirus,,174
+599,vir_ires_00075.1,vir_ires_00075.1,,Human alphaherpesvirus 3 (HHV-3),,174
+600,vir_ires_00309.1,vir_ires_00309.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+601,vir_ires_00407.1,vir_ires_00407.1,,Human adenovirus 54 (HAdV-54),,174
+602,vir_ires_00518.1,vir_ires_00518.1,RF00229,Human poliovirus 1,,742
+603,vir_ires_00550.1,vir_ires_00550.1,,Leishmania RNA virus 1 - 1,,447
+603,vir_ires_00550.1,vir_ires_00529.1,,Leishmania RNA virus 1-4,,449
 604,BiP_-222_-3|Homo sapiens,BiP_-222_-3|Homo sapiens,RF00223,Homo sapiens (human),,222
 604,BiP_-222_-3|Homo sapiens,"CM000671.2:125241341-125241094 Homo sapiens IRES_Bip Homo sapiens chromosome 9, GRCh38 reference primary assembly.",,Homo sapiens (human),,248
 605,"hsa_ires_00030.1|Homo sapiens (human)|chr12:121,011,141-121,016,497-","hsa_ires_00030.1|Homo sapiens (human)|chr12:121,011,141-121,016,497-",,Homo sapiens (human),"chr12:121,011,141-121,016,497-",174
@@ -745,25 +745,25 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 627,mmu_ires_00010.1|Mus musculus (house mouse),mmu_ires_00010.1|Mus musculus (house mouse),,Mus musculus (mouse),,115
 628,mouse_hsa_ires_00052.1 | chr10:16783403-16783551(+) | RF00457 | IRES_mnt | IRES,mouse_hsa_ires_00052.1 | chr10:16783403-16783551(+) | RF00457 | IRES_mnt | IRES,RF00457,Mus musculus (mouse),chr10:16783403-16783551+,149
 629,"KX883654.1:5717-5927 Shahe picorna-like virus 8 IRES_Cripavirus Shahe picorna-like virus 8 strain SHWC12398 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX883654.1:5717-5927 Shahe picorna-like virus 8 IRES_Cripavirus Shahe picorna-like virus 8 strain SHWC12398 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",RF00458,Virus,,211
-630,vir_ires_00025.1,vir_ires_00025.1,,Virus,,174
-631,vir_ires_00392.1,vir_ires_00392.1,,Virus,,174
-632,vir_ires_00276.1,vir_ires_00276.1,,Virus,,174
-633,vir_ires_00187.1,vir_ires_00187.1,,Virus,,174
-634,vir_ires_00397.1,vir_ires_00397.1,,Virus,,174
-635,vir_ires_00398.1,vir_ires_00398.1,,Virus,,174
-636,vir_ires_00333.1,vir_ires_00333.1,,Virus,,174
-637,vir_ires_00289.1,vir_ires_00289.1,,Virus,,174
-638,vir_ires_00182.1,vir_ires_00182.1,,Virus,,174
-638,vir_ires_00182.1,vir_ires_00063.1,,Virus,,174
-639,vir_ires_00250.1,vir_ires_00250.1,,Virus,,174
-640,vir_ires_00175.1,vir_ires_00175.1,,Virus,,174
-641,vir_ires_00004.1,vir_ires_00004.1,,Virus,,174
-642,vir_ires_00259.1,vir_ires_00259.1,,Virus,,174
-643,vir_ires_00282.1,vir_ires_00282.1,,Virus,,174
-644,vir_ires_00368.1,vir_ires_00368.1,RF00229,Virus,,174
-645,vir_ires_00519.1,vir_ires_00519.1,,Virus,,574
+630,vir_ires_00025.1,vir_ires_00025.1,,Human adenovirus 7 (HAdV7),,174
+631,vir_ires_00392.1,vir_ires_00392.1,,Human mastadenovirus B (HAdV-B),,174
+632,vir_ires_00276.1,vir_ires_00276.1,,Human papillomavirus type 90 (candHPV90),,174
+633,vir_ires_00187.1,vir_ires_00187.1,,Human betaherpesvirus 6A (HHV-6A),,174
+634,vir_ires_00397.1,vir_ires_00397.1,,Human mastadenovirus B (HAdV-B),,174
+635,vir_ires_00398.1,vir_ires_00398.1,,Human mastadenovirus B (HAdV-B),,174
+636,vir_ires_00333.1,vir_ires_00333.1,,Human gammaherpesvirus 4 (Epstein-Barr virus);  Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+637,vir_ires_00289.1,vir_ires_00289.1,,Machupo mammarenavirus,,174
+638,vir_ires_00182.1,vir_ires_00182.1,,Human betaherpesvirus 6A (HHV-6A),,174
+638,vir_ires_00182.1,vir_ires_00063.1,,Human betaherpesvirus 6B (HHV-6B),,174
+639,vir_ires_00250.1,vir_ires_00250.1,,Hendra henipavirus (HeV),,174
+640,vir_ires_00175.1,vir_ires_00175.1,,Human betaherpesvirus 6A (HHV-6A),,174
+641,vir_ires_00004.1,vir_ires_00004.1,,Human mastadenovirus C; Human adenovirus 2; Human adenovirus 5 (HAdV-C),,174
+642,vir_ires_00259.1,vir_ires_00259.1,,Human mastadenovirus E (HAdV-E),,174
+643,vir_ires_00282.1,vir_ires_00282.1,,Simian immunodeficiency virus SIV-mnd 2 (SIVmnd-2),,174
+644,vir_ires_00368.1,vir_ires_00368.1,RF00229,Simian enterovirus 19 (simian virus 19),,174
+645,vir_ires_00519.1,vir_ires_00519.1,,Encephalomyocarditis virus (EMCV),,574
 645,vir_ires_00519.1,EMCV-R|Encephalomyocarditis virus,,Encephalomyocarditis virus,,576
-646,vir_ires_00551.1,vir_ires_00551.1,,Virus,,495
+646,vir_ires_00551.1,vir_ires_00551.1,,Cryphonectria hypovirus 1,,495
 647,XIAP_5-464|Homo sapiens,XIAP_5-464|Homo sapiens,,Homo sapiens (human),,460
 647,XIAP_5-464|Homo sapiens,XIAP_5-464|Homo sapiens,,Homo sapiens (human),,460
 648,"hsa_ires_00031.1|Homo sapiens (human)|chr12:27,969,495-27,969,832-","hsa_ires_00031.1|Homo sapiens (human)|chr12:27,969,495-27,969,832-",,Homo sapiens (human),"chr12:27,969,495-27,969,832-",174
@@ -791,24 +791,24 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 669,mouse_hsa_ires_00276.1 | chr5:98312761-98312941(-) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),mouse_hsa_ires_00276.1 | chr5:98312761-98312941(-) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),RF00226,Mus musculus (mouse),chr5:98312761-98312941-,181
 670,mouse_hsa_ires_00560.1 | chr1:157065538-157065701(+) | RF00457 | IRES_mnt | IRES,mouse_hsa_ires_00560.1 | chr1:157065538-157065701(+) | RF00457 | IRES_mnt | IRES,RF00457,Mus musculus (mouse),chr1:157065538-157065701+,164
 671,mouse_hsa_ires_00031.1 | chr6:146665733-146665870(+) | RF00261 | IRES_L-myc | internal ribosome entry site (IRES),mouse_hsa_ires_00031.1 | chr6:146665733-146665870(+) | RF00261 | IRES_L-myc | internal ribosome entry site (IRES),RF00261,Mus musculus (mouse),chr6:146665733-146665870+,138
-672,vir_ires_00376.1,vir_ires_00376.1,RF00102,Virus,,174
-673,vir_ires_00311.1,vir_ires_00311.1,,Virus,,174
-674,vir_ires_00355.1,vir_ires_00355.1,,Virus,,174
-675,vir_ires_00434.1,vir_ires_00434.1,,Virus,,174
-676,vir_ires_00306.1,vir_ires_00306.1,,Virus,,174
-677,vir_ires_00041.1,vir_ires_00041.1,,Virus,,174
-678,vir_ires_00473.1,vir_ires_00473.1,,Virus,,353
-679,vir_ires_00321.1,vir_ires_00321.1,,Virus,,174
-680,vir_ires_00248.1,vir_ires_00248.1,,Virus,,174
-681,vir_ires_00082.1,vir_ires_00082.1,,Virus,,174
-682,vir_ires_00097.1,vir_ires_00097.1,,Virus,,174
-682,vir_ires_00097.1,vir_ires_00038.1,,Virus,,174
-683,vir_ires_00090.1,vir_ires_00090.1,,Virus,,174
-684,vir_ires_00416.1,vir_ires_00416.1,,Virus,,174
-685,vir_ires_00265.1,vir_ires_00265.1,,Virus,,174
-686,vir_ires_00493.1,vir_ires_00493.1,,Virus,,245
-687,vir_ires_00520.1,vir_ires_00520.1,,Virus,,721
-688,vir_ires_00552.1,vir_ires_00552.1,,Virus,,487
+672,vir_ires_00376.1,vir_ires_00376.1,RF00102,Human mastadenovirus D (HAdV-D),,174
+673,vir_ires_00311.1,vir_ires_00311.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+674,vir_ires_00355.1,vir_ires_00355.1,,Human gammaherpesvirus 8 (Kaposi's sarcoma-associated herpesvirus),,174
+675,vir_ires_00434.1,vir_ires_00434.1,,Human betaherpesvirus 6A (HHV-6A),,174
+676,vir_ires_00306.1,vir_ires_00306.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+677,vir_ires_00041.1,vir_ires_00041.1,,Simian T-lymphotropic virus 1 (STLVs-1),,174
+678,vir_ires_00473.1,vir_ires_00473.1,,Cricket paralysis virus (CrPV),,353
+679,vir_ires_00321.1,vir_ires_00321.1,,Human parvovirus 4 G1,,174
+680,vir_ires_00248.1,vir_ires_00248.1,,Hendra henipavirus (HeV),,174
+681,vir_ires_00082.1,vir_ires_00082.1,,Human alphaherpesvirus 3 (HHV-3),,174
+682,vir_ires_00097.1,vir_ires_00097.1,,Human papillomavirus type 6b (HPV6b),,174
+682,vir_ires_00097.1,vir_ires_00038.1,,Human papillomavirus type 11 (HPV11),,174
+683,vir_ires_00090.1,vir_ires_00090.1,,Human alphaherpesvirus 3 (HHV-3),,174
+684,vir_ires_00416.1,vir_ires_00416.1,,Mud crab dicistrovirus (MCDV),,174
+685,vir_ires_00265.1,vir_ires_00265.1,,Human mastadenovirus E (HAdV-E),,174
+686,vir_ires_00493.1,vir_ires_00493.1,,Gallid alphaherpesvirus 2 (Marek's disease virus type 1),,245
+687,vir_ires_00520.1,vir_ires_00520.1,,Senecavirus A,,721
+688,vir_ires_00552.1,vir_ires_00552.1,,Cryphonectria hypovirus 2-NB58,,487
 689,"CM000666.2:122826680-122827177 Homo sapiens IRES_FGF2 Homo sapiens chromosome 4, GRCh38 reference primary assembly.","CM000666.2:122826680-122827177 Homo sapiens IRES_FGF2 Homo sapiens chromosome 4, GRCh38 reference primary assembly.",,Homo sapiens (human),,498
 690,c-IAP1_285-1399|Homo sapiens,c-IAP1_285-1399|Homo sapiens,,Homo sapiens (human),,1115
 690,c-IAP1_285-1399|Homo sapiens,c-IAP1_285-1399|Homo sapiens,,Homo sapiens (human),,1115
@@ -840,25 +840,25 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 714,ABPV_IGRpred|Acute bee paralysis virus,vir_ires_00510.1,,Virus,,213
 715,HIV-1|Human Immunodeficiency Virus type 1,HIV-1|Human Immunodeficiency Virus type 1,RF00375,Human Immunodeficiency Virus type 1,,233
 715,HIV-1|Human Immunodeficiency Virus type 1,vir_ires_00470.1,RF00375,Virus,,233
-716,vir_ires_00018.1,vir_ires_00018.1,,Virus,,174
-717,vir_ires_00074.1,vir_ires_00074.1,,Virus,,174
-718,vir_ires_00012.1,vir_ires_00012.1,,Virus,,174
-719,vir_ires_00337.1,vir_ires_00337.1,,Virus,,174
-720,vir_ires_00477.1,vir_ires_00477.1,,Virus,,170
+716,vir_ires_00018.1,vir_ires_00018.1,,Human adenovirus 5 (HAdV5),,174
+717,vir_ires_00074.1,vir_ires_00074.1,,Human alphaherpesvirus 3 (HHV-3),,174
+718,vir_ires_00012.1,vir_ires_00012.1,,Human mastadenovirus C; Human adenovirus 2 (HAdV-C),,174
+719,vir_ires_00337.1,vir_ires_00337.1,,Human gammaherpesvirus 4 (Epstein-Barr virus);  Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+720,vir_ires_00477.1,vir_ires_00477.1,,Macaca mulatta polyomavirus 1,,170
 720,vir_ires_00477.1,SV40_661-830|Simian virus 40,,Simian virus 40,,170
-721,vir_ires_00140.1,vir_ires_00140.1,,Virus,,174
-722,vir_ires_00489.1,vir_ires_00489.1,RF00458,Virus,,175
-723,vir_ires_00279.1,vir_ires_00279.1,,Virus,,174
-724,vir_ires_00242.1,vir_ires_00242.1,,Virus,,174
-725,vir_ires_00274.1,vir_ires_00274.1,,Virus,,174
-726,vir_ires_00388.1,vir_ires_00388.1,,Virus,,174
-727,vir_ires_00098.1,vir_ires_00098.1,,Virus,,174
-728,vir_ires_00078.1,vir_ires_00078.1,,Virus,,174
-729,vir_ires_00143.1,vir_ires_00143.1,,Virus,,174
-730,vir_ires_00504.1,vir_ires_00504.1,RF00229,Virus,,510
-731,vir_ires_00000.1,vir_ires_00000.1,RF00102,Virus,,174
-732,vir_ires_00521.1,vir_ires_00521.1,RF00376,Virus,,421
-733,vir_ires_00553.1,vir_ires_00553.1,,Virus,,369
+721,vir_ires_00140.1,vir_ires_00140.1,,Spleen focus-forming virus (SFFV),,174
+722,vir_ires_00489.1,vir_ires_00489.1,RF00458,Rhopalosiphum padi virus (RhPV),,175
+723,vir_ires_00279.1,vir_ires_00279.1,,Banna virus strain JKT-6423,,174
+724,vir_ires_00242.1,vir_ires_00242.1,,"Human alphaherpesvirus 1 (Herpes simplex virus 1, HHV-1)",,174
+725,vir_ires_00274.1,vir_ires_00274.1,,Human papillomavirus type 90 (candHPV90),,174
+726,vir_ires_00388.1,vir_ires_00388.1,,Human mastadenovirus D (HAdV-D),,174
+727,vir_ires_00098.1,vir_ires_00098.1,,Alphapapillomavirus 7,,174
+728,vir_ires_00078.1,vir_ires_00078.1,,Human alphaherpesvirus 3 (HHV-3),,174
+729,vir_ires_00143.1,vir_ires_00143.1,,Murine osteosarcoma virus,,174
+730,vir_ires_00504.1,vir_ires_00504.1,RF00229,Human poliovirus 2,,510
+731,vir_ires_00000.1,vir_ires_00000.1,RF00102,Human mastadenovirus C; Human adenovirus 2 (HAdV-C),,174
+732,vir_ires_00521.1,vir_ires_00521.1,RF00376,Human immunodeficiency virus 2,,421
+733,vir_ires_00553.1,vir_ires_00553.1,,Cryphonectria hypovirus 3,,369
 734,"CM000685.2:38479154-38479285 Homo sapiens IRES_Bag1 Homo sapiens chromosome X, GRCh38 reference primary assembly.","CM000685.2:38479154-38479285 Homo sapiens IRES_Bag1 Homo sapiens chromosome X, GRCh38 reference primary assembly.",RF00222,Homo sapiens (human),,132
 735,"hsa_ires_00001.1|Homo sapiens (human)|chr1:70,411,242-70,411,415+","hsa_ires_00001.1|Homo sapiens (human)|chr1:70,411,242-70,411,415+",,Homo sapiens (human),"chr1:70,411,242-70,411,415+",174
 736,"hsa_ires_00033.1|Homo sapiens (human)|chr8:100,948,890-100,950,568-","hsa_ires_00033.1|Homo sapiens (human)|chr8:100,948,890-100,950,568-",,Homo sapiens (human),"chr8:100,948,890-100,950,568-",174
@@ -893,24 +893,24 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 759,mouse_hsa_ires_00350.1 | chr10:43619546-43619634(-) | RF00223 | IRES_Bip | internal ribosome entry site (IRES),mouse_hsa_ires_00350.1 | chr10:43619546-43619634(-) | RF00223 | IRES_Bip | internal ribosome entry site (IRES),RF00223,Mus musculus (mouse),chr10:43619546-43619634-,89
 760,mouse_hsa_ires_00562.1 | chr11:97231580-97231713(-) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,mouse_hsa_ires_00562.1 | chr11:97231580-97231713(-) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,RF00461,Mus musculus (mouse),chr11:97231580-97231713-,134
 761,AEV|Avian encephalomyelitis virus,AEV|Avian encephalomyelitis virus,,Avian encephalomyelitis virus,,494
-762,vir_ires_00482.1,vir_ires_00482.1,RF00228,Virus,,590
+762,vir_ires_00482.1,vir_ires_00482.1,RF00228,Hepatovirus A,,590
 762,vir_ires_00482.1,HAV_HM175|Human hepatitis A virus,RF00228,Human hepatitis A virus,,584
 762,vir_ires_00482.1,"M14707.1:166-737 Hepatovirus A UNKNOWN-M14707 IRES_HepA Hepatitis A virus (wild-type) RNA, complete genome.",RF00228,Virus,,572
-763,vir_ires_00204.1,vir_ires_00204.1,,Virus,,174
-764,vir_ires_00230.1,vir_ires_00230.1,,Virus,,174
-765,vir_ires_00381.1,vir_ires_00381.1,,Virus,,174
-766,vir_ires_00386.1,vir_ires_00386.1,,Virus,,174
-766,vir_ires_00386.1,vir_ires_00439.1,,Virus,,174
-767,vir_ires_00116.1,vir_ires_00116.1,,Virus,,174
-768,vir_ires_00454.1,vir_ires_00454.1,RF03546,Virus,,174
-769,vir_ires_00216.1,vir_ires_00216.1,,Virus,,174
-770,vir_ires_00042.1,vir_ires_00042.1,,Virus,,174
-771,vir_ires_00106.1,vir_ires_00106.1,,Virus,,174
-772,vir_ires_00232.1,vir_ires_00232.1,,Virus,,174
-773,vir_ires_00364.1,vir_ires_00364.1,,Virus,,174
-774,vir_ires_00178.1,vir_ires_00178.1,,Virus,,174
-775,vir_ires_00141.1,vir_ires_00141.1,,Virus,,174
-776,vir_ires_00522.1,vir_ires_00522.1,,Virus,,127
+763,vir_ires_00204.1,vir_ires_00204.1,,Human betaherpesvirus 7 (HHV-7),,174
+764,vir_ires_00230.1,vir_ires_00230.1,,"Human alphaherpesvirus 2 (Herpes simplex virus 2, HHV-2)",,174
+765,vir_ires_00381.1,vir_ires_00381.1,,Human mastadenovirus D (HAdV-D),,174
+766,vir_ires_00386.1,vir_ires_00386.1,,Human mastadenovirus D (HAdV-D),,174
+766,vir_ires_00386.1,vir_ires_00439.1,,Human adenovirus 54 (HAdV-54),,174
+767,vir_ires_00116.1,vir_ires_00116.1,,Human papillomavirus type 63 (HPV63),,174
+768,vir_ires_00454.1,vir_ires_00454.1,RF03546,West Nile virus (WNV),,174
+769,vir_ires_00216.1,vir_ires_00216.1,,Human betaherpesvirus 7 (HHV-7),,174
+770,vir_ires_00042.1,vir_ires_00042.1,,Human parvovirus B19,,174
+771,vir_ires_00106.1,vir_ires_00106.1,,Human mastadenovirus F (HAdV-F),,174
+772,vir_ires_00232.1,vir_ires_00232.1,,"Human alphaherpesvirus 2 (Herpes simplex virus 2, HHV-2)",,174
+773,vir_ires_00364.1,vir_ires_00364.1,,Woolly monkey sarcoma virus (WMSV),,174
+774,vir_ires_00178.1,vir_ires_00178.1,,Human betaherpesvirus 6A (HHV-6A),,174
+775,vir_ires_00141.1,vir_ires_00141.1,,Mouse mammary tumor virus (MMTV),,174
+776,vir_ires_00522.1,vir_ires_00522.1,,Murine leukemia virus,,127
 777,"CM000664.2:15941768-15942091 Homo sapiens IRES_n-myc Homo sapiens chromosome 2, GRCh38 reference primary assembly.","CM000664.2:15941768-15942091 Homo sapiens IRES_n-myc Homo sapiens chromosome 2, GRCh38 reference primary assembly.",,Homo sapiens (human),,324
 778,CCND1|Homo sapiens,CCND1|Homo sapiens,,Homo sapiens (human),,209
 779,"hsa_ires_00002.1|Homo sapiens (human)|chr4:169,620,906-169,635,928+","hsa_ires_00002.1|Homo sapiens (human)|chr4:169,620,906-169,635,928+",,Homo sapiens (human),"chr4:169,620,906-169,635,928+",174
@@ -942,23 +942,23 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 803,mouse_c-myc | chr15:61857412-61857722(+) | RF00216 | IRES_c-myc | internal ribosome entry site (IRES),"CM001008.3:61857412-61857722 Mus musculus IRES_c-myc CM001008.3 Mus musculus chromosome 15, GRCm39 reference primary assembly C57BL/6J",RF00216,Mus musculus (mouse),,311
 803,mouse_c-myc | chr15:61857412-61857722(+) | RF00216 | IRES_c-myc | internal ribosome entry site (IRES),mouse_hsa_ires_00598.1 | chr15:61857412-61857722(+) | RF00216 | IRES_c-myc | internal ribosome entry site (IRES),RF00216,Mus musculus (mouse),chr15:61857412-61857722+,311
 804,HRV-2|Human rhinovirus 2,HRV-2|Human rhinovirus 2,RF00229,Human rhinovirus 2,,604
-805,vir_ires_00111.1,vir_ires_00111.1,,Virus,,174
-806,vir_ires_00123.1,vir_ires_00123.1,,Virus,,174
-807,vir_ires_00445.1,vir_ires_00445.1,,Virus,,174
-808,vir_ires_00436.1,vir_ires_00436.1,,Virus,,174
-808,vir_ires_00436.1,vir_ires_00383.1,,Virus,,174
-809,vir_ires_00125.1,vir_ires_00125.1,,Virus,,174
-810,vir_ires_00308.1,vir_ires_00308.1,,Virus,,174
-811,vir_ires_00053.1,vir_ires_00053.1,,Virus,,174
-812,vir_ires_00272.1,vir_ires_00272.1,,Virus,,174
-813,vir_ires_00403.1,vir_ires_00403.1,,Virus,,174
-814,vir_ires_00435.1,vir_ires_00435.1,,Virus,,174
-815,vir_ires_00460.1,vir_ires_00460.1,RF00229,Virus,,174
-816,vir_ires_00451.1,vir_ires_00451.1,,Virus,,174
-816,vir_ires_00451.1,vir_ires_00387.1,,Virus,,174
-817,vir_ires_00212.1,vir_ires_00212.1,,Virus,,174
-818,vir_ires_00010.1,vir_ires_00010.1,,Virus,,174
-819,vir_ires_00073.1,vir_ires_00073.1,,Virus,,174
+805,vir_ires_00111.1,vir_ires_00111.1,,Human papillomavirus type 4 (HPV4),,174
+806,vir_ires_00123.1,vir_ires_00123.1,,Human mastadenovirus A,,174
+807,vir_ires_00445.1,vir_ires_00445.1,,Human adenovirus 5 (HAdV5),,174
+808,vir_ires_00436.1,vir_ires_00436.1,,Human adenovirus 54 (HAdV-54),,174
+808,vir_ires_00436.1,vir_ires_00383.1,,Human mastadenovirus D (HAdV-D),,174
+809,vir_ires_00125.1,vir_ires_00125.1,,Human mastadenovirus A,,174
+810,vir_ires_00308.1,vir_ires_00308.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+811,vir_ires_00053.1,vir_ires_00053.1,,Human betaherpesvirus 6B (HHV-6B),,174
+812,vir_ires_00272.1,vir_ires_00272.1,,Tremovirus A,,174
+813,vir_ires_00403.1,vir_ires_00403.1,,Human papillomavirus type 108 (HPV108),,174
+814,vir_ires_00435.1,vir_ires_00435.1,,Human betaherpesvirus 6A (HHV-6A),,174
+815,vir_ires_00460.1,vir_ires_00460.1,RF00229,Human enterovirus 100 (HEV-100),,174
+816,vir_ires_00451.1,vir_ires_00451.1,,Human adenovirus 54 (HAdV-54),,174
+816,vir_ires_00451.1,vir_ires_00387.1,,Human mastadenovirus D (HAdV-D),,174
+817,vir_ires_00212.1,vir_ires_00212.1,,Human betaherpesvirus 7 (HHV-7),,174
+818,vir_ires_00010.1,vir_ires_00010.1,,Human mastadenovirus C; Human adenovirus 2 (HAdV-C),,174
+819,vir_ires_00073.1,vir_ires_00073.1,,Human alphaherpesvirus 3 (HHV-3),,174
 820,"CM000664.2:15940568-15940760 Homo sapiens IRES_n-myc Homo sapiens chromosome 2, GRCh38 reference primary assembly.","CM000664.2:15940568-15940760 Homo sapiens IRES_n-myc Homo sapiens chromosome 2, GRCh38 reference primary assembly.",,Homo sapiens (human),,193
 821,DAP5|Homo sapiens,DAP5|Homo sapiens,,Homo sapiens (human),,305
 822,"hsa_ires_00003.1|Homo sapiens (human)|chr14:55,008,692-55,010,454-","hsa_ires_00003.1|Homo sapiens (human)|chr14:55,008,692-55,010,454-",,Homo sapiens (human),"chr14:55,008,692-55,010,454-",174
@@ -995,24 +995,24 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 847,mouse_CM000676.2:61695528-61695807 | chr12:73712911-73713073(+) | RF00216 | IRES_c-myc | internal ribosome entry site (IRES),mouse_CM000676.2:61695528-61695807 | chr12:73712911-73713073(+) | RF00216 | IRES_c-myc | internal ribosome entry site (IRES),RF00216,Mus musculus (mouse),chr12:73712911-73713073+,163
 848,BQCV_IGRpred|Black queen cell virus,BQCV_IGRpred|Black queen cell virus,RF00458,Black queen cell virus,,190
 848,BQCV_IGRpred|Black queen cell virus,vir_ires_00492.1,RF00458,Virus,,190
-849,vir_ires_00189.1,vir_ires_00189.1,,Virus,,174
-850,vir_ires_00410.1,vir_ires_00410.1,,Virus,,174
-851,vir_ires_00007.1,vir_ires_00007.1,,Virus,,174
-852,vir_ires_00254.1,vir_ires_00254.1,,Virus,,174
-853,vir_ires_00199.1,vir_ires_00199.1,,Virus,,174
-854,vir_ires_00304.1,vir_ires_00304.1,,Virus,,174
-855,vir_ires_00459.1,vir_ires_00459.1,RF00229,Virus,,174
-856,vir_ires_00148.1,vir_ires_00148.1,,Virus,,174
-857,vir_ires_00170.1,vir_ires_00170.1,,Virus,,174
-858,vir_ires_00406.1,vir_ires_00406.1,,Virus,,174
-859,vir_ires_00002.1,vir_ires_00002.1,,Virus,,174
-860,vir_ires_00251.1,vir_ires_00251.1,,Virus,,174
-861,vir_ires_00201.1,vir_ires_00201.1,,Virus,,174
-862,vir_ires_00483.1,vir_ires_00483.1,RF00210,Virus,,697
+849,vir_ires_00189.1,vir_ires_00189.1,,Macaca mulatta polyomavirus 1,,174
+850,vir_ires_00410.1,vir_ires_00410.1,,Human adenovirus 54 (HAdV-54),,174
+851,vir_ires_00007.1,vir_ires_00007.1,,Human mastadenovirus C; Human adenovirus 2 (HAdV-C),,174
+852,vir_ires_00254.1,vir_ires_00254.1,,Zaire ebolavirus (ZEBOV),,174
+853,vir_ires_00199.1,vir_ires_00199.1,,Human papillomavirus type 60 (HPV60),,174
+854,vir_ires_00304.1,vir_ires_00304.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+855,vir_ires_00459.1,vir_ires_00459.1,RF00229,Human enterovirus 107 (HEV-107),,174
+856,vir_ires_00148.1,vir_ires_00148.1,,Human papillomavirus type 5 (HPV5),,174
+857,vir_ires_00170.1,vir_ires_00170.1,,Human papillomavirus type 9 (HPV9),,174
+858,vir_ires_00406.1,vir_ires_00406.1,,Human bocavirus 4 NI (HBoV4-NI),,174
+859,vir_ires_00002.1,vir_ires_00002.1,,Human mastadenovirus C; Human adenovirus 2; Human adenovirus 5 (HAdV-C),,174
+860,vir_ires_00251.1,vir_ires_00251.1,,Aichi virus 1 (AiV-1),,174
+861,vir_ires_00201.1,vir_ires_00201.1,,Human betaherpesvirus 7 (HHV-7),,174
+862,vir_ires_00483.1,vir_ires_00483.1,RF00210,Equine rhinitis B virus 1 (ERBV-1),,697
 862,vir_ires_00483.1,ERBV_162-920|Equine rhinitis B virus,,Equine rhinitis B virus,,759
-863,vir_ires_00380.1,vir_ires_00380.1,,Virus,,174
-863,vir_ires_00380.1,vir_ires_00409.1,,Virus,,174
-864,vir_ires_00524.1,vir_ires_00524.1,,Virus,,663
+863,vir_ires_00380.1,vir_ires_00380.1,,Human mastadenovirus D (HAdV-D),,174
+863,vir_ires_00380.1,vir_ires_00409.1,,Human adenovirus 54 (HAdV-54),,174
+864,vir_ires_00524.1,vir_ires_00524.1,,Human betaherpesvirus 5,,663
 865,"CM000666.2:164188235-164188416 Homo sapiens IRES_Bip Homo sapiens chromosome 4, GRCh38 reference primary assembly.","CM000666.2:164188235-164188416 Homo sapiens IRES_Bip Homo sapiens chromosome 4, GRCh38 reference primary assembly.",RF00223,Homo sapiens (human),,182
 866,eIF4G|Homo sapiens,eIF4G|Homo sapiens,,Homo sapiens (human),,357
 867,"hsa_ires_00004.1|Homo sapiens (human)|chr2:210,556,599-210,556,772+","hsa_ires_00004.1|Homo sapiens (human)|chr2:210,556,599-210,556,772+",,Homo sapiens (human),"chr2:210,556,599-210,556,772+",174
@@ -1041,23 +1041,23 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 889,mouse_hsa_ires_00042.1 | chr9:77297295-77297424(+) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,mouse_hsa_ires_00009.1 | chr9:77297295-77297424(+) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,RF00461,Mus musculus (mouse),chr9:77297295-77297424+,130
 890,mouse_hsa_ires_00486.1 | chr8:119101893-119101984(-) | RF00223 | IRES_Bip | internal ribosome entry site (IRES),mouse_hsa_ires_00486.1 | chr8:119101893-119101984(-) | RF00223 | IRES_Bip | internal ribosome entry site (IRES),RF00223,Mus musculus (mouse),chr8:119101893-119101984-,92
 891,idefix|Drosophila melanogaster,idefix|Drosophila melanogaster,,Drosophila melanogaster,,521
-892,vir_ires_00069.1,vir_ires_00069.1,,Virus,,174
-893,vir_ires_00046.1,vir_ires_00046.1,,Virus,,174
-894,vir_ires_00015.1,vir_ires_00015.1,,Virus,,174
-895,vir_ires_00236.1,vir_ires_00236.1,,Virus,,174
-896,vir_ires_00177.1,vir_ires_00177.1,,Virus,,174
-897,vir_ires_00206.1,vir_ires_00206.1,,Virus,,174
-898,vir_ires_00048.1,vir_ires_00048.1,,Virus,,174
-899,vir_ires_00144.1,vir_ires_00144.1,,Virus,,174
-900,vir_ires_00457.1,vir_ires_00457.1,,Virus,,174
-901,vir_ires_00262.1,vir_ires_00262.1,,Virus,,174
-902,vir_ires_00481.1,vir_ires_00481.1,RF00210,Virus,,419
+892,vir_ires_00069.1,vir_ires_00069.1,,Human betaherpesvirus 6B (HHV-6B),,174
+893,vir_ires_00046.1,vir_ires_00046.1,,Human betaherpesvirus 6B (HHV-6B),,174
+894,vir_ires_00015.1,vir_ires_00015.1,,Human adenovirus 5 (HAdV5),,174
+895,vir_ires_00236.1,vir_ires_00236.1,,"Human alphaherpesvirus 1 (Herpes simplex virus 1, HHV-1)",,174
+896,vir_ires_00177.1,vir_ires_00177.1,,Human betaherpesvirus 6A (HHV-6A),,174
+897,vir_ires_00206.1,vir_ires_00206.1,,Human betaherpesvirus 7 (HHV-7),,174
+898,vir_ires_00048.1,vir_ires_00048.1,,Human betaherpesvirus 6B (HHV-6B),,174
+899,vir_ires_00144.1,vir_ires_00144.1,,Ovine lentivirus (OLV/OvLV),,174
+900,vir_ires_00457.1,vir_ires_00457.1,,Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+901,vir_ires_00262.1,vir_ires_00262.1,,Human mastadenovirus E (HAdV-E),,174
+902,vir_ires_00481.1,vir_ires_00481.1,RF00210,Encephalomyocarditis virus (EMCV),,419
 902,vir_ires_00481.1,"M81861.1:374-830 Encephalomyocarditis virus Ruckert IRES_Picorna_2 Encephalomyocarditis virus polyprotein, complete cds.",RF00210,Virus,,457
-903,vir_ires_00003.1,vir_ires_00003.1,,Virus,,174
-903,vir_ires_00003.1,vir_ires_00442.1,,Virus,,174
-904,vir_ires_00200.1,vir_ires_00200.1,,Virus,,174
-905,vir_ires_00150.1,vir_ires_00150.1,,Virus,,174
-906,vir_ires_00525.1,vir_ires_00525.1,,Virus,,161
+903,vir_ires_00003.1,vir_ires_00003.1,,Human mastadenovirus C; Human adenovirus 2 (HAdV-C),,174
+903,vir_ires_00003.1,vir_ires_00442.1,,Human adenovirus 5 (HAdV5),,174
+904,vir_ires_00200.1,vir_ires_00200.1,,Human papillomavirus type 60 (HPV60),,174
+905,vir_ires_00150.1,vir_ires_00150.1,,Human papillomavirus type 5 (HPV5),,174
+906,vir_ires_00525.1,vir_ires_00525.1,,Blackcurrant reversion virus,,161
 907,eIF4GI-ext|Homo sapiens,eIF4GI-ext|Homo sapiens,,Homo sapiens (human),,196
 908,"hsa_ires_00005.1|Homo sapiens (human)|chr5:74,763,743-74,767,087-","hsa_ires_00005.1|Homo sapiens (human)|chr5:74,763,743-74,767,087-",,Homo sapiens (human),"chr5:74,763,743-74,767,087-",174
 909,"hsa_ires_00037.1|Homo sapiens (human)|chr4:176,269,049-176,269,222-","hsa_ires_00037.1|Homo sapiens (human)|chr4:176,269,049-176,269,222-",,Homo sapiens (human),"chr4:176,269,049-176,269,222-",174
@@ -1084,23 +1084,23 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 929,mmu_ires_00017.1|Mus musculus (house mouse),Rbm3|Mus musculus,,Mus musculus (mouse),,22
 930,KBV_IGRpred|Kashmir bee virus,KBV_IGRpred|Kashmir bee virus,,Kashmir bee virus,,202
 930,KBV_IGRpred|Kashmir bee virus,vir_ires_00513.1,,Virus,,219
-931,vir_ires_00293.1,vir_ires_00293.1,,Virus,,174
-932,vir_ires_00195.1,vir_ires_00195.1,,Virus,,174
-933,vir_ires_00357.1,vir_ires_00357.1,,Virus,,174
-934,vir_ires_00426.1,vir_ires_00426.1,,Virus,,174
-935,vir_ires_00461.1,vir_ires_00461.1,,Virus,,174
-936,vir_ires_00327.1,vir_ires_00327.1,,Virus,,174
-937,vir_ires_00188.1,vir_ires_00188.1,,Virus,,174
-938,vir_ires_00404.1,vir_ires_00404.1,,Virus,,174
-939,vir_ires_00145.1,vir_ires_00145.1,,Virus,,174
-940,vir_ires_00456.1,vir_ires_00456.1,,Virus,,174
-940,vir_ires_00456.1,vir_ires_00455.1,,Virus,,174
-941,vir_ires_00295.1,vir_ires_00295.1,,Virus,,174
-942,vir_ires_00118.1,vir_ires_00118.1,RF00102,Virus,,174
-943,vir_ires_00198.1,vir_ires_00198.1,,Virus,,174
-944,vir_ires_00218.1,vir_ires_00218.1,,Virus,,174
-945,vir_ires_00431.1,vir_ires_00431.1,,Virus,,174
-946,vir_ires_00526.1,vir_ires_00526.1,,Virus,,101
+931,vir_ires_00293.1,vir_ires_00293.1,,Human coronavirus OC43 (HCoV-OC43),,174
+932,vir_ires_00195.1,vir_ires_00195.1,,Human papillomavirus type 50 (HPV50),,174
+933,vir_ires_00357.1,vir_ires_00357.1,,Human gammaherpesvirus 8 (Kaposi's sarcoma-associated herpesvirus),,174
+934,vir_ires_00426.1,vir_ires_00426.1,,Human betaherpesvirus 6A (HHV-6A),,174
+935,vir_ires_00461.1,vir_ires_00461.1,,Human mastadenovirus B (HAdV-B),,174
+936,vir_ires_00327.1,vir_ires_00327.1,,Human gammaherpesvirus 4 (Epstein-Barr virus);  Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+937,vir_ires_00188.1,vir_ires_00188.1,,Macaca mulatta polyomavirus 1,,174
+938,vir_ires_00404.1,vir_ires_00404.1,,Human papillomavirus type 108 (HPV108),,174
+939,vir_ires_00145.1,vir_ires_00145.1,,Squirrel monkey retrovirus (SMRV),,174
+940,vir_ires_00456.1,vir_ires_00456.1,,Moloney murine leukemia virus,,174
+940,vir_ires_00456.1,vir_ires_00455.1,,Abelson murine leukemia virus (A-MuLV),,174
+941,vir_ires_00295.1,vir_ires_00295.1,,Human coronavirus NL63 (HCoV-NL63),,174
+942,vir_ires_00118.1,vir_ires_00118.1,RF00102,Human mastadenovirus A,,174
+943,vir_ires_00198.1,vir_ires_00198.1,,Human papillomavirus type 60 (HPV60),,174
+944,vir_ires_00218.1,vir_ires_00218.1,,Human betaherpesvirus 7 (HHV-7),,174
+945,vir_ires_00431.1,vir_ires_00431.1,,Human mastadenovirus B (HAdV-B),,174
+946,vir_ires_00526.1,vir_ires_00526.1,,Hibiscus chlorotic ringspot virus,,101
 947,eIF4GII|Homo sapiens,eIF4GII|Homo sapiens,,Homo sapiens (human),,256
 948,"hsa_ires_00006.1|Homo sapiens (human)|chr6:89,829,900-89,853,221+","hsa_ires_00006.1|Homo sapiens (human)|chr6:89,829,900-89,853,221+",,Homo sapiens (human),"chr6:89,829,900-89,853,221+",174
 949,"hsa_ires_00038.1|Homo sapiens (human)|chr11:62,665,706-62,665,879+","hsa_ires_00038.1|Homo sapiens (human)|chr11:62,665,706-62,665,879+",,Homo sapiens (human),"chr11:62,665,706-62,665,879+",174
@@ -1133,24 +1133,24 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 973,LINE-1_ORF1_-101_to_-1|Mus musculus,LINE-1_ORF1_-101_to_-1|Mus musculus,,Mus musculus (mouse),,101
 973,LINE-1_ORF1_-101_to_-1|Mus musculus,LINE-1_ORF1_-101_to_-1|Mus musculus,,Mus musculus (mouse),,101
 973,LINE-1_ORF1_-101_to_-1|Mus musculus,LINE-1_ORF1_-101_to_-1|Mus musculus,,Mus musculus (mouse),,101
-974,vir_ires_00165.1,vir_ires_00165.1,,Virus,,174
-975,vir_ires_00190.1,vir_ires_00190.1,,Virus,,174
-976,vir_ires_00300.1,vir_ires_00300.1,,Virus,,174
-977,vir_ires_00226.1,vir_ires_00226.1,,Virus,,174
-978,vir_ires_00319.1,vir_ires_00319.1,,Virus,,174
-979,vir_ires_00400.1,vir_ires_00400.1,,Virus,,174
-980,vir_ires_00307.1,vir_ires_00307.1,,Virus,,174
-981,vir_ires_00066.1,vir_ires_00066.1,,Virus,,174
-981,vir_ires_00066.1,vir_ires_00438.1,,Virus,,174
-982,vir_ires_00344.1,vir_ires_00344.1,,Virus,,174
-983,vir_ires_00180.1,vir_ires_00180.1,,Virus,,174
-984,vir_ires_00350.1,vir_ires_00350.1,,Virus,,174
-985,vir_ires_00185.1,vir_ires_00185.1,,Virus,,174
-986,vir_ires_00263.1,vir_ires_00263.1,,Virus,,174
-987,vir_ires_00100.1,vir_ires_00100.1,,Virus,,174
-987,vir_ires_00100.1,vir_ires_00433.1,,Virus,,174
-988,vir_ires_00087.1,vir_ires_00087.1,,Virus,,174
-989,vir_ires_00527.1,vir_ires_00527.1,,Virus,,153
+974,vir_ires_00165.1,vir_ires_00165.1,,Human papillomavirus type 53 (HPV53),,174
+975,vir_ires_00190.1,vir_ires_00190.1,,Human papillomavirus type 48 (HPV48),,174
+976,vir_ires_00300.1,vir_ires_00300.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+977,vir_ires_00226.1,vir_ires_00226.1,,Snakehead retrovirus (SnRV),,174
+978,vir_ires_00319.1,vir_ires_00319.1,,Human coronavirus HKU1 (HCoV-HKU1),,174
+979,vir_ires_00400.1,vir_ires_00400.1,,Rotavirus A,,174
+980,vir_ires_00307.1,vir_ires_00307.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+981,vir_ires_00066.1,vir_ires_00066.1,,Human betaherpesvirus 6B (HHV-6B),,174
+981,vir_ires_00066.1,vir_ires_00438.1,,Human betaherpesvirus 6A (HHV-6A),,174
+982,vir_ires_00344.1,vir_ires_00344.1,,Human papillomavirus type 103 (HPV103),,174
+983,vir_ires_00180.1,vir_ires_00180.1,,Human betaherpesvirus 6A (HHV-6A),,174
+984,vir_ires_00350.1,vir_ires_00350.1,,Human gammaherpesvirus 8 (Kaposi's sarcoma-associated herpesvirus),,174
+985,vir_ires_00185.1,vir_ires_00185.1,,Human betaherpesvirus 6A (HHV-6A),,174
+986,vir_ires_00263.1,vir_ires_00263.1,,Human mastadenovirus E (HAdV-E),,174
+987,vir_ires_00100.1,vir_ires_00100.1,,Friend murine leukemia virus,,174
+987,vir_ires_00100.1,vir_ires_00433.1,,Rauscher murine leukemia virus,,174
+988,vir_ires_00087.1,vir_ires_00087.1,,Human alphaherpesvirus 3 (HHV-3),,174
+989,vir_ires_00527.1,vir_ires_00527.1,,Potato leafroll virus,,153
 990,"CM000669.2:129028750-129028891 Homo sapiens ODC_IRES Homo sapiens chromosome 7, GRCh38 reference primary assembly.","CM000669.2:129028750-129028891 Homo sapiens ODC_IRES Homo sapiens chromosome 7, GRCh38 reference primary assembly.",RF02535,Homo sapiens (human),,142
 991,eIF4GII-long|Homo sapiens,eIF4GII-long|Homo sapiens,,Homo sapiens (human),,327
 992,"hsa_ires_00007.1|Homo sapiens (human)|chr7:32,489,263-32,490,411-","hsa_ires_00007.1|Homo sapiens (human)|chr7:32,489,263-32,490,411-",,Homo sapiens (human),"chr7:32,489,263-32,490,411-",174
@@ -1181,23 +1181,23 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 1017,"AF308157.1:595-1057 Foot-and-mouth disease virus - type O  IRES_Picorna_2 Foot-and-mouth disease virus, complete genome.","AF308157.1:595-1057 Foot-and-mouth disease virus - type O  IRES_Picorna_2 Foot-and-mouth disease virus, complete genome.",RF00210,Virus,,463
 1018,CrPV_5NCR|Cricket paralysis virus,CrPV_5NCR|Cricket paralysis virus,,Cricket paralysis virus,,708
 1018,CrPV_5NCR|Cricket paralysis virus,CrPV_5NCR|Cricket paralysis virus,,Cricket paralysis virus,,708
-1019,vir_ires_00238.1,vir_ires_00238.1,,Virus,,174
-1020,vir_ires_00284.1,vir_ires_00284.1,,Virus,,174
-1021,vir_ires_00052.1,vir_ires_00052.1,,Virus,,174
-1022,vir_ires_00139.1,vir_ires_00139.1,,Virus,,174
-1023,vir_ires_00225.1,vir_ires_00225.1,,Virus,,174
-1024,vir_ires_00142.1,vir_ires_00142.1,,Virus,,174
-1025,vir_ires_00458.1,vir_ires_00458.1,,Virus,,174
-1026,vir_ires_00079.1,vir_ires_00079.1,,Virus,,174
-1027,vir_ires_00113.1,vir_ires_00113.1,,Virus,,174
-1028,vir_ires_00292.1,vir_ires_00292.1,,Virus,,174
-1029,vir_ires_00413.1,vir_ires_00413.1,,Virus,,174
-1030,vir_ires_00330.1,vir_ires_00330.1,,Virus,,174
-1031,vir_ires_00174.1,vir_ires_00174.1,RF00229,Virus,,174
-1032,vir_ires_00172.1,vir_ires_00172.1,,Virus,,174
-1033,vir_ires_00108.1,vir_ires_00108.1,,Virus,,174
-1034,vir_ires_00320.1,vir_ires_00320.1,,Virus,,174
-1035,vir_ires_00528.1,vir_ires_00528.1,,Virus,,143
+1019,vir_ires_00238.1,vir_ires_00238.1,,"Human alphaherpesvirus 1 (Herpes simplex virus 1, HHV-1)",,174
+1020,vir_ires_00284.1,vir_ires_00284.1,,Human papillomavirus type 92 (HPV92),,174
+1021,vir_ires_00052.1,vir_ires_00052.1,,Human betaherpesvirus 6B (HHV-6B),,174
+1022,vir_ires_00139.1,vir_ires_00139.1,,Spleen focus-forming virus (SFFV),,174
+1023,vir_ires_00225.1,vir_ires_00225.1,,Human immunodeficiency virus 2 (HIV-2),,174
+1024,vir_ires_00142.1,vir_ires_00142.1,,Mouse mammary tumor virus (MMTV),,174
+1025,vir_ires_00458.1,vir_ires_00458.1,,Human betaherpesvirus 6A (HHV-6A),,174
+1026,vir_ires_00079.1,vir_ires_00079.1,,Human alphaherpesvirus 3 (HHV-3),,174
+1027,vir_ires_00113.1,vir_ires_00113.1,,Human papillomavirus type 4 (HPV4),,174
+1028,vir_ires_00292.1,vir_ires_00292.1,,Human papillomavirus type 96 (HPV96),,174
+1029,vir_ires_00413.1,vir_ires_00413.1,,Tai Forest ebolavirus,,174
+1030,vir_ires_00330.1,vir_ires_00330.1,,Human gammaherpesvirus 4 (Epstein-Barr virus);  Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+1031,vir_ires_00174.1,vir_ires_00174.1,RF00229,Rhinovirus A,,174
+1032,vir_ires_00172.1,vir_ires_00172.1,,Marburg marburgvirus,,174
+1033,vir_ires_00108.1,vir_ires_00108.1,,Human mastadenovirus F (HAdV-F),,174
+1034,vir_ires_00320.1,vir_ires_00320.1,,Human coronavirus HKU1 (HCoV-HKU1),,174
+1035,vir_ires_00528.1,vir_ires_00528.1,,Tobacco etch virus,,143
 1036,ELG1|Homo sapiens,ELG1|Homo sapiens,,Homo sapiens (human),,460
 1036,ELG1|Homo sapiens,hsa_ires_00619.1|Homo sapiens (human)|NA,,Homo sapiens (human),Homo sapiens human,485
 1037,"hsa_ires_00008.1|Homo sapiens (human)|chr19:48,575,741-48,575,914+","hsa_ires_00008.1|Homo sapiens (human)|chr19:48,575,741-48,575,914+",,Homo sapiens (human),"chr19:48,575,741-48,575,914+",174
@@ -1225,25 +1225,25 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 1058,"hsa_ires_00680.1|Homo sapiens (human)|chr13:21,671,818-21,671,912+","hsa_ires_00680.1|Homo sapiens (human)|chr13:21,671,818-21,671,912+",,Homo sapiens (human),"chr13:21,671,818-21,671,912+",95
 1059,mmu_ires_00020.1|Mus musculus (house mouse),mmu_ires_00020.1|Mus musculus (house mouse),,Mus musculus (mouse),,489
 1060,X96871.1:402-893 Equine rhinitis B virus 1 P1436 /71 IRES_Picorna_2 Equine Rhinovirus type 2 genomic sequence,X96871.1:402-893 Equine rhinitis B virus 1 P1436 /71 IRES_Picorna_2 Equine Rhinovirus type 2 genomic sequence,RF00210,Virus,,492
-1061,vir_ires_00181.1,vir_ires_00181.1,,Virus,,174
-1061,vir_ires_00181.1,vir_ires_00058.1,,Virus,,174
-1062,vir_ires_00056.1,vir_ires_00056.1,,Virus,,174
-1063,vir_ires_00449.1,vir_ires_00449.1,,Virus,,174
-1063,vir_ires_00449.1,vir_ires_00385.1,,Virus,,174
-1064,vir_ires_00509.1,vir_ires_00509.1,,Virus,,252
-1065,vir_ires_00065.1,vir_ires_00065.1,,Virus,,174
-1066,vir_ires_00273.1,vir_ires_00273.1,RF00210,Virus,,174
-1067,vir_ires_00278.1,vir_ires_00278.1,,Virus,,174
-1068,vir_ires_00336.1,vir_ires_00336.1,,Virus,,174
-1069,vir_ires_00091.1,vir_ires_00091.1,,Virus,,174
-1070,vir_ires_00348.1,vir_ires_00348.1,,Virus,,174
+1061,vir_ires_00181.1,vir_ires_00181.1,,Human betaherpesvirus 6A (HHV-6A),,174
+1061,vir_ires_00181.1,vir_ires_00058.1,,Human betaherpesvirus 6B (HHV-6B),,174
+1062,vir_ires_00056.1,vir_ires_00056.1,,Human betaherpesvirus 6B (HHV-6B),,174
+1063,vir_ires_00449.1,vir_ires_00449.1,,Human adenovirus 54 (HAdV-54),,174
+1063,vir_ires_00449.1,vir_ires_00385.1,,Human mastadenovirus D (HAdV-D),,174
+1064,vir_ires_00509.1,vir_ires_00509.1,,Human herpesvirus 8 type M (HHV-8M),,252
+1065,vir_ires_00065.1,vir_ires_00065.1,,Human betaherpesvirus 6B (HHV-6B),,174
+1066,vir_ires_00273.1,vir_ires_00273.1,RF00210,Foot-and-mouth disease virus - type SAT 2 (FMDV-SAT2),,174
+1067,vir_ires_00278.1,vir_ires_00278.1,,Banna virus strain JKT-6423,,174
+1068,vir_ires_00336.1,vir_ires_00336.1,,Human gammaherpesvirus 4 (Epstein-Barr virus),,174
+1069,vir_ires_00091.1,vir_ires_00091.1,,Alphapapillomavirus 4,,174
+1070,vir_ires_00348.1,vir_ires_00348.1,,Israeli acute paralysis virus (IAPV),,174
 1070,vir_ires_00348.1,IAPV_IGRpred|Israel acute paralysis virus of bees,,Israel acute paralysis virus of bees,,199
-1071,vir_ires_00220.1,vir_ires_00220.1,,Virus,,174
-1072,vir_ires_00202.1,vir_ires_00202.1,,Virus,,174
-1073,vir_ires_00452.1,vir_ires_00452.1,,Virus,,174
-1073,vir_ires_00452.1,vir_ires_00028.1,,Virus,,174
-1074,vir_ires_00249.1,vir_ires_00249.1,,Virus,,174
-1075,vir_ires_00122.1,vir_ires_00122.1,,Virus,,174
+1071,vir_ires_00220.1,vir_ires_00220.1,,Human betaherpesvirus 7 (HHV-7),,174
+1072,vir_ires_00202.1,vir_ires_00202.1,,Human betaherpesvirus 7 (HHV-7),,174
+1073,vir_ires_00452.1,vir_ires_00452.1,,Human mastadenovirus B (HAdV-B),,174
+1073,vir_ires_00452.1,vir_ires_00028.1,,Human adenovirus 7 (HAdV7),,174
+1074,vir_ires_00249.1,vir_ires_00249.1,,Hendra henipavirus (HeV),,174
+1075,vir_ires_00122.1,vir_ires_00122.1,,Human mastadenovirus A,,174
 1076,"CM000667.2:109052656-109052458 Homo sapiens IRES_Cx43 Homo sapiens chromosome 5, GRCh38 reference primary assembly.","CM000667.2:109052656-109052458 Homo sapiens IRES_Cx43 Homo sapiens chromosome 5, GRCh38 reference primary assembly.",RF00487,Homo sapiens (human),,199
 1076,"CM000667.2:109052656-109052458 Homo sapiens IRES_Cx43 Homo sapiens chromosome 5, GRCh38 reference primary assembly.","CM000668.2:121435649-121435848 Homo sapiens IRES_Cx43 Homo sapiens chromosome 6, GRCh38 reference primary assembly.",RF00487,Homo sapiens (human),,200
 1077,FGF1A|Homo sapiens,FGF1A|Homo sapiens,,Homo sapiens (human),,434
@@ -1272,23 +1272,23 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 1100,mmu_ires_00021.1|Mus musculus (house mouse),mmu_ires_00021.1|Mus musculus (house mouse),,Mus musculus (mouse),,212
 1101,"AF218039.1:6028-6223 Cricket paralysis virus (isolate Teleogryllus commodus/Australia/CrPVVIC/1968) IRES_Cripavirus Cricket paralysis virus nonstructural polyprotein and structural polyprotein genes, complete cds.","AF218039.1:6028-6223 Cricket paralysis virus (isolate Teleogryllus commodus/Australia/CrPVVIC/1968) IRES_Cripavirus Cricket paralysis virus nonstructural polyprotein and structural polyprotein genes, complete cds.",,Virus,,196
 1101,"AF218039.1:6028-6223 Cricket paralysis virus (isolate Teleogryllus commodus/Australia/CrPVVIC/1968) IRES_Cripavirus Cricket paralysis virus nonstructural polyprotein and structural polyprotein genes, complete cds.",vir_ires_00474.1,,Virus,,211
-1102,vir_ires_00335.1,vir_ires_00335.1,,Virus,,174
-1103,vir_ires_00475.1,vir_ires_00475.1,,Virus,,232
-1104,vir_ires_00371.1,vir_ires_00371.1,,Virus,,174
-1105,vir_ires_00372.1,vir_ires_00372.1,,Virus,,174
-1106,vir_ires_00324.1,vir_ires_00324.1,,Virus,,174
-1107,vir_ires_00427.1,vir_ires_00427.1,,Virus,,174
-1108,vir_ires_00393.1,vir_ires_00393.1,,Virus,,174
-1109,vir_ires_00472.1,vir_ires_00472.1,RF00209,Virus,,334
+1102,vir_ires_00335.1,vir_ires_00335.1,,Human gammaherpesvirus 4 (Epstein-Barr virus);  Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+1103,vir_ires_00475.1,vir_ires_00475.1,,Hepatitis C virus (HCV),,232
+1104,vir_ires_00371.1,vir_ires_00371.1,,Macaque simian foamy virus (SFVmac),,174
+1105,vir_ires_00372.1,vir_ires_00372.1,,African green monkey simian foamy virus,,174
+1106,vir_ires_00324.1,vir_ires_00324.1,,Rotavirus C,,174
+1107,vir_ires_00427.1,vir_ires_00427.1,,Human mastadenovirus B (HAdV-B),,174
+1108,vir_ires_00393.1,vir_ires_00393.1,,Human mastadenovirus B (HAdV-B),,174
+1109,vir_ires_00472.1,vir_ires_00472.1,RF00209,Classical swine fever virus (CSFV),,334
 1109,vir_ires_00472.1,CSFV|Classical swine fever virus - C,,Classical swine fever virus - C,,373
-1110,vir_ires_00211.1,vir_ires_00211.1,,Virus,,174
-1111,vir_ires_00471.1,vir_ires_00471.1,,Virus,,518
-1112,vir_ires_00099.1,vir_ires_00099.1,,Virus,,174
-1113,vir_ires_00402.1,vir_ires_00402.1,,Virus,,174
-1114,vir_ires_00401.1,vir_ires_00401.1,,Virus,,174
-1115,vir_ires_00205.1,vir_ires_00205.1,,Virus,,174
-1116,vir_ires_00286.1,vir_ires_00286.1,,Virus,,174
-1117,vir_ires_00530.1,vir_ires_00530.1,,Virus,,297
+1110,vir_ires_00211.1,vir_ires_00211.1,,Human betaherpesvirus 7 (HHV-7),,174
+1111,vir_ires_00471.1,vir_ires_00471.1,,Giardia lamblia virus (GLV),,518
+1112,vir_ires_00099.1,vir_ires_00099.1,,Alphapapillomavirus 7,,174
+1113,vir_ires_00402.1,vir_ires_00402.1,,Simian T-cell lymphotropic virus 6 (STLVs-6),,174
+1114,vir_ires_00401.1,vir_ires_00401.1,,Simian T-cell lymphotropic virus 6 (STLVs-6),,174
+1115,vir_ires_00205.1,vir_ires_00205.1,,Human betaherpesvirus 7 (HHV-7),,174
+1116,vir_ires_00286.1,vir_ires_00286.1,,Human papillomavirus type 92 (HPV92),,174
+1117,vir_ires_00530.1,vir_ires_00530.1,,Hepacivirus N,,297
 1118,"hsa_ires_00010.1|Homo sapiens (human)|chr12:57,487,953-57,488,126+","hsa_ires_00010.1|Homo sapiens (human)|chr12:57,487,953-57,488,126+",,Homo sapiens (human),"chr12:57,487,953-57,488,126+",174
 1119,"hsa_ires_00042.1|Homo sapiens (human)|chr6:53,655,240-53,665,708-","hsa_ires_00042.1|Homo sapiens (human)|chr6:53,655,240-53,665,708-",,Homo sapiens (human),"chr6:53,655,240-53,665,708-",174
 1120,"hsa_ires_00074.1|Homo sapiens (human)|chr5:139,389,743-139,389,916-","hsa_ires_00074.1|Homo sapiens (human)|chr5:139,389,743-139,389,916-",,Homo sapiens (human),"chr5:139,389,743-139,389,916-",174
@@ -1317,23 +1317,23 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 1141,mouse_hsa_ires_00416.1 | chr6:82743830-82743966(-) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,mouse_hsa_ires_00207.1 | chr6:82967561-82967697(-) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,RF00461,Mus musculus (mouse),chr6:82967561-82967697-,137
 1142,mouse_hsa_ires_00252.1 | chr1:166831103-166831128(+) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),mouse_hsa_ires_00252.1 | chr1:166831103-166831128(+) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),RF00226,Mus musculus (mouse),chr1:166831103-166831128+,26
 1143,PSIV_IGR|Plautia stali intestine virus,PSIV_IGR|Plautia stali intestine virus,,Plautia stali intestine virus,,145
-1144,vir_ires_00334.1,vir_ires_00334.1,,Virus,,174
-1145,vir_ires_00229.1,vir_ires_00229.1,,Virus,,174
-1146,vir_ires_00092.1,vir_ires_00092.1,,Virus,,174
-1147,vir_ires_00133.1,vir_ires_00133.1,,Virus,,174
-1148,vir_ires_00084.1,vir_ires_00084.1,,Virus,,174
-1149,vir_ires_00064.1,vir_ires_00064.1,,Virus,,174
-1150,vir_ires_00294.1,vir_ires_00294.1,,Virus,,174
-1151,vir_ires_00479.1,vir_ires_00479.1,,Virus,,77
-1152,vir_ires_00430.1,vir_ires_00430.1,,Virus,,174
-1153,vir_ires_00341.1,vir_ires_00341.1,,Virus,,174
-1153,vir_ires_00341.1,vir_ires_00440.1,,Virus,,174
-1154,vir_ires_00498.1,vir_ires_00498.1,RF00210,Virus,,432
-1155,vir_ires_00112.1,vir_ires_00112.1,,Virus,,174
-1156,vir_ires_00102.1,vir_ires_00102.1,,Virus,,174
-1156,vir_ires_00102.1,vir_ires_00101.1,,Virus,,174
-1157,vir_ires_00031.1,vir_ires_00031.1,,Virus,,174
-1158,vir_ires_00531.1,vir_ires_00531.1,,Virus,,739
+1144,vir_ires_00334.1,vir_ires_00334.1,,Human gammaherpesvirus 4 (Epstein-Barr virus);  Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+1145,vir_ires_00229.1,vir_ires_00229.1,,"Human alphaherpesvirus 2 (Herpes simplex virus 2, HHV-2)",,174
+1146,vir_ires_00092.1,vir_ires_00092.1,,Human papillomavirus type 41 (HPV4),,174
+1147,vir_ires_00133.1,vir_ires_00133.1,,Human mastadenovirus A,,174
+1148,vir_ires_00084.1,vir_ires_00084.1,,Human alphaherpesvirus 3 (HHV-3),,174
+1149,vir_ires_00064.1,vir_ires_00064.1,,Human betaherpesvirus 6B (HHV-6B),,174
+1150,vir_ires_00294.1,vir_ires_00294.1,,Human coronavirus OC43 (HCoV-OC43),,174
+1151,vir_ires_00479.1,vir_ires_00479.1,,Pelargonium flower break virus (PFBV),,77
+1152,vir_ires_00430.1,vir_ires_00430.1,,Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+1153,vir_ires_00341.1,vir_ires_00341.1,,Human gammaherpesvirus 4 (Epstein-Barr virus),,174
+1153,vir_ires_00341.1,vir_ires_00440.1,,Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+1154,vir_ires_00498.1,vir_ires_00498.1,RF00210,Foot-and-mouth disease virus - type A (FMDV-A),,432
+1155,vir_ires_00112.1,vir_ires_00112.1,,Human papillomavirus type 4 (HPV4),,174
+1156,vir_ires_00102.1,vir_ires_00102.1,,Theilovirus (ThV),,174
+1156,vir_ires_00102.1,vir_ires_00101.1,,Theilovirus (ThV),,174
+1157,vir_ires_00031.1,vir_ires_00031.1,,Human adenovirus 7 (HAdV7),,174
+1158,vir_ires_00531.1,vir_ires_00531.1,,Triticum mosaic virus,,739
 1159,"CM000667.2:142697800-142697634 Homo sapiens IRES_FGF1 Homo sapiens chromosome 5, GRCh38 reference primary assembly.","CM000667.2:142697800-142697634 Homo sapiens IRES_FGF1 Homo sapiens chromosome 5, GRCh38 reference primary assembly.",RF00387,Homo sapiens (human),,167
 1160,hSNM1|Homo sapiens,hSNM1|Homo sapiens,,Homo sapiens (human),,918
 1160,hSNM1|Homo sapiens,"hsa_ires_00603.1|Homo sapiens (human)|chr10:113,853,183-113,854,100-",,Homo sapiens (human),"chr10:113,853,183-113,854,100-",918
@@ -1367,23 +1367,23 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 1185,mouse_hsa_ires_00387.1 | chr11:88361348-88361507(+) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,mouse_hsa_ires_00387.1 | chr11:88361348-88361507(+) | RF00461 | IRES_VEGF_A | endothelial growth factor (VEGF) IRES A,RF00461,Mus musculus (mouse),chr11:88361348-88361507+,160
 1186,"KX883979.1:6097-6308 Wenzhou shrimp virus 5 IRES_Cripavirus Wenzhou shrimp virus 5 strain shrimp14323 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX883979.1:6097-6308 Wenzhou shrimp virus 5 IRES_Cripavirus Wenzhou shrimp virus 5 strain shrimp14323 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",RF00458,Virus,,212
 1187,PV_type1_Mahoney|Human poliovirus 1,PV_type1_Mahoney|Human poliovirus 1,RF00229,Human poliovirus 1,,312
-1188,vir_ires_00375.1,vir_ires_00375.1,,Virus,,174
-1189,vir_ires_00382.1,vir_ires_00382.1,,Virus,,174
-1190,vir_ires_00501.1,vir_ires_00501.1,,Virus,,422
-1191,vir_ires_00303.1,vir_ires_00303.1,,Virus,,174
-1192,vir_ires_00158.1,vir_ires_00158.1,,Virus,,174
-1193,vir_ires_00154.1,vir_ires_00154.1,,Virus,,174
-1194,vir_ires_00361.1,vir_ires_00361.1,,Virus,,174
-1194,vir_ires_00361.1,vir_ires_00339.1,,Virus,,174
-1195,vir_ires_00484.1,vir_ires_00484.1,RF00458,Virus,,191
-1196,vir_ires_00505.1,vir_ires_00505.1,RF00229,Virus,,741
+1188,vir_ires_00375.1,vir_ires_00375.1,,Xenopus laevis endogenous retrovirus Xen1,,174
+1189,vir_ires_00382.1,vir_ires_00382.1,,Human mastadenovirus D (HAdV-D),,174
+1190,vir_ires_00501.1,vir_ires_00501.1,,Duck hepatitis A virus 3 (DHAV-3),,422
+1191,vir_ires_00303.1,vir_ires_00303.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+1192,vir_ires_00158.1,vir_ires_00158.1,,Human papillomavirus type 32 (HPV32),,174
+1193,vir_ires_00154.1,vir_ires_00154.1,,Simian immunodeficiency virus (SIV),,174
+1194,vir_ires_00361.1,vir_ires_00361.1,,Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+1194,vir_ires_00361.1,vir_ires_00339.1,,Human gammaherpesvirus 4 (Epstein-Barr virus),,174
+1195,vir_ires_00484.1,vir_ires_00484.1,RF00458,Plautia stali intestine virus (PSIV),,191
+1196,vir_ires_00505.1,vir_ires_00505.1,RF00229,Coxsackievirus B3 (CVB3),,741
 1196,vir_ires_00505.1,CVB3|Human coxsackievirus B3,,Human coxsackievirus B3,,750
-1197,vir_ires_00146.1,vir_ires_00146.1,,Virus,,174
-1198,vir_ires_00135.1,vir_ires_00135.1,,Virus,,174
-1199,vir_ires_00076.1,vir_ires_00076.1,,Virus,,174
-1200,vir_ires_00137.1,vir_ires_00137.1,,Virus,,174
-1201,vir_ires_00234.1,vir_ires_00234.1,,Virus,,174
-1202,vir_ires_00532.1,vir_ires_00532.1,,Virus,,182
+1197,vir_ires_00146.1,vir_ires_00146.1,,Human papillomavirus type 16 (HPV16),,174
+1198,vir_ires_00135.1,vir_ires_00135.1,,Human T-lymphotropic virus 2 (HTLV-2),,174
+1199,vir_ires_00076.1,vir_ires_00076.1,,Human alphaherpesvirus 3 (HHV-3),,174
+1200,vir_ires_00137.1,vir_ires_00137.1,,Jaagsiekte sheep retrovirus (JSRV),,174
+1201,vir_ires_00234.1,vir_ires_00234.1,,Human immunodeficiency virus 1 (HIV-1),,174
+1202,vir_ires_00532.1,vir_ires_00532.1,,Human T-cell leukemia virus type I,,182
 1203,"CM000676.2:61695528-61695807 Homo sapiens IRES_HIF1 Homo sapiens chromosome 14, GRCh38 reference primary assembly.","CM000676.2:61695528-61695807 Homo sapiens IRES_HIF1 Homo sapiens chromosome 14, GRCh38 reference primary assembly.",,Homo sapiens (human),,280
 1204,"hsa_ires_00012.1|Homo sapiens (human)|chr22:23,691,857-23,692,030+","hsa_ires_00012.1|Homo sapiens (human)|chr22:23,691,857-23,692,030+",,Homo sapiens (human),"chr22:23,691,857-23,692,030+",174
 1205,"hsa_ires_00044.1|Homo sapiens (human)|chr19:34,300,300-34,300,473+","hsa_ires_00044.1|Homo sapiens (human)|chr19:34,300,300-34,300,473+",,Homo sapiens (human),"chr19:34,300,300-34,300,473+",174
@@ -1414,28 +1414,28 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 1228,mouse_hsa_ires_00368.1 | chr14:30280604-30280687(-) | RF00223 | IRES_Bip | internal ribosome entry site (IRES),mouse_hsa_ires_00439.1 | chr14:28999456-28999539(-) | RF00223 | IRES_Bip | internal ribosome entry site (IRES),RF00223,Mus musculus (mouse),chr14:28999456-28999539-,84
 1229,"KX884348.1:7089-7293 Wenzhou shrimp virus 6 IRES_Cripavirus Wenzhou shrimp virus 6 strain WZRBX43423 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX884348.1:7089-7293 Wenzhou shrimp virus 6 IRES_Cripavirus Wenzhou shrimp virus 6 strain WZRBX43423 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",,Virus,,205
 1230,PV_type3_Leon|Human poliovirus 1,PV_type3_Leon|Human poliovirus 1,RF00229,Human poliovirus 1,,742
-1231,vir_ires_00231.1,vir_ires_00231.1,,Virus,,174
-1232,vir_ires_00161.1,vir_ires_00161.1,,Virus,,174
-1233,vir_ires_00425.1,vir_ires_00425.1,,Virus,,174
-1233,vir_ires_00425.1,vir_ires_00378.1,,Virus,,174
-1234,vir_ires_00071.1,vir_ires_00071.1,,Virus,,174
-1235,vir_ires_00016.1,vir_ires_00016.1,,Virus,,174
-1236,vir_ires_00508.1,vir_ires_00508.1,,Virus,,628
-1237,vir_ires_00428.1,vir_ires_00428.1,,Virus,,174
-1237,vir_ires_00428.1,vir_ires_00026.1,,Virus,,174
-1238,vir_ires_00338.1,vir_ires_00338.1,,Virus,,174
-1239,vir_ires_00011.1,vir_ires_00011.1,,Virus,,174
-1240,vir_ires_00507.1,vir_ires_00507.1,,Virus,,691
+1231,vir_ires_00231.1,vir_ires_00231.1,,"Human alphaherpesvirus 2 (Herpes simplex virus 2, HHV-2)",,174
+1232,vir_ires_00161.1,vir_ires_00161.1,,Human papillomavirus type 34 (HPV34),,174
+1233,vir_ires_00425.1,vir_ires_00425.1,,Human mastadenovirus E (HAdV-E),,174
+1233,vir_ires_00425.1,vir_ires_00378.1,,Human mastadenovirus D (HAdV-D),,174
+1234,vir_ires_00071.1,vir_ires_00071.1,,Human betaherpesvirus 6B (HHV-6B),,174
+1235,vir_ires_00016.1,vir_ires_00016.1,,Human adenovirus 5 (HAdV5),,174
+1236,vir_ires_00508.1,vir_ires_00508.1,,GB virus C (GBV-HGV),,628
+1237,vir_ires_00428.1,vir_ires_00428.1,,Human mastadenovirus B (HAdV-B),,174
+1237,vir_ires_00428.1,vir_ires_00026.1,,Human adenovirus 7 (HAdV7),,174
+1238,vir_ires_00338.1,vir_ires_00338.1,,Human gammaherpesvirus 4 (Epstein-Barr virus),,174
+1239,vir_ires_00011.1,vir_ires_00011.1,,Human mastadenovirus C; Human adenovirus 2; Human adenovirus 5 (HAdV-C),,174
+1240,vir_ires_00507.1,vir_ires_00507.1,,Pegivirus A,,691
 1240,vir_ires_00507.1,GBV-A|Hepatitis GB virus A,,Hepatitis GB virus A,,693
-1241,vir_ires_00331.1,vir_ires_00331.1,,Virus,,174
-1242,vir_ires_00068.1,vir_ires_00068.1,,Virus,,174
-1242,vir_ires_00068.1,vir_ires_00186.1,,Virus,,174
-1243,vir_ires_00328.1,vir_ires_00328.1,,Virus,,174
-1244,vir_ires_00217.1,vir_ires_00217.1,,Virus,,174
-1245,vir_ires_00280.1,vir_ires_00280.1,,Virus,,174
-1246,vir_ires_00422.1,vir_ires_00422.1,RF00210,Virus,,174
-1247,vir_ires_00533.1,vir_ires_00533.1,,Virus,,310
-1247,vir_ires_00533.1,vir_ires_00523.1,,Virus,,311
+1241,vir_ires_00331.1,vir_ires_00331.1,,Human gammaherpesvirus 4 (Epstein-Barr virus);  Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+1242,vir_ires_00068.1,vir_ires_00068.1,,Human betaherpesvirus 6B (HHV-6B),,174
+1242,vir_ires_00068.1,vir_ires_00186.1,,Human betaherpesvirus 6A (HHV-6A),,174
+1243,vir_ires_00328.1,vir_ires_00328.1,,Human gammaherpesvirus 4 (Epstein-Barr virus);  Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+1244,vir_ires_00217.1,vir_ires_00217.1,,Human betaherpesvirus 7 (HHV-7),,174
+1245,vir_ires_00280.1,vir_ires_00280.1,,Human erythrovirus V9 (HEV-V9),,174
+1246,vir_ires_00422.1,vir_ires_00422.1,RF00210,Bovine hungarovirus 1 (BHuV-1),,174
+1247,vir_ires_00533.1,vir_ires_00533.1,,Cloning vector pGR102,,310
+1247,vir_ires_00533.1,vir_ires_00523.1,,Mouse mammary tumor virus (MMTV),,311
 1248,IGF2_leader2|Homo sapiens,IGF2_leader2|Homo sapiens,RF00483,Homo sapiens (human),,121
 1248,IGF2_leader2|Homo sapiens,mouse_hsa_ires_00526.1 | chr7:143338633-143338753(-) | RF00483 | IRES_IGF2 | growth factor II IRES,RF00483,Mus musculus (mouse),chr7:143338633-143338753-,121
 1249,"hsa_ires_00013.1|Homo sapiens (human)|chrX:73,563,148-73,563,321+","hsa_ires_00013.1|Homo sapiens (human)|chrX:73,563,148-73,563,321+",,Homo sapiens (human),"chrX:73,563,148-73,563,321+",174
@@ -1463,24 +1463,24 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 1271,mmu_ires_00025.1|Mus musculus (house mouse),mmu_ires_00025.1|Mus musculus (house mouse),,Mus musculus (mouse),,193
 1272,"KX884282.1:5938-6130 Wuhan arthropod virus 2 IRES_Cripavirus Wuhan arthropod virus 2 strain WHSF0 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX884282.1:5938-6130 Wuhan arthropod virus 2 IRES_Cripavirus Wuhan arthropod virus 2 strain WHSF0 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",RF00458,Virus,,193
 1273,REV-A|Reticuloendotheliosis virus,REV-A|Reticuloendotheliosis virus,,Reticuloendotheliosis virus,,577
-1274,vir_ires_00313.1,vir_ires_00313.1,,Virus,,174
-1275,vir_ires_00162.1,vir_ires_00162.1,,Virus,,174
-1276,vir_ires_00412.1,vir_ires_00412.1,,Virus,,174
-1277,vir_ires_00166.1,vir_ires_00166.1,,Virus,,174
-1278,vir_ires_00222.1,vir_ires_00222.1,,Virus,,174
-1279,vir_ires_00132.1,vir_ires_00132.1,,Virus,,174
-1280,vir_ires_00365.1,vir_ires_00365.1,,Virus,,174
-1281,vir_ires_00067.1,vir_ires_00067.1,,Virus,,174
-1282,vir_ires_00429.1,vir_ires_00429.1,,Virus,,174
-1282,vir_ires_00429.1,vir_ires_00047.1,,Virus,,174
-1283,vir_ires_00495.1,vir_ires_00495.1,,Virus,,184
+1274,vir_ires_00313.1,vir_ires_00313.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+1275,vir_ires_00162.1,vir_ires_00162.1,,Human papillomavirus type 49 (HPV49),,174
+1276,vir_ires_00412.1,vir_ires_00412.1,,Tai Forest ebolavirus,,174
+1277,vir_ires_00166.1,vir_ires_00166.1,,Human papillomavirus type 7 (HPV7),,174
+1278,vir_ires_00222.1,vir_ires_00222.1,,Human betaherpesvirus 7 (HHV-7),,174
+1279,vir_ires_00132.1,vir_ires_00132.1,,Human mastadenovirus A,,174
+1280,vir_ires_00365.1,vir_ires_00365.1,,Human papillomavirus type 88 (HPV88),,174
+1281,vir_ires_00067.1,vir_ires_00067.1,,Human betaherpesvirus 6B (HHV-6B),,174
+1282,vir_ires_00429.1,vir_ires_00429.1,,Human betaherpesvirus 6A (HHV-6A),,174
+1282,vir_ires_00429.1,vir_ires_00047.1,,Human betaherpesvirus 6B (HHV-6B),,174
+1283,vir_ires_00495.1,vir_ires_00495.1,,Aphid lethal paralysis virus (ALPV),,184
 1283,vir_ires_00495.1,ALPV_IGRpred|Aphid lethal paralysis virus,,Aphid lethal paralysis virus,,184
-1284,vir_ires_00168.1,vir_ires_00168.1,,Virus,,174
-1285,vir_ires_00224.1,vir_ires_00224.1,,Virus,,174
-1286,vir_ires_00271.1,vir_ires_00271.1,RF01047,Virus,,174
-1287,vir_ires_00268.1,vir_ires_00268.1,,Virus,,174
-1288,vir_ires_00391.1,vir_ires_00391.1,,Virus,,174
-1289,vir_ires_00534.1,vir_ires_00534.1,RF00376,Virus,,120
+1284,vir_ires_00168.1,vir_ires_00168.1,,Human papillomavirus type 7 (HPV7),,174
+1285,vir_ires_00224.1,vir_ires_00224.1,,Human betaherpesvirus 7 (HHV-7),,174
+1286,vir_ires_00271.1,vir_ires_00271.1,RF01047,Hepatitis B virus (HBV),,174
+1287,vir_ires_00268.1,vir_ires_00268.1,,Human respirovirus 1 (HPIV-1),,174
+1288,vir_ires_00391.1,vir_ires_00391.1,,Human mastadenovirus B (HAdV-B),,174
+1289,vir_ires_00534.1,vir_ires_00534.1,RF00376,HIV-1 vector pNL4-3,,120
 1290,"CM000685.2:18534867-18535067 Homo sapiens IRES_Cx43 Homo sapiens chromosome X, GRCh38 reference primary assembly.","CM000685.2:18534867-18535067 Homo sapiens IRES_Cx43 Homo sapiens chromosome X, GRCh38 reference primary assembly.",RF00487,Homo sapiens (human),,201
 1291,L-myc|Homo sapiens,L-myc|Homo sapiens,,Homo sapiens (human),,52
 1292,"hsa_ires_00014.1|Homo sapiens (human)|chr10:67,647,514-67,696,168-","hsa_ires_00014.1|Homo sapiens (human)|chr10:67,647,514-67,696,168-",,Homo sapiens (human),"chr10:67,647,514-67,696,168-",174
@@ -1512,24 +1512,24 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 1317,mouse_hsa_ires_00450.1 | chr17:31663179-31663394(+) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),mouse_hsa_ires_00450.1 | chr17:31663179-31663394(+) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),RF00226,Mus musculus (mouse),chr17:31663179-31663394+,216
 1317,mouse_hsa_ires_00450.1 | chr17:31663179-31663394(+) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),mouse_hsa_ires_00461.1 | chr17:31663179-31663394(+) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),RF00226,Mus musculus (mouse),chr17:31663179-31663394+,216
 1318,"KX883971.1:5699-5893 Hubei diptera virus 1 IRES_Cripavirus Hubei diptera virus 1 strain SCM51289 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX883971.1:5699-5893 Hubei diptera virus 1 IRES_Cripavirus Hubei diptera virus 1 strain SCM51289 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",,Virus,,195
-1319,vir_ires_00332.1,vir_ires_00332.1,,Virus,,174
-1320,vir_ires_00024.1,vir_ires_00024.1,,Virus,,174
-1321,vir_ires_00453.1,vir_ires_00453.1,,Virus,,174
-1322,vir_ires_00246.1,vir_ires_00246.1,,Virus,,174
-1323,vir_ires_00014.1,vir_ires_00014.1,,Virus,,174
-1324,vir_ires_00237.1,vir_ires_00237.1,,Virus,,174
-1325,vir_ires_00243.1,vir_ires_00243.1,,Virus,,174
-1326,vir_ires_00369.1,vir_ires_00369.1,RF00229,Virus,,174
-1327,vir_ires_00281.1,vir_ires_00281.1,,Virus,,174
-1327,vir_ires_00281.1,vir_ires_00043.1,,Virus,,174
-1328,vir_ires_00464.1,vir_ires_00464.1,,Virus,,174
-1329,vir_ires_00034.1,vir_ires_00034.1,,Virus,,174
-1330,vir_ires_00314.1,vir_ires_00314.1,,Virus,,174
-1331,vir_ires_00019.1,vir_ires_00019.1,,Virus,,174
-1331,vir_ires_00019.1,vir_ires_00013.1,,Virus,,174
-1332,vir_ires_00367.1,vir_ires_00367.1,,Virus,,174
-1333,vir_ires_00342.1,vir_ires_00342.1,,Virus,,174
-1334,vir_ires_00535.1,vir_ires_00535.1,,Virus,,122
+1319,vir_ires_00332.1,vir_ires_00332.1,,Human gammaherpesvirus 4 (Epstein-Barr virus),,174
+1320,vir_ires_00024.1,vir_ires_00024.1,,Human adenovirus 7 (HAdV7),,174
+1321,vir_ires_00453.1,vir_ires_00453.1,,Mason-Pfizer monkey virus (M-PMV),,174
+1322,vir_ires_00246.1,vir_ires_00246.1,,Drosophila C virus (DCV),,174
+1323,vir_ires_00014.1,vir_ires_00014.1,,Human mastadenovirus C; Human adenovirus 2 (HAdV-C),,174
+1324,vir_ires_00237.1,vir_ires_00237.1,,"Human alphaherpesvirus 1 (Herpes simplex virus 1, HHV-1)",,174
+1325,vir_ires_00243.1,vir_ires_00243.1,,"Human alphaherpesvirus 1 (Herpes simplex virus 1, HHV-1)",,174
+1326,vir_ires_00369.1,vir_ires_00369.1,RF00229,Enterovirus J (simian virus 6),,174
+1327,vir_ires_00281.1,vir_ires_00281.1,,Human erythrovirus V9 (HEV-V9),,174
+1327,vir_ires_00281.1,vir_ires_00043.1,,Human parvovirus B19,,174
+1328,vir_ires_00464.1,vir_ires_00464.1,,Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+1329,vir_ires_00034.1,vir_ires_00034.1,,Hepatitis GB virus B (HGBV-B),,174
+1330,vir_ires_00314.1,vir_ires_00314.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+1331,vir_ires_00019.1,vir_ires_00019.1,,Human adenovirus 5 (HAdV5),,174
+1331,vir_ires_00019.1,vir_ires_00013.1,,Human mastadenovirus C; Human adenovirus 2 (HAdV-C),,174
+1332,vir_ires_00367.1,vir_ires_00367.1,,Human papillomavirus type 88 (HPV88),,174
+1333,vir_ires_00342.1,vir_ires_00342.1,,Human gammaherpesvirus 4 (Epstein-Barr virus);  Human herpesvirus 4 type 2 (Epstein-Barr virus type 2),,174
+1334,vir_ires_00535.1,vir_ires_00535.1,,HIV-1 vector pNL4-3,,122
 1335,LamB1_-335_-1|Homo sapiens,LamB1_-335_-1|Homo sapiens,,Homo sapiens (human),,335
 1336,"hsa_ires_00015.1|Homo sapiens (human)|chr2:73,829,015-73,830,856+","hsa_ires_00015.1|Homo sapiens (human)|chr2:73,829,015-73,830,856+",,Homo sapiens (human),"chr2:73,829,015-73,830,856+",174
 1337,"hsa_ires_00047.1|Homo sapiens (human)|chr1:44,739,818-44,739,991+","hsa_ires_00047.1|Homo sapiens (human)|chr1:44,739,818-44,739,991+",,Homo sapiens (human),"chr1:44,739,818-44,739,991+",174
@@ -1564,23 +1564,23 @@ Cluster Num,Representative,Member,RFAM family,Organism,Location,Length
 1361,mouse_hsa_ires_00341.1 | chr12:12982648-12982917(-) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),mouse_hsa_ires_00341.1 | chr12:12982648-12982917(-) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),RF00226,Mus musculus (mouse),chr12:12982648-12982917-,270
 1361,mouse_hsa_ires_00341.1 | chr12:12982648-12982917(-) | RF00226 | IRES_n-myc | internal ribosome entry site (IRES),"CM001005.3:12990637-12990368 Mus musculus IRES_n-myc CM001005.3 Mus musculus chromosome 12, GRCm39 reference primary assembly C57BL/6J",RF00226,Mus musculus (mouse),,270
 1362,"KX884274.1:7022-7201 Wuhan insect virus 33 IRES_Cripavirus Wuhan insect virus 33 strain WHCCII11871 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.","KX884274.1:7022-7201 Wuhan insect virus 33 IRES_Cripavirus Wuhan insect virus 33 strain WHCCII11871 hypothetical protein 1 and hypothetical protein 2 genes, complete cds.",RF00458,Virus,,180
-1363,vir_ires_00214.1,vir_ires_00214.1,,Virus,,174
-1364,vir_ires_00408.1,vir_ires_00408.1,,Virus,,174
-1364,vir_ires_00408.1,vir_ires_00379.1,,Virus,,174
-1365,vir_ires_00008.1,vir_ires_00008.1,,Virus,,174
-1366,vir_ires_00450.1,vir_ires_00450.1,,Virus,,174
-1366,vir_ires_00450.1,vir_ires_00020.1,,Virus,,174
-1367,vir_ires_00448.1,vir_ires_00448.1,,Virus,,174
-1368,vir_ires_00296.1,vir_ires_00296.1,,Virus,,174
-1369,vir_ires_00264.1,vir_ires_00264.1,,Virus,,174
-1370,vir_ires_00134.1,vir_ires_00134.1,,Virus,,174
-1371,vir_ires_00301.1,vir_ires_00301.1,,Virus,,174
-1372,vir_ires_00345.1,vir_ires_00345.1,,Virus,,174
-1373,vir_ires_00085.1,vir_ires_00085.1,,Virus,,174
-1374,vir_ires_00267.1,vir_ires_00267.1,,Virus,,174
-1374,vir_ires_00267.1,vir_ires_00033.1,,Virus,,174
-1375,vir_ires_00210.1,vir_ires_00210.1,,Virus,,174
-1376,vir_ires_00476.1,vir_ires_00476.1,,Virus,,129
-1377,vir_ires_00173.1,vir_ires_00173.1,RF00229,Virus,,174
-1378,vir_ires_00305.1,vir_ires_00305.1,,Virus,,174
-1379,vir_ires_00536.1,vir_ires_00536.1,,Virus,,119
+1363,vir_ires_00214.1,vir_ires_00214.1,,Human betaherpesvirus 7 (HHV-7),,174
+1364,vir_ires_00408.1,vir_ires_00408.1,,Human adenovirus 54 (HAdV-54),,174
+1364,vir_ires_00408.1,vir_ires_00379.1,,Human mastadenovirus D (HAdV-D),,174
+1365,vir_ires_00008.1,vir_ires_00008.1,,Human mastadenovirus C; Human adenovirus 2 (HAdV-C),,174
+1366,vir_ires_00450.1,vir_ires_00450.1,,Human mastadenovirus B (HAdV-B),,174
+1366,vir_ires_00450.1,vir_ires_00020.1,,Human adenovirus 7 (HAdV7),,174
+1367,vir_ires_00448.1,vir_ires_00448.1,,Human mastadenovirus B (HAdV-B),,174
+1368,vir_ires_00296.1,vir_ires_00296.1,,Human coronavirus NL63 (HCoV-NL63),,174
+1369,vir_ires_00264.1,vir_ires_00264.1,,Human mastadenovirus E (HAdV-E),,174
+1370,vir_ires_00134.1,vir_ires_00134.1,,Feline immunodeficiency virus (FIV),,174
+1371,vir_ires_00301.1,vir_ires_00301.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+1372,vir_ires_00345.1,vir_ires_00345.1,,Human papillomavirus type 101 (HPV101),,174
+1373,vir_ires_00085.1,vir_ires_00085.1,,Human alphaherpesvirus 3 (HHV-3),,174
+1374,vir_ires_00267.1,vir_ires_00267.1,,Human mastadenovirus E (HAdV-E),,174
+1374,vir_ires_00267.1,vir_ires_00033.1,,Human adenovirus 7 (HAdV7),,174
+1375,vir_ires_00210.1,vir_ires_00210.1,,Human betaherpesvirus 7 (HHV-7),,174
+1376,vir_ires_00476.1,vir_ires_00476.1,,Reticuloendotheliosis virus (REV),,129
+1377,vir_ires_00173.1,vir_ires_00173.1,RF00229,Enterovirus A,,174
+1378,vir_ires_00305.1,vir_ires_00305.1,,Human betaherpesvirus 5 (HHV-5;  HCMV),,174
+1379,vir_ires_00536.1,vir_ires_00536.1,,Infectious pancreatic necrosis virus,,119
