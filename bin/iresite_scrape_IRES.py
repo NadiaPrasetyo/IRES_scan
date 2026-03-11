@@ -1,3 +1,23 @@
+# !/usr/bin/env python3
+'''
+iresite_scrape_IRES.py
+
+Usage:
+    python iresite_scrape_IRES.py --output-viral output_viral.csv --output-human output_human.csv --output-mouse output_mouse.csv
+
+Options:
+    --output-viral STR  Output CSV file for viral IRES data (default: data/iresite_viral.csv)
+    --output-human STR  Output CSV file for human IRES data (default: data/iresite_human.csv)
+    --output-mouse STR  Output CSV file for mouse IRES data (default: data/iresite_mouse.csv)
+
+Output:
+    A CSV file containing the extracted IRES data from IRESite.org
+
+The script will scrape IRESite.org for viral, human, and mouse IRES data and
+write it to a CSV file.
+
+Author: Nadia Prasetyo
+'''
 from cProfile import label
 import requests
 from bs4 import BeautifulSoup
@@ -50,10 +70,19 @@ def fetch(url):
 # ------------------------------------------------------------
 # Parse main browse tables
 # ------------------------------------------------------------
-# ------------------------------------------------------------
-# Parse main browse tables
-# ------------------------------------------------------------
 def parse_browse_page(url, mode):
+    """
+    Parse IRESite browse pages into a list of dictionaries.
+
+    Parameters
+    ----------
+        url (str): URL of the IRESite browse page
+        mode (str): "viral" or "cellular" to specify the type of browse page
+
+    Returns
+    -------
+        list: A list of dictionaries containing the extracted information
+    """
     html = fetch(url)
     soup = BeautifulSoup(html, "lxml")
 
@@ -154,6 +183,19 @@ def parse_browse_page(url, mode):
 # Parse individual IRES pages
 # ------------------------------------------------------------
 def parse_ires_page(record):
+    """
+    Parse an individual IRES page, given the record with the URL to fetch.
+
+    Parameters
+    ----------
+    record : dict
+        A dictionary containing the following keys:
+        - iresite_id
+        - detail_url
+
+    Returns a list of dictionaries with the extracted information.
+    """
+    
     html = fetch(record["detail_url"])
     soup = BeautifulSoup(html, "lxml")
 
@@ -249,7 +291,20 @@ def parse_ires_page(record):
 # ------------------------------------------------------------
 
 def scrape_all(mode="viral"):
+    """
+    Scrape all IRES records from either the viral or cellular tables.
 
+    Parameters
+    ----------
+    mode : str, default="viral"
+        Either "viral" or "cellular", indicating which table to scrape.
+
+    Returns
+    -------
+    pd.DataFrame
+        A DataFrame containing the scraped IRES records, with columns
+        as specified in the OUTPUT_COLUMNS constant.
+    """
     if mode == "viral":
         print("Scraping viral IRES table...")
         records = parse_browse_page(VIRAL_URL, mode="virus")
@@ -276,7 +331,25 @@ def scrape_all(mode="viral"):
     return pd.DataFrame(records_parsed, columns=OUTPUT_COLUMNS)
 
 
-if __name__ == "__main__":
+def main():  
+    """
+    Main function of the script.
+
+    Scrapes IRESite database for viral, human, and mouse IRES data.
+
+    Parameters
+    ----------
+    --output-viral : str
+        Output CSV file for viral IRES data (default: data/iresite_viral.csv)
+    --output-human : str
+        Output CSV file for human IRES data (default: data/iresite_human.csv)
+    --output-mouse : str
+        Output CSV file for mouse IRES data (default: data/iresite_mouse.csv)
+
+    Returns
+    -------
+    None
+    """
     argparser = argparse.ArgumentParser(description="Scrape IRESite database")
     argparser.add_argument(
         "--output-viral",
@@ -324,3 +397,7 @@ if __name__ == "__main__":
     print(f"Saved {len(df_viral)} records to {args.output_viral}")
     print(f"Saved {len(df_cellular_mouse)} records to {args.output_mouse}")
     print(f"Saved {len(df_cellular_human)} records to {args.output_human}")
+
+
+if __name__ == "__main__":
+    main()

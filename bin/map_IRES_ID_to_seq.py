@@ -1,4 +1,22 @@
+# !/usr/bin/env python3
+'''
+map_IRES_ID_to_seq.py
 
+Usage:
+    python map_IRES_ID_to_seq.py --input input.tsv --output output.tsv --fasta_mode
+
+Options:
+    --input FILE    Input TSV file with IRES IDs [required]
+    --output FILE   Output TSV file with IRES sequences [required]
+    --fasta_mode : bool    If True, the script will extract sequences from the compiled FASTA file instead of the IRES information files [default: False]
+
+Output:
+    A TSV file containing IRES IDs and their corresponding sequences
+
+The script will map IRES IDs to their corresponding sequences and add them to the input file.
+
+Author: Nadia Prasetyo
+'''
 import csv
 import argparse
 
@@ -10,6 +28,23 @@ mouse_file = "data/mouse_IRES/IRESbase/mouse_IRES_info.txt"
 compiled_sequences_file = "data/compiled_human_mouse_virus_IRES.fasta"
 
 def main(input_file, output_file, fasta_mode=False):
+    """
+    Maps IRES IDs to their corresponding sequences and adds them to the input file.
+
+    Parameters
+    ----------
+    input_file : str
+        Path to the input TSV file containing IRES IDs
+    output_file : str
+        Path to the output TSV file with IRES sequences added
+    fasta_mode : bool
+        If True, the script will extract sequences from the compiled FASTA file instead of the IRES information files
+
+    Returns
+    -------
+    None
+    """
+    
     ires_to_seq = {}
 
     if fasta_mode:

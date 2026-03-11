@@ -1,5 +1,22 @@
 #!/usr/bin/env python3
+'''
+rfam_fetch_IRES.py
 
+Usage:
+    python rfam_fetch_IRES.py --org org --output-dir output_dir
+
+Options:    
+    --org STR   Organism name or taxonomy code (E.g. "human", "homo sapiens", or TAXONOMY:"9606" )
+    --output-dir STR    Output directory path
+    --verbose BOOL  Enable verbose logging
+
+Output:
+    A TSV file containing IRES IDs and their corresponding sequences
+
+The script will fetch IRES sequences from RFAM and add them to the input file.
+
+Author: Nadia Prasetyo
+'''
 import argparse
 import csv
 import logging
@@ -25,6 +42,18 @@ HEADERS = {
 TIMEOUT = 30
 
 def setup_logging(verbose=False):
+    """
+    Set up logging for the script.
+
+    If verbose is True, logs are written to both the console and the log file.
+    If verbose is False, logs are only written to the log file.
+
+    Parameters
+    ----------
+    verbose : bool
+        If True, write logs to both the console and the log file.
+        If False, write logs only to the console.
+    """
     log_level =logging.INFO
     log_file = "rfam_fetch_IRES.log"
     logging.basicConfig(
@@ -37,6 +66,21 @@ def setup_logging(verbose=False):
 
 
 def safe_get(url, retries=3):
+    """
+    Make a GET request to the given URL, retrying up to the given number of times if the request fails.
+
+    Parameters
+    ----------
+    url : str
+        The URL to make the GET request to.
+    retries : int
+        The number of times to retry the request if it fails. Defaults to 3.
+
+    Returns
+    -------
+    requests.Response or None
+        The response from the GET request, or None if the request failed after all retries.
+    """
     for attempt in range(1, retries + 1):
         try:
             logging.debug(f"GET {url} (attempt {attempt})")
@@ -63,6 +107,26 @@ def safe_get(url, retries=3):
     return None
 
 def dedupe_entries(entries):
+    """
+    Remove duplicate entries from the given list.
+
+    Two entries are considered duplicates if they have the same values for the following fields:
+    - entry_type
+    - id
+    - rfamseq_acc
+    - seq_start
+    - seq_end
+
+    Parameters
+    ----------
+    entries : list[dict]
+        The list of entries to deduplicate.
+
+    Returns
+    -------
+    list[dict]
+        The list of unique entries.
+    """
     seen = set()
     unique = []
 
@@ -82,6 +146,26 @@ def dedupe_entries(entries):
     return unique
 
 def dedupe_rows(rows):
+    """
+    Remove duplicate rows from the given list.
+
+    Two rows are considered duplicates if they have the same values for the following fields:
+    - entry_type
+    - rfam_id
+    - accession
+    - seq_start
+    - seq_end
+
+    Parameters
+    ----------
+    rows : list[dict]
+        The list of rows to deduplicate.
+
+    Returns
+    -------
+    list[dict]
+        The list of unique rows.
+    """
     seen = set()
     unique = []
 
@@ -103,7 +187,16 @@ def dedupe_rows(rows):
 def fetch_full_sequence(accession):
     """
     Fetch full FASTA sequence for an accession from ENA.
-    Returns (header, sequence) or (None, None)
+
+    Parameters
+    ----------
+    accession : str
+        The accession to fetch the sequence for.
+
+    Returns
+    -------
+    tuple[str, str]
+        A tuple containing the header and sequence.
     """
     url = f"https://www.ebi.ac.uk/ena/browser/api/fasta/{accession}"
     r = safe_get(url)
@@ -124,6 +217,19 @@ def fetch_sequence_regions(entries, organism, outdir):
       - entry_type == 'Sequence'
       - scientific_name matches organism (if provided)
       - Extract ONLY between seq_start and seq_end
+
+    Parameters
+    ----------
+    entries : list[dict]
+        The list of entries to fetch sequences for.
+    organism : str
+        The organism to fetch sequences for.
+    outdir : str
+        The output directory to save the FASTA files to.
+
+    Returns
+    -------
+    None
 
     Saves results to: <output-dir>/<organism>_sequence_regions.fasta
     """
@@ -182,6 +288,16 @@ def collect_rfam_ids(entries):
     """
     Collect RFAM family IDs from EBISearch entries.
     Works without relying on entry_type.
+
+    Parameters
+    ----------
+    entries : list[dict]
+        The list of EBISearch entries.
+
+    Returns
+    -------
+    list[str]
+        A list of unique RFAM family IDs.
     """
     rfams = set()
 
@@ -208,6 +324,19 @@ def collect_rfam_ids(entries):
     return sorted(rfams)
 
 def fetch_search_results(org):
+    """
+    Fetch all EBISearch entries for a given organism.
+
+    Parameters
+    ----------
+    org : str
+        The organism to fetch entries for.
+
+    Returns
+    -------
+    list[dict]
+        The list of EBISearch entries for the given organism.
+    """
     query = f'rna_type:"IRES" AND {org}'
     params = {
         "query": query,
@@ -231,8 +360,25 @@ def fetch_search_results(org):
 
 def fetch_family_regions(rfam_id, outdir):
     """
-    Returns a list of dicts:
-    accession, type, start, end, description, species
+    Fetch family regions for a given RFAM family ID.
+
+    Parameters
+    ----------
+    rfam_id : str
+        The RFAM family ID to fetch regions for.
+    outdir : str
+        The output directory path.
+
+    Returns
+    -------
+    list[str]
+        The list of family regions for the given RFAM family ID.
+
+    Notes
+    ----
+    * The function fetches the family regions from the RFAM website.
+    * The function saves the family regions to a CSV file in the given output directory.
+    * The function logs a message indicating the path of the saved CSV file.
     """
     url = f"https://rfam.org/family/{rfam_id}/regions"
     r = safe_get(url)
@@ -259,6 +405,22 @@ def extract_secondary_structure(stockholm_text):
 
 
 def fetch_family_data(rfam_id, outdir):
+    """
+    Fetch RFAM family data from the RFAM website.
+
+    Parameters
+    ----------
+    rfam_id : str
+        The RFAM family ID to fetch data for.
+    outdir : str
+        The output directory path to save the data to.
+
+    Notes
+    ----
+    * The function fetches the Stockholm alignment, covariance model, structure mapping JSON and structure SVG for the given RFAM family ID.
+    * The function saves the data to the given output directory.
+    * The function logs messages indicating the paths of the saved files.
+    """
     fam_dir = os.path.join(outdir, rfam_id)
     os.makedirs(fam_dir, exist_ok=True)
 
@@ -305,6 +467,26 @@ def fetch_family_data(rfam_id, outdir):
 
 
 def main():
+    """
+    Main entry point of the script.
+
+    Fetches search results for the given organism name or taxonomy code, deduplicates the results, and saves them to a CSV file.
+    Collects RFAM family IDs from the search results, and then fetches the family data and regions for each family.
+    Saves the fetched data to the given output directory.
+
+    Parameters
+    ----------
+    --org : str
+        Organism name or taxonomy code (E.g. TAXONOMY:"9606" )
+    --output-dir : str
+        Output directory path
+    --verbose : bool
+        Enable verbose logging
+
+    Notes
+    ----
+    * The script will sleep for 0.3 seconds between each RFAM family fetch to avoid overwhelming the RFAM server.
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument("--org", help='Organism name or taxonomy code (E.g. TAXONOMY:"9606" )', required=True)
     parser.add_argument("--output-dir", help='Output directory path', required=True)

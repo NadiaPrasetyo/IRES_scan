@@ -1,9 +1,38 @@
 #!/usr/bin/env python3
+'''
+extract_genome_sequence.py
+
+Usage:
+    python extract_genome_sequence.py -f genome_fasta -i input_tsv -l length -o output_fasta
+
+Options:
+    -f, --genome_fasta STR: Mouse genome FASTA file
+    -i, --input_tsv STR: Input TSV file
+    -l, --length INT: Number of nucleotides to extract from exon start (default: 1248530, which is the max distance to the nearest downstream CCD exon found in the human IRES analysis + buffer (500))
+    -o, --output_fasta STR: Output FASTA file (default: mouse_upstream_seq.fasta)
+
+Output:
+    A FASTA file containing all sequences from the input file/directory
+
+The script will compile all sequences in the input file/directory into a single
+FASTA file.
+
+Author: Nadia Prasetyo
+'''
 import argparse
 from Bio import SeqIO
 import logging
 
 def setup_logging(verbose=False):
+    '''
+    Set up logging for the script.
+
+    If verbose is True, logs are written to both the console and the log file.
+    If verbose is False, logs are only written to the log file.
+
+    Parameters:
+    verbose (bool): If True, write logs to both the console and the log file.
+    '''
     logging.basicConfig(
         level=logging.DEBUG if verbose else logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
@@ -12,6 +41,25 @@ def setup_logging(verbose=False):
 
 
 def parse_arguments():
+    '''
+    Parse command line arguments for the script.
+
+    Parameters:
+    -f, --genome_fasta : str
+        Mouse genome FASTA file
+    -i, --input_tsv : str
+        Input TSV file
+    -l, --length : int
+        Number of nucleotides to extract from exon start (default: 1248530, which is the max distance to the nearest downstream CCD exon found in the human IRES analysis + buffer (500))
+    -o, --output_fasta : str
+        Output FASTA file (default: mouse_upstream_seq.fasta)
+    --verbose : bool
+        Enable verbose logging
+
+    Returns:
+    argparse.Namespace
+        Parsed command line arguments
+    '''
     parser = argparse.ArgumentParser(
         description="Extract exon sequences from mouse genome using TSV coordinates."
     )
@@ -24,6 +72,19 @@ def parse_arguments():
 
 
 def load_genome(genome_fasta):
+    '''
+    Load a mouse genome FASTA file and store its sequences in a dictionary.
+    
+    Parameters
+    ----------
+    genome_fasta : str
+        Path to the mouse genome FASTA file
+    
+    Returns
+    -------
+    dict
+        A dictionary where the keys are the sequence IDs and the values are the sequences themselves.
+    '''
     genome = {}
     for record in SeqIO.parse(genome_fasta, "fasta"):
         genome[record.id] = record.seq
@@ -31,6 +92,28 @@ def load_genome(genome_fasta):
 
 
 def main():
+    '''
+    Main function of the script.
+
+    Extracts the upstream sequences from the mouse genome for a given set of IRES coordinates in a TSV file and writes them to a new FASTA file.
+
+    Parameters
+    ----------
+    --genome_fasta : str
+        Mouse genome FASTA file
+    --input_tsv : str
+        Input TSV file
+    --length : int
+        Number of nucleotides to extract from exon start (default: 1248530, which is the max distance to the nearest downstream CCD exon found in the human IRES analysis + buffer (500))
+    --output_fasta : str
+        Output FASTA file (default: mouse_upstream_seq.fasta)
+    --verbose : bool
+        Enable verbose logging
+
+    Returns
+    -------
+    None
+    '''
     args = parse_arguments()
     setup_logging(verbose=args.verbose)
     genome = load_genome(args.genome_fasta)

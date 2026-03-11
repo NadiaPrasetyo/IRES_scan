@@ -14,7 +14,6 @@ project/
 │   ├── find_mouse_homolog.py
 │   ├── find_nearest_downstream_ccd_exon.py
 │   ├── get_mouse_homolog_seq.py
-│   ├── human_mouse_pident_length.py
 │   ├── iresite_scrape_IRES.py
 │   ├── map_IRES_ID_to_seq.py
 │   ├── map_seq_to_expression.py

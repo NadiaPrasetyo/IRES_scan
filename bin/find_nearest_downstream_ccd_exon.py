@@ -1,4 +1,26 @@
 #!/usr/bin/env python3
+'''
+find_nearest_downstream_ccd_exon.py
+
+Usage:
+    python find_nearest_downstream_ccd_exon.py --fasta fasta_file --ccd_file ccd_file --ccds_protein_fasta ccds_protein_fasta --output_csv output_csv
+
+Options:
+    --fasta FILE    Input FASTA file with human IRES sequences [required]
+    --ccd_file FILE   CCDS exon file [required]
+    --ccds_protein_fasta FILE   CCDS exon protein FASTA [required]
+    --output_csv FILE   Output CSV file [required]
+    --blat_path FILE   Path to BLAT executable [default: ./blat]
+    --verbose : bool    Enable verbose logging [default: False]
+
+Output:
+    A TSV file containing the nearest downstream ccd exon for each human IRES sequence
+
+The script will use BLAT to find the nearest downstream ccd exon for each human IRES sequence
+and write them to a new TSV file.
+
+Author: Nadia Prasetyo
+'''
 import os
 import shutil
 import sys
@@ -18,6 +40,19 @@ HG38_2BIT = "hg38.2bit"   # path to hg38 2bit genome
 # BLAT_PATH = "blat"       # blat executable in PATH
 
 def setup_logging(verbose=False):
+    '''
+    Set up logging for the script.
+
+    Parameters
+    ----------
+    verbose : bool
+        If True, logs are written to both the console and the log file.
+        If False, logs are only written to the log file.
+
+    Returns
+    -------
+    None
+    '''
     log_file = "find_nearest_downstream_ccd_exon.log"
     logging.basicConfig(
         level=logging.DEBUG if verbose else logging.INFO,
@@ -32,13 +67,27 @@ def setup_logging(verbose=False):
 
 
 def parse_header_for_coordinates(header):
-    """
-    Extract chromosome, start, end, strand from header.
-    Returns: (chrom, start, end, strand) or None
-    
-    Always returns chromosome in 'chrN' format.
-    """
+    '''
+    Parse FASTA header for coordinates.
 
+    Parameters
+    ----------
+    header : str
+        FASTA header string
+
+    Returns
+    -------
+    chrom : str
+        Chromosome name
+    start : int
+        Start coordinate
+    end : int
+        End coordinate
+    strand : str
+        Strand information (+ or -)
+
+    Returns None if parsing fails.
+    '''
     # Remove commas
     header_clean = header.replace(",", "")
 
@@ -80,11 +129,25 @@ def parse_header_for_coordinates(header):
 ############################################################
 
 def run_blat(sequence, temp_fasta="temp.fa", output_psl="temp.psl", blat_path="./blat"):
-    """
-    Run BLAT against hg38 to get genomic coordinates.
-    Returns best hit: (chrom, start, end, strand)
-    """
+    '''
+    Run BLAT to find the nearest downstream ccd exon for a given human IRES sequence.
 
+    Parameters
+    ----------
+    sequence : str
+        Human IRES sequence
+    temp_fasta : str
+        Path to temporary FASTA file containing the human IRES sequence
+    output_psl : str
+        Path to temporary PSL file containing BLAT results
+    blat_path : str
+        Path to BLAT executable
+
+    Returns
+    -------
+    tuple
+        Tuple containing the nearest downstream ccd exon information in the format of (chrom, start, end, strand)
+    '''
     with open(temp_fasta, "w") as f:
         f.write(">query\n")
         f.write(sequence + "\n")
@@ -126,7 +189,22 @@ def run_blat(sequence, temp_fasta="temp.fa", output_psl="temp.psl", blat_path=".
 ############################################################
 
 def load_ccds_exons(ccd_file):
+    '''
+    Load CCDS genomic exon file into a pandas DataFrame, then filter to only
+    include Public CCDS and those with valid exon locations.
 
+    Parameters
+    ----------
+    ccd_file : str
+        Path to CCDS genomic exon file
+
+    Returns
+    -------
+    dict
+        Dictionary where the keys are chromosome names and the values are lists
+        of dictionaries containing the start, end, strand, ccds_id, and exon_number
+        for each exon in the given chromosome.
+    '''
     df = pd.read_csv(ccd_file, sep="\t", dtype=str, low_memory=False)
     df.columns = df.columns.str.replace("#", "").str.strip()
 
@@ -185,7 +263,22 @@ def load_ccds_exons(ccd_file):
     return exons_by_chr
 
 def load_ccds_protein_fasta(protein_fasta):
+    '''
+    Parse a CCDS protein FASTA file and return a dictionary where the keys
+    are in the format "{ccds_id}_{exon_part}" and the values are the corresponding
+    protein sequences.
 
+    Parameters
+    ----------
+    protein_fasta: str
+        Path to the CCDS protein FASTA file.
+
+    Returns
+    -------
+    dict
+        A dictionary where the keys are in the format "{ccds_id}_{exon_part}"
+        and the values are the corresponding protein sequences.
+    '''
     protein_dict = {}
 
     for record in SeqIO.parse(protein_fasta, "fasta"):
@@ -207,7 +300,28 @@ def load_ccds_protein_fasta(protein_fasta):
 ############################################################
 
 def find_nearest_downstream(chrom, start, end, strand, exons_by_chr):
+    """
+    Find the nearest downstream exon in a given chromosome and coordinates.
 
+    Parameters
+    ----------
+    chrom : str
+        Chromosome name
+    start : int
+        Start coordinate of the genomic region
+    end : int
+        End coordinate of the genomic region
+    strand : str
+        Strand of the genomic region (either "+", "-", or "NA" for unknown)
+    exons_by_chr : dict
+        A dictionary of exons by chromosome
+
+    Returns
+    -------
+    dict
+        A dictionary representing the nearest downstream exon, with keys
+        "start", "end", "strand", "ccds_id", "exon_number", and "distance".
+    """
     if chrom not in exons_by_chr:
         logging.info(f"No exons found for chromosome {chrom}")
         return None
@@ -262,8 +376,39 @@ def find_nearest_downstream(chrom, start, end, strand, exons_by_chr):
 ############################################################
 
 def main(fasta_file, ccd_file, output_csv, blat_path, ccds_protein_fasta=None):
+    """
+    Main function to find the nearest downstream CCDS exon for each IRES entry.
 
-    # check that blat executable exists
+    Parameters
+    ----------
+    fasta_file : str
+        Path to the FASTA file containing IRES sequences
+    ccd_file : str
+        Path to the CCDS file containing CCDS exons
+    output_csv : str
+        Path to output CSV file
+    blat_path : str
+        Path to the BLAT executable
+    ccds_protein_fasta : str, optional
+        Path to the FASTA file containing CCDS protein sequences, by default None
+
+    Returns
+    -------
+    None
+
+    Notes
+    -----
+    This function will check that the BLAT executable exists before running.
+    For each IRES entry, it will check if the entry has a valid chromosomal location.
+    If the entry has a valid location, it will use the location to find the nearest downstream CCDS exon.
+    If the entry does not have a valid location, it will use BLAT to remap the sequence to the genome.
+    If BLAT succeeds, it will update the coordinates and try to find the nearest downstream CCDS exon again.
+    If BLAT fails, it will log a warning and continue to the next entry.
+    For each IRES entry, it will add the nearest downstream CCDS exon to the results list.
+    The results list will contain the IRES ID, IRES location, nearest exon location, CCDS ID, exon number, distance, and protein sequence if applicable.
+    Finally, it will write the results list to the output CSV file.
+    """
+    # check that blat executable existss
     if not shutil.which(blat_path):
         logging.error(f"BLAT executable not found at {blat_path}. Please check the path and try again.")
         sys.exit(1)

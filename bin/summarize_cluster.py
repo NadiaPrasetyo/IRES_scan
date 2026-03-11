@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
+'''
+summarize_cluster.py
 
+Usage:
+    python summarize_cluster.py -i input.csv -o output.csv
+    
+Options:
+    -i, --input_fasta FILE    Input Clustered FASTA file [required]
+    -o, --output_csv FILE    Output directory [default: data/cluster_summary.csv]
+    --verbose    Enable verbose logging
+    
+Output:
+    A CSV file containing all sequences from the input file/directory
+    
+The script will compile all sequences in the input file/directory into a single
+FASTA file.
+'''
 import csv
 import os
 import re
@@ -17,6 +33,22 @@ rfam_cache = {}
 
 
 def setup_logging(verbose=False):
+    """
+    Set up logging for the script.
+
+    If verbose is True, logs are written to both the console and the log file.
+    If verbose is False, logs are only written to the log file.
+
+    Parameters
+    ----------
+    verbose : bool
+        If True, write logs to both the console and the log file.
+        If False, write logs only to the log file.
+
+    Returns
+    -------
+    None
+    """
     log_file = "summarize_cluster.log"
     logging.basicConfig(
         level=logging.INFO,
@@ -26,12 +58,38 @@ def setup_logging(verbose=False):
 
 
 def extract_rfam_from_header(header):
+    """
+    Extract an RFAM family ID from a sequence header.
+
+    Parameters
+    ----------
+    header : str
+        The sequence header to extract the RFAM family ID from.
+
+    Returns
+    -------
+    str or None
+        The extracted RFAM family ID, or None if no match is found.
+    """
     match = re.search(r'(RF\d{5})', header)
     logging.info(f"Extracting RFAM from header: {header}, match: {match}")
     return match.group(1) if match else None
 
 
 def parse_organism_and_location(theader):
+    """
+    Parse an organism and location from a sequence header.
+
+    Parameters
+    ----------
+    theader : str
+        The sequence header to parse the organism and location from.
+
+    Returns
+    -------
+    str, str
+        The parsed organism and location, respectively.
+    """
     parts = theader.split("|")
     if len(parts) > 1:
         organism = parts[1].strip()
@@ -72,7 +130,19 @@ def parse_organism_and_location(theader):
 
 
 def query_rfam_from_sequence(sequence):
+    """
+    Query an RFAM family ID from a sequence.
 
+    Parameters
+    ----------
+    sequence : str
+        The sequence to query the RFAM API for.
+
+    Returns
+    -------
+    str or None
+        The queried RFAM family ID, or None if no match is found.
+    """
     if sequence in rfam_cache:
         return rfam_cache[sequence]
 
@@ -121,6 +191,25 @@ def load_processed_entries(output_csv):
     and determine the last processed cluster number.
 
     Works with FASTA-based clustering (no dependency on input format).
+
+    Parameters
+    ----------
+    output_csv : str
+        The path to the output CSV file.
+
+    Returns
+    -------
+    set
+        A set of processed entries.
+    int
+        The last processed cluster number.
+
+    Notes
+    -----
+    The output CSV should have the following columns:
+    - Cluster Num
+    - Representative
+    - Member
     """
 
     processed = set()
@@ -157,7 +246,47 @@ def load_processed_entries(output_csv):
     return processed, last_cluster_num
 
 def parse_clustered_fasta(fasta_path):
+    """
+    Parse a FASTA file into a list of clusters.
 
+    A cluster is a representative sequence, followed by one or more
+    member sequences. The representative sequence is the first sequence
+    in the cluster, and is denoted by a line starting with ">" followed by
+    the header of the sequence.
+
+    The remaining sequences in the cluster are denoted by lines starting
+    with ">" followed by the header of the sequence.
+
+    Parameters
+    ----------
+    fasta_path : str
+        The path to the FASTA file to parse.
+
+    Returns
+    -------
+    list
+        A list of clusters, where each cluster is a dictionary with the
+        following keys:
+        - "representative": The header of the representative sequence.
+        - "members": A list of dictionaries, each with the following keys:
+          - "header": The header of the sequence.
+          - "sequence": The sequence data.
+
+    Notes
+    -----
+    The FASTA file should have the following format:
+    >cluster_header
+    >representative_header
+    sequence data
+    >member_header
+    sequence data
+
+    Example:
+    >representative_header
+    ATCG
+    >member_header
+    GCAT
+    """
     clusters = []
     current_cluster = None
 
@@ -226,7 +355,29 @@ def parse_clustered_fasta(fasta_path):
     return clusters
 
 def summarize_clusters(input_fasta, output_csv):
+    """
+    Summarize clusters from a FASTA file into a CSV file.
 
+    Parameters
+    ----------
+    input_fasta : str
+        The path to the FASTA file to summarize.
+    output_csv : str
+        The path to the CSV file to write the cluster summary to.
+
+    Notes
+    -----
+    The CSV file will contain the following columns:
+    - "Cluster Num": The number of the cluster.
+    - "Representative": The header of the representative sequence in the cluster.
+    - "Member": The header of the member sequence in the cluster.
+    - "RFAM family": The RFAM family of the member sequence.
+    - "Organism": The organism of the member sequence.
+    - "Location": The location of the member sequence.
+    - "Length": The length of the member sequence.
+
+    The CSV file will contain one row per member sequence in the FASTA file.
+    """
     clusters = parse_clustered_fasta(input_fasta)
 
     logging.info(f"Parsed {len(clusters)} clusters from FASTA")
@@ -296,7 +447,7 @@ def summarize_clusters(input_fasta, output_csv):
 
 
 if __name__ == "__main__":
-
+    
     parser = argparse.ArgumentParser(description="Summarize MMseqs2 cluster alignments with RFAM annotations (resume-safe)")
     parser.add_argument("-i", "--input_fasta", required=True)
     parser.add_argument("-o", "--output_csv", default="data/cluster_summary.csv")

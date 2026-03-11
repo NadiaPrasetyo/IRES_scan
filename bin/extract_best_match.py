@@ -1,8 +1,40 @@
+# !/usr/bin/env python
+'''
+extract_best_match.py
+
+Usage:
+    python extract_best_match.py --input input.tsv --output output.tsv
+
+Options:
+    --input FILE    Input TSV file with MMseqs2 search results [required]
+    --output FILE   Output TSV file for best matches [required]
+
+Output:
+    A TSV file containing the best matching mouse homologs from the MMseqs2 search results
+
+The script will extract the best matching mouse homologs from the MMseqs2 search
+results and write them to a new TSV file.
+
+Author: Nadia Prasetyo
+'''
 import argparse
 import logging
 import os
 
 def setup_logging(verbose=False):
+    '''
+    Set up logging for the script.
+
+    Parameters
+    ----------
+    verbose : bool
+        If True, logs are written to both the console and the log file.
+        If False, logs are only written to the log file.
+
+    Returns
+    -------
+    None
+    '''
     logging.basicConfig(
         level=logging.DEBUG if verbose else logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
@@ -10,6 +42,25 @@ def setup_logging(verbose=False):
     )
 
 def main():
+    '''
+    Main function of the script.
+
+    Extracts the best matching mouse homologs from the MMseqs2 search results
+    and writes them to a new TSV file.
+
+    Parameters
+    ----------
+    --i, --input : str
+        Input TSV file with MMseqs2 search results (default: data/mouse_IRES_homologs.tsv)
+    -o, --output : str
+        Output TSV file for best matches (default: data/best_mouse_homologs.tsv)
+    --verbose : bool
+        Enable verbose logging to console
+
+    Returns
+    -------
+    None
+    '''
     parser = argparse.ArgumentParser(description="Extract best matching mouse homologs from MMseqs2 search results")
     parser.add_argument("-i", "--input", default="data/mouse_IRES_homologs.tsv", help="Input TSV file with MMseqs2 search results (default: data/mouse_IRES_homologs.tsv)")
     parser.add_argument("-o", "--output", default="data/best_mouse_homologs.tsv", help="Output TSV file for best matches (default: data/best_mouse_homologs.tsv)")

@@ -1,4 +1,22 @@
-#!/usr/bin/env python3
+#!/usr/bin/env 
+'''
+compare_mouse_human_homolog.py
+
+Usage:
+    python compare_mouse_human_homolog.py --mouse mouse.fasta --human human.fasta
+
+Options:
+    --mouse FILE    Mouse FASTA file [required]
+    --human FILE    Human FASTA file [required]
+    --output FILE   Output TSV file [default: mouse_human_alignment.csv]
+    --plot          Generate a plot of the percent identity vs alignment length
+
+The script will compare the sequences of the mouse and human homologs,
+write the alignment results to a TSV file, and optionally generate a plot of
+the percent identity vs alignment length.
+
+Author: Nadia Prasetyo
+'''
 
 import re
 from Bio.Align import PairwiseAligner
@@ -15,6 +33,19 @@ import pandas as pd
 # ---------------------------------------------------------------------
 
 def extract_accession(header):
+    """
+    Extract the accession number from a header string.
+
+    Parameters
+    ----------
+    header : str
+        The header string to extract the accession number from.
+
+    Returns
+    -------
+    str
+        The accession number extracted from the header string.
+    """
     if "|" in header:
         header = header.split("|")[0]
     else:
@@ -25,6 +56,21 @@ def extract_accession(header):
 
 
 def calculate_identity(aln1, aln2):
+    """
+    Calculate the percentage identity between two aligned sequences.
+
+    Parameters
+    ----------
+    aln1 : str
+        The first aligned sequence.
+    aln2 : str
+        The second aligned sequence.
+
+    Returns
+    -------
+    tuple
+        A tuple containing the percentage identity and the length of the aligned sequences.
+    """
     matches = sum(a == b for a, b in zip(aln1, aln2))
     alnlen = len(aln1)
     pident = (matches / alnlen) * 100 if alnlen > 0 else 0
@@ -32,14 +78,64 @@ def calculate_identity(aln1, aln2):
 
 
 def calculate_bit_score(raw_score):
+    """
+    Calculate the bit score from a raw score.
+
+    Parameters
+    ----------
+    raw_score : int
+        The raw score to calculate the bit score from.
+
+    Returns
+    -------
+    int
+        The bit score calculated from the raw score.
+    """
     return raw_score
 
 
 def calculate_evalue(bit_score, m, n):
+    """
+    Calculate the e-value from a bit score, m and n.
+
+    Parameters
+    ----------
+    bit_score : int
+        The bit score to calculate the e-value from.
+    m : int
+        The length of the first sequence.
+    n : int
+        The length of the second sequence.
+
+    Returns
+    -------
+    float
+        The e-value calculated from the bit score, m and n.
+    """
     return m * n * exp(-bit_score)
 
 
 def alignment_to_gapped_sequences(alignment, seq1, seq2):
+    """
+    Convert a pairwise alignment into two sequences of characters.
+
+    Parameters
+    ----------
+    alignment : PairwiseAlignment
+        The pairwise alignment to convert into two sequences of characters.
+    seq1 : str
+        The first sequence of the pairwise alignment.
+    seq2 : str
+        The second sequence of the pairwise alignment.
+
+    Returns
+    -------
+    tuple
+        A tuple containing two sequences of characters. The first sequence is the
+        first sequence of the pairwise alignment, with gaps represented by
+        hyphens. The second sequence is the second sequence of the pairwise
+        alignment, with gaps represented by hyphens.
+    """
     blocks1, blocks2 = alignment.aligned
     i = 0
     j = 0
@@ -85,6 +181,17 @@ def alignment_to_gapped_sequences(alignment, seq1, seq2):
 
 def load_sequences(mouse_fasta, human_fasta):
 
+    """
+    Load mouse and human sequences from fasta files, handling duplicates.
+
+    Parameters:
+    mouse_fasta (str): Path to mouse fasta file.
+    human_fasta (str): Path to human fasta file.
+
+    Returns:
+    tuple: A tuple of two dictionaries. Each dictionary has accessions as keys
+    and lists of SeqRecord objects as values.
+    """
     def load_with_duplicates(fasta_file):
         records = []
         seen_ids = defaultdict(int)
@@ -121,10 +228,43 @@ def load_sequences(mouse_fasta, human_fasta):
 
 
 # ---------------------------------------------------------------------
-# Perform comparisons (UPDATED FOR MANY-TO-MANY)
+# Perform comparisons 
 # ---------------------------------------------------------------------
 def compare_homologs(mouse_dict, human_dict, output_file):
 
+    """
+    Compare homologous sequences between mouse and human.
+
+    Parameters
+    ----------
+    mouse_dict : dict
+        A dictionary of mouse sequences, where the keys are accessions
+        and the values are lists of SeqRecord objects.
+    human_dict : dict
+        A dictionary of human sequences, where the keys are accessions
+        and the values are lists of SeqRecord objects.
+    output_file : str
+        The file to which the alignment results will be written.
+
+    Returns
+    -------
+    None
+
+    Notes
+    -----
+    This function will write the alignment results to the specified output file.
+    The format of the output file is a CSV file with the following columns:
+        query : The ID of the mouse SeqRecord.
+        target : The ID of the human SeqRecord.
+        pident : The percentage identity between the two sequences.
+        alnlen : The length of the alignment in characters.
+        bits : The bit score of the alignment.
+        evalue : The e-value of the alignment.
+        tseq : The aligned sequence of the target (human).
+        qseq : The aligned sequence of the query (mouse).
+        theader : The description of the target (human).
+        qheader : The description of the query (mouse).
+    """
     aligner = PairwiseAligner()
     aligner.mode = "global"
     aligner.match_score = 2
@@ -168,6 +308,23 @@ def compare_homologs(mouse_dict, human_dict, output_file):
     print(f"Alignment results written to {output_file}")
 
 def plot_pident_vs_length(csv_file):
+    """
+    Plot the percent identity vs alignment length of mouse-human IRES homologs.
+
+    Parameters
+    ----------
+    csv_file : str
+        The path to the CSV file containing the alignment results.
+
+    Returns
+    -------
+    None
+
+    Notes
+    -----
+    This function reads the CSV file, generates a scatter plot of the percent
+    identity vs alignment length, and saves the plot to a PNG file.
+    """
     df = pd.read_csv(csv_file)
     plt.figure(figsize=(8, 6))
     plt.scatter(df["alnlen"], df["pident"], alpha=0.7)
@@ -183,6 +340,31 @@ def plot_pident_vs_length(csv_file):
 # Main
 # ---------------------------------------------------------------------
 def main():
+    """
+    Compare mouse and human IRES homologs.
+
+    Parameters
+    ----------
+    --mouse : str
+        Path to the mouse FASTA file.
+    --human : str
+        Path to the human FASTA file.
+    --output : str
+        Path to the output TSV file (default: mouse_human_alignment.csv).
+    --plot : bool
+        If set, generate a plot of the percent identity vs alignment length.
+
+    Outputs
+    -------
+    - TSV file containing the alignment results.
+    - Optional plot of the percent identity vs alignment length.
+
+    Notes
+    -----
+    This function will compare the sequences of the mouse and human IRES homologs,
+    write the alignment results to a TSV file, and optionally generate a plot of
+    the percent identity vs alignment length.
+    """
     parser = argparse.ArgumentParser(description="Compare mouse and human IRES homologs")
     parser.add_argument("--mouse", required=True, help="Mouse FASTA file")
     parser.add_argument("--human", required=True, help="Human FASTA file")

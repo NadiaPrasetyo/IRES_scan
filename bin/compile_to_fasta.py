@@ -1,3 +1,27 @@
+# !/usr/bin/env python
+'''
+compile_to_fasta.py
+
+Usage:
+    python compile_to_fasta.py --input_dir input_dir --input_fasta input_fasta --input_csv input_csv --input_tsv input_tsv --output output
+
+Options:
+    --input_dir DIRECTORY to search for FASTA files (recursively)
+    --input_fasta FILE FASTA file(s) to include in the output
+    --input_csv FILE CSV file with sequence IDs and descriptions to include in the FASTA headers
+    --input_tsv FILE TSV file with sequence IDs and descriptions to include in the FASTA headers
+    --output  FILE Output FASTA file name (default: data/all_sequences.fasta)
+    --verbose : bool    Enable verbose logging
+
+Output:
+    A FASTA file containing all sequences from the input directory
+
+The script will compile all sequences in the input file/directory into a single
+FASTA file.
+
+Author: Nadia Prasetyo
+'''
+
 import argparse
 import logging
 import sys
@@ -5,6 +29,15 @@ import csv
 from pathlib import Path
 
 def setup_logging(verbose=False):
+    """
+    Set up logging for the compile_to_fasta script.
+
+    If verbose is True, logs are written to both the console and the log file.
+    If verbose is False, logs are only written to the log file.
+
+    Parameters:
+    verbose (bool): If True, write logs to both the console and the log file.
+    """
     log_file = "compile_to_fasta.log"
     logging.basicConfig(
         level=logging.INFO,
@@ -19,6 +52,20 @@ def collect_fastas(input_dir):
 
 
 def main():
+    """
+    Compile all sequences in the input file/directory into a single FASTA file.
+
+    Parameters:
+    input_dir (str): Optional Directory to search for FASTA files (recursively)
+    input_fasta (list[str]): Optional FASTA file(s) to include in the output
+    input_csv (list[str]): Optional CSV file with sequence IDs and descriptions to include in the FASTA headers
+    input_tsv (list[str]): Optional TSV file with sequence IDs and descriptions to include in the FASTA headers
+    output (str): Output FASTA file name (default: data/all_sequences.fasta)
+    verbose (bool): Enable verbose logging to console and file
+
+    Returns:
+    None
+    """
     parser = argparse.ArgumentParser(description="Compile all sequences in the input file/directory into a single FASTA file")
     parser.add_argument("--input_dir", nargs="?", help="Optional Directory to search for FASTA files (recursively)")
     parser.add_argument("--input_fasta", nargs="+", help="Optional FASTA file(s) to include in the output")

@@ -1,8 +1,36 @@
+# !/usr/bin/env python3
+'''
+map_seq_to_expression.py
+
+Usage:
+    python map_seq_to_expression.py -i input.tsv -o output.tsv
+
+Options:
+    --i, --input_file FILE    Input TSV file with IRES IDs [required]
+    --o, --output FILE   Output TSV file with IRES sequences [default: data/filtered_IRES_with_seq.tsv]
+
+Output:
+    A TSV file containing IRES IDs and their corresponding sequences
+
+The script will map IRES IDs to their corresponding sequences and add them to the input file.
+
+Author: Nadia Prasetyo
+'''
 import os
 import pandas as pd
 import argparse
 
 def main(input_file, output_file):
+    """
+    Maps the IRES sequences in the input file to the corresponding expression data in the literature excel files.
+
+    Parameters:
+    input_file (str): The input file containing the IRES sequences
+    output_file (str): The output file with the IRES sequences mapped to the expression data
+
+    Returns:
+    None
+    """
     forward_primer = "CTAGGGCGCGCCAGTCCT"
     reverse_primer = "CGACTCGGACCGATGGTGAG"
 
@@ -44,7 +72,7 @@ def main(input_file, output_file):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Map IRES IDs to sequences and add them to the input file.")
-    parser.add_argument("-i", "--input_file", help="Path to the input TSV file containing IRES IDs.")
+    parser.add_argument("-i", "--input_file", required=True, help="Path to the input TSV file containing IRES IDs.")
     parser.add_argument("-o", "--output_file", help="Path to the output TSV file with IRES sequences added.", default="data/filtered_IRES_with_seq.tsv")
 
     args = parser.parse_args()

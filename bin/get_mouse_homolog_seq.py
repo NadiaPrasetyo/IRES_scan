@@ -1,4 +1,26 @@
 #!/usr/bin/env python3
+'''
+get_mouse_homolog_seq.py
+
+Usage:
+    python get_mouse_homolog_seq.py --table table --fasta_file fasta_file --output_file output_file
+    
+Options:
+    --table FILE Table file with IRES information (default: data/mouse_IRES/filtered_cmscan_table)
+    --fasta_file FILE FASTA file with IRES sequences (default: data/mouse_IRES/mouse_IRES_sequences.fasta)
+    --output_file FILE Output FASTA file for extracted IRES sequences (default: data/mouse_IRES/mouse_IRES_homologs.fasta)
+    --verbose : bool    Enable verbose logging to console and file
+
+Output:
+    A FASTA file containing mouse homologs of the human IRES sequences
+
+The script will use MMseqs2 to find mouse homologs of the human IRES sequences
+and write them to a new FASTA file.
+
+MMseqs2: https://github.com/soedinglab/MMseqs2 is required to run this script.
+
+Author: Nadia Prasetyo
+'''
 
 from Bio import SeqIO
 from Bio.Seq import Seq
@@ -7,6 +29,22 @@ import argparse
 import logging
 
 def setup_logging(verbose=False):
+    """
+    Set up logging for the script.
+
+    If verbose is True, logs are written to both the console and the log file.
+    If verbose is False, logs are only written to the log file.
+
+    Parameters
+    ----------
+    verbose : bool
+        If True, write logs to both the console and the log file.
+        If False, write logs only to the log file.
+
+    Returns
+    -------
+    None
+    """
     log_file = "get_mouse_homolog_seq.log"
     logging.basicConfig(
         level=logging.INFO,
@@ -45,6 +83,23 @@ def parse_fasta_headers(fasta_file):
 
 
 def extract_ires_sequences(table_file, fasta_data):
+    """
+    Extracts IRES sequences from a table file and FASTA file.
+
+    Table file expected format:
+    target_name    accession    query_name    seq_from    seq_to    strand    description
+
+    FASTA file expected format:
+    >mouse_hsa_ires_00510.1 | chr18:37877999-39126684
+
+    Returns a list of tuples, where each tuple contains:
+    - A header string in the format: "mouse_<query_name> | <detected_location> | <accession> | <target_name> | <description>"
+    - The extracted IRES sequence as a Seq object
+
+    :param table_file: Table file with IRES information
+    :param fasta_data: FASTA file with IRES sequences
+    :return: List of tuples containing extracted IRES sequences and their corresponding headers
+    """
     results = []
 
     with open(table_file) as f:
@@ -103,6 +158,26 @@ def extract_ires_sequences(table_file, fasta_data):
 
 
 def write_fasta(results, output_file):
+    """
+    Write a list of (header, sequence) tuples to a FASTA file.
+
+    Parameters
+    ----------
+    results : list
+        A list of tuples, where each tuple contains a FASTA header string and a Seq object.
+    output_file : str
+        The path to the output FASTA file.
+
+    Returns
+    -------
+    None
+
+    Notes
+    -----
+    This function writes a list of (header, sequence) tuples to a FASTA file.
+    The format of the output file is a standard FASTA file, with each sequence
+    preceded by a line starting with ">" and containing the header string.
+    """
     with open(output_file, "w") as out:
         for header, seq in results:
             out.write(f">{header}\n")
@@ -110,6 +185,31 @@ def write_fasta(results, output_file):
 
 
 def main():
+    """
+    Main function of the script.
+
+    Extracts IRES sequences from cm_scan table and corresponding FASTA file, and writes them to a new FASTA file.
+
+    Parameters
+    ----------
+    --table_file : str
+        Path to the filtered cm_scan table (default: data/mouse_IRES/filtered_cmscan_table)
+    --fasta_file : str
+        Path to the FASTA file with original sequences (default: data/mouse_IRES/mouse_IRES_sequences.fasta)
+    --output_file : str
+        Path to the output FASTA file for extracted IRES sequences (default: data/mouse_IRES/mouse_IRES_homologs.fasta)
+    --verbose : bool
+        Enable verbose logging to console and file
+
+    Outputs
+    -------
+    A FASTA file containing all the extracted IRES sequences.
+
+    Notes
+    -----
+    This function will parse the FASTA file, extract the IRES sequences based on the cm_scan table,
+    and write the extracted sequences to a new FASTA file.
+    """
     parser = argparse.ArgumentParser(description="Extract IRES sequences from cm_scan table and corresponding FASTA file.")
     parser.add_argument("--table_file", default="data/mouse_IRES/filtered_cmscan_table", help="Path to the filtered cm_scan table (default: data/mouse_IRES/filtered_cmscan_table)")
     parser.add_argument("--fasta_file", default="data/mouse_IRES/mouse_IRES_sequences.fasta", help="Path to the FASTA file with original sequences (default: data/mouse_IRES/mouse_IRES_sequences.fasta)")

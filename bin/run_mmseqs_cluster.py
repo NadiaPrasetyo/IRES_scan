@@ -1,5 +1,27 @@
 #!/usr/bin/env python3
+'''
+run_mmseqs_cluster.py
 
+Usage:
+    python run_mmseqs_cluster.py -i input.fasta -o output_dir -t threads -m mmseqs_path -l max_seq_len -s min_seq_len -d db_path -c min_cov -e min_id -p identity -r min_len -v verbose
+
+Options:
+    -i, --input-fasta FILE    Input FASTA file [required]
+    -o, --output-dir DIRECTORY    Output directory [required]
+    --min-seq-id FLOAT    Minimum sequence identity [default: 0.9]
+    -c, --coverage FLOAT    Coverage threshold [default: 0.8]
+    --cov-mode INT    Coverage mode [default: 0]
+    --threads INT    Number of threads [default: 4]
+    --verbose    Enable verbose logging
+
+Output:
+    A FASTA file containing all sequences from the input file/directory
+
+The script will compile all sequences in the input file/directory into a single
+FASTA file.
+
+Author: Nadia Prasetyo
+'''
 import os
 import shutil
 import subprocess
@@ -8,6 +30,18 @@ import sys
 import logging
 
 def setup_logging(verbose=False):
+    """
+    Set up logging for the script.
+
+    If verbose is True, logs are written to both the console and the log file.
+    If verbose is False, logs are only written to the log file.
+
+    Parameters
+    ----------
+    verbose : bool
+        If True, write logs to both the console and the log file.
+        If False, write logs only to the log file.
+    """
     log_file = "run_mmseqs_cluster.log"
     logging.basicConfig(
         level=logging.INFO,
@@ -24,6 +58,30 @@ def run(cmd):
 
 
 def main():
+    """
+    Simple MMseqs2 clustering pipeline
+
+    Parameters
+    ----------
+    -i, --input-fasta : Input FASTA file
+    -o, --output-dir : Output directory
+    --min-seq-id : Minimum sequence identity (default: 0.9)
+    -c, --coverage : Coverage threshold (default: 0.8)
+    --cov-mode : Coverage mode (default: 0)
+    --threads : Number of threads (default: 4)
+    --verbose : Enable verbose logging to console and file
+
+    Notes
+    ----
+    * MMseqs2 is required to be installed and in the PATH
+    * The script will create a temporary directory in the output directory
+    * The script will create the following files:
+        * clusters.tsv: Cluster TSV file
+        * clustered_sequences.fasta: Clustered sequences FASTA file
+        * cluster_representatives.fasta: Representative sequences FASTA file
+        * cluster_alignments.tsv: Alignment results in BLAST tab format
+    * The script will remove temporary files and directories after completion
+    """
     parser = argparse.ArgumentParser(
         description="Simple MMseqs2 clustering pipeline"
     )
