@@ -12,8 +12,6 @@ To do:
 - get the conservation score (length normalized conservation score) to the final TSV
 
 
-- Figure out the global coverage of Staphylococcus aureus sequence typing (ST), clonal complex (CC), or multilevel genome typing (MGT), multilocus sequence typing (MLST): how to figure out what's circulating
-
 - Is there a way to evaluate the sequences they've selected? diversity of the sequences
   - aligning the sequences, identifying a non-synonymous variation (protein level)
 - Machine learning paper: influenza vaccine: coverage score (how well does the sequence represent the circulating virus)
